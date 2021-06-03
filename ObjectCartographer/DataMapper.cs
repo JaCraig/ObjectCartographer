@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
+using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ObjectCartographer
 {
@@ -36,7 +38,12 @@ namespace ObjectCartographer
         /// Gets the types.
         /// </summary>
         /// <value>The types.</value>
-        private Dictionary<TypeTuple, TypeMapping> Types { get; } = new Dictionary<TypeTuple, TypeMapping>();
+        private Dictionary<TypeTuple, ITypeMapping> Types { get; } = new Dictionary<TypeTuple, ITypeMapping>();
+
+        /// <summary>
+        /// The generic map method.
+        /// </summary>
+        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod("Map", Array.Empty<Type>());
 
         /// <summary>
         /// Automatically maps the two types.
@@ -46,8 +53,8 @@ namespace ObjectCartographer
         /// <returns>This.</returns>
         public DataMapper AutoMap(Type first, Type second)
         {
-            Map(first, second);
-            Map(second, first);
+            Map(first, second)?.AutoMap().Build();
+            Map(second, first)?.AutoMap().Build();
             return this;
         }
 
@@ -68,9 +75,17 @@ namespace ObjectCartographer
         /// <typeparam name="TSource">The type of the source.</typeparam>
         /// <typeparam name="TDestination">The type of the destination.</typeparam>
         /// <returns>The type mapping.</returns>
-        public TypeMapping Map<TSource, TDestination>()
+        public TypeMapping<TSource, TDestination>? Map<TSource, TDestination>()
         {
-            return Map(typeof(TSource), typeof(TDestination));
+            var Source = typeof(TSource);
+            var Destination = typeof(TDestination);
+            var Key = new TypeTuple(Source, Destination);
+            if (Types.TryGetValue(Key, out var ReturnValue))
+                return ReturnValue as TypeMapping<TSource, TDestination>;
+            Logger?.LogInformation($"Mapping {Source.Name} to {Destination.Name}");
+            var NewMapping = new TypeMapping<TSource, TDestination>(Key);
+            Types.Add(Key, NewMapping);
+            return NewMapping;
         }
 
         /// <summary>
@@ -79,15 +94,9 @@ namespace ObjectCartographer
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
         /// <returns>The type mapping.</returns>
-        public TypeMapping Map(Type source, Type destination)
+        public ITypeMapping? Map(Type source, Type destination)
         {
-            var Key = new TypeTuple(source, destination);
-            if (Types.TryGetValue(Key, out var ReturnValue))
-                return ReturnValue;
-            Logger?.LogInformation($"Mapping {source.Name} to {destination.Name}");
-            var NewMapping = new TypeMapping(source, destination);
-            Types.Add(Key, NewMapping);
-            return NewMapping;
+            return MapGeneric.MakeGenericMethod(source, destination).Invoke(this, Array.Empty<object>()) as ITypeMapping;
         }
     }
 }

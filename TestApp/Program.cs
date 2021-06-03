@@ -9,7 +9,8 @@ namespace TestApp
         {
             var Collection = new ServiceCollection().AddCanisterModules().BuildServiceProvider();
             var DataMapper = Collection.GetRequiredService<DataMapper>();
-            DataMapper.AutoMap<TestType1, TestType2>();
+            var Mapper = DataMapper.Map<TestType1, TestType2>();
+            Mapper.AddMapping(x => x.A, x => x.A).Build();
             DataMapper.AutoMap<TestType1, TestType2>();
         }
     }

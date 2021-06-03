@@ -1,7 +1,7 @@
 ﻿using Canister.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
-using ObjectCartographer.Converter;
-using ObjectCartographer.Converter.Interfaces;
+using ObjectCartographer.ExpressionBuilder;
+using ObjectCartographer.ExpressionBuilder.Interfaces;
 
 namespace ObjectCartographer.Modules
 {
@@ -23,8 +23,8 @@ namespace ObjectCartographer.Modules
         public void Load(IBootstrapper? bootstrapper)
         {
             bootstrapper?.Register<DataMapper>(ServiceLifetime.Singleton)
-                .RegisterAll<IConverter>(ServiceLifetime.Singleton)
-                .Register<ConverterManager>(ServiceLifetime.Singleton);
+                .RegisterAll<IExpressionBuilder>(ServiceLifetime.Singleton)
+                .Register<ExpressionBuilderManager>(ServiceLifetime.Singleton);
         }
     }
 }

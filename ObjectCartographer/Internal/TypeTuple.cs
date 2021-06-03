@@ -6,7 +6,7 @@ namespace ObjectCartographer.Internal
     /// Type tuple
     /// </summary>
     /// <seealso cref="IEquatable{TypeTuple}"/>
-    internal readonly struct TypeTuple : IEquatable<TypeTuple>
+    public readonly struct TypeTuple : IEquatable<TypeTuple>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TypeTuple"/> struct.
@@ -22,16 +22,6 @@ namespace ObjectCartographer.Internal
         }
 
         /// <summary>
-        /// The hash code
-        /// </summary>
-        private readonly int _HashCode;
-
-        /// <summary>
-        /// To string value
-        /// </summary>
-        private readonly string _ToString;
-
-        /// <summary>
         /// Gets the destination.
         /// </summary>
         /// <value>The destination.</value>
@@ -42,6 +32,16 @@ namespace ObjectCartographer.Internal
         /// </summary>
         /// <value>The source.</value>
         public Type Source { get; }
+
+        /// <summary>
+        /// The hash code
+        /// </summary>
+        private readonly int _HashCode;
+
+        /// <summary>
+        /// To string value
+        /// </summary>
+        private readonly string _ToString;
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
