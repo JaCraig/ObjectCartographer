@@ -1,4 +1,5 @@
-﻿using ObjectCartographer.Interfaces;
+﻿using Microsoft.Extensions.Logging;
+using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,19 @@ namespace ObjectCartographer
         /// Initializes a new instance of the <see cref="TypeMapping"/> class.
         /// </summary>
         /// <param name="typeInfo">The type information.</param>
-        /// <param name="dataMapper">The data mapper.</param>
-        public TypeMapping(TypeTuple typeInfo)
+        /// <param name="logger">The logger.</param>
+        public TypeMapping(TypeTuple typeInfo, ILogger? logger)
         {
             Source = typeInfo.Source;
             Destination = typeInfo.Destination;
+            Logger = logger;
         }
+
+        /// <summary>
+        /// Gets or sets the converter.
+        /// </summary>
+        /// <value>The converter.</value>
+        public Func<TSource, TDestination, TDestination>? Converter { get; set; }
 
         /// <summary>
         /// Gets the destination.
@@ -42,6 +50,12 @@ namespace ObjectCartographer
         /// </summary>
         /// <value>The source.</value>
         public Type Source { get; }
+
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>The logger.</value>
+        private ILogger? Logger { get; }
 
         /// <summary>
         /// Adds the mapping specified.
@@ -71,6 +85,18 @@ namespace ObjectCartographer
         /// </summary>
         public void Build()
         {
+            Logger?.LogInformation($"Building {Source.Name} => {Destination.Name}");
+        }
+
+        /// <summary>
+        /// Uses the method supplied instead of building out a converter.
+        /// </summary>
+        /// <param name="func">The function.</param>
+        /// <returns>This.</returns>
+        public TypeMapping<TSource, TDestination> UseMethod(Func<TSource, TDestination, TDestination> func)
+        {
+            Converter = func;
+            return this;
         }
     }
 }
