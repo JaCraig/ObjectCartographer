@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ExpressionBuilder\ExpressionBuilders\" />
+    <Folder Include="ExpressionBuilder\Converters\" />
   </ItemGroup>
 
 </Project>

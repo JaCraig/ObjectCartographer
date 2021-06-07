@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectCartographer", "Objec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectCartographer.Tests", "ObjectCartographer.Tests\ObjectCartographer.Tests.csproj", "{2A94912A-9934-48FD-92A6-FF2182370E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{5DE9F353-9387-4CDA-A1F8-C7E7C0FA523F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{5DE9F353-9387-4CDA-A1F8-C7E7C0FA523F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectCartographer.Benchmarks", "ObjectCartographer.Benchmarks\ObjectCartographer.Benchmarks.csproj", "{383E5F42-D52E-411D-9026-0B66214471F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{5DE9F353-9387-4CDA-A1F8-C7E7C0FA523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DE9F353-9387-4CDA-A1F8-C7E7C0FA523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DE9F353-9387-4CDA-A1F8-C7E7C0FA523F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{383E5F42-D52E-411D-9026-0B66214471F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{383E5F42-D52E-411D-9026-0B66214471F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{383E5F42-D52E-411D-9026-0B66214471F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{383E5F42-D52E-411D-9026-0B66214471F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

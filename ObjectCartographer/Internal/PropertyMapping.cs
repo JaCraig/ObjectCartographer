@@ -23,6 +23,12 @@ namespace ObjectCartographer.Internal
         }
 
         /// <summary>
+        /// Gets the destination.
+        /// </summary>
+        /// <value>The destination.</value>
+        public Expression Destination => RightProperty;
+
+        /// <summary>
         /// Gets the left property.
         /// </summary>
         /// <value>The left property.</value>
@@ -33,5 +39,11 @@ namespace ObjectCartographer.Internal
         /// </summary>
         /// <value>The right property.</value>
         public Expression<Func<TRight, object?>> RightProperty { get; }
+
+        /// <summary>
+        /// Gets the source.
+        /// </summary>
+        /// <value>The source.</value>
+        public Expression Source => LeftProperty;
     }
 }

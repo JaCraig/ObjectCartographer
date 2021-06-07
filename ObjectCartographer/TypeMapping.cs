@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ObjectCartographer.ExpressionBuilder;
 using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
@@ -20,11 +21,12 @@ namespace ObjectCartographer
         /// </summary>
         /// <param name="typeInfo">The type information.</param>
         /// <param name="logger">The logger.</param>
-        public TypeMapping(TypeTuple typeInfo, ILogger? logger)
+        /// <param name="expressionBuilder">The expression builder.</param>
+        public TypeMapping(TypeTuple typeInfo, ILogger? logger, ExpressionBuilderManager? expressionBuilder)
         {
-            Source = typeInfo.Source;
-            Destination = typeInfo.Destination;
             Logger = logger;
+            ExpressionBuilder = expressionBuilder;
+            TypeInfo = typeInfo;
         }
 
         /// <summary>
@@ -34,22 +36,22 @@ namespace ObjectCartographer
         public Func<TSource, TDestination, TDestination>? Converter { get; set; }
 
         /// <summary>
-        /// Gets the destination.
-        /// </summary>
-        /// <value>The destination.</value>
-        public Type Destination { get; }
-
-        /// <summary>
         /// Gets the mappings.
         /// </summary>
         /// <value>The mappings.</value>
         public List<IPropertyMapping> Properties { get; } = new List<IPropertyMapping>();
 
         /// <summary>
-        /// Gets the source.
+        /// Gets the type information.
         /// </summary>
-        /// <value>The source.</value>
-        public Type Source { get; }
+        /// <value>The type information.</value>
+        public TypeTuple TypeInfo { get; }
+
+        /// <summary>
+        /// Gets the expression builder.
+        /// </summary>
+        /// <value>The expression builder.</value>
+        private ExpressionBuilderManager? ExpressionBuilder { get; }
 
         /// <summary>
         /// Gets the logger.
@@ -77,6 +79,10 @@ namespace ObjectCartographer
         /// <returns>This.</returns>
         public ITypeMapping AutoMap()
         {
+            if (Properties.Count > 0 || !(Converter is null))
+                return this;
+            Logger?.LogInformation($"Automapping {TypeInfo}");
+            Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);
             return this;
         }
 
@@ -85,7 +91,10 @@ namespace ObjectCartographer
         /// </summary>
         public void Build()
         {
-            Logger?.LogInformation($"Building {Source.Name} => {Destination.Name}");
+            if (!(Converter is null))
+                return;
+            Logger?.LogInformation($"Building {TypeInfo}");
+            Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);
         }
 
         /// <summary>

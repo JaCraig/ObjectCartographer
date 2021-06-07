@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 
 namespace ObjectCartographer.Internal
 {
@@ -14,8 +15,13 @@ namespace ObjectCartographer.Internal
         public static readonly ConstructorInfo[] Constructors = typeof(TObject).GetConstructors();
 
         /// <summary>
-        /// The properties
+        /// The readable properties
         /// </summary>
-        public static readonly PropertyInfo[] Properties = typeof(TObject).GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public);
+        public static readonly PropertyInfo[] ReadableProperties = typeof(TObject).GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanRead).ToArray();
+
+        /// <summary>
+        /// The writable properties
+        /// </summary>
+        public static readonly PropertyInfo[] WritableProperties = typeof(TObject).GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanWrite).ToArray();
     }
 }

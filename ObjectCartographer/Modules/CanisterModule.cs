@@ -24,7 +24,8 @@ namespace ObjectCartographer.Modules
         {
             bootstrapper?.Register<DataMapper>(ServiceLifetime.Singleton)
                 .RegisterAll<IExpressionBuilder>(ServiceLifetime.Singleton)
-                .Register<ExpressionBuilderManager>(ServiceLifetime.Singleton);
+                .Register<ExpressionBuilderManager>(ServiceLifetime.Singleton)
+                .RegisterAll<IConverter>(ServiceLifetime.Singleton);
         }
     }
 }

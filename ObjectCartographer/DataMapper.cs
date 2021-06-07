@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ObjectCartographer.ExpressionBuilder;
 using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
@@ -17,10 +18,12 @@ namespace ObjectCartographer
         /// <summary>
         /// Initializes a new instance of the <see cref="DataMapper"/> class.
         /// </summary>
+        /// <param name="expressionBuilder">The expression builder.</param>
         /// <param name="logger">The logger.</param>
-        public DataMapper(ILogger<DataMapper>? logger = null)
+        public DataMapper(ExpressionBuilderManager expressionBuilder, ILogger<DataMapper>? logger = null)
         {
             Logger = logger;
+            ExpressionBuilder = expressionBuilder;
         }
 
         /// <summary>
@@ -35,6 +38,12 @@ namespace ObjectCartographer
         /// </summary>
         /// <value>The copy methods.</value>
         private Dictionary<TypeTuple, MethodWrapperDelegate> CopyMethods { get; } = new Dictionary<TypeTuple, MethodWrapperDelegate>();
+
+        /// <summary>
+        /// Gets the expression builder.
+        /// </summary>
+        /// <value>The expression builder.</value>
+        private ExpressionBuilderManager? ExpressionBuilder { get; }
 
         /// <summary>
         /// Gets the logger.
@@ -110,22 +119,7 @@ namespace ObjectCartographer
         /// <returns>The resulting object</returns>
         public TDestination Copy<TDestination>(object? source, TDestination destination = default!)
         {
-            if (source is null)
-                return destination;
-            var Source = source.GetType();
-            var Destination = typeof(TDestination);
-            var Key = new TypeTuple(Source, Destination);
-            if (CopyMethods.TryGetValue(Key, out var Method))
-                return (TDestination)Method(new object?[] { source, destination });
-            lock (CopyCreateLockObject)
-            {
-                if (CopyMethods.TryGetValue(Key, out Method))
-                    return (TDestination)Method(new object?[] { source, destination });
-                var GenericMethod = CopyGeneric.MakeGenericMethod(Source, Destination);
-                var FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
-                CopyMethods.Add(Key, FinalMethod);
-                return (TDestination)FinalMethod(new object?[] { source, destination });
-            }
+            return (TDestination)Copy(source, destination, typeof(TDestination))!;
         }
 
         /// <summary>
@@ -181,7 +175,9 @@ namespace ObjectCartographer
                 if (!Types.TryGetValue(Key, out ReturnValue))
                     return destination;
             }
-            return (ReturnValue as TypeMapping<TSource, TDestination>).Converter(source, destination);
+            var Mapping = ReturnValue as TypeMapping<TSource, TDestination>;
+            Mapping.Build();
+            return Mapping.Converter(source, destination);
         }
 
         /// <summary>
@@ -198,7 +194,7 @@ namespace ObjectCartographer
             if (Types.TryGetValue(Key, out var ReturnValue))
                 return ReturnValue as TypeMapping<TSource, TDestination>;
             Logger?.LogInformation($"Mapping {Source.Name} to {Destination.Name}");
-            var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger);
+            var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
             Types.Add(Key, NewMapping);
             return NewMapping;
         }
