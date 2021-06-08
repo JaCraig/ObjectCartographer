@@ -3,10 +3,10 @@ using BenchmarkDotNet.Attributes;
 using BigBook;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ObjectCartographer.Benchmarks
+namespace ObjectCartographer.Benchmarks.Tests
 {
     [RankColumn, MemoryDiagnoser]
-    public class SimpleCopy
+    public class CreationAndCopy
     {
         private IMapper AutoMapperMapper { get; set; }
         private TestClass Object1 { get; } = new TestClass();
@@ -16,20 +16,23 @@ namespace ObjectCartographer.Benchmarks
         [Benchmark]
         public void AutoMapper()
         {
-            _ = AutoMapperMapper.Map(Object1, Object2);
+            _ = AutoMapperMapper.Map<TestClass2>(Object1);
         }
 
         [Benchmark]
         public void ByHand()
         {
-            Object2.A = Object1.A;
-            Object2.B = Object1.B;
+            _ = new TestClass2
+            {
+                A = Object1.A,
+                B = Object1.B
+            };
         }
 
         [Benchmark(Baseline = true)]
         public void ObjectCartographer()
         {
-            _ = ObjectCartographerMapper.Copy(Object1, Object2);
+            _ = ObjectCartographerMapper.Copy<TestClass2>(Object1);
         }
 
         [Benchmark]

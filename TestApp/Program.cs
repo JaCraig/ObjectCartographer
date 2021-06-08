@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using ObjectCartographer;
 using System;
+using System.Dynamic;
 
 namespace TestApp
 {
@@ -23,11 +24,17 @@ namespace TestApp
 
             var Result3 = DataMapper.Copy(new TestType2 { A = 30 }, new TestType1());
             Console.WriteLine(Result3.A);
+
+            DataMapper.AutoMap<ExpandoObject, ExpandoObject>();
+            dynamic Val = new ExpandoObject();
+            Val.A = 40;
+            var Result4 = DataMapper.Copy<ExpandoObject>(Val);
+            Console.WriteLine(Result4.A);
         }
 
         private static TestType2 TestMethod(TestType1 arg1, TestType2 arg2)
         {
-            arg2 ??= new TestType2();
+            arg2 ??= new TestType2(10);
             arg2.A = (int)arg1.A;
             return arg2;
         }

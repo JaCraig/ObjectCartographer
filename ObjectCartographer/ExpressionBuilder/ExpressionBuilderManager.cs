@@ -40,9 +40,9 @@ namespace ObjectCartographer.ExpressionBuilder
         /// </summary>
         /// <param name="propertyGet">The property get.</param>
         /// <param name="property">The property.</param>
-        /// <param name="destinationProperty">The destination property.</param>
+        /// <param name="destinationType">Type of the destination.</param>
         /// <returns></returns>
-        public Expression Convert(Expression propertyGet, PropertyInfo property, PropertyInfo destinationProperty)
+        public Expression Convert(Expression propertyGet, PropertyInfo property, Type destinationType)
         {
             return propertyGet;
         }

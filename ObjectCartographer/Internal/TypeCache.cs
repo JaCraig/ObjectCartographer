@@ -12,7 +12,7 @@ namespace ObjectCartographer.Internal
         /// <summary>
         /// The constructors
         /// </summary>
-        public static readonly ConstructorInfo[] Constructors = typeof(TObject).GetConstructors();
+        public static readonly ConstructorInfo[] Constructors = typeof(TObject).GetConstructors().Where(x => x.IsPublic).OrderByDescending(x => x.GetParameters().Length).ToArray();
 
         /// <summary>
         /// The readable properties

@@ -1,4 +1,6 @@
-﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.ExpressionBuilder.Interfaces;
+using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -9,13 +11,13 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
     /// Pre mapped
     /// </summary>
     /// <seealso cref="IExpressionBuilder"/>
-    public class PreMapped : IExpressionBuilder
+    public class PreMapped : ExpressionBuilderBaseClass
     {
         /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => int.MinValue;
+        public override int Order => int.MinValue;
 
         /// <summary>
         /// Determines whether this instance can handle the specified mapping.
@@ -26,7 +28,7 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// <returns>
         /// <c>true</c> if this instance can handle the specified mapping; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping)
+        public override bool CanHandle<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping)
         {
             return mapping.Properties.Count > 0;
         }
@@ -39,13 +41,15 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// <param name="mapping">The mapping.</param>
         /// <param name="manager">The manager.</param>
         /// <returns>The resulting expression.</returns>
-        public Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping, ExpressionBuilderManager manager)
+        public override Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping, ExpressionBuilderManager manager)
         {
+            var SourceType = typeof(TSource);
+            var DestinationType = typeof(TDestination);
             List<Expression> Expressions = new List<Expression>();
-            var SourceObjectInstance = Expression.Parameter(typeof(TSource), "source");
-            var DestinationObjectInstance = Expression.Parameter(typeof(TDestination), "destination");
+            var SourceObjectInstance = Expression.Parameter(SourceType, "source");
+            var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
 
-            Expressions.Add(Expression.Assign(DestinationObjectInstance, Expression.Coalesce(DestinationObjectInstance, Expression.New(typeof(TDestination)))));
+            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
 
             foreach (var Property in mapping.Properties)
             {
@@ -53,7 +57,7 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             }
             if (Expressions.Count == 0)
                 return (_, y) => y;
-            Expressions.Add(Expression.Return(Expression.Label(), DestinationObjectInstance));
+            Expressions.Add(DestinationObjectInstance);
             var BlockExpression = Expression.Block(Expressions);
             var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
             return SourceLambda.Compile();

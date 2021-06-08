@@ -18,7 +18,6 @@ namespace ObjectCartographer.Internal
             Source = source;
             Destination = destination;
             _HashCode = HashCode.Combine(Source, Destination);
-            _ToString = $"({Source.Name}, {Destination.Name})";
         }
 
         /// <summary>
@@ -37,11 +36,6 @@ namespace ObjectCartographer.Internal
         /// The hash code
         /// </summary>
         private readonly int _HashCode;
-
-        /// <summary>
-        /// To string value
-        /// </summary>
-        private readonly string _ToString;
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -71,11 +65,5 @@ namespace ObjectCartographer.Internal
         /// structures like a hash table.
         /// </returns>
         public override int GetHashCode() => _HashCode;
-
-        /// <summary>
-        /// Converts to string.
-        /// </summary>
-        /// <returns>A <see cref="System.String"/> that represents this instance.</returns>
-        public override string ToString() => _ToString;
     }
 }
