@@ -62,7 +62,7 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
                 Expression PropertyGet = Expression.Property(SourceObjectInstance, Property);
                 var PropertySet = Expression.Property(DestinationObjectInstance, DestinationProperty);
 
-                PropertyGet = manager.Convert(PropertyGet, Property, DestinationProperty.PropertyType);
+                PropertyGet = manager.Convert(PropertyGet, Property.PropertyType, DestinationProperty.PropertyType);
 
                 Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
             }

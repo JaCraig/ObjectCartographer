@@ -1,18 +1,20 @@
-﻿using System;
+﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+using System;
 using System.Linq.Expressions;
 
-namespace ObjectCartographer.ExpressionBuilder.Interfaces
+namespace ObjectCartographer.ExpressionBuilder.Converters
 {
     /// <summary>
-    /// Converter interface
+    /// Assignable from converter
     /// </summary>
-    public interface IConverter
+    /// <seealso cref="IConverter"/>
+    public class AssignableFromConverter : IConverter
     {
         /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        int Order { get; }
+        public int Order => 0;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -22,7 +24,10 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        bool CanHandle(Type sourceType, Type destinationType);
+        public bool CanHandle(Type sourceType, Type destinationType)
+        {
+            return destinationType.IsAssignableFrom(sourceType);
+        }
 
         /// <summary>
         /// Converts the specified property get.
@@ -32,6 +37,9 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// <param name="destinationType">Type of the destination.</param>
         /// <param name="expressionBuilderManager">The expression builder manager.</param>
         /// <returns></returns>
-        Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager);
+        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager)
+        {
+            return Expression.Convert(propertyGet, destinationType);
+        }
     }
 }

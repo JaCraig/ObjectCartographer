@@ -23,7 +23,7 @@ namespace ObjectCartographer
         public DataMapper(ExpressionBuilderManager expressionBuilder, ILogger<DataMapper>? logger = null)
         {
             Logger = logger;
-            ExpressionBuilder = expressionBuilder;
+            ExpressionBuilder = expressionBuilder?.Initialize(this);
         }
 
         /// <summary>

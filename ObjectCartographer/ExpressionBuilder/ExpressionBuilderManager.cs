@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 
 namespace ObjectCartographer.ExpressionBuilder
 {
@@ -19,32 +18,49 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <param name="converters">The converters.</param>
         public ExpressionBuilderManager(IEnumerable<IExpressionBuilder> builders, IEnumerable<IConverter> converters)
         {
-            Builders = builders;
-            Converters = converters;
+            Builders = builders.OrderBy(x => x.Order).ToArray();
+            Converters = converters.OrderBy(x => x.Order).ToArray();
         }
+
+        /// <summary>
+        /// Gets the data mapper.
+        /// </summary>
+        /// <value>The data mapper.</value>
+        internal DataMapper DataMapper { get; private set; }
 
         /// <summary>
         /// Gets the builders.
         /// </summary>
         /// <value>The builders.</value>
-        private IEnumerable<IExpressionBuilder> Builders { get; }
+        private IExpressionBuilder[] Builders { get; }
 
         /// <summary>
         /// Gets the converters.
         /// </summary>
         /// <value>The converters.</value>
-        private IEnumerable<IConverter> Converters { get; }
+        private IConverter[] Converters { get; }
 
         /// <summary>
         /// Converts the specified property get.
         /// </summary>
         /// <param name="propertyGet">The property get.</param>
-        /// <param name="property">The property.</param>
+        /// <param name="sourceType">The property.</param>
         /// <param name="destinationType">Type of the destination.</param>
         /// <returns></returns>
-        public Expression Convert(Expression propertyGet, PropertyInfo property, Type destinationType)
+        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType)
         {
-            return propertyGet;
+            return Array.Find(Converters, x => x.CanHandle(sourceType, destinationType))?.Convert(propertyGet, sourceType, destinationType, this) ?? propertyGet;
+        }
+
+        /// <summary>
+        /// Initializes the specified data mapper.
+        /// </summary>
+        /// <param name="dataMapper">The data mapper.</param>
+        /// <returns>This</returns>
+        public ExpressionBuilderManager Initialize(DataMapper dataMapper)
+        {
+            DataMapper = dataMapper;
+            return this;
         }
 
         /// <summary>
@@ -56,7 +72,7 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <returns>The resulting expression.</returns>
         public Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping)
         {
-            return Builders.FirstOrDefault(x => x.CanHandle(mapping))?.Map(mapping, this) ?? ((_, y) => y);
+            return Array.Find(Builders, x => x.CanHandle(mapping))?.Map(mapping, this) ?? ((_, y) => y);
         }
     }
 }

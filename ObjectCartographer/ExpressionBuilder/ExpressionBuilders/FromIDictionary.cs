@@ -1,6 +1,9 @@
 ﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
 {
@@ -20,6 +23,11 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// The dictionary type
         /// </summary>
         private static readonly Type DictionaryType = typeof(IDictionary<string, object>);
+
+        /// <summary>
+        /// The try get value method
+        /// </summary>
+        private static readonly MethodInfo TryGetValueMethod = typeof(IDictionary<string, object>).GetMethod("TryGetValue");
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -45,7 +53,49 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// <returns>The resulting expression.</returns>
         public override Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping, ExpressionBuilderManager manager)
         {
-            return (_, y) => y;
+            var SourceType = typeof(TSource);
+            var IDictionaryType = Array.Find(SourceType.GetInterfaces(), x => string.Equals(x.Name, "IDictionary`2", StringComparison.OrdinalIgnoreCase));
+            var IDictionaryKeyType = IDictionaryType.GetGenericArguments()[0];
+            var IDictionaryValueType = IDictionaryType.GetGenericArguments()[1];
+            var DestinationType = typeof(TDestination);
+
+            List<Expression> Expressions = new List<Expression>();
+            var SourceObjectInstance = Expression.Parameter(SourceType, "source");
+            var SourceObjectAsIDictionary = Expression.Variable(IDictionaryType);
+            var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
+            var Value = Expression.Variable(IDictionaryValueType);
+
+            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
+            Expressions.Add(Expression.Assign(SourceObjectAsIDictionary, Expression.Convert(SourceObjectInstance, IDictionaryType)));
+
+            for (var x = 0; x < TypeCache<TDestination>.WritableProperties.Length; ++x)
+            {
+                var DestinationProperty = TypeCache<TDestination>.WritableProperties[x];
+                var SourceProperty = FindMatchingProperty(TypeCache<TSource>.ReadableProperties, DestinationProperty.Name);
+
+                var PropertySet = Expression.Property(DestinationObjectInstance, DestinationProperty);
+
+                if (SourceProperty is null)
+                {
+                    Expression Key = Expression.Constant(DestinationProperty.Name);
+                    Expression MethodCall = Expression.Call(SourceObjectInstance, TryGetValueMethod, Key, Value);
+                    Expression Assignment = Expression.Assign(PropertySet, manager.Convert(Value, IDictionaryValueType, DestinationProperty.PropertyType));
+                    Expression IfStatement = Expression.IfThen(MethodCall, Assignment);
+                    Expressions.Add(IfStatement);
+                }
+                else
+                {
+                    Expression PropertyGet = manager.Convert(Expression.Property(SourceObjectInstance, SourceProperty), SourceProperty.PropertyType, DestinationProperty.PropertyType);
+
+                    Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
+                }
+            }
+            if (Expressions.Count == 0)
+                return (_, y) => y;
+            Expressions.Add(DestinationObjectInstance);
+            var BlockExpression = Expression.Block(DestinationType, new[] { SourceObjectAsIDictionary, Value }, Expressions);
+            var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
+            return SourceLambda.Compile();
         }
     }
 }

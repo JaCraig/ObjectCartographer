@@ -76,7 +76,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
                         Found = false;
                         break;
                     }
-                    TempParams.Add(manager.Convert(Expression.Property(sourceVariable, TempProperty), TempProperty, Param.ParameterType));
+                    TempParams.Add(manager.Convert(Expression.Property(sourceVariable, TempProperty), TempProperty.PropertyType, Param.ParameterType));
                 }
                 if (Found)
                 {

@@ -12,5 +12,7 @@
         }
 
         public int A { get; set; }
+
+        public decimal B { get; set; }
     }
 }
