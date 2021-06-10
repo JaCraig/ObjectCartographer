@@ -1,4 +1,6 @@
-﻿namespace TestApp
+﻿using System;
+
+namespace TestApp
 {
     internal class TestType2
     {
@@ -14,5 +16,13 @@
         public int A { get; set; }
 
         public decimal B { get; set; }
+
+        public MyEnum C { get; set; }
+
+        public DateTime? D { get; set; }
+
+        public MyEnum2 E { get; set; }
+
+        public TimeSpan F { get; set; }
     }
 }

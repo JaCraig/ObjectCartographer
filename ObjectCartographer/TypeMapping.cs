@@ -33,7 +33,7 @@ namespace ObjectCartographer
         /// Gets or sets the converter.
         /// </summary>
         /// <value>The converter.</value>
-        public Func<TSource, TDestination, TDestination>? Converter { get; set; }
+        public Func<TSource, TDestination, TDestination>? Converter { get; private set; }
 
         /// <summary>
         /// Gets the mappings.

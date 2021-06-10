@@ -1,7 +1,11 @@
 ﻿using Fast.Activator;
 using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
 {
@@ -18,9 +22,15 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         public override int Order => -1;
 
         /// <summary>
+        /// Gets the default method information.
+        /// </summary>
+        /// <value>The default method information.</value>
+        private static MethodInfo DefaultMethodInfo { get; } = typeof(BothIDictionary).GetMethod("DefaultMethod", BindingFlags.NonPublic | BindingFlags.Static);
+
+        /// <summary>
         /// The dictionary type
         /// </summary>
-        private static readonly Type DictionaryType = typeof(IDictionary<string, object>);
+        private static readonly Type DictionaryType = typeof(IDictionary<,>);
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -33,7 +43,7 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// </returns>
         public override bool CanHandle<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping)
         {
-            return DictionaryType.IsAssignableFrom(mapping.TypeInfo.Source) && DictionaryType.IsAssignableFrom(mapping.TypeInfo.Destination);
+            return IsDictionary(mapping.TypeInfo.Source) && IsDictionary(mapping.TypeInfo.Destination);
         }
 
         /// <summary>
@@ -46,7 +56,19 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// <returns>The resulting expression.</returns>
         public override Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping, ExpressionBuilderManager manager)
         {
-            return DefaultMethod;
+            var SourceType = typeof(TSource);
+            var DestinationType = typeof(TDestination);
+            var FinalMethod = DefaultMethodInfo.MakeGenericMethod(SourceType, DestinationType);
+
+            List<Expression> Expressions = new List<Expression>();
+            var SourceObjectInstance = Expression.Parameter(SourceType, "source");
+            var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
+
+            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
+            Expressions.Add(Expression.Call(FinalMethod, SourceObjectInstance, DestinationObjectInstance));
+            var BlockExpression = Expression.Block(DestinationType, Expressions);
+            var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
+            return SourceLambda.Compile();
         }
 
         /// <summary>
@@ -69,6 +91,17 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
                 TempDestination.Add(item.Key, item.Value);
             }
             return destination;
+        }
+
+        /// <summary>
+        /// Determines whether the specified type is dictionary.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns><c>true</c> if the specified type is dictionary; otherwise, <c>false</c>.</returns>
+        private static bool IsDictionary(Type type)
+        {
+            var Interfaces = type.GetInterfaces();
+            return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
         }
     }
 }

@@ -5,7 +5,6 @@ using ObjectCartographer.Internal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -28,7 +27,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the convert to method.
         /// </summary>
         /// <value>The convert to method.</value>
-        private static MethodInfo ConvertToMethod { get; } = typeof(DefaultConverter).GetMethod("ConvertTo");
+        private static MethodInfo ConvertToMethod { get; } = typeof(DefaultConverter).GetMethod(nameof(DefaultConverter.ConvertTo));
 
         /// <summary>
         /// Gets or sets the data mapper.
@@ -80,33 +79,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 if (item is null || item is DBNull)
                 {
                     return ReturnDefaultValue(destinationType);
-                }
-
-                if (SourceType.IsPrimitive && destinationType.IsPrimitive)
-                {
-                    try
-                    {
-                        return System.Convert.ChangeType(item, destinationType, CultureInfo.InvariantCulture);
-                    }
-                    catch { }
-                }
-
-                var Converter = TypeDescriptor.GetConverter(SourceType);
-                if (Converter.CanConvertTo(destinationType))
-                    return Converter.ConvertTo(item, destinationType);
-
-                Converter = TypeDescriptor.GetConverter(destinationType);
-                if (Converter.CanConvertFrom(SourceType))
-                    return Converter.ConvertFrom(item);
-
-                if (destinationType.IsEnum)
-                {
-                    if (item is string ItemStringValue)
-                    {
-                        return Enum.Parse(destinationType, ItemStringValue, true);
-                    }
-
-                    return Enum.ToObject(destinationType, item);
                 }
 
                 var IEnumerableResultType = destinationType.GetIEnumerableElementType();
