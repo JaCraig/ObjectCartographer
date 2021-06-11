@@ -49,7 +49,7 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             var SourceObjectInstance = Expression.Parameter(SourceType, "source");
             var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
 
-            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
+            Expressions.Add(manager.Create(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors));
 
             foreach (var Property in mapping.Properties)
             {

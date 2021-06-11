@@ -1,10 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ObjectCartographer.ExtensionMethods
 {
+    /// <summary>
+    /// Helper extensions
+    /// </summary>
     internal static class HelperExtensions
     {
+        /// <summary>
+        /// Finds the matching property.
+        /// </summary>
+        /// <param name="properties">The properties.</param>
+        /// <param name="name">The name.</param>
+        /// <returns>The property or null if it is not found.</returns>
+        public static PropertyInfo? FindMatchingProperty(this PropertyInfo[] properties, string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return null;
+            properties ??= Array.Empty<PropertyInfo>();
+            return Array.Find(properties, x => x.Name == name)
+                    ?? Array.Find(properties, x => string.Equals(RemoveChars(x.Name), RemoveChars(name), StringComparison.OrdinalIgnoreCase));
+        }
+
         /// <summary>
         /// Gets the type of the element within the IEnumerable. Or the type itself if it is not an IEnumerable.
         /// </summary>
@@ -69,6 +88,16 @@ namespace ObjectCartographer.ExtensionMethods
             return !(TypeInfo.BaseType is null) && TypeInfo.BaseType != typeof(object) ?
                 FindIEnumerableElementType(TypeInfo.BaseType) :
                 null;
+        }
+
+        /// <summary>
+        /// Removes bad chars.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns>The resulting string.</returns>
+        private static string RemoveChars(string name)
+        {
+            return name?.Replace("_", "") ?? "";
         }
     }
 }

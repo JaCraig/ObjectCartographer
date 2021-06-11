@@ -1,5 +1,26 @@
-﻿namespace ObjectCartographer.Interfaces
+﻿using ObjectCartographer.Internal;
+using System.Collections.Generic;
+
+namespace ObjectCartographer.Interfaces
 {
+    /// <summary>
+    /// Type mapping interface
+    /// </summary>
+    public interface IInternalTypeMapping
+    {
+        /// <summary>
+        /// Gets the properties.
+        /// </summary>
+        /// <value>The properties.</value>
+        List<IPropertyMapping> Properties { get; }
+
+        /// <summary>
+        /// Gets the type information.
+        /// </summary>
+        /// <value>The type information.</value>
+        TypeTuple TypeInfo { get; }
+    }
+
     /// <summary>
     /// Type mapping interface
     /// </summary>

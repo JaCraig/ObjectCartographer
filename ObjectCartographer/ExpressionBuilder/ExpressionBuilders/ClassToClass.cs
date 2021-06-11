@@ -1,5 +1,6 @@
 ﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
 using ObjectCartographer.ExpressionBuilder.Interfaces;
+using ObjectCartographer.ExtensionMethods;
 using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
@@ -50,12 +51,11 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             var SourceObjectInstance = Expression.Parameter(SourceType, "source");
             var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
 
-            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
+            Expressions.Add(manager.Create(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors));
 
             foreach (var Property in TypeCache<TSource>.ReadableProperties)
             {
-                var DestinationProperty = Array.Find(TypeCache<TDestination>.WritableProperties, x => x.Name == Property.Name)
-                    ?? Array.Find(TypeCache<TDestination>.WritableProperties, x => string.Equals(RemoveChars(x.Name), RemoveChars(Property.Name), StringComparison.OrdinalIgnoreCase));
+                var DestinationProperty = TypeCache<TDestination>.WritableProperties.FindMatchingProperty(Property.Name);
                 if (DestinationProperty is null)
                     continue;
 

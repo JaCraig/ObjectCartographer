@@ -14,7 +14,7 @@ namespace ObjectCartographer
     /// <typeparam name="TSource">The type of the source.</typeparam>
     /// <typeparam name="TDestination">The type of the destination.</typeparam>
     /// <seealso cref="ITypeMapping"/>
-    public class TypeMapping<TSource, TDestination> : ITypeMapping
+    public class TypeMapping<TSource, TDestination> : ITypeMapping, IInternalTypeMapping
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TypeMapping"/> class.

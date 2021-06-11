@@ -1,5 +1,5 @@
-﻿using Fast.Activator;
-using ObjectCartographer.ExpressionBuilder.BaseClasses;
+﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.ExtensionMethods;
 using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
@@ -33,6 +33,16 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         private static readonly Type DictionaryType = typeof(IDictionary<,>);
 
         /// <summary>
+        /// The set value method
+        /// </summary>
+        private static readonly MethodInfo SetValueMethod = typeof(IDictionary<,>).GetMethod("Add");
+
+        /// <summary>
+        /// The try get value method
+        /// </summary>
+        private static readonly MethodInfo TryGetValueMethod = typeof(IDictionary<,>).GetMethod("TryGetValue");
+
+        /// <summary>
         /// Determines whether this instance can handle the specified types.
         /// </summary>
         /// <typeparam name="TSource">The type of the source.</typeparam>
@@ -57,16 +67,56 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         public override Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> mapping, ExpressionBuilderManager manager)
         {
             var SourceType = typeof(TSource);
+            var ISourceDictionaryType = Array.Find(SourceType.GetInterfaces(), x => string.Equals(x.Name, "IDictionary`2", StringComparison.OrdinalIgnoreCase));
+            var ISourceDictionaryKeyType = ISourceDictionaryType.GetGenericArguments()[0];
+            var ISourceDictionaryValueType = ISourceDictionaryType.GetGenericArguments()[1];
+
             var DestinationType = typeof(TDestination);
-            var FinalMethod = DefaultMethodInfo.MakeGenericMethod(SourceType, DestinationType);
+            var IDestinationDictionaryType = Array.Find(DestinationType.GetInterfaces(), x => string.Equals(x.Name, "IDictionary`2", StringComparison.OrdinalIgnoreCase));
+            var IDestinationDictionaryKeyType = IDestinationDictionaryType.GetGenericArguments()[0];
+            var IDestinationDictionaryValueType = IDestinationDictionaryType.GetGenericArguments()[1];
 
             List<Expression> Expressions = new List<Expression>();
-            var SourceObjectInstance = Expression.Parameter(SourceType, "source");
-            var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
 
-            Expressions.Add(CreateObjectIfNeeded(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors, manager));
-            Expressions.Add(Expression.Call(FinalMethod, SourceObjectInstance, DestinationObjectInstance));
-            var BlockExpression = Expression.Block(DestinationType, Expressions);
+            var SourceObjectInstance = Expression.Parameter(SourceType, "source");
+            var SourceObjectAsIDictionary = Expression.Variable(ISourceDictionaryType);
+
+            var DestinationObjectInstance = Expression.Parameter(DestinationType, "destination");
+            var DestinationObjectAsIDictionary = Expression.Variable(IDestinationDictionaryType);
+
+            var SourceValue = Expression.Variable(ISourceDictionaryValueType);
+            var DestinationValue = Expression.Variable(IDestinationDictionaryValueType);
+
+            Expressions.Add(manager.Create(DestinationObjectInstance, SourceObjectInstance, TypeCache<TSource>.ReadableProperties, TypeCache<TDestination>.Constructors));
+            Expressions.Add(Expression.Assign(SourceObjectAsIDictionary, Expression.Convert(SourceObjectInstance, ISourceDictionaryType)));
+            Expressions.Add(Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(DestinationObjectInstance, IDestinationDictionaryType)));
+
+            for (var x = 0; x < TypeCache<TDestination>.WritableProperties.Length; ++x)
+            {
+                var DestinationProperty = TypeCache<TDestination>.WritableProperties[x];
+                var SourceProperty = TypeCache<TSource>.ReadableProperties.FindMatchingProperty(DestinationProperty.Name);
+
+                if (SourceProperty is null)
+                {
+                    Expression Key = manager.Convert(Expression.Constant(DestinationProperty.Name), typeof(string), ISourceDictionaryKeyType);
+                    Expression MethodCall = Expression.Call(SourceObjectInstance, TryGetValueMethod, Key, SourceValue);
+                    Expression PropertySet = Expression.Property(DestinationObjectInstance, DestinationProperty);
+                    Expression Assignment = Expression.Assign(PropertySet, manager.Convert(SourceValue, ISourceDictionaryValueType, DestinationProperty.PropertyType));
+                    Expression IfStatement = Expression.IfThen(MethodCall, Assignment);
+                    Expressions.Add(IfStatement);
+                }
+                else
+                {
+                    Expression PropertyGet = manager.Convert(Expression.Property(SourceObjectInstance, SourceProperty), SourceProperty.PropertyType, DestinationProperty.PropertyType);
+                    Expression PropertySet = Expression.Property(DestinationObjectInstance, DestinationProperty);
+                    Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
+                }
+            }
+            Expressions.Add(Expression.Call(DefaultMethodInfo.MakeGenericMethod(ISourceDictionaryKeyType, ISourceDictionaryValueType, IDestinationDictionaryKeyType, IDestinationDictionaryValueType), SourceValue, DestinationValue));
+            if (Expressions.Count == 0)
+                return (_, y) => y;
+            Expressions.Add(DestinationObjectInstance);
+            var BlockExpression = Expression.Block(DestinationType, new[] { SourceObjectAsIDictionary, DestinationObjectAsIDictionary, SourceValue, DestinationValue }, Expressions);
             var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
             return SourceLambda.Compile();
         }
@@ -74,21 +124,21 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// <summary>
         /// Default mapping method.
         /// </summary>
-        /// <typeparam name="TSource">The type of the source.</typeparam>
-        /// <typeparam name="TDestination">The type of the destination.</typeparam>
+        /// <typeparam name="TSourceKey">The type of the source key.</typeparam>
+        /// <typeparam name="TSourceValue">The type of the source value.</typeparam>
+        /// <typeparam name="TDestinationKey">The type of the destination key.</typeparam>
+        /// <typeparam name="TDestinationValue">The type of the destination value.</typeparam>
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
+        /// <param name="manager">The manager.</param>
         /// <returns>The resulting dictionary.</returns>
-        private static TDestination DefaultMethod<TSource, TDestination>(TSource source, TDestination destination)
+        private static void DefaultMethod<TSourceKey, TSourceValue, TDestinationKey, TDestinationValue>(
+            IDictionary<TSourceKey, TSourceValue> source,
+            IDictionary<TDestinationKey, TDestinationValue> destination)
         {
-            destination ??= FastActivator.CreateInstance<TDestination>();
-            if (!(source is IDictionary<string, object> TempSource))
-                return destination;
-            if (!(destination is IDictionary<string, object> TempDestination))
-                return destination;
-            foreach (var item in TempSource)
+            foreach (var item in source)
             {
-                TempDestination.Add(item.Key, item.Value);
+                destination.Add(item.Key, item.Value);
             }
             return destination;
         }
