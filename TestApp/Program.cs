@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Logging;
 using ObjectCartographer;
 using System;
+using System.Collections.Generic;
+using System.Dynamic;
 
 namespace TestApp
 {
@@ -24,11 +26,11 @@ namespace TestApp
             //var Result3 = DataMapper.Copy(new TestType2 { A = 30 }, new TestType1());
             //Console.WriteLine(Result3.A);
 
-            //DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
-            //var TempDictionary = new Dictionary<string, object>();
-            //TempDictionary["A"] = 55;
-            //var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
-            //Console.WriteLine(ExpandoResult["A"]);
+            DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
+            var TempDictionary = new Dictionary<string, object>();
+            TempDictionary["A"] = 55;
+            var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
+            Console.WriteLine(ExpandoResult["A"]);
 
             DataMapper.AutoMap<TestType2, TestType1>();
             var Val = new TestType1();
@@ -38,6 +40,7 @@ namespace TestApp
             Val.D = "1/1/2020";
             Val.E = MyEnum.Option3;
             Val.F = "0:0:1";
+            Val.G = new TestType3() { A = 11 };
             var Result4 = DataMapper.Copy<TestType2>(Val);
             Console.WriteLine(Result4.A);
             Console.WriteLine(Result4.B);
@@ -45,6 +48,7 @@ namespace TestApp
             Console.WriteLine(Result4.D);
             Console.WriteLine(Result4.E);
             Console.WriteLine(Result4.F);
+            Console.WriteLine(Result4.G.A);
 
             Console.WriteLine();
             Val = DataMapper.Copy<TestType1>(Result4);
@@ -54,6 +58,7 @@ namespace TestApp
             Console.WriteLine(Val.D);
             Console.WriteLine(Val.E);
             Console.WriteLine(Val.F);
+            Console.WriteLine(Val.G.A);
         }
 
         private static TestType2 TestMethod(TestType1 arg1, TestType2 arg2)

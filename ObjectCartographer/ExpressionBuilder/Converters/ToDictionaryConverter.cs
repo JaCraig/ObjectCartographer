@@ -1,4 +1,5 @@
-﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.ExpressionBuilder.Interfaces;
 using ObjectCartographer.ExtensionMethods;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
     /// To dictionary converter
     /// </summary>
     /// <seealso cref="IConverter"/>
-    public class ToDictionaryConverter : IConverter
+    public class ToDictionaryConverter : ConverterBaseClass
     {
         /// <summary>
         /// The dictionary type
@@ -22,7 +23,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public override int Order => 0;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -32,7 +33,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type source, Type destination)
+        public override bool CanHandle(Type source, Type destination)
         {
             return IsDictionary(destination);
         }
@@ -47,7 +48,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <param name="mapping">The mapping.</param>
         /// <param name="manager">The manager.</param>
         /// <returns>The resulting expression.</returns>
-        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        public override Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             if (destination is null)
                 return source;
@@ -61,8 +62,11 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
 
             var DestinationObjectAsIDictionary = mapping.AddVariable(IDictionaryType);
 
-            List<Expression> Expressions = new List<Expression>();
-            Expressions.Add(Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, IDictionaryType)));
+            List<Expression> Expressions = new List<Expression>()
+            {
+                CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
+                Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, IDictionaryType))
+            };
 
             var SourceProperties = sourceType.ReadableProperties();
 

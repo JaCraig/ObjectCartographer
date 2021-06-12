@@ -1,4 +1,5 @@
-﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
+using ObjectCartographer.ExpressionBuilder.Interfaces;
 using ObjectCartographer.ExtensionMethods;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
     /// Class to class converter
     /// </summary>
     /// <seealso cref="IConverter"/>
-    public class ClassToClassConverter : IConverter
+    public class ClassToClassConverter : ConverterBaseClass
     {
         /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => int.MaxValue - 1;
+        public override int Order => int.MaxValue - 1;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -26,7 +27,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
+        public override bool CanHandle(Type sourceType, Type destinationType)
         {
             return !sourceType.IsValueType && !destinationType.IsValueType;
         }
@@ -41,17 +42,20 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <param name="mapping">The mapping.</param>
         /// <param name="manager">The manager.</param>
         /// <returns>The resulting expression.</returns>
-        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        public override Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            var Expressions = new List<Expression>();
+            var Expressions = new List<Expression>
+            {
+                CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager)
+            };
             foreach (var Property in sourceType.ReadableProperties())
             {
                 var DestinationProperty = destinationType.WritableProperties().FindMatchingProperty(Property.Name);
                 if (DestinationProperty is null)
                     continue;
 
-                Expression PropertyGet = Expression.Property(mapping.SourceParameter, Property);
-                var PropertySet = Expression.Property(mapping.DestinationParameter, DestinationProperty);
+                Expression PropertyGet = Expression.Property(source, Property);
+                var PropertySet = Expression.Property(destination, DestinationProperty);
 
                 PropertyGet = manager.Map(PropertyGet, PropertySet, Property.PropertyType, DestinationProperty.PropertyType, mapping);
 

@@ -37,6 +37,11 @@ namespace ObjectCartographer.ExtensionMethods
             return IEnum is null ? type : IEnum.GetGenericArguments()[0];
         }
 
+        public static ConstructorInfo[] PublicConstructors(this Type type)
+        {
+            return type?.GetConstructors().Where(x => x.IsPublic).ToArray() ?? Array.Empty<ConstructorInfo>();
+        }
+
         /// <summary>
         /// Returns the readable properties for a type.
         /// </summary>
@@ -44,7 +49,7 @@ namespace ObjectCartographer.ExtensionMethods
         /// <returns>The readable properties</returns>
         public static PropertyInfo[] ReadableProperties(this Type type)
         {
-            return type.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanRead).ToArray();
+            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanRead).ToArray() ?? Array.Empty<PropertyInfo>();
         }
 
         /// <summary>
@@ -54,7 +59,7 @@ namespace ObjectCartographer.ExtensionMethods
         /// <returns>The writable properties</returns>
         public static PropertyInfo[] WritableProperties(this Type type)
         {
-            return type.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanWrite).ToArray();
+            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanWrite).ToArray() ?? Array.Empty<PropertyInfo>();
         }
 
         /// <summary>

@@ -24,5 +24,7 @@ namespace TestApp
         public MyEnum2 E { get; set; }
 
         public TimeSpan F { get; set; }
+
+        public TestType2 G { get; set; }
     }
 }
