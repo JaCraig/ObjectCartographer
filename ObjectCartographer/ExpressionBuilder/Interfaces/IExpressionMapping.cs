@@ -44,5 +44,12 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// </summary>
         /// <value>The variables.</value>
         List<ParameterExpression> Variables { get; }
+
+        /// <summary>
+        /// Adds the variable.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns>The new variable</returns>
+        ParameterExpression AddVariable(Type type);
     }
 }

@@ -50,20 +50,22 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <summary>
         /// Converts the specified property get.
         /// </summary>
-        /// <param name="propertyGet">The property get.</param>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
         /// <param name="sourceType">Type of the source.</param>
         /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="expressionBuilderManager">The expression builder manager.</param>
-        /// <returns></returns>
-        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager)
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
+        /// <returns>The resulting expression.</returns>
+        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             var Converter = TypeDescriptor.GetConverter(sourceType);
             if (Converter.CanConvertTo(destinationType))
-                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertToMethod, propertyGet, Expression.Constant(destinationType)), destinationType);
+                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertToMethod, source, Expression.Constant(destinationType)), destinationType);
 
             Converter = TypeDescriptor.GetConverter(destinationType);
             if (Converter.CanConvertFrom(sourceType))
-                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConverFromMethod, propertyGet), destinationType);
+                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConverFromMethod, source), destinationType);
             return Expression.Empty();
         }
     }

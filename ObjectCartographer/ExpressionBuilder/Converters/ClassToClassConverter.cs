@@ -1,20 +1,22 @@
 ﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+using ObjectCartographer.ExtensionMethods;
 using System;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace ObjectCartographer.ExpressionBuilder.Converters
 {
     /// <summary>
-    /// From enum converter
+    /// Class to class converter
     /// </summary>
     /// <seealso cref="IConverter"/>
-    public class FromEnumConverter : IConverter
+    public class ClassToClassConverter : IConverter
     {
         /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public int Order => int.MaxValue - 1;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -26,11 +28,11 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return sourceType.IsEnum && destinationType.IsPrimitive;
+            return !sourceType.IsValueType && !destinationType.IsValueType;
         }
 
         /// <summary>
-        /// Converts the specified property get.
+        /// Maps the specified source to the destination.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
@@ -41,7 +43,22 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            return Expression.Convert(source, destinationType);
+            var Expressions = new List<Expression>();
+            foreach (var Property in sourceType.ReadableProperties())
+            {
+                var DestinationProperty = destinationType.WritableProperties().FindMatchingProperty(Property.Name);
+                if (DestinationProperty is null)
+                    continue;
+
+                Expression PropertyGet = Expression.Property(mapping.SourceParameter, Property);
+                var PropertySet = Expression.Property(mapping.DestinationParameter, DestinationProperty);
+
+                PropertyGet = manager.Map(PropertyGet, PropertySet, Property.PropertyType, DestinationProperty.PropertyType, mapping);
+
+                Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
+            }
+            Expressions.Add(destination);
+            return Expression.Block(destinationType, Expressions);
         }
     }
 }

@@ -23,10 +23,8 @@ namespace ObjectCartographer.Modules
         public void Load(IBootstrapper? bootstrapper)
         {
             bootstrapper?.Register<DataMapper>(ServiceLifetime.Singleton)
-                .RegisterAll<IExpressionBuilder>(ServiceLifetime.Singleton)
                 .Register<ExpressionBuilderManager>(ServiceLifetime.Singleton)
-                .RegisterAll<IConverter>(ServiceLifetime.Singleton)
-                .RegisterAll<ICreator>(ServiceLifetime.Singleton);
+                .RegisterAll<IConverter>(ServiceLifetime.Singleton);
         }
     }
 }

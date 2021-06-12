@@ -1,18 +1,10 @@
-﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
-using ObjectCartographer.ExtensionMethods;
-using ObjectCartographer.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Reflection;
-
-namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
+﻿namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
 {
     /// <summary>
     /// From IDictionary expression builder
     /// </summary>
     /// <seealso cref="ExpressionBuilderBaseClass"/>
-    public class FromIDictionary : ExpressionBuilderBaseClass
+    /*public class FromIDictionary : ExpressionBuilderBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -98,5 +90,5 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
             return SourceLambda.Compile();
         }
-    }
+    }*/
 }

@@ -33,7 +33,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets or sets the data mapper.
         /// </summary>
         /// <value>The data mapper.</value>
-        private DataMapper DataMapper { get; set; }
+        private DataMapper? DataMapper { get; set; }
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -46,23 +46,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public bool CanHandle(Type sourceType, Type destinationType)
         {
             return true;
-        }
-
-        /// <summary>
-        /// Converts the specified property get.
-        /// </summary>
-        /// <param name="propertyGet">The property get.</param>
-        /// <param name="sourceType">Type of the source.</param>
-        /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="expressionBuilderManager">The expression builder manager.</param>
-        /// <returns></returns>
-        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager)
-        {
-            if (DataMapper is null)
-                DataMapper = expressionBuilderManager.DataMapper;
-            if (sourceType != typeof(object))
-                propertyGet = Expression.Convert(propertyGet, typeof(object));
-            return Expression.Convert(Expression.Call(Expression.Constant(this), ConvertToMethod, propertyGet, Expression.Constant(destinationType)), destinationType);
         }
 
         /// <summary>
@@ -94,7 +77,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 }
                 if (destinationType.IsClass)
                 {
-                    return DataMapper.Copy(item, null, destinationType);
+                    return DataMapper?.Copy(item, null, destinationType);
                 }
 
                 try
@@ -117,6 +100,25 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                     return ReturnValue;
                 return FastActivator.CreateInstance(resultType);
             }
+        }
+
+        /// <summary>
+        /// Converts the specified property get.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
+        /// <param name="sourceType">Type of the source.</param>
+        /// <param name="destinationType">Type of the destination.</param>
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
+        /// <returns>The resulting expression.</returns>
+        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        {
+            if (DataMapper is null)
+                DataMapper = manager.DataMapper;
+            if (sourceType != typeof(object))
+                source = Expression.Convert(source, typeof(object));
+            return Expression.Convert(Expression.Call(Expression.Constant(this), ConvertToMethod, source, Expression.Constant(destinationType)), destinationType);
         }
     }
 }

@@ -2,8 +2,6 @@
 using Microsoft.Extensions.Logging;
 using ObjectCartographer;
 using System;
-using System.Collections.Generic;
-using System.Dynamic;
 
 namespace TestApp
 {
@@ -25,18 +23,19 @@ namespace TestApp
 
             //var Result3 = DataMapper.Copy(new TestType2 { A = 30 }, new TestType1());
             //Console.WriteLine(Result3.A);
-            DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
-            var TempDictionary = new Dictionary<string, object>();
-            TempDictionary["A"] = 55;
-            var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
-            Console.WriteLine(ExpandoResult["A"]);
+
+            //DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
+            //var TempDictionary = new Dictionary<string, object>();
+            //TempDictionary["A"] = 55;
+            //var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
+            //Console.WriteLine(ExpandoResult["A"]);
 
             DataMapper.AutoMap<TestType2, TestType1>();
             var Val = new TestType1();
             Val.A = 100;
             Val.B = 40.1f;
             Val.C = 1;
-            Val.D = "A";//"1/1/2020";
+            Val.D = "1/1/2020";
             Val.E = MyEnum.Option3;
             Val.F = "0:0:1";
             var Result4 = DataMapper.Copy<TestType2>(Val);

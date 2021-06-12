@@ -58,6 +58,18 @@ namespace ObjectCartographer.ExpressionBuilder
         public List<ParameterExpression> Variables { get; } = new List<ParameterExpression>();
 
         /// <summary>
+        /// Adds the variable.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns>The new variable</returns>
+        public ParameterExpression AddVariable(Type type)
+        {
+            var NewVariable = Expression.Variable(type);
+            Variables.Add(NewVariable);
+            return NewVariable;
+        }
+
+        /// <summary>
         /// Builds this instance.
         /// </summary>
         /// <returns>The final function.</returns>

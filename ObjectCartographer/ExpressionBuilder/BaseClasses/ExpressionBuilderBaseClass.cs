@@ -1,5 +1,4 @@
-﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
-using System;
+﻿using System;
 
 namespace ObjectCartographer.ExpressionBuilder.BaseClasses
 {
@@ -7,7 +6,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
     /// Expression builder base class
     /// </summary>
     /// <seealso cref="IExpressionBuilder"/>
-    public abstract class ExpressionBuilderBaseClass : IExpressionBuilder
+    public abstract class ExpressionBuilderBaseClass
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpressionBuilderBaseClass"/> class.

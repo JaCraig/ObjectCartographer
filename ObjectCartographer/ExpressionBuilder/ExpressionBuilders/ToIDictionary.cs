@@ -1,25 +1,11 @@
-﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
-using ObjectCartographer.ExtensionMethods;
-using ObjectCartographer.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Reflection;
-
-namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
+﻿namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
 {
     /// <summary>
     /// To IDictionary
     /// </summary>
     /// <seealso cref="ExpressionBuilderBaseClass"/>
-    public class ToIDictionary : ExpressionBuilderBaseClass
+    /*public class ToIDictionary : ExpressionBuilderBaseClass
     {
-        /// <summary>
-        /// Gets the order.
-        /// </summary>
-        /// <value>The order.</value>
-        public override int Order => 0;
-
         /// <summary>
         /// The dictionary type
         /// </summary>
@@ -29,6 +15,12 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
         /// The set value method
         /// </summary>
         private static readonly MethodInfo SetValueMethod = typeof(IDictionary<string, object>).GetMethod("Add");
+
+        /// <summary>
+        /// Gets the order.
+        /// </summary>
+        /// <value>The order.</value>
+        public override int Order => 0;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -93,5 +85,5 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceObjectInstance, DestinationObjectInstance);
             return SourceLambda.Compile();
         }
-    }
+    }*/
 }

@@ -1,19 +1,10 @@
-﻿using ObjectCartographer.ExpressionBuilder.BaseClasses;
-using ObjectCartographer.ExtensionMethods;
-using ObjectCartographer.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-
-namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
+﻿namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
 {
     /// <summary>
     /// Both items are IDictionaries
     /// </summary>
     /// <seealso cref="ExpressionBuilderBaseClass"/>
-    public class BothIDictionary : ExpressionBuilderBaseClass
+    /*public class BothIDictionary : ExpressionBuilderBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -153,5 +144,5 @@ namespace ObjectCartographer.ExpressionBuilder.ExpressionBuilders
             var Interfaces = type.GetInterfaces();
             return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
         }
-    }
+    }*/
 }

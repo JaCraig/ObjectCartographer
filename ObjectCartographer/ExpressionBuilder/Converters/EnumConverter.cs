@@ -45,16 +45,18 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <summary>
         /// Converts the specified property get.
         /// </summary>
-        /// <param name="propertyGet">The property get.</param>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
         /// <param name="sourceType">Type of the source.</param>
         /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="expressionBuilderManager">The expression builder manager.</param>
-        /// <returns></returns>
-        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager)
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
+        /// <returns>The resulting expression.</returns>
+        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             if (sourceType == typeof(string))
-                return Expression.Convert(Expression.Call(EnumParse, Expression.Constant(destinationType), propertyGet, Expression.Constant(true)), destinationType);
-            return Expression.Convert(Expression.Call(EnumToObject, Expression.Constant(destinationType), Expression.Convert(propertyGet, typeof(object))), destinationType);
+                return Expression.Convert(Expression.Call(EnumParse, Expression.Constant(destinationType), source, Expression.Constant(true)), destinationType);
+            return Expression.Convert(Expression.Call(EnumToObject, Expression.Constant(destinationType), Expression.Convert(source, typeof(object))), destinationType);
         }
     }
 }

@@ -39,14 +39,16 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <summary>
         /// Converts the specified property get.
         /// </summary>
-        /// <param name="propertyGet">The property get.</param>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
         /// <param name="sourceType">Type of the source.</param>
         /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="expressionBuilderManager">The expression builder manager.</param>
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
         /// <returns></returns>
-        public Expression Convert(Expression propertyGet, Type sourceType, Type destinationType, ExpressionBuilderManager expressionBuilderManager)
+        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            return Expression.Call(propertyGet, ToStringMethod);
+            return Expression.Call(source, ToStringMethod);
         }
     }
 }
