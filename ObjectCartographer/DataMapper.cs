@@ -34,6 +34,26 @@ namespace ObjectCartographer
         }
 
         /// <summary>
+        /// The copy create lock object
+        /// </summary>
+        private static readonly object CopyCreateLockObject = new object();
+
+        /// <summary>
+        /// The copy generic
+        /// </summary>
+        private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, "copy", StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
+
+        /// <summary>
+        /// The map create lock object
+        /// </summary>
+        private static readonly object MapCreateLockObject = new object();
+
+        /// <summary>
+        /// The generic map method.
+        /// </summary>
+        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod("Map", Array.Empty<Type>());
+
+        /// <summary>
         /// Gets the copy methods.
         /// </summary>
         /// <value>The copy methods.</value>
@@ -62,26 +82,6 @@ namespace ObjectCartographer
         /// </summary>
         /// <value>The types.</value>
         private Dictionary<TypeTuple, ITypeMapping> Types { get; } = new Dictionary<TypeTuple, ITypeMapping>();
-
-        /// <summary>
-        /// The copy create lock object
-        /// </summary>
-        private static readonly object CopyCreateLockObject = new object();
-
-        /// <summary>
-        /// The copy generic
-        /// </summary>
-        private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, "copy", StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
-
-        /// <summary>
-        /// The map create lock object
-        /// </summary>
-        private static readonly object MapCreateLockObject = new object();
-
-        /// <summary>
-        /// The generic map method.
-        /// </summary>
-        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod("Map", Array.Empty<Type>());
 
         /// <summary>
         /// Automatically maps the two types.
@@ -252,7 +252,7 @@ namespace ObjectCartographer
                 .Select((info, index) => CreateArgumentExpression(ParameterExpression, info, index))
                 .ToArray();
 
-            Expression CallExpression = Expression.Call(ThisValue, method, ArgsExpressions);
+            Expression CallExpression = Expression.Convert(Expression.Call(ThisValue, method, ArgsExpressions), typeof(object));
 
             return (Expression.Lambda(
                 typeof(MethodWrapperDelegate),

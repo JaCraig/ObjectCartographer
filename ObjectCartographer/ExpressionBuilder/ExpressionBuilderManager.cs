@@ -1,4 +1,5 @@
 ﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
+using ObjectCartographer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,8 +54,7 @@ namespace ObjectCartographer.ExpressionBuilder
         public Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> typeInfo)
         {
             var Mapping = new ExpressionMapping<TSource, TDestination>();
-            AddPreMappedProperties(typeInfo, Mapping);
-            GenerateMappings(typeInfo, Mapping);
+            Mapping.FinalExpression = GenerateMappings(typeInfo, Mapping);
             return Mapping.Build();
         }
 
@@ -77,35 +77,37 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <summary>
         /// Adds the pre mapped properties.
         /// </summary>
-        /// <typeparam name="TSource">The type of the source.</typeparam>
-        /// <typeparam name="TDestination">The type of the destination.</typeparam>
         /// <param name="typeInfo">The type information.</param>
-        /// <param name="Mapping">The mapping.</param>
-        private static void AddPreMappedProperties<TSource, TDestination>(TypeMapping<TSource, TDestination> typeInfo, ExpressionMapping<TSource, TDestination> Mapping)
+        /// <returns></returns>
+        private static Expression AddPreMappedProperties(IInternalTypeMapping typeInfo)
         {
+            List<Expression> Expressions = new List<Expression>();
             foreach (var Property in typeInfo.Properties)
             {
-                Mapping.Expressions.Add(Expression.Assign(Property.Destination, Property.Source));
+                Expressions.Add(Expression.Assign(Property.Destination, Property.Source));
             }
+            return Expression.Block(Expressions);
         }
 
         /// <summary>
         /// Generates the mappings.
         /// </summary>
-        /// <typeparam name="TSource">The type of the source.</typeparam>
-        /// <typeparam name="TDestination">The type of the destination.</typeparam>
         /// <param name="typeInfo">The type information.</param>
-        /// <param name="Mapping">The mapping.</param>
-        private void GenerateMappings<TSource, TDestination>(TypeMapping<TSource, TDestination> typeInfo, ExpressionMapping<TSource, TDestination> Mapping)
+        /// <param name="mapping">The mapping.</param>
+        private Expression GenerateMappings(IInternalTypeMapping typeInfo, IExpressionMapping mapping)
         {
-            if (typeInfo.Properties.Count > 0)
-                return;
-            Mapping.Expressions.Add(Map(
-                Mapping.SourceParameter,
-                Mapping.DestinationParameter,
-                typeInfo.TypeInfo.Source,
+            return Expression.Block(
                 typeInfo.TypeInfo.Destination,
-                Mapping));
+                Expression.Assign(mapping.DestinationParameter, Map(
+                    mapping.SourceParameter,
+                    mapping.DestinationParameter,
+                    typeInfo.TypeInfo.Source,
+                    typeInfo.TypeInfo.Destination,
+                    mapping
+                )),
+                AddPreMappedProperties(typeInfo),
+                mapping.DestinationParameter
+            );
         }
     }
 }

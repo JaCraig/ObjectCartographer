@@ -26,11 +26,28 @@ namespace TestApp
             //var Result3 = DataMapper.Copy(new TestType2 { A = 30 }, new TestType1());
             //Console.WriteLine(Result3.A);
 
-            DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
-            var TempDictionary = new Dictionary<string, object>();
-            TempDictionary["A"] = 55;
-            var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
+            //DataMapper.AutoMap<ExpandoObject, Dictionary<string, object>>();
+            //var TempDictionary = new Dictionary<string, object>();
+            //TempDictionary["A"] = 55;
+            //var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
+            //Console.WriteLine(ExpandoResult["A"]);
+
+            KeyValuePair<int, int> A = (KeyValuePair<int, int>)((object)new KeyValuePair<int, int>(1, 2));
+            Console.WriteLine(A.Key);
+            Console.WriteLine(A.Value);
+
+            var Temp = DataMapper.Copy<KeyValuePair<string, object>>(new KeyValuePair<int, int>(1, 2));
+            Console.WriteLine(Temp.Key);
+            Console.WriteLine(Temp.Value);
+
+            dynamic ExpandoResult2 = new ExpandoObject();
+            ExpandoResult2.A = 55;
+            var FinalResult = DataMapper.Copy<Dictionary<string, object>>(ExpandoResult2);
+            Console.WriteLine(FinalResult["A"]);
+            var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(FinalResult);
             Console.WriteLine(ExpandoResult["A"]);
+            var TestType1Result = DataMapper.Copy<TestType1>(ExpandoResult);
+            Console.WriteLine(TestType1Result.A);
 
             DataMapper.AutoMap<TestType2, TestType1>();
             var Val = new TestType1();

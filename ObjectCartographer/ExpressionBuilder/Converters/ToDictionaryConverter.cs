@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace ObjectCartographer.ExpressionBuilder.Converters
 {
@@ -15,15 +16,21 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
     public class ToDictionaryConverter : ConverterBaseClass
     {
         /// <summary>
-        /// The dictionary type
-        /// </summary>
-        private static readonly Type DictionaryType = typeof(IDictionary<,>);
-
-        /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 0;
+        public override int Order => 1;
+
+        /// <summary>
+        /// Gets the add method.
+        /// </summary>
+        /// <value>The add method.</value>
+        private static MethodInfo AddMethod { get; } = typeof(IDictionary<string, object>).GetMethod(nameof(IDictionary<string, object>.Add));
+
+        /// <summary>
+        /// The dictionary type
+        /// </summary>
+        private static Type DictionaryType { get; } = typeof(IDictionary<string, object>);
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -50,46 +57,19 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public override Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            if (destination is null)
-                return source;
-            var AddMethod = destinationType.GetMethod("Add");
-
-            var IDictionaryType = Array.Find(destinationType.GetInterfaces(), x => string.Equals(x.Name, "IDictionary`2", StringComparison.OrdinalIgnoreCase));
-            var IDictionaryArgs = IDictionaryType.GetGenericArguments();
-
-            var IDictionaryKeyType = IDictionaryArgs[0];
-            var IDictionaryValueType = IDictionaryArgs[1];
-
-            var DestinationObjectAsIDictionary = mapping.AddVariable(IDictionaryType);
-
-            List<Expression> Expressions = new List<Expression>()
+            var CopyConstructor = GetCopyConstructor(sourceType, destinationType);
+            if (CopyConstructor is null)
             {
-                CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
-                Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, IDictionaryType))
-            };
-
-            var SourceProperties = sourceType.ReadableProperties();
-
-            for (var x = 0; x < sourceType.ReadableProperties().Length; ++x)
-            {
-                //var SourceProperty = TypeCache<TSource>.ReadableProperties[x];
-                //var DestinationProperty = TypeCache<TDestination>.WritableProperties.FindMatchingProperty(SourceProperty.Name);
-
-                //var PropertyGet = manager.Convert(Expression.Property(SourceObjectInstance, SourceProperty), SourceProperty.PropertyType, IDictionaryValueType);
-
-                //if (DestinationProperty is null)
-                //{
-                //    Expression Key = Expression.Constant(SourceProperty.Name);
-                //    Expressions.Add(Expression.Call(DestinationObjectInstance, SetValueMethod, Key, PropertyGet));
-                //}
-                //else
-                //{
-                //    Expression PropertySet = Expression.Property(DestinationObjectInstance, DestinationProperty);
-                //    Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
-                //}
+                return CopyToDictionary(source, destination, sourceType, destinationType, mapping, manager);
             }
-            Expressions.Add(destination);
-            return Expression.Block(destinationType, Expressions);
+            else
+            {
+                return Expression.Block(destinationType,
+                        Expression.IfThenElse(Expression.Equal(destination, Expression.Constant(null)),
+                                Expression.Assign(destination, Expression.New(CopyConstructor, source)),
+                                CopyToDictionary(source, destination, sourceType, destinationType, mapping, manager)),
+                        destination);
+            }
         }
 
         /// <summary>
@@ -101,6 +81,55 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             var Interfaces = type.GetInterfaces();
             return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
+        }
+
+        /// <summary>
+        /// Copies to dictionary.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
+        /// <param name="sourceType">Type of the source.</param>
+        /// <param name="destinationType">Type of the destination.</param>
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
+        /// <returns></returns>
+        private Expression CopyToDictionary(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        {
+            if (destination is null)
+                return source;
+
+            var DestinationObjectAsIDictionary = mapping.AddVariable(DictionaryType);
+            var TempHolder = mapping.AddVariable(typeof(object));
+
+            List<Expression> Expressions = new List<Expression>()
+            {
+                CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
+                Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, DictionaryType))
+            };
+
+            var SourceProperties = sourceType.ReadableProperties();
+            var DestinationProperties = destinationType.WritableProperties();
+
+            for (var x = 0; x < SourceProperties.Length; ++x)
+            {
+                var SourceProperty = SourceProperties[x];
+                var DestinationProperty = DestinationProperties.FindMatchingProperty(SourceProperty.Name);
+
+                var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
+
+                if (DestinationProperty is null)
+                {
+                    Expression Key = Expression.Constant(SourceProperty.Name);
+                    Expressions.Add(Expression.Call(DestinationObjectAsIDictionary, AddMethod, Key, PropertyGet));
+                }
+                else
+                {
+                    Expression PropertySet = Expression.Property(DestinationObjectAsIDictionary, DestinationProperty);
+                    Expressions.Add(Expression.Assign(PropertySet, PropertyGet));
+                }
+            }
+            Expressions.Add(destination);
+            return Expression.Block(destinationType, Expressions);
         }
     }
 }

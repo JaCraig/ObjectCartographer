@@ -1,6 +1,7 @@
 ﻿using ObjectCartographer.ExpressionBuilder.Interfaces;
 using ObjectCartographer.ExtensionMethods;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -82,6 +83,55 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
                 }
             }
             return Expression.Assign(destinationVariable, Expression.Coalesce(destinationVariable, Expression.New(FinalConstructor, FinalParameters.ToArray())));
+        }
+
+        /// <summary>
+        /// Foreach loop helper method.
+        /// </summary>
+        /// <param name="collection">The collection.</param>
+        /// <param name="loopVar">The loop variable.</param>
+        /// <param name="loopContent">Content of the loop.</param>
+        /// <returns>The resulting expression</returns>
+        protected Expression ForEach(Expression collection, ParameterExpression loopVar, Expression loopContent)
+        {
+            var elementType = loopVar.Type;
+            var enumerableType = typeof(IEnumerable<>).MakeGenericType(elementType);
+            var enumeratorType = typeof(IEnumerator<>).MakeGenericType(elementType);
+
+            var enumeratorVar = Expression.Variable(enumeratorType, "enumerator");
+            var getEnumeratorCall = Expression.Call(collection, enumerableType.GetMethod("GetEnumerator"));
+            var enumeratorAssign = Expression.Assign(enumeratorVar, getEnumeratorCall);
+
+            var moveNextCall = Expression.Call(enumeratorVar, typeof(IEnumerator).GetMethod("MoveNext"));
+
+            var breakLabel = Expression.Label("LoopBreak");
+
+            var ifThenElseExpr = Expression.IfThenElse(
+                Expression.Equal(moveNextCall, Expression.Constant(true)),
+                Expression.Block(new[] { loopVar },
+                    Expression.Assign(loopVar, Expression.Property(enumeratorVar, "Current")),
+                    loopContent
+                ),
+                Expression.Break(breakLabel)
+            );
+
+            var loop = Expression.Loop(ifThenElseExpr, breakLabel);
+
+            return Expression.Block(new[] { enumeratorVar },
+                enumeratorAssign,
+                loop
+            );
+        }
+
+        /// <summary>
+        /// Gets the constructor.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
+        /// <returns></returns>
+        protected ConstructorInfo GetCopyConstructor(Type source, Type destination)
+        {
+            return destination.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, new[] { source }, null);
         }
     }
 }

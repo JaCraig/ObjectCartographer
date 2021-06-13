@@ -25,7 +25,7 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// Gets the expressions.
         /// </summary>
         /// <value>The expressions.</value>
-        List<Expression> Expressions { get; }
+        Expression FinalExpression { get; set; }
 
         /// <summary>
         /// Gets the source parameter.

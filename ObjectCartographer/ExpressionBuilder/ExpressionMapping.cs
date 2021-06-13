@@ -34,10 +34,10 @@ namespace ObjectCartographer.ExpressionBuilder
         public Type DestinationType { get; } = typeof(TDestination);
 
         /// <summary>
-        /// Gets the expressions.
+        /// Gets or sets the final expression.
         /// </summary>
-        /// <value>The expressions.</value>
-        public List<Expression> Expressions { get; } = new List<Expression>();
+        /// <value>The final expression.</value>
+        public Expression FinalExpression { get; set; }
 
         /// <summary>
         /// Gets the source parameter.
@@ -75,10 +75,13 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <returns>The final function.</returns>
         public Func<TSource, TDestination, TDestination> Build()
         {
-            if (Expressions.Count == 0)
+            if (FinalExpression is null)
                 return (_, y) => y;
-            Expressions.Add(DestinationParameter);
-            var BlockExpression = Expression.Block(DestinationType, Variables.ToArray(), Expressions);
+            var BlockExpression = Expression.Block(
+                DestinationType,
+                Variables.ToArray(),
+                Expression.Assign(DestinationParameter, FinalExpression),
+                DestinationParameter);
             var SourceLambda = Expression.Lambda<Func<TSource, TDestination, TDestination>>(BlockExpression, SourceParameter, DestinationParameter);
             return SourceLambda.Compile();
         }
