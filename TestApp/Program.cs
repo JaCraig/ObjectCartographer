@@ -40,7 +40,7 @@ namespace TestApp
             Console.WriteLine(A.Key);
             Console.WriteLine(A.Value);
 
-            Console.WriteLine(DataMapper.Copy<byte[]>("ASDf"));
+            Console.WriteLine(DataMapper.Copy<string>(DataMapper.Copy<byte[]>("ASDf")));
 
             dynamic ExpandoResult2 = new ExpandoObject();
             ExpandoResult2.A = 55;
@@ -78,6 +78,15 @@ namespace TestApp
             Console.WriteLine(Val.E);
             Console.WriteLine(Val.F);
             Console.WriteLine(Val.G.A);
+
+            Console.WriteLine();
+            ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(Val);
+            Console.WriteLine(ExpandoResult["A"]);
+            Console.WriteLine(ExpandoResult["B"]);
+            Console.WriteLine(ExpandoResult["C"]);
+            Console.WriteLine(ExpandoResult["D"]);
+            Console.WriteLine(ExpandoResult["E"]);
+            Console.WriteLine(ExpandoResult["F"]);
         }
 
         private static TestType2 TestMethod(TestType1 arg1, TestType2 arg2)

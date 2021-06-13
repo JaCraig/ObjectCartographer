@@ -3,7 +3,6 @@ using ObjectCartographer.ExpressionBuilder.Interfaces;
 using ObjectCartographer.ExtensionMethods;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -19,7 +18,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 1;
+        public override int Order => 2;
 
         /// <summary>
         /// Gets the add method.
@@ -79,8 +78,9 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if the specified type is dictionary; otherwise, <c>false</c>.</returns>
         private static bool IsDictionary(Type type)
         {
-            var Interfaces = type.GetInterfaces();
-            return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
+            return DictionaryType.IsAssignableFrom(type);
+            //type.GetInterfaces();
+            //return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
         }
 
         /// <summary>

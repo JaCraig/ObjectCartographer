@@ -18,7 +18,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 0;
+        public override int Order => 1;
 
         /// <summary>
         /// Gets the type of the key value pair.
@@ -42,7 +42,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public override bool CanHandle(Type sourceType, Type destinationType)
         {
-            return IsCollection(sourceType) && IsCollection(destinationType);
+            return IsIEnumerable(sourceType) && IsCollection(destinationType);
         }
 
         /// <summary>
