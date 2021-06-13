@@ -32,13 +32,15 @@ namespace TestApp
             //var ExpandoResult = (IDictionary<string, object>)DataMapper.Copy<ExpandoObject>(TempDictionary);
             //Console.WriteLine(ExpandoResult["A"]);
 
-            KeyValuePair<int, int> A = (KeyValuePair<int, int>)((object)new KeyValuePair<int, int>(1, 2));
+            KeyValuePair<int, int> A = new KeyValuePair<int, int>(1, 2);
+            var Temp = DataMapper.Copy<KeyValuePair<string, object>>(A);
+            Console.WriteLine(Temp.Key);
+            Console.WriteLine(Temp.Value);
+            A = DataMapper.Copy<KeyValuePair<int, int>>(Temp);
             Console.WriteLine(A.Key);
             Console.WriteLine(A.Value);
 
-            var Temp = DataMapper.Copy<KeyValuePair<string, object>>(new KeyValuePair<int, int>(1, 2));
-            Console.WriteLine(Temp.Key);
-            Console.WriteLine(Temp.Value);
+            Console.WriteLine(DataMapper.Copy<byte[]>("ASDf"));
 
             dynamic ExpandoResult2 = new ExpandoObject();
             ExpandoResult2.A = 55;

@@ -82,6 +82,8 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
                     break;
                 }
             }
+            if (FinalConstructor.GetParameters().Length != FinalParameters.Count)
+                return Expression.Empty();
             return Expression.Assign(destinationVariable, Expression.Coalesce(destinationVariable, Expression.New(FinalConstructor, FinalParameters.ToArray())));
         }
 
