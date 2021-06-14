@@ -1,7 +1,11 @@
 ﻿using Fast.Activator;
 using ObjectCartographer.ExpressionBuilder.Interfaces;
+using ObjectCartographer.ExtensionMethods;
 using ObjectCartographer.Internal;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -50,12 +54,54 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             var SourceType = item?.GetType() ?? typeof(object);
             try
             {
-                if (destinationType.IsAssignableFrom(SourceType))
-                    return item;
-
                 if (item is null || item is DBNull)
                 {
                     return ReturnDefaultValue(destinationType);
+                }
+                if (destinationType.IsAssignableFrom(SourceType))
+                    return item;
+
+                if (SourceType.IsPrimitive && destinationType.IsPrimitive)
+                {
+                    try
+                    {
+                        return Convert.ChangeType(item, destinationType, CultureInfo.InvariantCulture);
+                    }
+                    catch { }
+                }
+
+                var Converter = TypeDescriptor.GetConverter(SourceType);
+                if (Converter.CanConvertTo(destinationType))
+                {
+                    return Converter.ConvertTo(item, destinationType);
+                }
+
+                Converter = TypeDescriptor.GetConverter(destinationType);
+                if (Converter.CanConvertFrom(SourceType))
+                {
+                    return Converter.ConvertFrom(item);
+                }
+
+                if (destinationType.IsEnum)
+                {
+                    if (item is string ItemStringValue)
+                    {
+                        return Enum.Parse(destinationType, ItemStringValue, true);
+                    }
+
+                    return Enum.ToObject(destinationType, item);
+                }
+
+                var IEnumerableResultType = destinationType.GetIEnumerableElementType();
+                var IEnumerableObjectType = SourceType.GetIEnumerableElementType();
+                if (destinationType != IEnumerableResultType && SourceType != IEnumerableObjectType)
+                {
+                    var TempList = (IList)FastActivator.CreateInstance(typeof(List<>).MakeGenericType(IEnumerableResultType));
+                    foreach (var Item in (IEnumerable)item)
+                    {
+                        TempList.Add(DataMapper.Instance?.Copy(Item, null, IEnumerableResultType));
+                    }
+                    return TempList;
                 }
 
                 if (destinationType.IsClass)

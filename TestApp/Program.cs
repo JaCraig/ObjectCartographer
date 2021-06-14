@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ObjectCartographer;
+using ObjectCartographer.ExtensionMethods;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Dynamic;
 
 namespace TestApp
@@ -97,6 +99,27 @@ namespace TestApp
             Console.WriteLine(Result[0].E);
             Console.WriteLine(Result[0].F);
             Console.WriteLine(Result[0].G);
+
+            Console.WriteLine(DataMapper.Copy<SqlDbType>(DbType.String));
+            Console.WriteLine(DataMapper.Copy<Type>(DataMapper.Copy<SqlDbType>(DbType.String)));
+
+            Result4 = Val.To<TestType2>();
+            Console.WriteLine(Result4.A);
+            Console.WriteLine(Result4.B);
+            Console.WriteLine(Result4.C);
+            Console.WriteLine(Result4.D);
+            Console.WriteLine(Result4.E);
+            Console.WriteLine(Result4.F);
+            Console.WriteLine(Result4.G.A);
+
+            Result4 = (TestType2)Val.To(typeof(TestType2), null);
+            Console.WriteLine(Result4.A);
+            Console.WriteLine(Result4.B);
+            Console.WriteLine(Result4.C);
+            Console.WriteLine(Result4.D);
+            Console.WriteLine(Result4.E);
+            Console.WriteLine(Result4.F);
+            Console.WriteLine(Result4.G.A);
         }
 
         private static TestType2 TestMethod(TestType1 arg1, TestType2 arg2)

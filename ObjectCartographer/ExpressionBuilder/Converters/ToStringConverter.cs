@@ -48,7 +48,22 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            return Expression.Call(source, ToStringMethod);
+            return IsNullable(sourceType)
+                ? Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
+                    destination,
+                    Expression.Call(source, ToStringMethod))
+                : (Expression)Expression.Call(source, ToStringMethod);
+        }
+
+        /// <summary>
+        /// Determines whether the specified type is nullable.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns><c>true</c> if the specified type is nullable; otherwise, <c>false</c>.</returns>
+        private static bool IsNullable(Type type)
+        {
+            return !(type is null)
+                && (!type.IsValueType || Nullable.GetUnderlyingType(type) != null);
         }
     }
 }

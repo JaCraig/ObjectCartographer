@@ -22,27 +22,10 @@ namespace ObjectCartographer.ExpressionBuilder
         }
 
         /// <summary>
-        /// Gets the data mapper.
-        /// </summary>
-        /// <value>The data mapper.</value>
-        internal DataMapper? DataMapper { get; private set; }
-
-        /// <summary>
         /// Gets the expression mappers.
         /// </summary>
         /// <value>The expression mappers.</value>
         private IConverter[] ExpressionMappers { get; }
-
-        /// <summary>
-        /// Initializes the specified data mapper.
-        /// </summary>
-        /// <param name="dataMapper">The data mapper.</param>
-        /// <returns>This</returns>
-        public ExpressionBuilderManager Initialize(DataMapper dataMapper)
-        {
-            DataMapper = dataMapper;
-            return this;
-        }
 
         /// <summary>
         /// Converts the specified source and destination.

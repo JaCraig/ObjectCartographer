@@ -44,7 +44,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <typeparam name="TDestination">The type of the destination.</typeparam>
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
-        /// <param name="converter">The converter.</param>
         /// <returns></returns>
         public TDestination[] Conversion<TSource, TDestination>(IEnumerable<TSource> source, TDestination[] destination)
         {

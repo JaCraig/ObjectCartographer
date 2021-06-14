@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ObjectCartographer.SQL\ObjectCartographer.SQL.csproj" />
     <ProjectReference Include="..\ObjectCartographer\ObjectCartographer.csproj" />
   </ItemGroup>
 
