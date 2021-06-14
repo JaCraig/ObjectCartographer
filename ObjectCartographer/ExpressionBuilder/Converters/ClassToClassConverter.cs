@@ -33,42 +33,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         }
 
         /// <summary>
-        /// Maps the specified source to the destination.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="destination">The destination.</param>
-        /// <param name="sourceType">Type of the source.</param>
-        /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="mapping">The mapping.</param>
-        /// <param name="manager">The manager.</param>
-        /// <returns>The resulting expression.</returns>
-        public override Expression Map(Expression source,
-                                       Expression? destination,
-                                       Type sourceType,
-                                       Type destinationType,
-                                       IExpressionMapping mapping,
-                                       ExpressionBuilderManager manager)
-        {
-            var CopyConstructor = GetCopyConstructor(sourceType, destinationType);
-            if (CopyConstructor is null)
-            {
-                var Expressions = new List<Expression>
-                {
-                    CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager)
-                };
-                return CopyProperties(source, destination, sourceType, destinationType, mapping, manager, Expressions);
-            }
-            else
-            {
-                return Expression.Block(destinationType,
-                        Expression.IfThenElse(Expression.Equal(destination, Expression.Constant(null)),
-                                Expression.Assign(destination, Expression.New(CopyConstructor, source)),
-                                CopyProperties(source, destination, sourceType, destinationType, mapping, manager, new List<Expression>())),
-                        destination);
-            }
-        }
-
-        /// <summary>
         /// Copies the properties.
         /// </summary>
         /// <param name="source">The source.</param>
@@ -79,7 +43,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <param name="manager">The manager.</param>
         /// <param name="expressions">The expressions.</param>
         /// <returns></returns>
-        private static Expression CopyProperties(
+        protected override Expression CopyObject(
             Expression source,
             Expression? destination,
             Type sourceType,

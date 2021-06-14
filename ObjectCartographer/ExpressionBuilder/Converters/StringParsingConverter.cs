@@ -44,7 +44,9 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             var ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>());
-            return Expression.Call(ParseMethod, source);
+            return Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
+                    destination,
+                    Expression.Call(ParseMethod, source));
         }
     }
 }

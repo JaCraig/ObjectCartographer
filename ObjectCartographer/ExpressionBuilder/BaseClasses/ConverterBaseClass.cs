@@ -40,7 +40,45 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <param name="mapping">The mapping.</param>
         /// <param name="manager">The manager.</param>
         /// <returns>The resulting expression.</returns>
-        public abstract Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager);
+        public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        {
+            var CopyConstructor = GetCopyConstructor(sourceType, destinationType);
+            if (CopyConstructor is null)
+            {
+                return Expression.Block(destinationType,
+                    Expression.IfThenElse(Expression.Equal(source, Expression.Constant(null)),
+                        Expression.Empty(),
+                        Expression.Block(destinationType,
+                            CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
+                            CopyObject(source, destination, sourceType, destinationType, mapping, manager, new List<Expression>()),
+                            destination)
+                        ),
+                    destination);
+            }
+            else
+            {
+                return Expression.Block(destinationType,
+                    Expression.IfThenElse(Expression.Equal(source, Expression.Constant(null)),
+                        Expression.Empty(),
+                        Expression.IfThenElse(Expression.Equal(destination, Expression.Constant(null)),
+                                Expression.Assign(destination, Expression.New(CopyConstructor, source)),
+                                CopyObject(source, destination, sourceType, destinationType, mapping, manager, new List<Expression>()))),
+                    destination);
+            }
+        }
+
+        /// <summary>
+        /// Copies the object after object is created.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="destination">The destination.</param>
+        /// <param name="sourceType">Type of the source.</param>
+        /// <param name="destinationType">Type of the destination.</param>
+        /// <param name="mapping">The mapping.</param>
+        /// <param name="manager">The manager.</param>
+        /// <param name="expressions">The expressions.</param>
+        /// <returns>The resulting expression.</returns>
+        protected abstract Expression CopyObject(Expression source, Expression destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager, List<Expression> expressions);
 
         /// <summary>
         /// Creates the object.

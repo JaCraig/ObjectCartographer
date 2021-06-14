@@ -1,10 +1,7 @@
 ﻿using Fast.Activator;
 using ObjectCartographer.ExpressionBuilder.Interfaces;
-using ObjectCartographer.ExtensionMethods;
 using ObjectCartographer.Internal;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -30,12 +27,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         private static MethodInfo ConvertToMethod { get; } = typeof(DefaultConverter).GetMethod(nameof(DefaultConverter.ConvertTo));
 
         /// <summary>
-        /// Gets or sets the data mapper.
-        /// </summary>
-        /// <value>The data mapper.</value>
-        private DataMapper? DataMapper { get; set; }
-
-        /// <summary>
         /// Determines whether this instance can handle the specified types.
         /// </summary>
         /// <param name="sourceType">Type of the source.</param>
@@ -54,30 +45,22 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <param name="item">The item.</param>
         /// <param name="destinationType">Type of the destination.</param>
         /// <returns></returns>
-        public object? ConvertTo(object? item, Type destinationType)
+        public object? ConvertTo(object? item, object? destination, Type destinationType)
         {
             var SourceType = item?.GetType() ?? typeof(object);
             try
             {
+                if (destinationType.IsAssignableFrom(SourceType))
+                    return item;
+
                 if (item is null || item is DBNull)
                 {
                     return ReturnDefaultValue(destinationType);
                 }
 
-                var IEnumerableResultType = destinationType.GetIEnumerableElementType();
-                var IEnumerableObjectType = SourceType.GetIEnumerableElementType();
-                if (destinationType != IEnumerableResultType && SourceType != IEnumerableObjectType)
-                {
-                    var TempList = (IList)FastActivator.CreateInstance(typeof(List<>).MakeGenericType(IEnumerableResultType));
-                    foreach (var Item in (IEnumerable)item)
-                    {
-                        TempList.Add(ConvertTo(item, IEnumerableResultType));
-                    }
-                    return TempList;
-                }
                 if (destinationType.IsClass)
                 {
-                    return DataMapper?.Copy(item, null, destinationType);
+                    return DataMapper.Instance?.Copy(item, destination, destinationType);
                 }
 
                 try
@@ -114,11 +97,9 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
-            if (DataMapper is null)
-                DataMapper = manager.DataMapper;
             if (sourceType != typeof(object))
                 source = Expression.Convert(source, typeof(object));
-            return Expression.Convert(Expression.Call(Expression.Constant(this), ConvertToMethod, source, Expression.Constant(destinationType)), destinationType);
+            return Expression.Convert(Expression.Call(Expression.Constant(this), ConvertToMethod, source, Expression.Convert(destination ?? Expression.Constant(null), typeof(object)), Expression.Constant(destinationType)), destinationType);
         }
     }
 }

@@ -49,6 +49,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             var ConvertMethod = ConvertType.GetMethod("To" + destinationType.Name, new[] { sourceType });
+            if (sourceType == typeof(string))
+                source = Expression.Coalesce(source, Expression.Constant(""));
             return Expression.Call(ConvertMethod, source);
         }
 

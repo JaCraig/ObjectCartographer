@@ -24,6 +24,7 @@ namespace ObjectCartographer
         {
             Logger = logger;
             ExpressionBuilder = expressionBuilder?.Initialize(this);
+            Instance = this;
         }
 
         /// <summary>
@@ -31,27 +32,14 @@ namespace ObjectCartographer
         /// </summary>
         public DataMapper()
         {
+            Instance = this;
         }
 
         /// <summary>
-        /// The copy create lock object
+        /// Gets the instance.
         /// </summary>
-        private static readonly object CopyCreateLockObject = new object();
-
-        /// <summary>
-        /// The copy generic
-        /// </summary>
-        private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, "copy", StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
-
-        /// <summary>
-        /// The map create lock object
-        /// </summary>
-        private static readonly object MapCreateLockObject = new object();
-
-        /// <summary>
-        /// The generic map method.
-        /// </summary>
-        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod("Map", Array.Empty<Type>());
+        /// <value>The instance.</value>
+        internal static DataMapper Instance { get; private set; }
 
         /// <summary>
         /// Gets the copy methods.
@@ -82,6 +70,26 @@ namespace ObjectCartographer
         /// </summary>
         /// <value>The types.</value>
         private Dictionary<TypeTuple, ITypeMapping> Types { get; } = new Dictionary<TypeTuple, ITypeMapping>();
+
+        /// <summary>
+        /// The copy create lock object
+        /// </summary>
+        private static readonly object CopyCreateLockObject = new object();
+
+        /// <summary>
+        /// The copy generic
+        /// </summary>
+        private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, "copy", StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
+
+        /// <summary>
+        /// The map create lock object
+        /// </summary>
+        private static readonly object MapCreateLockObject = new object();
+
+        /// <summary>
+        /// The generic map method.
+        /// </summary>
+        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod("Map", Array.Empty<Type>());
 
         /// <summary>
         /// Automatically maps the two types.

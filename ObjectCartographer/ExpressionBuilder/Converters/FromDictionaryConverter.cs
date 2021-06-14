@@ -9,10 +9,10 @@ using System.Reflection;
 namespace ObjectCartographer.ExpressionBuilder.Converters
 {
     /// <summary>
-    /// To dictionary converter
+    /// From dictionary converter
     /// </summary>
-    /// <seealso cref="IConverter"/>
-    public class ToDictionaryConverter : ConverterBaseClass
+    /// <seealso cref="ConverterBaseClass"/>
+    public class FromDictionaryConverter : ConverterBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -21,15 +21,15 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public override int Order => 2;
 
         /// <summary>
-        /// Gets the add method.
-        /// </summary>
-        /// <value>The add method.</value>
-        private static MethodInfo AddMethod { get; } = typeof(IDictionary<string, object>).GetMethod(nameof(IDictionary<string, object>.Add));
-
-        /// <summary>
         /// The dictionary type
         /// </summary>
         private static Type DictionaryType { get; } = typeof(IDictionary<string, object>);
+
+        /// <summary>
+        /// Gets the add method.
+        /// </summary>
+        /// <value>The add method.</value>
+        private static MethodInfo TryGetValueMethod { get; } = typeof(IDictionary<string, object>).GetMethod(nameof(IDictionary<string, object>.TryGetValue));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -41,7 +41,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public override bool CanHandle(Type source, Type destination)
         {
-            return IsDictionary(destination);
+            return IsDictionary(source);
         }
 
         /// <summary>
@@ -59,29 +59,35 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (destination is null)
                 return source;
 
-            var DestinationObjectAsIDictionary = mapping.AddVariable(DictionaryType);
+            var SourceObjectAsIDictionary = mapping.AddVariable(DictionaryType);
             var TempHolder = mapping.AddVariable(typeof(object));
 
-            expressions.Add(Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, DictionaryType)));
+            expressions.Add(Expression.Assign(SourceObjectAsIDictionary, Expression.Convert(source, DictionaryType)));
 
             var SourceProperties = sourceType.ReadableProperties();
             var DestinationProperties = destinationType.WritableProperties();
 
-            for (var x = 0; x < SourceProperties.Length; ++x)
+            for (var x = 0; x < DestinationProperties.Length; ++x)
             {
-                var SourceProperty = SourceProperties[x];
-                var DestinationProperty = DestinationProperties.FindMatchingProperty(SourceProperty.Name);
+                var DestinationProperty = DestinationProperties[x];
+                var SourceProperty = SourceProperties.FindMatchingProperty(DestinationProperty.Name);
 
-                var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
-
-                if (DestinationProperty is null)
+                if (SourceProperty is null)
                 {
-                    Expression Key = Expression.Constant(SourceProperty.Name);
-                    expressions.Add(Expression.Call(DestinationObjectAsIDictionary, AddMethod, Key, PropertyGet));
+                    var PropertySet = Expression.Property(destination, DestinationProperty);
+                    Expression Key = Expression.Constant(DestinationProperty.Name);
+                    Expression MethodCall = Expression.Call(SourceObjectAsIDictionary, TryGetValueMethod, Key, TempHolder);
+                    Expression Assignment = Expression.Assign(PropertySet, manager.Map(TempHolder, PropertySet, typeof(object), DestinationProperty.PropertyType, mapping));
+                    Expression IfStatement = Expression.IfThen(MethodCall, Assignment);
+                    expressions.Add(IfStatement);
                 }
                 else
                 {
-                    Expression PropertySet = Expression.Property(destination, DestinationProperty);
+                    Expression PropertyGet = Expression.Property(source, SourceProperty);
+                    var PropertySet = Expression.Property(destination, DestinationProperty);
+
+                    PropertyGet = manager.Map(PropertyGet, PropertySet, SourceProperty.PropertyType, DestinationProperty.PropertyType, mapping);
+
                     expressions.Add(Expression.Assign(PropertySet, PropertyGet));
                 }
             }

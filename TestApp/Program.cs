@@ -87,6 +87,16 @@ namespace TestApp
             Console.WriteLine(ExpandoResult["D"]);
             Console.WriteLine(ExpandoResult["E"]);
             Console.WriteLine(ExpandoResult["F"]);
+
+            var ArrayTemp = new TestType1[3] { new TestType1(), null, null };
+            var Result = DataMapper.Copy<TestType2[]>(ArrayTemp);
+            Console.WriteLine(Result[0].A);
+            Console.WriteLine(Result[0].B);
+            Console.WriteLine(Result[0].C);
+            Console.WriteLine(Result[0].D);
+            Console.WriteLine(Result[0].E);
+            Console.WriteLine(Result[0].F);
+            Console.WriteLine(Result[0].G);
         }
 
         private static TestType2 TestMethod(TestType1 arg1, TestType2 arg2)
