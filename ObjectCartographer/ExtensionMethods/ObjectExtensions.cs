@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ObjectCartographer.ExtensionMethods
+namespace ObjectCartographer
 {
     /// <summary>
     /// Object extensions

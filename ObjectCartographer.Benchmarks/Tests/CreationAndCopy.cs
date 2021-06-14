@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using BenchmarkDotNet.Attributes;
-using BigBook;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ObjectCartographer.Benchmarks.Tests
@@ -33,6 +32,12 @@ namespace ObjectCartographer.Benchmarks.Tests
         public void ObjectCartographer()
         {
             _ = ObjectCartographerMapper.Copy<TestClass2>(Object1);
+        }
+
+        [Benchmark]
+        public void ObjectCartographerExtensionMethod()
+        {
+            _ = Object1.To<TestClass2>();
         }
 
         [Benchmark]
