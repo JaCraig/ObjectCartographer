@@ -73,15 +73,15 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 var SourceProperty = SourceProperties[x];
                 var DestinationProperty = DestinationProperties.FindMatchingProperty(SourceProperty.Name);
 
-                var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
-
                 if (DestinationProperty is null)
                 {
+                    var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
                     Expression Key = Expression.Constant(SourceProperty.Name);
                     expressions.Add(Expression.Call(DestinationObjectAsIDictionary, AddMethod, Key, PropertyGet));
                 }
                 else
                 {
+                    var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, DestinationProperty.PropertyType, mapping);
                     Expression PropertySet = Expression.Property(destination, DestinationProperty);
                     expressions.Add(Expression.Assign(PropertySet, PropertyGet));
                 }
