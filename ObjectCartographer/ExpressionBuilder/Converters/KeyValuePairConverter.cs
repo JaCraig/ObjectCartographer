@@ -48,6 +48,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             var SourceArgs = sourceType.GenericTypeArguments;
             var DestinationArgs = destinationType.GenericTypeArguments;
 
@@ -63,7 +65,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if [is key value pair] [the specified type]; otherwise, <c>false</c>.</returns>
         private bool IsKeyValuePair(Type type)
         {
-            return type.IsGenericType && type.GetGenericTypeDefinition() == KeyValuePairType;
+            return type?.IsGenericType == true && type?.GetGenericTypeDefinition() == KeyValuePairType;
         }
     }
 }

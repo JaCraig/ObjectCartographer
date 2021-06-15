@@ -80,6 +80,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             IExpressionMapping mapping,
             ExpressionBuilderManager manager)
         {
+            if (sourceType is null || destinationType is null)
+                return Expression.Empty();
             var SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
             var DestionationCollectionValueType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
 
@@ -95,7 +97,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if [is i enumerable] [the specified type]; otherwise, <c>false</c>.</returns>
         private bool IsIEnumerable(Type type)
         {
-            return type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType);
+            return type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
         }
     }
 }

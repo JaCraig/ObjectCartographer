@@ -26,7 +26,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return sourceType.IsEnum && destinationType.IsPrimitive;
+            return sourceType?.IsEnum == true && destinationType?.IsPrimitive == true;
         }
 
         /// <summary>
@@ -41,6 +41,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             return Expression.Convert(source, destinationType);
         }
     }

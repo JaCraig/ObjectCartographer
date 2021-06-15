@@ -73,6 +73,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             IExpressionMapping mapping,
             ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             if (sourceType == typeof(string) && destinationType == typeof(byte[]))
                 return StringToByteArray(source, destination, sourceType, destinationType, mapping, manager);
             return ByteArrayToString(source, destination, sourceType, destinationType, mapping, manager);

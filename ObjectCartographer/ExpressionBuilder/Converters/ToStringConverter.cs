@@ -33,7 +33,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return destinationType == typeof(string);
+            return sourceType != typeof(DBNull) && destinationType == typeof(string);
         }
 
         /// <summary>
@@ -48,6 +48,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             return IsNullable(sourceType)
                 ? Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
                     destination,

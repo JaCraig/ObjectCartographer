@@ -25,7 +25,7 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// Gets the expressions.
         /// </summary>
         /// <value>The expressions.</value>
-        Expression FinalExpression { get; set; }
+        Expression? FinalExpression { get; set; }
 
         /// <summary>
         /// Gets the source parameter.
@@ -50,6 +50,6 @@ namespace ObjectCartographer.ExpressionBuilder.Interfaces
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns>The new variable</returns>
-        ParameterExpression AddVariable(Type type);
+        ParameterExpression? AddVariable(Type type);
     }
 }

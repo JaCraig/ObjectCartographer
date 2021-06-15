@@ -36,6 +36,8 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <returns>The resulting expression.</returns>
         public Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> typeInfo)
         {
+            if (typeInfo is null)
+                return (_, y) => y;
             var Mapping = new ExpressionMapping<TSource, TDestination>();
             Mapping.FinalExpression = GenerateMappings(typeInfo, Mapping);
             return Mapping.Build();

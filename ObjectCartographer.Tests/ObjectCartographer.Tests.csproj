@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-
+    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ObjectCartographer.SQL\ObjectCartographer.SQL.csproj" />
     <ProjectReference Include="..\ObjectCartographer\ObjectCartographer.csproj" />
   </ItemGroup>
-
 </Project>

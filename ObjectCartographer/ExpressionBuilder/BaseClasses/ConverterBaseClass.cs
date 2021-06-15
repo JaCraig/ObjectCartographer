@@ -42,6 +42,8 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             var CopyConstructor = GetCopyConstructor(sourceType, destinationType);
             if (CopyConstructor is null)
             {
@@ -169,9 +171,9 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
         /// <returns></returns>
-        protected ConstructorInfo GetCopyConstructor(Type source, Type destination)
+        protected ConstructorInfo? GetCopyConstructor(Type source, Type destination)
         {
-            return destination.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, new[] { source }, null);
+            return destination?.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, new[] { source }, null);
         }
     }
 }

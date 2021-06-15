@@ -43,6 +43,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             var ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>());
             return Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
                     destination,

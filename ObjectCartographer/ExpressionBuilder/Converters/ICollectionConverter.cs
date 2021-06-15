@@ -92,7 +92,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if [is i enumerable] [the specified type]; otherwise, <c>false</c>.</returns>
         private bool IsIEnumerable(Type type)
         {
-            return type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType);
+            return type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the enum parse.
         /// </summary>
         /// <value>The enum parse.</value>
-        private static MethodInfo EnumParse { get; } = typeof(Enum).GetMethod(nameof(Enum.Parse), BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Type), typeof(string) }, Array.Empty<ParameterModifier>());
+        private static MethodInfo EnumParse { get; } = typeof(Enum).GetMethod(nameof(Enum.Parse), BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Type), typeof(string), typeof(bool) }, Array.Empty<ParameterModifier>());
 
         /// <summary>
         /// Gets the enum to object.
@@ -39,7 +39,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return destinationType.IsEnum;
+            return destinationType?.IsEnum ?? false;
         }
 
         /// <summary>
@@ -54,6 +54,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (sourceType is null || !CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             if (sourceType == typeof(string))
                 return Expression.Convert(Expression.Call(EnumParse, Expression.Constant(destinationType), source, Expression.Constant(true)), destinationType);
             return Expression.Convert(Expression.Call(EnumToObject, Expression.Constant(destinationType), Expression.Convert(source, typeof(object))), destinationType);

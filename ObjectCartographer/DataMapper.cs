@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Fast.Activator;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using ObjectCartographer.ExpressionBuilder;
 using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
@@ -45,19 +47,34 @@ namespace ObjectCartographer
             {
                 if (!(_instance is null))
                     return _instance;
-                lock (InstanceLockObject)
+                if (Canister.Builder.Bootstrapper is null)
                 {
-                    if (!(_instance is null))
-                        return _instance;
-                    _instance = Canister.Builder.Bootstrapper.Resolve<DataMapper>();
-                    return _instance;
+                    lock (InstanceLockObject)
+                    {
+                        if (Canister.Builder.Bootstrapper is null)
+                        {
+                            new ServiceCollection().AddCanisterModules();
+                        }
+                    }
                 }
+                for (var x = 0; x < 1000; ++x)
+                {
+                    try
+                    {
+                        _instance = Canister.Builder.Bootstrapper?.Resolve<DataMapper>();
+                        break;
+                    }
+                    catch { }
+                }
+                return _instance;
             }
             set
             {
                 _instance = value;
             }
         }
+
+        private static MethodInfo CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, Array.Empty<Type>());
 
         /// <summary>
         /// Gets the copy methods.
@@ -100,6 +117,11 @@ namespace ObjectCartographer
         private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, nameof(DataMapper.Copy), StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
 
         /// <summary>
+        /// The instance lock object
+        /// </summary>
+        private static readonly object InstanceLockObject = new object();
+
+        /// <summary>
         /// The map create lock object
         /// </summary>
         private static readonly object MapCreateLockObject = new object();
@@ -113,11 +135,6 @@ namespace ObjectCartographer
         /// The instance
         /// </summary>
         private static DataMapper _instance;
-
-        /// <summary>
-        /// The instance lock object
-        /// </summary>
-        private static object InstanceLockObject = new object();
 
         /// <summary>
         /// Automatically maps the two types.
@@ -268,8 +285,13 @@ namespace ObjectCartographer
         /// <returns>The argument expression</returns>
         private static Expression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index)
         {
+            var IndexValue = Expression.ArrayIndex(parameterExpression, Expression.Constant(index));
+            if (DefaultValueLookup.Values.TryGetValue(parameterInfo.ParameterType.GetHashCode(), out var defaultValue))
+                IndexValue = Expression.Coalesce(IndexValue, Expression.Constant(defaultValue));
+            else if (!parameterInfo.ParameterType.IsClass)
+                IndexValue = Expression.Coalesce(IndexValue, Expression.Call(CreateInstance.MakeGenericMethod(parameterInfo.ParameterType)));
             return Expression.Convert(
-                Expression.ArrayIndex(parameterExpression, Expression.Constant(index)),
+                IndexValue,
                 parameterInfo.ParameterType);
         }
 

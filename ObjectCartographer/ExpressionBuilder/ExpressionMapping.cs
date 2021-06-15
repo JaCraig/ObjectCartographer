@@ -37,7 +37,7 @@ namespace ObjectCartographer.ExpressionBuilder
         /// Gets or sets the final expression.
         /// </summary>
         /// <value>The final expression.</value>
-        public Expression FinalExpression { get; set; }
+        public Expression? FinalExpression { get; set; }
 
         /// <summary>
         /// Gets the source parameter.
@@ -62,8 +62,10 @@ namespace ObjectCartographer.ExpressionBuilder
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns>The new variable</returns>
-        public ParameterExpression AddVariable(Type type)
+        public ParameterExpression? AddVariable(Type type)
         {
+            if (type is null)
+                return null;
             var NewVariable = Expression.Variable(type);
             Variables.Add(NewVariable);
             return NewVariable;

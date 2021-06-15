@@ -48,6 +48,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (!CanHandle(sourceType, destinationType))
+                return Expression.Empty();
             var ConvertMethod = ConvertType.GetMethod("To" + destinationType.Name, new[] { sourceType });
             if (sourceType == typeof(string))
                 source = Expression.Coalesce(source, Expression.Constant(""));
@@ -61,7 +63,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if [is built in type] [the specified type]; otherwise, <c>false</c>.</returns>
         private static bool IsBuiltInType(Type type)
         {
-            return type.IsPrimitive || type == typeof(string) || type == typeof(decimal);
+            return type?.IsPrimitive == true || type == typeof(string) || type == typeof(decimal);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ObjectCartographer.SQL.Converters
             ConvertFromTypes = new Dictionary<Type, Func<object, DbType>>();
             ConvertToTypes.Add(typeof(Type), DbTypeToType);
             ConvertToTypes.Add(typeof(SqlDbType), DbTypeToSqlDbType);
-            ConvertFromTypes.Add(typeof(Type), TypeToDbType);
+            ConvertFromTypes.Add(typeof(Type).GetType(), TypeToDbType);
             ConvertFromTypes.Add(typeof(SqlDbType), SqlDbTypeToDbType);
         }
 

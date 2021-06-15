@@ -56,7 +56,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             {
                 if (item is null || item is DBNull)
                 {
-                    return ReturnDefaultValue(destinationType);
+                    return ReturnDefaultValue(destination, destinationType);
                 }
                 if (destinationType.IsAssignableFrom(SourceType))
                     return item;
@@ -118,12 +118,12 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             catch
             {
             }
-            return ReturnDefaultValue(destinationType);
+            return ReturnDefaultValue(destination, destinationType);
 
-            static object? ReturnDefaultValue(Type resultType)
+            static object? ReturnDefaultValue(object? destination, Type resultType)
             {
-                if (!resultType.IsValueType)
-                    return null;
+                if (!(destination is null) || !(resultType?.IsValueType ?? false))
+                    return destination;
                 var ResultHash = resultType.GetHashCode();
                 if (DefaultValueLookup.Values.TryGetValue(ResultHash, out var ReturnValue))
                     return ReturnValue;
@@ -143,6 +143,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>The resulting expression.</returns>
         public Expression Map(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
+            if (sourceType is null || destinationType is null)
+                return Expression.Empty();
             if (sourceType != typeof(object))
                 source = Expression.Convert(source, typeof(object));
             return Expression.Convert(Expression.Call(Expression.Constant(this), ConvertToMethod, source, Expression.Convert(destination ?? Expression.Constant(null), typeof(object)), Expression.Constant(destinationType)), destinationType);
