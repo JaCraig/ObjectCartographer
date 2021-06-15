@@ -70,7 +70,7 @@ namespace ObjectCartographer.Tests.BaseClasses
         /// <summary>
         /// The lock object
         /// </summary>
-        private static readonly object LockObject = new object();
+        private static readonly object LockObject = new();
 
         /// <summary>
         /// Attempts to break the object.

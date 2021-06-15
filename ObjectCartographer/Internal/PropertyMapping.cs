@@ -1,6 +1,6 @@
 ﻿using ObjectCartographer.Interfaces;
 using System;
-using System.Linq.Expressions;
+using System.Reflection;
 
 namespace ObjectCartographer.Internal
 {
@@ -9,41 +9,46 @@ namespace ObjectCartographer.Internal
     /// </summary>
     /// <typeparam name="TLeft">The type of the left.</typeparam>
     /// <typeparam name="TRight">The type of the right.</typeparam>
-    public class PropertyMapping<TLeft, TRight> : IPropertyMapping
+    /// <typeparam name="TLeftPropertyType">The type of the right property type.</typeparam>
+    /// <seealso cref="IPropertyMapping"/>
+    public class PropertyMapping<TLeft, TRight, TLeftPropertyType> : IPropertyMapping
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PropertyMapping{TLeft, TRight}"/> class.
+        /// Initializes a new instance of the <see cref="PropertyMapping{TLeft, TRight,
+        /// TRightPropertyType}"/> class.
         /// </summary>
         /// <param name="leftProperty">The left property.</param>
         /// <param name="rightProperty">The right property.</param>
-        public PropertyMapping(Expression<Func<TLeft, object?>> leftProperty, Expression<Func<TRight, object?>> rightProperty)
+        public PropertyMapping(Func<TLeft, TLeftPropertyType> leftProperty, Action<TRight, TLeftPropertyType> rightProperty)
         {
-            RightProperty = rightProperty;
-            LeftProperty = leftProperty;
+            SourceTarget = leftProperty.Target;
+            Source = leftProperty.Method;
+            Destination = rightProperty.Method;
+            DestinationTarget = rightProperty.Target;
         }
 
         /// <summary>
         /// Gets the destination.
         /// </summary>
         /// <value>The destination.</value>
-        public Expression Destination => RightProperty;
+        public MethodInfo Destination { get; }
 
         /// <summary>
-        /// Gets the left property.
+        /// Gets the destination target.
         /// </summary>
-        /// <value>The left property.</value>
-        public Expression<Func<TLeft, object?>> LeftProperty { get; }
-
-        /// <summary>
-        /// Gets the right property.
-        /// </summary>
-        /// <value>The right property.</value>
-        public Expression<Func<TRight, object?>> RightProperty { get; }
+        /// <value>The destination target.</value>
+        public object? DestinationTarget { get; }
 
         /// <summary>
         /// Gets the source.
         /// </summary>
         /// <value>The source.</value>
-        public Expression Source => LeftProperty;
+        public MethodInfo Source { get; }
+
+        /// <summary>
+        /// Gets the source target.
+        /// </summary>
+        /// <value>The source target.</value>
+        public object? SourceTarget { get; }
     }
 }

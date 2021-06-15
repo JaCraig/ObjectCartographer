@@ -14,6 +14,9 @@ namespace ObjectCartographer.SQL.Converters
     /// <seealso cref="IConverter"/>
     public class SqlDbTypeConverter : IConverter
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SqlDbTypeConverter"/> class.
+        /// </summary>
         public SqlDbTypeConverter()
         {
             ConvertToTypes = new Dictionary<Type, Func<SqlDbType, object>>();

@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using BenchmarkDotNet.Attributes;
-using BigBook;
+using Mapster;
 using Microsoft.Extensions.DependencyInjection;
+using Nelibur.ObjectMapper;
 
 namespace ObjectCartographer.Benchmarks
 {
@@ -26,21 +27,22 @@ namespace ObjectCartographer.Benchmarks
             Object2.B = Object1.B;
         }
 
+        [Benchmark]
+        public void Mapster()
+        {
+            _ = Object1.Adapt<TestClass2>();
+        }
+
         [Benchmark(Baseline = true)]
         public void ObjectCartographer()
         {
             _ = ObjectCartographerMapper.Copy(Object1, Object2);
         }
 
-        [Benchmark]
-        public void OldSystem()
-        {
-            _ = Object1.To(typeof(TestClass2), Object2);
-        }
-
         [GlobalSetup]
         public void Setup()
         {
+            TinyMapper.Bind<TestClass, TestClass2>();
             new ServiceCollection().AddCanisterModules();
             ObjectCartographerMapper = Canister.Builder.Bootstrapper.Resolve<DataMapper>();
             ObjectCartographerMapper.AutoMap<TestClass, TestClass2>();
@@ -52,7 +54,13 @@ namespace ObjectCartographer.Benchmarks
             AutoMapperMapper = configuration.CreateMapper();
         }
 
-        private class TestClass
+        [Benchmark]
+        public void TinyMapperTest()
+        {
+            _ = TinyMapper.Map(Object1, Object2);
+        }
+
+        public class TestClass
         {
             public string A { get; set; }
 
@@ -61,7 +69,7 @@ namespace ObjectCartographer.Benchmarks
             public float C { get; set; }
         }
 
-        private class TestClass2
+        public class TestClass2
         {
             public string A { get; set; }
 

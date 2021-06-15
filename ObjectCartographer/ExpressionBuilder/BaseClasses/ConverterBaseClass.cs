@@ -15,6 +15,11 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
     public abstract class ConverterBaseClass : IConverter
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="ConverterBaseClass"/> class.
+        /// </summary>
+        protected ConverterBaseClass() { }
+
+        /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
@@ -95,7 +100,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         protected Expression CreateObject(Expression destinationVariable, Expression sourceVariable, PropertyInfo[] sourceProperties, ConstructorInfo[] destinationConstructors, IExpressionMapping mapping, ExpressionBuilderManager manager)
         {
             if (destinationVariable is null || destinationConstructors.Length == 0 || !destinationVariable.Type.IsClass)
-                return destinationVariable;
+                return destinationVariable ?? Expression.Empty();
             var FinalConstructor = destinationConstructors[^1];
             var FinalParameters = new List<Expression>();
             for (var x = 0; x < destinationConstructors.Length; ++x)

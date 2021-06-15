@@ -53,7 +53,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <param name="destinationType">Type of the destination.</param>
         /// <param name="mapping">The mapping.</param>
         /// <param name="manager">The manager.</param>
-        /// <returns></returns>
+        /// <param name="expressions">The expressions.</param>
+        /// <returns>The resulting expression.</returns>
         protected override Expression CopyObject(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager, List<Expression> expressions)
         {
             if (destination is null)

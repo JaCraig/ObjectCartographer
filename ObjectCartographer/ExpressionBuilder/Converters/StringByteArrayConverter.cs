@@ -76,21 +76,16 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
             if (sourceType == typeof(string) && destinationType == typeof(byte[]))
-                return StringToByteArray(source, destination, sourceType, destinationType, mapping, manager);
-            return ByteArrayToString(source, destination, sourceType, destinationType, mapping, manager);
+                return StringToByteArray(source);
+            return ByteArrayToString(source);
         }
 
         /// <summary>
         /// Bytes the array to string.
         /// </summary>
         /// <param name="source">The source.</param>
-        /// <param name="destination">The destination.</param>
-        /// <param name="sourceType">Type of the source.</param>
-        /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="mapping">The mapping.</param>
-        /// <param name="manager">The manager.</param>
         /// <returns></returns>
-        private Expression ByteArrayToString(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        private Expression ByteArrayToString(Expression source)
         {
             return Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetString)), source);
         }
@@ -99,13 +94,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Strings to byte array.
         /// </summary>
         /// <param name="source">The source.</param>
-        /// <param name="destination">The destination.</param>
-        /// <param name="sourceType">Type of the source.</param>
-        /// <param name="destinationType">Type of the destination.</param>
-        /// <param name="mapping">The mapping.</param>
-        /// <param name="manager">The manager.</param>
         /// <returns></returns>
-        private Expression StringToByteArray(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager)
+        private Expression StringToByteArray(Expression source)
         {
             return Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetBytes)), source);
         }

@@ -4,7 +4,6 @@ using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace ObjectCartographer
 {
@@ -17,7 +16,7 @@ namespace ObjectCartographer
     public class TypeMapping<TSource, TDestination> : ITypeMapping, IInternalTypeMapping
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TypeMapping"/> class.
+        /// Initializes a new instance of the <see cref="TypeMapping{TSource, TDestination}"/> class.
         /// </summary>
         /// <param name="typeInfo">The type information.</param>
         /// <param name="logger">The logger.</param>
@@ -65,11 +64,11 @@ namespace ObjectCartographer
         /// <param name="leftExpression">The left expression.</param>
         /// <param name="rightExpression">The right expression.</param>
         /// <returns>This.</returns>
-        public TypeMapping<TSource, TDestination> AddMapping(Expression<Func<TSource, object?>> leftExpression, Expression<Func<TDestination, object?>> rightExpression)
+        public TypeMapping<TSource, TDestination> AddMapping<TSourceProperty>(Func<TSource, TSourceProperty> leftExpression, Action<TDestination, TSourceProperty> rightExpression)
         {
             if (leftExpression is null || rightExpression is null)
                 return this;
-            Properties.Add(new PropertyMapping<TSource, TDestination>(leftExpression, rightExpression));
+            Properties.Add(new PropertyMapping<TSource, TDestination, TSourceProperty>(leftExpression, rightExpression));
             return this;
         }
 

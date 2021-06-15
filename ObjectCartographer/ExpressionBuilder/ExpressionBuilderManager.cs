@@ -63,13 +63,15 @@ namespace ObjectCartographer.ExpressionBuilder
         /// Adds the pre mapped properties.
         /// </summary>
         /// <param name="typeInfo">The type information.</param>
+        /// <param name="mapping">The mapping.</param>
         /// <returns></returns>
-        private static Expression AddPreMappedProperties(IInternalTypeMapping typeInfo)
+        private Expression AddPreMappedProperties(IInternalTypeMapping typeInfo, IExpressionMapping mapping)
         {
             List<Expression> Expressions = new List<Expression>();
             foreach (var Property in typeInfo.Properties)
             {
-                Expressions.Add(Expression.Assign(Property.Destination, Property.Source));
+                var SourceCall = Expression.Call(Expression.Constant(Property.SourceTarget), Property.Source, mapping.SourceParameter);
+                Expressions.Add(Expression.Call(Expression.Constant(Property.DestinationTarget), Property.Destination, mapping.DestinationParameter, SourceCall));
             }
             return Expression.Block(Expressions);
         }
@@ -90,7 +92,7 @@ namespace ObjectCartographer.ExpressionBuilder
                     typeInfo.TypeInfo.Destination,
                     mapping
                 )),
-                AddPreMappedProperties(typeInfo),
+                AddPreMappedProperties(typeInfo, mapping),
                 mapping.DestinationParameter
             );
         }

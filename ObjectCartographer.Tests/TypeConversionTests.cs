@@ -40,6 +40,11 @@ namespace ObjectCartographer.Tests
         public virtual int B { get; set; }
     }
 
+    public class ProjectionTestClass
+    {
+        public int FinalValue { get; set; }
+    }
+
     public class TypeConversionTests : TestBaseClass
     {
         protected override Type ObjectType { get; set; } = null;
@@ -58,6 +63,15 @@ namespace ObjectCartographer.Tests
             Assert.Equal(typeof(int), DbType.Int32.To(typeof(int)));
             Assert.Equal(typeof(string), DbType.String.To(typeof(int)));
             Assert.Equal(typeof(float), DbType.Single.To(typeof(int)));
+        }
+
+        [Fact]
+        public void ProjectionTest()
+        {
+            new MyTestClass2().Map<MyTestClass2, ProjectionTestClass>()
+                .AddMapping(x => x.B + 20, (x, val) => x.FinalValue = val)
+                .Build();
+            Assert.Equal(40, new MyTestClass2().To<ProjectionTestClass>().FinalValue);
         }
 
         [Fact]

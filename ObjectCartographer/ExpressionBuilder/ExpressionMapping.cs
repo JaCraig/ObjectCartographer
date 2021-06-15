@@ -13,7 +13,7 @@ namespace ObjectCartographer.ExpressionBuilder
     public class ExpressionMapping<TSource, TDestination> : IExpressionMapping
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExpressionMapping"/> class.
+        /// Initializes a new instance of the <see cref="ExpressionMapping{TSource, TDestination}"/> class.
         /// </summary>
         public ExpressionMapping()
         {

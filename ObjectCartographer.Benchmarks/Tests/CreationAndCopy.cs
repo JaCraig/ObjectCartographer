@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BenchmarkDotNet.Attributes;
 using Microsoft.Extensions.DependencyInjection;
+using Nelibur.ObjectMapper;
 
 namespace ObjectCartographer.Benchmarks.Tests
 {
@@ -9,7 +10,6 @@ namespace ObjectCartographer.Benchmarks.Tests
     {
         private IMapper AutoMapperMapper { get; set; }
         private TestClass Object1 { get; } = new TestClass();
-        private TestClass2 Object2 { get; } = new TestClass2();
         private DataMapper ObjectCartographerMapper { get; set; }
 
         [Benchmark]
@@ -28,6 +28,12 @@ namespace ObjectCartographer.Benchmarks.Tests
             };
         }
 
+        //[Benchmark]
+        //public void Mapster()
+        //{
+        //    _ = Object1.Adapt<TestClass2>();
+        //}
+
         [Benchmark(Baseline = true)]
         public void ObjectCartographer()
         {
@@ -40,15 +46,10 @@ namespace ObjectCartographer.Benchmarks.Tests
             _ = Object1.To<TestClass2>();
         }
 
-        [Benchmark]
-        public void OldSystem()
-        {
-            _ = Object1.To(typeof(TestClass2), Object2);
-        }
-
         [GlobalSetup]
         public void Setup()
         {
+            TinyMapper.Bind<TestClass, TestClass2>();
             new ServiceCollection().AddCanisterModules();
             ObjectCartographerMapper = Canister.Builder.Bootstrapper.Resolve<DataMapper>();
             ObjectCartographerMapper.AutoMap<TestClass, TestClass2>();
@@ -60,7 +61,13 @@ namespace ObjectCartographer.Benchmarks.Tests
             AutoMapperMapper = configuration.CreateMapper();
         }
 
-        private class TestClass
+        //[Benchmark]
+        //public void TinyMapperTest()
+        //{
+        //    _ = TinyMapper.Map<TestClass2>(Object1);
+        //}
+
+        public class TestClass
         {
             public string A { get; set; }
 
@@ -69,7 +76,7 @@ namespace ObjectCartographer.Benchmarks.Tests
             public float C { get; set; }
         }
 
-        private class TestClass2
+        public class TestClass2
         {
             public string A { get; set; }
 

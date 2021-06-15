@@ -47,6 +47,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Converts to.
         /// </summary>
         /// <param name="item">The item.</param>
+        /// <param name="destination">The destination.</param>
         /// <param name="destinationType">Type of the destination.</param>
         /// <returns></returns>
         public object? ConvertTo(object? item, object? destination, Type destinationType)

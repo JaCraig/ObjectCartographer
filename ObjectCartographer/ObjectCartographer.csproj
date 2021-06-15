@@ -1,8 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <BuildNumber Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</BuildNumber>
+    <!-- for AppVeyor -->
+    <BuildNumber Condition=" '$(BUILD_NUMBER)' != '' ">$(BUILD_NUMBER)</BuildNumber>
+    <!-- for Team City -->
+    <BuildNumber Condition=" '$(BuildNumber)' == '' ">0</BuildNumber>
+    <!-- if not set -->
+    <Description>A fast object to object mapper.</Description>
+    <AssemblyTitle>ObjectCartographer</AssemblyTitle>
+    <Authors>James Craig</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>ObjectCartographer</AssemblyName>
+    <PackageId>ObjectCartographer</PackageId>
+    <PackageTags>Object to object mapper;data copying</PackageTags>
+    <PackageProjectUrl>https://github.com/JaCraig/ObjectCartographer</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>2.0.$(BuildNumber)</Version>
     <Nullable>enable</Nullable>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,5 +35,4 @@
     <PackageReference Include="Fast.Activator" Version="1.0.16" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
   </ItemGroup>
-
 </Project>

@@ -13,39 +13,39 @@ namespace ObjectCartographer.Tests.SQLTests
             TestObject = new DbTypeConverter();
         }
 
-        public static readonly TheoryData<DbType, Type> DBToTypeData = new TheoryData<DbType, Type>
+        public static readonly TheoryData<DbType, Type> DBToTypeData = new()
         {
-            {DbType.Int16,typeof(short) },
-            {DbType.Int64,typeof(long) },
-            {DbType.Int32,typeof(int) },
-            {DbType.Boolean,typeof(bool) },
-            {DbType.String,typeof(string) },
-            {DbType.DateTime2,typeof(DateTime) },
-            {DbType.Decimal,typeof(decimal) },
-            {DbType.Single,typeof(float) },
-            {DbType.String,typeof(string) },
-            {DbType.Time,typeof(TimeSpan) },
-            {DbType.Binary,typeof(byte[]) }
+            { DbType.Int16, typeof(short) },
+            { DbType.Int64, typeof(long) },
+            { DbType.Int32, typeof(int) },
+            { DbType.Boolean, typeof(bool) },
+            { DbType.String, typeof(string) },
+            { DbType.DateTime2, typeof(DateTime) },
+            { DbType.Decimal, typeof(decimal) },
+            { DbType.Single, typeof(float) },
+            { DbType.String, typeof(string) },
+            { DbType.Time, typeof(TimeSpan) },
+            { DbType.Binary, typeof(byte[]) }
         };
 
-        public static readonly TheoryData<DbType, Type> DBToTypeDataSpecialCases = new TheoryData<DbType, Type>
+        public static readonly TheoryData<DbType, Type> DBToTypeDataSpecialCases = new()
         {
-            {DbType.String,typeof(Uri) }
+            { DbType.String, typeof(Uri) }
         };
 
-        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new TheoryData<SqlDbType, DbType>
+        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new()
         {
-            {SqlDbType.SmallInt,DbType.Int16 },
-            {SqlDbType.BigInt,DbType.Int64 },
-            {SqlDbType.Int,DbType.Int32 },
-            {SqlDbType.Bit,DbType.Boolean },
-            {SqlDbType.NVarChar,DbType.String },
-            {SqlDbType.DateTime2,DbType.DateTime2 },
-            {SqlDbType.Decimal,DbType.Decimal },
-            {SqlDbType.Real,DbType.Single },
-            {SqlDbType.NVarChar,DbType.String },
-            {SqlDbType.Time,DbType.Time },
-            {SqlDbType.VarBinary,DbType.Binary },
+            { SqlDbType.SmallInt, DbType.Int16 },
+            { SqlDbType.BigInt, DbType.Int64 },
+            { SqlDbType.Int, DbType.Int32 },
+            { SqlDbType.Bit, DbType.Boolean },
+            { SqlDbType.NVarChar, DbType.String },
+            { SqlDbType.DateTime2, DbType.DateTime2 },
+            { SqlDbType.Decimal, DbType.Decimal },
+            { SqlDbType.Real, DbType.Single },
+            { SqlDbType.NVarChar, DbType.String },
+            { SqlDbType.Time, DbType.Time },
+            { SqlDbType.VarBinary, DbType.Binary },
         };
 
         [Theory]

@@ -74,6 +74,10 @@ namespace ObjectCartographer
             }
         }
 
+        /// <summary>
+        /// Gets the create instance.
+        /// </summary>
+        /// <value>The create instance.</value>
         private static MethodInfo CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, Array.Empty<Type>());
 
         /// <summary>
@@ -134,7 +138,7 @@ namespace ObjectCartographer
         /// <summary>
         /// The instance
         /// </summary>
-        private static DataMapper _instance;
+        private static DataMapper? _instance;
 
         /// <summary>
         /// Automatically maps the two types.

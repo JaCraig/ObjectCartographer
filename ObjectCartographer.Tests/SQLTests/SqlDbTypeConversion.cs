@@ -13,34 +13,34 @@ namespace ObjectCartographer.Tests.SQLTests
             TestObject = new SqlDbTypeConverter();
         }
 
-        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new TheoryData<SqlDbType, DbType>
+        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new()
         {
-            {SqlDbType.SmallInt,DbType.Int16 },
-            {SqlDbType.BigInt,DbType.Int64 },
-            {SqlDbType.Int,DbType.Int32 },
-            {SqlDbType.Bit,DbType.Boolean },
-            {SqlDbType.NVarChar,DbType.String },
-            {SqlDbType.DateTime2,DbType.DateTime2 },
-            {SqlDbType.Decimal,DbType.Decimal },
-            {SqlDbType.Real,DbType.Single },
-            {SqlDbType.NVarChar,DbType.String },
-            {SqlDbType.Time,DbType.Time },
-            {SqlDbType.VarBinary,DbType.Binary },
+            { SqlDbType.SmallInt, DbType.Int16 },
+            { SqlDbType.BigInt, DbType.Int64 },
+            { SqlDbType.Int, DbType.Int32 },
+            { SqlDbType.Bit, DbType.Boolean },
+            { SqlDbType.NVarChar, DbType.String },
+            { SqlDbType.DateTime2, DbType.DateTime2 },
+            { SqlDbType.Decimal, DbType.Decimal },
+            { SqlDbType.Real, DbType.Single },
+            { SqlDbType.NVarChar, DbType.String },
+            { SqlDbType.Time, DbType.Time },
+            { SqlDbType.VarBinary, DbType.Binary },
         };
 
-        public static readonly TheoryData<SqlDbType, Type> SQLToTypeData = new TheoryData<SqlDbType, Type>
+        public static readonly TheoryData<SqlDbType, Type> SQLToTypeData = new()
         {
-            {SqlDbType.SmallInt,typeof(short) },
-            {SqlDbType.BigInt,typeof(long) },
-            {SqlDbType.Int,typeof(int) },
-            {SqlDbType.Bit,typeof(bool) },
-            {SqlDbType.NChar,typeof(char) },
-            {SqlDbType.DateTime2,typeof(DateTime) },
-            {SqlDbType.Decimal,typeof(decimal) },
-            {SqlDbType.Real,typeof(float) },
-            {SqlDbType.NVarChar,typeof(string) },
-            {SqlDbType.Time,typeof(TimeSpan) },
-            {SqlDbType.VarBinary,typeof(byte[]) },
+            { SqlDbType.SmallInt, typeof(short) },
+            { SqlDbType.BigInt, typeof(long) },
+            { SqlDbType.Int, typeof(int) },
+            { SqlDbType.Bit, typeof(bool) },
+            { SqlDbType.NChar, typeof(char) },
+            { SqlDbType.DateTime2, typeof(DateTime) },
+            { SqlDbType.Decimal, typeof(decimal) },
+            { SqlDbType.Real, typeof(float) },
+            { SqlDbType.NVarChar, typeof(string) },
+            { SqlDbType.Time, typeof(TimeSpan) },
+            { SqlDbType.VarBinary, typeof(byte[]) },
         };
 
         [Theory]

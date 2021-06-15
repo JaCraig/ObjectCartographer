@@ -6,6 +6,6 @@ namespace ObjectCartographer.Tests.Internal
 {
     public class PropertyMappingTests : TestBaseClass
     {
-        protected override Type ObjectType { get; set; } = typeof(PropertyMapping<MyTestClass, MyTestClass2>);
+        protected override Type ObjectType { get; set; } = typeof(PropertyMapping<MyTestClass, MyTestClass2, int>);
     }
 }
