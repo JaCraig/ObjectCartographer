@@ -186,7 +186,8 @@ namespace ObjectCartographer.SQL.Converters
         {
             if (TempValue == DbType.Time)
                 return SqlDbType.Time;
-
+            if (TempValue == DbType.UInt64)
+                return SqlDbType.BigInt;
             var Parameter = new SqlParameter
             {
                 DbType = TempValue

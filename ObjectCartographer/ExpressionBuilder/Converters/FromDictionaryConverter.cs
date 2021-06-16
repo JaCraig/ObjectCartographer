@@ -3,6 +3,7 @@ using ObjectCartographer.ExpressionBuilder.Interfaces;
 using ObjectCartographer.ExtensionMethods;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -29,7 +30,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the add method.
         /// </summary>
         /// <value>The add method.</value>
-        private static MethodInfo TryGetValueMethod { get; } = typeof(IDictionary<string, object>).GetMethod(nameof(IDictionary<string, object>.TryGetValue));
+        private static MethodInfo TryGetValueMethod { get; } = typeof(FromDictionaryConverter).GetMethod(nameof(FromDictionaryConverter.TryGetValue));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -42,6 +43,27 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public override bool CanHandle(Type source, Type destination)
         {
             return IsDictionary(source);
+        }
+
+        /// <summary>
+        /// Tries the get value.
+        /// </summary>
+        /// <param name="dictionary">The dictionary.</param>
+        /// <param name="key">The key.</param>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public bool TryGetValue(IDictionary<string, object> dictionary, string key, out object? value)
+        {
+            var FinalKey = dictionary.Keys.FirstOrDefault(z => string.Equals(z.Replace("_", "", StringComparison.Ordinal), key, StringComparison.OrdinalIgnoreCase));
+            if (!string.IsNullOrEmpty(FinalKey))
+            {
+                value = dictionary[FinalKey];
+                return true;
+            }
+            if (dictionary.TryGetValue(key, out value))
+                return true;
+            value = null;
+            return false;
         }
 
         /// <summary>
@@ -77,7 +99,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 {
                     var PropertySet = Expression.Property(destination, DestinationProperty);
                     Expression Key = Expression.Constant(DestinationProperty.Name);
-                    Expression MethodCall = Expression.Call(SourceObjectAsIDictionary, TryGetValueMethod, Key, TempHolder);
+                    Expression MethodCall = Expression.Call(Expression.Constant(this), TryGetValueMethod, SourceObjectAsIDictionary, Key, TempHolder);
                     Expression Assignment = Expression.Assign(PropertySet, manager.Map(TempHolder, PropertySet, typeof(object), DestinationProperty.PropertyType, mapping));
                     Expression IfStatement = Expression.IfThen(MethodCall, Assignment);
                     expressions.Add(IfStatement);
@@ -104,8 +126,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         private static bool IsDictionary(Type type)
         {
             return DictionaryType.IsAssignableFrom(type);
-            //type.GetInterfaces();
-            //return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
         }
     }
 }
