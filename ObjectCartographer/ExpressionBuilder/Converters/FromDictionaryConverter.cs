@@ -54,6 +54,11 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         public bool TryGetValue(IDictionary<string, object> dictionary, string key, out object? value)
         {
+            if (dictionary is null || key is null)
+            {
+                value = null;
+                return false;
+            }
             var FinalKey = dictionary.Keys.FirstOrDefault(z => string.Equals(z.Replace("_", "", StringComparison.Ordinal), key, StringComparison.OrdinalIgnoreCase));
             if (!string.IsNullOrEmpty(FinalKey))
             {
