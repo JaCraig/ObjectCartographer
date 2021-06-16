@@ -50,11 +50,16 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            return IsNullable(sourceType)
-                ? Expression.Condition(Expression.Or(Expression.Equal(source, Expression.Constant(null)), Expression.Equal(source, Expression.Constant(DBNull.Value))),
+            if (IsNullable(sourceType))
+            {
+                var EqualityComparison = Expression.Equal(source, Expression.Constant(null));
+                if (sourceType == typeof(object) || sourceType == typeof(DBNull))
+                    EqualityComparison = Expression.Or(EqualityComparison, Expression.Equal(source, Expression.Constant(DBNull.Value)));
+                return Expression.Condition(EqualityComparison,
                     destination,
-                    Expression.Call(source, ToStringMethod))
-                : (Expression)Expression.Call(source, ToStringMethod);
+                    Expression.Call(source, ToStringMethod));
+            }
+            return Expression.Call(source, ToStringMethod);
         }
 
         /// <summary>

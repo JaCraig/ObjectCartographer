@@ -19,19 +19,12 @@ namespace ObjectCartographer.SQL.Converters
         /// </summary>
         public SqlDbTypeConverter()
         {
-            ConvertToTypes = new Dictionary<Type, Func<SqlDbType, object>>();
-            ConvertFromTypes = new Dictionary<Type, Func<object, SqlDbType>>();
-            ConvertToTypes.Add(typeof(Type), SqlDbTypeToType);
-            ConvertToTypes.Add(typeof(DbType), SqlDbTypeToDbType);
-            ConvertFromTypes.Add(typeof(Type).GetType(), TypeToSqlDbType);
-            ConvertFromTypes.Add(typeof(DbType), DbTypeToSqlDbType);
+            ConvertToTypes = new Dictionary<Type, Func<SqlDbType, object>>
+            {
+                { typeof(Type), SqlDbTypeToType },
+                { typeof(DbType), SqlDbTypeToDbType }
+            };
         }
-
-        /// <summary>
-        /// Gets the convert from types.
-        /// </summary>
-        /// <value>The convert from types.</value>
-        public Dictionary<Type, Func<object, SqlDbType>> ConvertFromTypes { get; }
 
         /// <summary>
         /// Gets the convert to types.
@@ -127,8 +120,8 @@ namespace ObjectCartographer.SQL.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return (destinationType == typeof(SqlDbType) && (sourceType == typeof(DbType) || sourceType == typeof(Type).GetType()))
-                || (sourceType == typeof(SqlDbType) && (destinationType == typeof(DbType) || destinationType == typeof(Type).GetType()));
+            return (destinationType == typeof(SqlDbType) && (sourceType == typeof(DbType) || sourceType == typeof(Type) || sourceType == typeof(Type).GetType()))
+                || (sourceType == typeof(SqlDbType) && (destinationType == typeof(DbType) || destinationType == typeof(Type) || destinationType == typeof(Type).GetType()));
         }
 
         /// <summary>
@@ -140,12 +133,10 @@ namespace ObjectCartographer.SQL.Converters
         {
             if (value is null)
                 return SqlDbType.Int;
-
-            var ValueType = value.GetType();
-            if (ConvertFromTypes.ContainsKey(ValueType))
-            {
-                return ConvertFromTypes[ValueType](value);
-            }
+            if (value is DbType DBTypeObject)
+                return DbTypeToSqlDbType(DBTypeObject);
+            if (value is Type TypeObject)
+                return TypeToSqlDbType(TypeObject);
 
             return SqlDbType.Int;
         }
@@ -189,14 +180,10 @@ namespace ObjectCartographer.SQL.Converters
         /// <summary>
         /// Databases the type of the type to SQL database.
         /// </summary>
-        /// <param name="value">The value.</param>
+        /// <param name="TempValue">The temporary value.</param>
         /// <returns></returns>
-        private static SqlDbType DbTypeToSqlDbType(object value)
+        private static SqlDbType DbTypeToSqlDbType(DbType TempValue)
         {
-            if (!(value is DbType TempValue))
-            {
-                return SqlDbType.Int;
-            }
             if (TempValue == DbType.Time)
                 return SqlDbType.Time;
 
@@ -244,15 +231,10 @@ namespace ObjectCartographer.SQL.Converters
         /// <summary>
         /// Types the type of to SQL database.
         /// </summary>
-        /// <param name="arg">The argument.</param>
+        /// <param name="TempValue">The temporary value.</param>
         /// <returns></returns>
-        private static SqlDbType TypeToSqlDbType(object arg)
+        private static SqlDbType TypeToSqlDbType(Type TempValue)
         {
-            if (!(arg is Type TempValue))
-            {
-                return SqlDbType.Int;
-            }
-
             if (TempValue.IsEnum)
             {
                 TempValue = Enum.GetUnderlyingType(TempValue);
