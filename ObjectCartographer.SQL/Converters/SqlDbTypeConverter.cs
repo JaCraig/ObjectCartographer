@@ -127,7 +127,8 @@ namespace ObjectCartographer.SQL.Converters
         /// </returns>
         public bool CanHandle(Type sourceType, Type destinationType)
         {
-            return destinationType == typeof(SqlDbType) || sourceType == typeof(SqlDbType);
+            return (destinationType == typeof(SqlDbType) && (sourceType == typeof(DbType) || sourceType == typeof(Type).GetType()))
+                || (sourceType == typeof(SqlDbType) && (destinationType == typeof(DbType) || destinationType == typeof(Type).GetType()));
         }
 
         /// <summary>

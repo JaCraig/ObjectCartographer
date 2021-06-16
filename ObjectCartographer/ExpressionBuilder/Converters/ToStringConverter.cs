@@ -51,7 +51,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
             return IsNullable(sourceType)
-                ? Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
+                ? Expression.Condition(Expression.Or(Expression.Equal(source, Expression.Constant(null)), Expression.Equal(source, Expression.Constant(DBNull.Value))),
                     destination,
                     Expression.Call(source, ToStringMethod))
                 : (Expression)Expression.Call(source, ToStringMethod);
