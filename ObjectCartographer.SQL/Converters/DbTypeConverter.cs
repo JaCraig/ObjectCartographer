@@ -187,13 +187,15 @@ namespace ObjectCartographer.SQL.Converters
         {
             if (value == DbType.Time)
                 return SqlDbType.Time;
-            if (value == DbType.UInt64)
-                return SqlDbType.BigInt;
-            var Parameter = new SqlParameter
+            try
             {
-                DbType = value
-            };
-            return Parameter.SqlDbType;
+                var Parameter = new SqlParameter
+                {
+                    DbType = value
+                };
+                return Parameter.SqlDbType;
+            }
+            catch { return SqlDbType.Int; }
         }
 
         /// <summary>
