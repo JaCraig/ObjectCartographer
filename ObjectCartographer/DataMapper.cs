@@ -250,7 +250,7 @@ namespace ObjectCartographer
             var Key = new TypeTuple(Source, Destination);
             if (Types.TryGetValue(Key, out var ReturnValue))
                 return ReturnValue as TypeMapping<TSource, TDestination>;
-            Logger?.LogInformation($"Mapping {Source} => {Destination}");
+            Logger?.LogDebug($"Mapping {Source} => {Destination}");
             var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
             Types.Add(Key, NewMapping);
             return NewMapping;

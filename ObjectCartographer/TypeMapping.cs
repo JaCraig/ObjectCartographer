@@ -80,7 +80,7 @@ namespace ObjectCartographer
         {
             if (Properties.Count > 0 || !(Converter is null))
                 return this;
-            Logger?.LogInformation($"Automapping {TypeInfo.Source} => {TypeInfo.Destination}");
+            Logger?.LogDebug($"Automapping {TypeInfo.Source} => {TypeInfo.Destination}");
             Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);
             return this;
         }
@@ -92,7 +92,7 @@ namespace ObjectCartographer
         {
             if (!(Converter is null))
                 return;
-            Logger?.LogInformation($"Building {TypeInfo.Source} => {TypeInfo.Destination}");
+            Logger?.LogDebug($"Building {TypeInfo.Source} => {TypeInfo.Destination}");
             Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);
         }
 
