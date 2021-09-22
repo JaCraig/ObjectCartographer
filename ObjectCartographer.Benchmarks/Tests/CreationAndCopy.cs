@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BenchmarkDotNet.Attributes;
+using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 using Nelibur.ObjectMapper;
 
@@ -28,11 +29,11 @@ namespace ObjectCartographer.Benchmarks.Tests
             };
         }
 
-        //[Benchmark]
-        //public void Mapster()
-        //{
-        //    _ = Object1.Adapt<TestClass2>();
-        //}
+        [Benchmark]
+        public void Mapster()
+        {
+            _ = Object1.Adapt<TestClass2>();
+        }
 
         [Benchmark(Baseline = true)]
         public void ObjectCartographer()
@@ -61,11 +62,11 @@ namespace ObjectCartographer.Benchmarks.Tests
             AutoMapperMapper = configuration.CreateMapper();
         }
 
-        //[Benchmark]
-        //public void TinyMapperTest()
-        //{
-        //    _ = TinyMapper.Map<TestClass2>(Object1);
-        //}
+        [Benchmark]
+        public void TinyMapperTest()
+        {
+            _ = TinyMapper.Map<TestClass2>(Object1);
+        }
 
         public class TestClass
         {

@@ -141,6 +141,11 @@ namespace ObjectCartographer
         private static DataMapper? _instance;
 
         /// <summary>
+        /// The internal lock
+        /// </summary>
+        private static object InternalLock = new object();
+
+        /// <summary>
         /// Automatically maps the two types.
         /// </summary>
         /// <param name="first">The first.</param>
@@ -250,10 +255,15 @@ namespace ObjectCartographer
             var Key = new TypeTuple(Source, Destination);
             if (Types.TryGetValue(Key, out var ReturnValue))
                 return ReturnValue as TypeMapping<TSource, TDestination>;
-            Logger?.LogDebug($"Mapping {Source} => {Destination}");
-            var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
-            Types.Add(Key, NewMapping);
-            return NewMapping;
+            lock (InternalLock)
+            {
+                if (Types.TryGetValue(Key, out ReturnValue))
+                    return ReturnValue as TypeMapping<TSource, TDestination>;
+                Logger?.LogDebug($"Mapping {Source} => {Destination}");
+                var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
+                Types.Add(Key, NewMapping);
+                return NewMapping;
+            }
         }
 
         /// <summary>
