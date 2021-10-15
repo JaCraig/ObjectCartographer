@@ -210,7 +210,7 @@ namespace ObjectCartographer
                     return Method(new object?[] { source, destination });
                 var GenericMethod = CopyGeneric.MakeGenericMethod(Source, Destination);
                 var FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
-                CopyMethods.Add(Key, FinalMethod);
+                CopyMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(new object?[] { source, destination });
             }
         }
@@ -261,7 +261,7 @@ namespace ObjectCartographer
                     return ReturnValue as TypeMapping<TSource, TDestination>;
                 Logger?.LogDebug($"Mapping {Source} => {Destination}");
                 var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
-                Types.Add(Key, NewMapping);
+                Types.TryAdd(Key, NewMapping);
                 return NewMapping;
             }
         }
@@ -285,7 +285,7 @@ namespace ObjectCartographer
                     return Method(Array.Empty<object>()) as ITypeMapping;
                 var GenericMethod = MapGeneric.MakeGenericMethod(source, destination);
                 var FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
-                MapMethods.Add(Key, FinalMethod);
+                MapMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(Array.Empty<object>()) as ITypeMapping;
             }
         }
