@@ -126,6 +126,11 @@ namespace ObjectCartographer
         private static readonly object InstanceLockObject = new object();
 
         /// <summary>
+        /// The internal lock
+        /// </summary>
+        private static readonly object InternalLock = new object();
+
+        /// <summary>
         /// The map create lock object
         /// </summary>
         private static readonly object MapCreateLockObject = new object();
@@ -139,11 +144,6 @@ namespace ObjectCartographer
         /// The instance
         /// </summary>
         private static DataMapper? _instance;
-
-        /// <summary>
-        /// The internal lock
-        /// </summary>
-        private static object InternalLock = new object();
 
         /// <summary>
         /// Automatically maps the two types.
