@@ -13,7 +13,7 @@ namespace ObjectCartographer.Tests.SQLTests
             TestObject = new DbTypeConverter();
         }
 
-        public static readonly TheoryData<DbType, Type> DBToTypeData = new()
+        public static readonly TheoryData<DbType, Type> DBToTypeData = new TheoryData<DbType, Type>()
         {
             { DbType.Int16, typeof(short) },
             { DbType.Int64, typeof(long) },
@@ -28,12 +28,12 @@ namespace ObjectCartographer.Tests.SQLTests
             { DbType.Binary, typeof(byte[]) }
         };
 
-        public static readonly TheoryData<DbType, Type> DBToTypeDataSpecialCases = new()
+        public static readonly TheoryData<DbType, Type> DBToTypeDataSpecialCases = new TheoryData<DbType, Type>()
         {
             { DbType.String, typeof(Uri) }
         };
 
-        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new()
+        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new TheoryData<SqlDbType, DbType>()
         {
             { SqlDbType.SmallInt, DbType.Int16 },
             { SqlDbType.BigInt, DbType.Int64 },

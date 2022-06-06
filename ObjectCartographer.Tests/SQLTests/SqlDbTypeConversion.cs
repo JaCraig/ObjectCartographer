@@ -13,7 +13,7 @@ namespace ObjectCartographer.Tests.SQLTests
             TestObject = new SqlDbTypeConverter();
         }
 
-        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new()
+        public static readonly TheoryData<SqlDbType, DbType> SQLToDbTypeData = new TheoryData<SqlDbType, DbType>()
         {
             { SqlDbType.SmallInt, DbType.Int16 },
             { SqlDbType.BigInt, DbType.Int64 },
@@ -28,7 +28,7 @@ namespace ObjectCartographer.Tests.SQLTests
             { SqlDbType.VarBinary, DbType.Binary },
         };
 
-        public static readonly TheoryData<SqlDbType, Type> SQLToTypeData = new()
+        public static readonly TheoryData<SqlDbType, Type> SQLToTypeData = new TheoryData<SqlDbType, Type>()
         {
             { SqlDbType.SmallInt, typeof(short) },
             { SqlDbType.BigInt, typeof(long) },
