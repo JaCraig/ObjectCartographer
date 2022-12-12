@@ -104,14 +104,14 @@ namespace ObjectCartographer.ExtensionMethods
                     var InterfaceUsed = Interfaces[x];
                     var IEnum = FindIEnumerableElementType(InterfaceUsed);
 
-                    if (!(IEnum is null))
+                    if (IEnum is not null)
                     {
                         return IEnum;
                     }
                 }
             }
 
-            return !(TypeInfo.BaseType is null) && TypeInfo.BaseType != typeof(object) ?
+            return TypeInfo.BaseType is not null && TypeInfo.BaseType != typeof(object) ?
                 FindIEnumerableElementType(TypeInfo.BaseType) :
                 null;
         }

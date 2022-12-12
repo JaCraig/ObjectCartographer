@@ -43,8 +43,8 @@ namespace ObjectCartographer.Benchmarks
         public void Setup()
         {
             TinyMapper.Bind<TestClass, TestClass2>();
-            new ServiceCollection().AddCanisterModules();
-            ObjectCartographerMapper = Canister.Builder.Bootstrapper.Resolve<DataMapper>();
+            var Provider = new ServiceCollection().AddCanisterModules().BuildServiceProvider();
+            ObjectCartographerMapper = Provider.GetService<DataMapper>();
             ObjectCartographerMapper.AutoMap<TestClass, TestClass2>();
 
             var configuration = new MapperConfiguration(cfg =>

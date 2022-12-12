@@ -1,4 +1,5 @@
-﻿using ObjectCartographer.Tests.BaseClasses;
+﻿using Microsoft.Extensions.DependencyInjection;
+using ObjectCartographer.Tests.BaseClasses;
 
 namespace ObjectCartographer.Tests
 {
@@ -6,7 +7,8 @@ namespace ObjectCartographer.Tests
     {
         public DataMapperTests()
         {
-            TestObject = Canister.Builder.Bootstrapper.Resolve<DataMapper>();
+            var Provider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
+            TestObject = Provider?.GetService<DataMapper>();
         }
     }
 }

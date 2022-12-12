@@ -20,11 +20,11 @@ namespace ObjectCartographer.Modules
         /// Loads the module using the bootstrapper
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public void Load(IBootstrapper? bootstrapper)
+        public void Load(IServiceCollection? bootstrapper)
         {
-            bootstrapper?.Register<DataMapper>(ServiceLifetime.Singleton)
-                .Register<ExpressionBuilderManager>(ServiceLifetime.Singleton)
-                .RegisterAll<IConverter>(ServiceLifetime.Singleton);
+            bootstrapper?.AddSingleton<DataMapper>()
+                .AddSingleton<ExpressionBuilderManager>()
+                .AddAllSingleton<IConverter>();
         }
     }
 }

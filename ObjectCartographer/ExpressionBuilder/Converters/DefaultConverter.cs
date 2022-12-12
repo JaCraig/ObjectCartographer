@@ -123,7 +123,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
 
             static object? ReturnDefaultValue(object? destination, Type resultType)
             {
-                if (!(destination is null) || !(resultType?.IsValueType ?? false))
+                if (destination is not null || !(resultType?.IsValueType ?? false))
                     return destination;
                 var ResultHash = resultType.GetHashCode();
                 if (DefaultValueLookup.Values.TryGetValue(ResultHash, out var ReturnValue))

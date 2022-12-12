@@ -78,7 +78,7 @@ namespace ObjectCartographer
         /// <returns>This.</returns>
         public ITypeMapping AutoMap()
         {
-            if (Properties.Count > 0 || !(Converter is null))
+            if (Properties.Count > 0 || Converter is not null)
                 return this;
             Logger?.LogDebug($"Automapping {TypeInfo.Source} => {TypeInfo.Destination}");
             Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);
@@ -90,7 +90,7 @@ namespace ObjectCartographer
         /// </summary>
         public void Build()
         {
-            if (!(Converter is null))
+            if (Converter is not null)
                 return;
             Logger?.LogDebug($"Building {TypeInfo.Source} => {TypeInfo.Destination}");
             Converter = ExpressionBuilder?.Map(this) ?? ((_, y) => y);

@@ -29,8 +29,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </returns>
         public override bool CanHandle(Type sourceType, Type destinationType)
         {
-            return !(sourceType is null)
-                && !(destinationType is null)
+            return sourceType is not null
+                && destinationType is not null
                 && sourceType != typeof(object)
                 && !sourceType.IsValueType
                 && destinationType != typeof(object)

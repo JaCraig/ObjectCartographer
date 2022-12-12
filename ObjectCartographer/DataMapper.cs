@@ -45,26 +45,13 @@ namespace ObjectCartographer
         {
             get
             {
-                if (!(_instance is null))
+                if (_instance is not null)
                     return _instance;
-                if (Canister.Builder.Bootstrapper is null)
+                lock (InstanceLockObject)
                 {
-                    lock (InstanceLockObject)
-                    {
-                        if (Canister.Builder.Bootstrapper is null)
-                        {
-                            new ServiceCollection().AddCanisterModules();
-                        }
-                    }
-                }
-                for (var x = 0; x < 1000; ++x)
-                {
-                    try
-                    {
-                        _instance = Canister.Builder.Bootstrapper?.Resolve<DataMapper>();
-                        break;
-                    }
-                    catch { }
+                    if (_instance is not null)
+                        return _instance;
+                    _instance = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider().GetService<DataMapper>();
                 }
                 return _instance;
             }

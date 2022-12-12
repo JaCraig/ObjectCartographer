@@ -69,7 +69,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns><c>true</c> if the specified type is nullable; otherwise, <c>false</c>.</returns>
         private static bool IsNullable(Type type)
         {
-            return !(type is null)
+            return type is not null
                 && (!type.IsValueType || Nullable.GetUnderlyingType(type) != null);
         }
     }
