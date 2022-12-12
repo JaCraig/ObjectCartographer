@@ -38,7 +38,6 @@ namespace ObjectCartographer.Tests.BaseClasses
         [Fact]
         public Task BreakObject()
         {
-            return Task.CompletedTask;
             return Mech.BreakAsync(TestObject, new Options
             {
                 MaxDuration = 1000
@@ -56,10 +55,10 @@ namespace ObjectCartographer.Tests.BaseClasses
         /// </summary>
         protected TestBaseClass()
         {
-            //lock (LockObject)
-            //{
-            //    _ = Mech.Default;
-            //}
+            lock (LockObject)
+            {
+                _ = Mech.Default;
+            }
         }
 
         /// <summary>
@@ -80,7 +79,6 @@ namespace ObjectCartographer.Tests.BaseClasses
         [Fact]
         public Task BreakType()
         {
-            return Task.CompletedTask;
             return Mech.BreakAsync(ObjectType, new Options
             {
                 MaxDuration = 1000
