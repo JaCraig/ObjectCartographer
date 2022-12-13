@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ObjectCartographer.ExpressionBuilder;
+using ObjectCartographer.ExtensionMethods;
 using ObjectCartographer.Interfaces;
 using ObjectCartographer.Internal;
 using System;
@@ -51,14 +52,11 @@ namespace ObjectCartographer
                 {
                     if (_instance is not null)
                         return _instance;
-                    _instance = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider().GetService<DataMapper>();
+                    _instance = Services.ServiceProvider?.GetService<DataMapper>();
                 }
                 return _instance;
             }
-            set
-            {
-                _instance = value;
-            }
+            set => _instance = value;
         }
 
         /// <summary>
@@ -100,7 +98,7 @@ namespace ObjectCartographer
         /// <summary>
         /// The copy create lock object
         /// </summary>
-        private static readonly object CopyCreateLockObject = new object();
+        private static readonly object CopyCreateLockObject = new();
 
         /// <summary>
         /// The copy generic
@@ -110,17 +108,17 @@ namespace ObjectCartographer
         /// <summary>
         /// The instance lock object
         /// </summary>
-        private static readonly object InstanceLockObject = new object();
+        private static readonly object InstanceLockObject = new();
 
         /// <summary>
         /// The internal lock
         /// </summary>
-        private static readonly object InternalLock = new object();
+        private static readonly object InternalLock = new();
 
         /// <summary>
         /// The map create lock object
         /// </summary>
-        private static readonly object MapCreateLockObject = new object();
+        private static readonly object MapCreateLockObject = new();
 
         /// <summary>
         /// The generic map method.
@@ -153,10 +151,7 @@ namespace ObjectCartographer
         /// <typeparam name="TFirst">The type of the first.</typeparam>
         /// <typeparam name="TSecond">The type of the second.</typeparam>
         /// <returns>This.</returns>
-        public DataMapper AutoMap<TFirst, TSecond>()
-        {
-            return AutoMap(typeof(TFirst), typeof(TSecond));
-        }
+        public DataMapper AutoMap<TFirst, TSecond>() => AutoMap(typeof(TFirst), typeof(TSecond));
 
         /// <summary>
         /// Copies the specified source to the destination object (or a new TDestination object if
@@ -166,10 +161,7 @@ namespace ObjectCartographer
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
         /// <returns>The resulting object</returns>
-        public TDestination Copy<TDestination>(object? source, TDestination destination = default!)
-        {
-            return (TDestination)Copy(source, destination, typeof(TDestination))!;
-        }
+        public TDestination Copy<TDestination>(object? source, TDestination destination = default!) => (TDestination)Copy(source, destination, typeof(TDestination))!;
 
         /// <summary>
         /// Copies the specified source to the destination
@@ -184,19 +176,19 @@ namespace ObjectCartographer
         {
             if (source is null)
                 return destination;
-            var Source = source.GetType();
-            var Destination = destinationType ?? destination?.GetType();
+            Type Source = source.GetType();
+            Type? Destination = destinationType ?? destination?.GetType();
             if (Destination is null)
                 return destination;
             var Key = new TypeTuple(Source, Destination);
-            if (CopyMethods.TryGetValue(Key, out var Method))
+            if (CopyMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
                 return Method(new object?[] { source, destination });
             lock (CopyCreateLockObject)
             {
                 if (CopyMethods.TryGetValue(Key, out Method))
                     return Method(new object?[] { source, destination });
-                var GenericMethod = CopyGeneric.MakeGenericMethod(Source, Destination);
-                var FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
+                MethodInfo GenericMethod = CopyGeneric.MakeGenericMethod(Source, Destination);
+                MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 CopyMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(new object?[] { source, destination });
             }
@@ -215,10 +207,10 @@ namespace ObjectCartographer
         {
             if (source is null)
                 return destination;
-            var Source = source.GetType();
-            var Destination = typeof(TDestination);
+            Type Source = source.GetType();
+            Type Destination = typeof(TDestination);
             var Key = new TypeTuple(Source, Destination);
-            if (!Types.TryGetValue(Key, out var ReturnValue))
+            if (!Types.TryGetValue(Key, out ITypeMapping? ReturnValue))
             {
                 AutoMap<TSource, TDestination>();
                 if (!Types.TryGetValue(Key, out ReturnValue))
@@ -237,10 +229,10 @@ namespace ObjectCartographer
         /// <returns>The type mapping.</returns>
         public TypeMapping<TSource, TDestination>? Map<TSource, TDestination>()
         {
-            var Source = typeof(TSource);
-            var Destination = typeof(TDestination);
+            Type Source = typeof(TSource);
+            Type Destination = typeof(TDestination);
             var Key = new TypeTuple(Source, Destination);
-            if (Types.TryGetValue(Key, out var ReturnValue))
+            if (Types.TryGetValue(Key, out ITypeMapping? ReturnValue))
                 return ReturnValue as TypeMapping<TSource, TDestination>;
             lock (InternalLock)
             {
@@ -264,14 +256,14 @@ namespace ObjectCartographer
             if (source is null || destination is null)
                 return null;
             var Key = new TypeTuple(source, destination);
-            if (MapMethods.TryGetValue(Key, out var Method))
+            if (MapMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
                 return Method(Array.Empty<object>()) as ITypeMapping;
             lock (MapCreateLockObject)
             {
                 if (MapMethods.TryGetValue(Key, out Method))
                     return Method(Array.Empty<object>()) as ITypeMapping;
-                var GenericMethod = MapGeneric.MakeGenericMethod(source, destination);
-                var FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
+                MethodInfo GenericMethod = MapGeneric.MakeGenericMethod(source, destination);
+                MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 MapMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(Array.Empty<object>()) as ITypeMapping;
             }
@@ -286,7 +278,7 @@ namespace ObjectCartographer
         /// <returns>The argument expression</returns>
         private static Expression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index)
         {
-            var IndexValue = Expression.ArrayIndex(parameterExpression, Expression.Constant(index));
+            BinaryExpression IndexValue = Expression.ArrayIndex(parameterExpression, Expression.Constant(index));
             if (DefaultValueLookup.Values.TryGetValue(parameterInfo.ParameterType.GetHashCode(), out var defaultValue))
                 IndexValue = Expression.Coalesce(IndexValue, Expression.Constant(defaultValue));
             else if (!parameterInfo.ParameterType.IsClass)
@@ -304,10 +296,10 @@ namespace ObjectCartographer
         /// <returns>The resulting method.</returns>
         private MethodWrapperDelegate CreateMethod(MethodInfo method, ParameterInfo[] parameters)
         {
-            var ParameterExpression = Expression.Parameter(typeof(object[]), "args");
-            var ThisValue = Expression.Constant(this);
+            ParameterExpression ParameterExpression = Expression.Parameter(typeof(object[]), "args");
+            ConstantExpression ThisValue = Expression.Constant(this);
 
-            var ArgsExpressions = parameters
+            Expression[] ArgsExpressions = parameters
                 .Select((info, index) => CreateArgumentExpression(ParameterExpression, info, index))
                 .ToArray();
 
