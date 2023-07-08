@@ -7,5 +7,55 @@ All notable changes to this project will be documented in this file. See [versio
 
 ### Bug Fixes
 
+* Adding tests ([0cd9083](https://www.github.com/JaCraig/ObjectCartographer/commit/0cd90836e14c30fb46b526686014f96bd47283ad))
+* Fixing the workflows as they were pointing to master instead of main ([e8917ed](https://www.github.com/JaCraig/ObjectCartographer/commit/e8917ed19c298b6c38b0533a59c796c16d8174a1))
+* package updates and getting the versioning working ([d1ab94d](https://www.github.com/JaCraig/ObjectCartographer/commit/d1ab94db657e41fece3e11d31e4e63c3d89e22d2))
+
+### Other
+
+* - Added a number of various converters for basic types. ([9234c53](https://www.github.com/JaCraig/ObjectCartographer/commit/9234c53dc3fe1acefb65992a7bbb916b80787a0f))
+* - Added Dictionary/ExpandoObject functionality. ([7219329](https://www.github.com/JaCraig/ObjectCartographer/commit/721932963deb1a69192e51ea4e4362c2276fc8f6))
+* - Added the basic method builders for items mapped by the user and class to class. Need to work on simple types, etc. ([49e0f04](https://www.github.com/JaCraig/ObjectCartographer/commit/49e0f048fc013c682ae51bca023389754701da6b))
+* - Changing logging to be debug level. ([1cab2b6](https://www.github.com/JaCraig/ObjectCartographer/commit/1cab2b6a8ebdaed073ad89000aa163f961c3f89c))
+* - Checking for null. ([0deb6d3](https://www.github.com/JaCraig/ObjectCartographer/commit/0deb6d3fc0008b5f7def8060848092f6eeb9ed55))
+* - Collection copying is complete. ([cc9dceb](https://www.github.com/JaCraig/ObjectCartographer/commit/cc9dceb713ece9044a8bb7df31a73a29be09db6b))
+* - Collection fixed. ([1696a95](https://www.github.com/JaCraig/ObjectCartographer/commit/1696a95eba87f7fa921571b286497adc1a875e39))
+* - Final cleanup. ([4c982b5](https://www.github.com/JaCraig/ObjectCartographer/commit/4c982b534724d2974a610e74a6799b129a85faeb))
+* - Finished adding tests. Final prep for build/push will be tomorrow. ([d716d2d](https://www.github.com/JaCraig/ObjectCartographer/commit/d716d2df9ac5b339983d2cb2cb63315778f8a4c6))
+* - Finished basic converters. Need SQL, etc. types next. ([befcfd1](https://www.github.com/JaCraig/ObjectCartographer/commit/befcfd1b4d25edfd0319660049cf250766da0313))
+* - Fix for DBNull ToString call. ([d2c64dd](https://www.github.com/JaCraig/ObjectCartographer/commit/d2c64dd8c1be856b8126b93c7c8425bcc40aff1b))
+* - Fix for dictionary keys that contain underscores. ([052b051](https://www.github.com/JaCraig/ObjectCartographer/commit/052b05186cf20fae2d4c74445947ba21a955a029))
+* - Fix for ToDictionary when the type has properties defined on it but implements IDictionary<string,object>. ([5ce435a](https://www.github.com/JaCraig/ObjectCartographer/commit/5ce435aa61099ea051c21368d99f1b130f87e59c))
+* - Fix for unknown sql db type. ([18c34e4](https://www.github.com/JaCraig/ObjectCartographer/commit/18c34e4fe964a98b894cba089563549813da6cd0))
+* - Fixed class creation and properties further down the chain. ([4cd3106](https://www.github.com/JaCraig/ObjectCartographer/commit/4cd310677ce8281cfc0587c1c31f12a8667af7de))
+* - Fixed some null object issues. ([3838c2d](https://www.github.com/JaCraig/ObjectCartographer/commit/3838c2d69b150fe356bfa2c4518a6426198dfeb0))
+* - Fixes for service collection management. ([bc2a549](https://www.github.com/JaCraig/ObjectCartographer/commit/bc2a54971afa954c5bed351db7f4f6f0365c740d))
+* - Fixing extensions. ([eaec238](https://www.github.com/JaCraig/ObjectCartographer/commit/eaec2384025deab16a6a4ed5422ebce0ea2866b6))
+* - Fixing tests. ([499c98d](https://www.github.com/JaCraig/ObjectCartographer/commit/499c98db7258e0d08951217c3a8c9a4599b91466))
+* - Lock/double check added for certain race conditions. ([7b53fff](https://www.github.com/JaCraig/ObjectCartographer/commit/7b53fff6e945b1db9a18c7462664f5512e8d4bef))
+* - More converters. ([fad88fa](https://www.github.com/JaCraig/ObjectCartographer/commit/fad88faf1770524a9052db31b910fdd2c8124cd2))
+* - Moved to .net 6 as base. ([e7a66f5](https://www.github.com/JaCraig/ObjectCartographer/commit/e7a66f5aae4778459890b0f9b683d78163642fc1))
+* - Package updates. ([90f783b](https://www.github.com/JaCraig/ObjectCartographer/commit/90f783b3fc3aec94933b4b03300f44777171a8d7))
+* - Package updates. ([eaba28c](https://www.github.com/JaCraig/ObjectCartographer/commit/eaba28cfcca8077c0b2b5e1ebde037e0169e90b3))
+* - Small fix so race condition doesn't throw error. ([3f2c179](https://www.github.com/JaCraig/ObjectCartographer/commit/3f2c179d3def5c11fe2c32a1e82df15d05d8a5c6))
+* - Started down the path of expression building/compiling. ([0c4d0f6](https://www.github.com/JaCraig/ObjectCartographer/commit/0c4d0f6647695839036f512a6f22dc9a0ee7311e))
+* - Started on code move. ([4cd7987](https://www.github.com/JaCraig/ObjectCartographer/commit/4cd79871fc630f592fc08ede15d1857d688a098f))
+* - Started on rework. Object creation is now wonky. ([d85dab7](https://www.github.com/JaCraig/ObjectCartographer/commit/d85dab74c3dea04fee241e5015f9e148192b0d40))
+* - Still working on the copy and rethinking a lot of the direction of the old code. ([6ac8dbc](https://www.github.com/JaCraig/ObjectCartographer/commit/6ac8dbc97d88bd0be103c3ec9ea680ac684b2f6a))
+* - Test updates. ([bf69e6c](https://www.github.com/JaCraig/ObjectCartographer/commit/bf69e6c3979966ba92808cd31a495bc1e9d19379))
+* - Think I've got the interface down. Just need the actual mapping code. ([a6a1c5c](https://www.github.com/JaCraig/ObjectCartographer/commit/a6a1c5cf615cf8119266eea3321102271b7ab76d))
+* - Too complex. Needs simplifying so starting over. ([cd92803](https://www.github.com/JaCraig/ObjectCartographer/commit/cd92803dae1b5311b9b09f7afca8bc71fa7f5771))
+* - Updates for DBNull check on ToString. ([c4cc157](https://www.github.com/JaCraig/ObjectCartographer/commit/c4cc157c616b688dde6297977a911526aaccbc75))
+* - Worked a bit more on the expression builders. ([07ce118](https://www.github.com/JaCraig/ObjectCartographer/commit/07ce1185d001314b45fa0a8aab26a4ba36d7987f))
+* Initial commit ([b7798d3](https://www.github.com/JaCraig/ObjectCartographer/commit/b7798d34c8958c91071c27da34602adfb4a0b09d))
+* Create CODE_OF_CONDUCT.md ([fa0bf8c](https://www.github.com/JaCraig/ObjectCartographer/commit/fa0bf8cf70febee9e90e291caf941eb7dbb27905))
+* Getting the basic automation set up ([879b58a](https://www.github.com/JaCraig/ObjectCartographer/commit/879b58abbb4719f22b37d6d5f2797c50839d0f72))
+* **release:** 3.0.3 ([8f4c7b5](https://www.github.com/JaCraig/ObjectCartographer/commit/8f4c7b512edafe0e5bfa985f4f6a43a3687cb688))
+
+<a name="3.0.3"></a>
+## [3.0.3](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.3) (2023-7-8)
+
+### Bug Fixes
+
 * package updates and getting the versioning working ([d1ab94d](https://www.github.com/JaCraig/ObjectCartographer/commit/d1ab94db657e41fece3e11d31e4e63c3d89e22d2))
 
