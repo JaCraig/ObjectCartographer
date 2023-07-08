@@ -10,6 +10,9 @@
         Option3
     }
 
+    /// <summary>
+    /// My enum 2
+    /// </summary>
     public enum MyEnum2
     {
         Option1,
