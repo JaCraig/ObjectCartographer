@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.7"></a>
+## [3.0.7](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.7) (2023-7-8)
+
+### Bug Fixes
+
+* Another push test ([9b55f74](https://www.github.com/JaCraig/ObjectCartographer/commit/9b55f74927226a2134988d25ca03c091c4e67128))
+
+### Other
+
+* Create CONTRIBUTING.md ([0e49f60](https://www.github.com/JaCraig/ObjectCartographer/commit/0e49f60ff944e1fad314da9e335a4cca9fadc16e))
+* Create SECURITY.md ([9e5ca62](https://www.github.com/JaCraig/ObjectCartographer/commit/9e5ca62a7095690786e3dabdd23930a68370b014))
+
 <a name="3.0.6"></a>
 ## [3.0.6](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.6) (2023-7-8)
 
