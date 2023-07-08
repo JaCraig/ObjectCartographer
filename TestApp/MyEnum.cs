@@ -1,5 +1,8 @@
 ﻿namespace TestApp
 {
+    /// <summary>
+    /// My enum
+    /// </summary>
     public enum MyEnum
     {
         Option1,
