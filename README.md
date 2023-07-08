@@ -1,6 +1,6 @@
 # ObjectCartographer
 
-[![Build status](https://ci.appveyor.com/api/projects/status/jm99x01py3941m0r?svg=true)](https://ci.appveyor.com/project/JaCraig/objectcartographer)
+[![.NET Publish](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml)
 
 ObjectCartographer is a fast, convention based, and developer friendly object to object mapper. It's designed to simplify your life and remove the drudgery of writing code to copy data from one object to another.
 
