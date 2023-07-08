@@ -1,0 +1,2104 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Microsoft.Extensions.DependencyInjection
+  name: Microsoft.Extensions.DependencyInjection
+  href: api/Microsoft.Extensions.DependencyInjection.html
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions
+  name: CanisterExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.CanisterExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions
+  nameWithType: CanisterExtensions
+- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  name: RegisterObjectCartographer(ICanisterConfiguration?)
+  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html#Microsoft_Extensions_DependencyInjection_CanisterExtensions_RegisterObjectCartographer_Canister_Interfaces_ICanisterConfiguration_
+  commentId: M:Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  name.vb: RegisterObjectCartographer(ICanisterConfiguration)
+  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  nameWithType: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration?)
+  nameWithType.vb: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration)
+- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer*
+  name: RegisterObjectCartographer
+  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html#Microsoft_Extensions_DependencyInjection_CanisterExtensions_RegisterObjectCartographer_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer
+  isSpec: "True"
+  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer
+  nameWithType: CanisterExtensions.RegisterObjectCartographer
+- uid: ObjectCartographer
+  name: ObjectCartographer
+  href: api/ObjectCartographer.html
+  commentId: N:ObjectCartographer
+  fullName: ObjectCartographer
+  nameWithType: ObjectCartographer
+- uid: ObjectCartographer.DataMapper
+  name: DataMapper
+  href: api/ObjectCartographer.DataMapper.html
+  commentId: T:ObjectCartographer.DataMapper
+  fullName: ObjectCartographer.DataMapper
+  nameWithType: DataMapper
+- uid: ObjectCartographer.DataMapper.#ctor
+  name: DataMapper()
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper__ctor
+  commentId: M:ObjectCartographer.DataMapper.#ctor
+  name.vb: New()
+  fullName: ObjectCartographer.DataMapper.DataMapper()
+  fullName.vb: ObjectCartographer.DataMapper.New()
+  nameWithType: DataMapper.DataMapper()
+  nameWithType.vb: DataMapper.New()
+- uid: ObjectCartographer.DataMapper.#ctor(ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,Microsoft.Extensions.Logging.ILogger{ObjectCartographer.DataMapper})
+  name: DataMapper(ExpressionBuilderManager, ILogger<DataMapper>?)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper__ctor_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_Microsoft_Extensions_Logging_ILogger_ObjectCartographer_DataMapper__
+  commentId: M:ObjectCartographer.DataMapper.#ctor(ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,Microsoft.Extensions.Logging.ILogger{ObjectCartographer.DataMapper})
+  name.vb: New(ExpressionBuilderManager, ILogger(Of DataMapper))
+  fullName: ObjectCartographer.DataMapper.DataMapper(ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, Microsoft.Extensions.Logging.ILogger<ObjectCartographer.DataMapper>?)
+  fullName.vb: ObjectCartographer.DataMapper.New(ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, Microsoft.Extensions.Logging.ILogger(Of ObjectCartographer.DataMapper))
+  nameWithType: DataMapper.DataMapper(ExpressionBuilderManager, ILogger<DataMapper>?)
+  nameWithType.vb: DataMapper.New(ExpressionBuilderManager, ILogger(Of DataMapper))
+- uid: ObjectCartographer.DataMapper.#ctor*
+  name: DataMapper
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper__ctor_
+  commentId: Overload:ObjectCartographer.DataMapper.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.DataMapper.DataMapper
+  fullName.vb: ObjectCartographer.DataMapper.New
+  nameWithType: DataMapper.DataMapper
+  nameWithType.vb: DataMapper.New
+- uid: ObjectCartographer.DataMapper.AutoMap(System.Type,System.Type)
+  name: AutoMap(Type, Type)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_AutoMap_System_Type_System_Type_
+  commentId: M:ObjectCartographer.DataMapper.AutoMap(System.Type,System.Type)
+  fullName: ObjectCartographer.DataMapper.AutoMap(System.Type, System.Type)
+  nameWithType: DataMapper.AutoMap(Type, Type)
+- uid: ObjectCartographer.DataMapper.AutoMap*
+  name: AutoMap
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_AutoMap_
+  commentId: Overload:ObjectCartographer.DataMapper.AutoMap
+  isSpec: "True"
+  fullName: ObjectCartographer.DataMapper.AutoMap
+  nameWithType: DataMapper.AutoMap
+- uid: ObjectCartographer.DataMapper.AutoMap``2
+  name: AutoMap<TFirst, TSecond>()
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_AutoMap__2
+  commentId: M:ObjectCartographer.DataMapper.AutoMap``2
+  name.vb: AutoMap(Of TFirst, TSecond)()
+  fullName: ObjectCartographer.DataMapper.AutoMap<TFirst, TSecond>()
+  fullName.vb: ObjectCartographer.DataMapper.AutoMap(Of TFirst, TSecond)()
+  nameWithType: DataMapper.AutoMap<TFirst, TSecond>()
+  nameWithType.vb: DataMapper.AutoMap(Of TFirst, TSecond)()
+- uid: ObjectCartographer.DataMapper.Copy(System.Object,System.Object,System.Type)
+  name: Copy(object?, object?, Type?)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Copy_System_Object_System_Object_System_Type_
+  commentId: M:ObjectCartographer.DataMapper.Copy(System.Object,System.Object,System.Type)
+  name.vb: Copy(Object, Object, Type)
+  fullName: ObjectCartographer.DataMapper.Copy(object?, object?, System.Type?)
+  fullName.vb: ObjectCartographer.DataMapper.Copy(Object, Object, System.Type)
+  nameWithType: DataMapper.Copy(object?, object?, Type?)
+  nameWithType.vb: DataMapper.Copy(Object, Object, Type)
+- uid: ObjectCartographer.DataMapper.Copy*
+  name: Copy
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Copy_
+  commentId: Overload:ObjectCartographer.DataMapper.Copy
+  isSpec: "True"
+  fullName: ObjectCartographer.DataMapper.Copy
+  nameWithType: DataMapper.Copy
+- uid: ObjectCartographer.DataMapper.Copy``1(System.Object,``0)
+  name: Copy<TDestination>(object?, TDestination)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Copy__1_System_Object___0_
+  commentId: M:ObjectCartographer.DataMapper.Copy``1(System.Object,``0)
+  name.vb: Copy(Of TDestination)(Object, TDestination)
+  fullName: ObjectCartographer.DataMapper.Copy<TDestination>(object?, TDestination)
+  fullName.vb: ObjectCartographer.DataMapper.Copy(Of TDestination)(Object, TDestination)
+  nameWithType: DataMapper.Copy<TDestination>(object?, TDestination)
+  nameWithType.vb: DataMapper.Copy(Of TDestination)(Object, TDestination)
+- uid: ObjectCartographer.DataMapper.Copy``2(``0,``1)
+  name: Copy<TSource, TDestination>(TSource, TDestination)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Copy__2___0___1_
+  commentId: M:ObjectCartographer.DataMapper.Copy``2(``0,``1)
+  name.vb: Copy(Of TSource, TDestination)(TSource, TDestination)
+  fullName: ObjectCartographer.DataMapper.Copy<TSource, TDestination>(TSource, TDestination)
+  fullName.vb: ObjectCartographer.DataMapper.Copy(Of TSource, TDestination)(TSource, TDestination)
+  nameWithType: DataMapper.Copy<TSource, TDestination>(TSource, TDestination)
+  nameWithType.vb: DataMapper.Copy(Of TSource, TDestination)(TSource, TDestination)
+- uid: ObjectCartographer.DataMapper.Map(System.Type,System.Type)
+  name: Map(Type, Type)
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Map_System_Type_System_Type_
+  commentId: M:ObjectCartographer.DataMapper.Map(System.Type,System.Type)
+  fullName: ObjectCartographer.DataMapper.Map(System.Type, System.Type)
+  nameWithType: DataMapper.Map(Type, Type)
+- uid: ObjectCartographer.DataMapper.Map*
+  name: Map
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Map_
+  commentId: Overload:ObjectCartographer.DataMapper.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.DataMapper.Map
+  nameWithType: DataMapper.Map
+- uid: ObjectCartographer.DataMapper.Map``2
+  name: Map<TSource, TDestination>()
+  href: api/ObjectCartographer.DataMapper.html#ObjectCartographer_DataMapper_Map__2
+  commentId: M:ObjectCartographer.DataMapper.Map``2
+  name.vb: Map(Of TSource, TDestination)()
+  fullName: ObjectCartographer.DataMapper.Map<TSource, TDestination>()
+  fullName.vb: ObjectCartographer.DataMapper.Map(Of TSource, TDestination)()
+  nameWithType: DataMapper.Map<TSource, TDestination>()
+  nameWithType.vb: DataMapper.Map(Of TSource, TDestination)()
+- uid: ObjectCartographer.ExpressionBuilder
+  name: ObjectCartographer.ExpressionBuilder
+  href: api/ObjectCartographer.ExpressionBuilder.html
+  commentId: N:ObjectCartographer.ExpressionBuilder
+  fullName: ObjectCartographer.ExpressionBuilder
+  nameWithType: ObjectCartographer.ExpressionBuilder
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses
+  name: ObjectCartographer.ExpressionBuilder.BaseClasses
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.html
+  commentId: N:ObjectCartographer.ExpressionBuilder.BaseClasses
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses
+  nameWithType: ObjectCartographer.ExpressionBuilder.BaseClasses
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass
+  name: ConverterBaseClass
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass
+  nameWithType: ConverterBaseClass
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.#ctor
+  name: ConverterBaseClass()
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass__ctor
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.#ctor
+  name.vb: New()
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ConverterBaseClass()
+  fullName.vb: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.New()
+  nameWithType: ConverterBaseClass.ConverterBaseClass()
+  nameWithType.vb: ConverterBaseClass.New()
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.#ctor*
+  name: ConverterBaseClass
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass__ctor_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ConverterBaseClass
+  fullName.vb: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.New
+  nameWithType: ConverterBaseClass.ConverterBaseClass
+  nameWithType.vb: ConverterBaseClass.New
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle(System.Type, System.Type)
+  nameWithType: ConverterBaseClass.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CanHandle
+  nameWithType: ConverterBaseClass.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: ConverterBaseClass.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: ConverterBaseClass.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CopyObject
+  nameWithType: ConverterBaseClass.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Reflection.PropertyInfo[],System.Reflection.ConstructorInfo[],ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: CreateObject(Expression, Expression, PropertyInfo[], ConstructorInfo[], IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CreateObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Reflection_PropertyInfo___System_Reflection_ConstructorInfo___ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Reflection.PropertyInfo[],System.Reflection.ConstructorInfo[],ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: CreateObject(Expression, Expression, PropertyInfo(), ConstructorInfo(), IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Reflection.PropertyInfo[], System.Reflection.ConstructorInfo[], ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Reflection.PropertyInfo(), System.Reflection.ConstructorInfo(), ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: ConverterBaseClass.CreateObject(Expression, Expression, PropertyInfo[], ConstructorInfo[], IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: ConverterBaseClass.CreateObject(Expression, Expression, PropertyInfo(), ConstructorInfo(), IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject*
+  name: CreateObject
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_CreateObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.CreateObject
+  nameWithType: ConverterBaseClass.CreateObject
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach(System.Linq.Expressions.Expression,System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression)
+  name: ForEach(Expression, ParameterExpression, Expression)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_ForEach_System_Linq_Expressions_Expression_System_Linq_Expressions_ParameterExpression_System_Linq_Expressions_Expression_
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach(System.Linq.Expressions.Expression,System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.Expression)
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach(System.Linq.Expressions.Expression, System.Linq.Expressions.ParameterExpression, System.Linq.Expressions.Expression)
+  nameWithType: ConverterBaseClass.ForEach(Expression, ParameterExpression, Expression)
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach*
+  name: ForEach
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_ForEach_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.ForEach
+  nameWithType: ConverterBaseClass.ForEach
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor(System.Type,System.Type)
+  name: GetCopyConstructor(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_GetCopyConstructor_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor(System.Type, System.Type)
+  nameWithType: ConverterBaseClass.GetCopyConstructor(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor*
+  name: GetCopyConstructor
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_GetCopyConstructor_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.GetCopyConstructor
+  nameWithType: ConverterBaseClass.GetCopyConstructor
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: ConverterBaseClass.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: ConverterBaseClass.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Map
+  nameWithType: ConverterBaseClass.Map
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order
+  nameWithType: ConverterBaseClass.Order
+- uid: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html#ObjectCartographer_ExpressionBuilder_BaseClasses_ConverterBaseClass_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.Order
+  nameWithType: ConverterBaseClass.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters
+  name: ObjectCartographer.ExpressionBuilder.Converters
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.html
+  commentId: N:ObjectCartographer.ExpressionBuilder.Converters
+  fullName: ObjectCartographer.ExpressionBuilder.Converters
+  nameWithType: ObjectCartographer.ExpressionBuilder.Converters
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter
+  name: ArrayIEnumerableConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter
+  nameWithType: ArrayIEnumerableConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle(System.Type, System.Type)
+  nameWithType: ArrayIEnumerableConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.CanHandle
+  nameWithType: ArrayIEnumerableConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion*
+  name: Conversion
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Conversion_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion
+  nameWithType: ArrayIEnumerableConverter.Conversion
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion``2(System.Collections.Generic.IEnumerable{``0},``1[])
+  name: Conversion<TSource, TDestination>(IEnumerable<TSource>, TDestination[])
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Conversion__2_System_Collections_Generic_IEnumerable___0____1___
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion``2(System.Collections.Generic.IEnumerable{``0},``1[])
+  name.vb: Conversion(Of TSource, TDestination)(IEnumerable(Of TSource), TDestination())
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion<TSource, TDestination>(System.Collections.Generic.IEnumerable<TSource>, TDestination[])
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Conversion(Of TSource, TDestination)(System.Collections.Generic.IEnumerable(Of TSource), TDestination())
+  nameWithType: ArrayIEnumerableConverter.Conversion<TSource, TDestination>(IEnumerable<TSource>, TDestination[])
+  nameWithType.vb: ArrayIEnumerableConverter.Conversion(Of TSource, TDestination)(IEnumerable(Of TSource), TDestination())
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: ArrayIEnumerableConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: ArrayIEnumerableConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Map
+  nameWithType: ArrayIEnumerableConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order
+  nameWithType: ArrayIEnumerableConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ArrayIEnumerableConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.Order
+  nameWithType: ArrayIEnumerableConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter
+  name: AssignableFromConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter
+  nameWithType: AssignableFromConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle(System.Type, System.Type)
+  nameWithType: AssignableFromConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.CanHandle
+  nameWithType: AssignableFromConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: AssignableFromConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: AssignableFromConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Map
+  nameWithType: AssignableFromConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order
+  nameWithType: AssignableFromConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html#ObjectCartographer_ExpressionBuilder_Converters_AssignableFromConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.Order
+  nameWithType: AssignableFromConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter
+  name: ClassToClassConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter
+  nameWithType: ClassToClassConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle(System.Type, System.Type)
+  nameWithType: ClassToClassConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CanHandle
+  nameWithType: ClassToClassConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: ClassToClassConverter.CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: ClassToClassConverter.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.CopyObject
+  nameWithType: ClassToClassConverter.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order
+  nameWithType: ClassToClassConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ClassToClassConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.Order
+  nameWithType: ClassToClassConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter
+  name: DefaultConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter
+  nameWithType: DefaultConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle(System.Type, System.Type)
+  nameWithType: DefaultConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.CanHandle
+  nameWithType: DefaultConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo(System.Object,System.Object,System.Type)
+  name: ConvertTo(object?, object?, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_ConvertTo_System_Object_System_Object_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo(System.Object,System.Object,System.Type)
+  name.vb: ConvertTo(Object, Object, Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo(object?, object?, System.Type)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo(Object, Object, System.Type)
+  nameWithType: DefaultConverter.ConvertTo(object?, object?, Type)
+  nameWithType.vb: DefaultConverter.ConvertTo(Object, Object, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo*
+  name: ConvertTo
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_ConvertTo_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.ConvertTo
+  nameWithType: DefaultConverter.ConvertTo
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: DefaultConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: DefaultConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Map
+  nameWithType: DefaultConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order
+  nameWithType: DefaultConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html#ObjectCartographer_ExpressionBuilder_Converters_DefaultConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.Order
+  nameWithType: DefaultConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter
+  name: EnumConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter
+  nameWithType: EnumConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle(System.Type, System.Type)
+  nameWithType: EnumConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.CanHandle
+  nameWithType: EnumConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: EnumConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: EnumConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Map
+  nameWithType: EnumConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order
+  nameWithType: EnumConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_EnumConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.Order
+  nameWithType: EnumConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter
+  name: FromDictionaryConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter
+  nameWithType: FromDictionaryConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle(System.Type, System.Type)
+  nameWithType: FromDictionaryConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CanHandle
+  nameWithType: FromDictionaryConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: FromDictionaryConverter.CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: FromDictionaryConverter.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.CopyObject
+  nameWithType: FromDictionaryConverter.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order
+  nameWithType: FromDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.Order
+  nameWithType: FromDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary{System.String,System.Object},System.String,System.Object@)
+  name: TryGetValue(IDictionary<string, object>, string, out object?)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_TryGetValue_System_Collections_Generic_IDictionary_System_String_System_Object__System_String_System_Object__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary{System.String,System.Object},System.String,System.Object@)
+  name.vb: TryGetValue(IDictionary(Of String, Object), String, Object)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary<string, object>, string, out object?)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary(Of String, Object), String, Object)
+  nameWithType: FromDictionaryConverter.TryGetValue(IDictionary<string, object>, string, out object?)
+  nameWithType.vb: FromDictionaryConverter.TryGetValue(IDictionary(Of String, Object), String, Object)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue*
+  name: TryGetValue
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromDictionaryConverter_TryGetValue_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.TryGetValue
+  nameWithType: FromDictionaryConverter.TryGetValue
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter
+  name: FromEnumConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter
+  nameWithType: FromEnumConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle(System.Type, System.Type)
+  nameWithType: FromEnumConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.CanHandle
+  nameWithType: FromEnumConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: FromEnumConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: FromEnumConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Map
+  nameWithType: FromEnumConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
+  nameWithType: FromEnumConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromEnumConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
+  nameWithType: FromEnumConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter
+  name: ICollectionConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter
+  nameWithType: ICollectionConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle(System.Type, System.Type)
+  nameWithType: ICollectionConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CanHandle
+  nameWithType: ICollectionConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: ICollectionConverter.CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: ICollectionConverter.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.CopyObject
+  nameWithType: ICollectionConverter.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
+  nameWithType: ICollectionConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ICollectionConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
+  nameWithType: ICollectionConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter
+  name: KeyValuePairConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter
+  nameWithType: KeyValuePairConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle(System.Type, System.Type)
+  nameWithType: KeyValuePairConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.CanHandle
+  nameWithType: KeyValuePairConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: KeyValuePairConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: KeyValuePairConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Map
+  nameWithType: KeyValuePairConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order
+  nameWithType: KeyValuePairConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html#ObjectCartographer_ExpressionBuilder_Converters_KeyValuePairConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.Order
+  nameWithType: KeyValuePairConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter
+  name: PrimitiveConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter
+  nameWithType: PrimitiveConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle(System.Type, System.Type)
+  nameWithType: PrimitiveConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.CanHandle
+  nameWithType: PrimitiveConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: PrimitiveConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: PrimitiveConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Map
+  nameWithType: PrimitiveConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order
+  nameWithType: PrimitiveConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html#ObjectCartographer_ExpressionBuilder_Converters_PrimitiveConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.Order
+  nameWithType: PrimitiveConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter
+  name: SameConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.SameConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter
+  nameWithType: SameConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle(System.Type, System.Type)
+  nameWithType: SameConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.CanHandle
+  nameWithType: SameConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: SameConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: SameConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Map
+  nameWithType: SameConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order
+  nameWithType: SameConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html#ObjectCartographer_ExpressionBuilder_Converters_SameConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.SameConverter.Order
+  nameWithType: SameConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter
+  name: StringByteArrayConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter
+  nameWithType: StringByteArrayConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle(System.Type, System.Type)
+  nameWithType: StringByteArrayConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.CanHandle
+  nameWithType: StringByteArrayConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes(System.String)
+  name: GetBytes(string)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_GetBytes_System_String_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes(System.String)
+  name.vb: GetBytes(String)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes(string)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes(String)
+  nameWithType: StringByteArrayConverter.GetBytes(string)
+  nameWithType.vb: StringByteArrayConverter.GetBytes(String)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes*
+  name: GetBytes
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_GetBytes_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetBytes
+  nameWithType: StringByteArrayConverter.GetBytes
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString(System.Byte[])
+  name: GetString(byte[])
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_GetString_System_Byte___
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString(System.Byte[])
+  name.vb: GetString(Byte())
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString(byte[])
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString(Byte())
+  nameWithType: StringByteArrayConverter.GetString(byte[])
+  nameWithType.vb: StringByteArrayConverter.GetString(Byte())
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString*
+  name: GetString
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_GetString_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.GetString
+  nameWithType: StringByteArrayConverter.GetString
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: StringByteArrayConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: StringByteArrayConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Map
+  nameWithType: StringByteArrayConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order
+  nameWithType: StringByteArrayConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringByteArrayConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.Order
+  nameWithType: StringByteArrayConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter
+  name: StringParsingConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter
+  nameWithType: StringParsingConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle(System.Type, System.Type)
+  nameWithType: StringParsingConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.CanHandle
+  nameWithType: StringParsingConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: StringParsingConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: StringParsingConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Map
+  nameWithType: StringParsingConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order
+  nameWithType: StringParsingConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html#ObjectCartographer_ExpressionBuilder_Converters_StringParsingConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.Order
+  nameWithType: StringParsingConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter
+  name: ToDictionaryConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter
+  nameWithType: ToDictionaryConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle(System.Type, System.Type)
+  nameWithType: ToDictionaryConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CanHandle
+  nameWithType: ToDictionaryConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: ToDictionaryConverter.CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: ToDictionaryConverter.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.CopyObject
+  nameWithType: ToDictionaryConverter.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order
+  nameWithType: ToDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToDictionaryConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.Order
+  nameWithType: ToDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter
+  name: ToStringConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter
+  nameWithType: ToStringConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle(System.Type, System.Type)
+  nameWithType: ToStringConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.CanHandle
+  nameWithType: ToStringConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: ToStringConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: ToStringConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Map
+  nameWithType: ToStringConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order
+  nameWithType: ToStringConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html#ObjectCartographer_ExpressionBuilder_Converters_ToStringConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.Order
+  nameWithType: ToStringConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter
+  name: TypeConverterConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter
+  nameWithType: TypeConverterConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle(System.Type, System.Type)
+  nameWithType: TypeConverterConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.CanHandle
+  nameWithType: TypeConverterConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: TypeConverterConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: TypeConverterConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Map
+  nameWithType: TypeConverterConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order
+  nameWithType: TypeConverterConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html#ObjectCartographer_ExpressionBuilder_Converters_TypeConverterConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.Order
+  nameWithType: TypeConverterConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager
+  name: ExpressionBuilderManager
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager
+  nameWithType: ExpressionBuilderManager
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.#ctor(System.Collections.Generic.IEnumerable{ObjectCartographer.ExpressionBuilder.Interfaces.IConverter})
+  name: ExpressionBuilderManager(IEnumerable<IConverter>)
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html#ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager__ctor_System_Collections_Generic_IEnumerable_ObjectCartographer_ExpressionBuilder_Interfaces_IConverter__
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.#ctor(System.Collections.Generic.IEnumerable{ObjectCartographer.ExpressionBuilder.Interfaces.IConverter})
+  name.vb: New(IEnumerable(Of IConverter))
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.ExpressionBuilderManager(System.Collections.Generic.IEnumerable<ObjectCartographer.ExpressionBuilder.Interfaces.IConverter>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.New(System.Collections.Generic.IEnumerable(Of ObjectCartographer.ExpressionBuilder.Interfaces.IConverter))
+  nameWithType: ExpressionBuilderManager.ExpressionBuilderManager(IEnumerable<IConverter>)
+  nameWithType.vb: ExpressionBuilderManager.New(IEnumerable(Of IConverter))
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.#ctor*
+  name: ExpressionBuilderManager
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html#ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager__ctor_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.ExpressionBuilderManager
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.New
+  nameWithType: ExpressionBuilderManager.ExpressionBuilderManager
+  nameWithType.vb: ExpressionBuilderManager.New
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping)
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html#ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping)
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping)
+  nameWithType: ExpressionBuilderManager.Map(Expression, Expression?, Type, Type, IExpressionMapping)
+  nameWithType.vb: ExpressionBuilderManager.Map(Expression, Expression, Type, Type, IExpressionMapping)
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html#ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map
+  nameWithType: ExpressionBuilderManager.Map
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map``2(ObjectCartographer.TypeMapping{``0,``1})
+  name: Map<TSource, TDestination>(TypeMapping<TSource, TDestination>)
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html#ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_Map__2_ObjectCartographer_TypeMapping___0___1__
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map``2(ObjectCartographer.TypeMapping{``0,``1})
+  name.vb: Map(Of TSource, TDestination)(TypeMapping(Of TSource, TDestination))
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map<TSource, TDestination>(ObjectCartographer.TypeMapping<TSource, TDestination>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.Map(Of TSource, TDestination)(ObjectCartographer.TypeMapping(Of TSource, TDestination))
+  nameWithType: ExpressionBuilderManager.Map<TSource, TDestination>(TypeMapping<TSource, TDestination>)
+  nameWithType.vb: ExpressionBuilderManager.Map(Of TSource, TDestination)(TypeMapping(Of TSource, TDestination))
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2
+  name: ExpressionMapping<TSource, TDestination>
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2
+  name.vb: ExpressionMapping(Of TSource, TDestination)
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination)
+  nameWithType: ExpressionMapping<TSource, TDestination>
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination)
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.#ctor
+  name: ExpressionMapping()
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2__ctor
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.#ctor
+  name.vb: New()
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.ExpressionMapping()
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).New()
+  nameWithType: ExpressionMapping<TSource, TDestination>.ExpressionMapping()
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).New()
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.#ctor*
+  name: ExpressionMapping
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2__ctor_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.ExpressionMapping
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).New
+  nameWithType: ExpressionMapping<TSource, TDestination>.ExpressionMapping
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).New
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.AddVariable(System.Type)
+  name: AddVariable(Type)
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_AddVariable_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.AddVariable(System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.AddVariable(System.Type)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).AddVariable(System.Type)
+  nameWithType: ExpressionMapping<TSource, TDestination>.AddVariable(Type)
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).AddVariable(Type)
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.AddVariable*
+  name: AddVariable
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_AddVariable_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.AddVariable
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.AddVariable
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).AddVariable
+  nameWithType: ExpressionMapping<TSource, TDestination>.AddVariable
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).AddVariable
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Build
+  name: Build()
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_Build
+  commentId: M:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Build
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.Build()
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).Build()
+  nameWithType: ExpressionMapping<TSource, TDestination>.Build()
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).Build()
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Build*
+  name: Build
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_Build_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Build
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.Build
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).Build
+  nameWithType: ExpressionMapping<TSource, TDestination>.Build
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).Build
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationParameter
+  name: DestinationParameter
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_DestinationParameter
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationParameter
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.DestinationParameter
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).DestinationParameter
+  nameWithType: ExpressionMapping<TSource, TDestination>.DestinationParameter
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).DestinationParameter
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationParameter*
+  name: DestinationParameter
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_DestinationParameter_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationParameter
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.DestinationParameter
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).DestinationParameter
+  nameWithType: ExpressionMapping<TSource, TDestination>.DestinationParameter
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).DestinationParameter
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationType
+  name: DestinationType
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_DestinationType
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationType
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.DestinationType
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).DestinationType
+  nameWithType: ExpressionMapping<TSource, TDestination>.DestinationType
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).DestinationType
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationType*
+  name: DestinationType
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_DestinationType_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.DestinationType
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.DestinationType
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).DestinationType
+  nameWithType: ExpressionMapping<TSource, TDestination>.DestinationType
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).DestinationType
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.FinalExpression
+  name: FinalExpression
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_FinalExpression
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.FinalExpression
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.FinalExpression
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).FinalExpression
+  nameWithType: ExpressionMapping<TSource, TDestination>.FinalExpression
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).FinalExpression
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.FinalExpression*
+  name: FinalExpression
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_FinalExpression_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.FinalExpression
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.FinalExpression
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).FinalExpression
+  nameWithType: ExpressionMapping<TSource, TDestination>.FinalExpression
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).FinalExpression
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceParameter
+  name: SourceParameter
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_SourceParameter
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceParameter
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.SourceParameter
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).SourceParameter
+  nameWithType: ExpressionMapping<TSource, TDestination>.SourceParameter
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).SourceParameter
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceParameter*
+  name: SourceParameter
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_SourceParameter_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceParameter
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.SourceParameter
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).SourceParameter
+  nameWithType: ExpressionMapping<TSource, TDestination>.SourceParameter
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).SourceParameter
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceType
+  name: SourceType
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_SourceType
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceType
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.SourceType
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).SourceType
+  nameWithType: ExpressionMapping<TSource, TDestination>.SourceType
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).SourceType
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceType*
+  name: SourceType
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_SourceType_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.SourceType
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.SourceType
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).SourceType
+  nameWithType: ExpressionMapping<TSource, TDestination>.SourceType
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).SourceType
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Variables
+  name: Variables
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_Variables
+  commentId: P:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Variables
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.Variables
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).Variables
+  nameWithType: ExpressionMapping<TSource, TDestination>.Variables
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).Variables
+- uid: ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Variables*
+  name: Variables
+  href: api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html#ObjectCartographer_ExpressionBuilder_ExpressionMapping_2_Variables_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.ExpressionMapping`2.Variables
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>.Variables
+  fullName.vb: ObjectCartographer.ExpressionBuilder.ExpressionMapping(Of TSource, TDestination).Variables
+  nameWithType: ExpressionMapping<TSource, TDestination>.Variables
+  nameWithType.vb: ExpressionMapping(Of TSource, TDestination).Variables
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces
+  name: ObjectCartographer.ExpressionBuilder.Interfaces
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.html
+  commentId: N:ObjectCartographer.ExpressionBuilder.Interfaces
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces
+  nameWithType: ObjectCartographer.ExpressionBuilder.Interfaces
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter
+  name: IConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter
+  nameWithType: IConverter
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle(System.Type, System.Type)
+  nameWithType: IConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.CanHandle
+  nameWithType: IConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: IConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: IConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Map
+  nameWithType: IConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order
+  nameWithType: IConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html#ObjectCartographer_ExpressionBuilder_Interfaces_IConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.Order
+  nameWithType: IConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping
+  name: IExpressionMapping
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping
+  nameWithType: IExpressionMapping
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable(System.Type)
+  name: AddVariable(Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_AddVariable_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable(System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable(System.Type)
+  nameWithType: IExpressionMapping.AddVariable(Type)
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable*
+  name: AddVariable
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_AddVariable_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.AddVariable
+  nameWithType: IExpressionMapping.AddVariable
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter
+  name: DestinationParameter
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_DestinationParameter
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter
+  nameWithType: IExpressionMapping.DestinationParameter
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter*
+  name: DestinationParameter
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_DestinationParameter_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationParameter
+  nameWithType: IExpressionMapping.DestinationParameter
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType
+  name: DestinationType
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_DestinationType
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType
+  nameWithType: IExpressionMapping.DestinationType
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType*
+  name: DestinationType
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_DestinationType_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.DestinationType
+  nameWithType: IExpressionMapping.DestinationType
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression
+  name: FinalExpression
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_FinalExpression
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression
+  nameWithType: IExpressionMapping.FinalExpression
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression*
+  name: FinalExpression
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_FinalExpression_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.FinalExpression
+  nameWithType: IExpressionMapping.FinalExpression
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter
+  name: SourceParameter
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_SourceParameter
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter
+  nameWithType: IExpressionMapping.SourceParameter
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter*
+  name: SourceParameter
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_SourceParameter_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceParameter
+  nameWithType: IExpressionMapping.SourceParameter
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType
+  name: SourceType
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_SourceType
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType
+  nameWithType: IExpressionMapping.SourceType
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType*
+  name: SourceType
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_SourceType_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.SourceType
+  nameWithType: IExpressionMapping.SourceType
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
+  name: Variables
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_Variables
+  commentId: P:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
+  nameWithType: IExpressionMapping.Variables
+- uid: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables*
+  name: Variables
+  href: api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html#ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_Variables_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
+  nameWithType: IExpressionMapping.Variables
+- uid: ObjectCartographer.Interfaces
+  name: ObjectCartographer.Interfaces
+  href: api/ObjectCartographer.Interfaces.html
+  commentId: N:ObjectCartographer.Interfaces
+  fullName: ObjectCartographer.Interfaces
+  nameWithType: ObjectCartographer.Interfaces
+- uid: ObjectCartographer.Interfaces.IInternalTypeMapping
+  name: IInternalTypeMapping
+  href: api/ObjectCartographer.Interfaces.IInternalTypeMapping.html
+  commentId: T:ObjectCartographer.Interfaces.IInternalTypeMapping
+  fullName: ObjectCartographer.Interfaces.IInternalTypeMapping
+  nameWithType: IInternalTypeMapping
+- uid: ObjectCartographer.Interfaces.IInternalTypeMapping.Properties
+  name: Properties
+  href: api/ObjectCartographer.Interfaces.IInternalTypeMapping.html#ObjectCartographer_Interfaces_IInternalTypeMapping_Properties
+  commentId: P:ObjectCartographer.Interfaces.IInternalTypeMapping.Properties
+  fullName: ObjectCartographer.Interfaces.IInternalTypeMapping.Properties
+  nameWithType: IInternalTypeMapping.Properties
+- uid: ObjectCartographer.Interfaces.IInternalTypeMapping.Properties*
+  name: Properties
+  href: api/ObjectCartographer.Interfaces.IInternalTypeMapping.html#ObjectCartographer_Interfaces_IInternalTypeMapping_Properties_
+  commentId: Overload:ObjectCartographer.Interfaces.IInternalTypeMapping.Properties
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IInternalTypeMapping.Properties
+  nameWithType: IInternalTypeMapping.Properties
+- uid: ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo
+  name: TypeInfo
+  href: api/ObjectCartographer.Interfaces.IInternalTypeMapping.html#ObjectCartographer_Interfaces_IInternalTypeMapping_TypeInfo
+  commentId: P:ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo
+  fullName: ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo
+  nameWithType: IInternalTypeMapping.TypeInfo
+- uid: ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo*
+  name: TypeInfo
+  href: api/ObjectCartographer.Interfaces.IInternalTypeMapping.html#ObjectCartographer_Interfaces_IInternalTypeMapping_TypeInfo_
+  commentId: Overload:ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IInternalTypeMapping.TypeInfo
+  nameWithType: IInternalTypeMapping.TypeInfo
+- uid: ObjectCartographer.Interfaces.IPropertyMapping
+  name: IPropertyMapping
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html
+  commentId: T:ObjectCartographer.Interfaces.IPropertyMapping
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping
+  nameWithType: IPropertyMapping
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.Destination
+  name: Destination
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_Destination
+  commentId: P:ObjectCartographer.Interfaces.IPropertyMapping.Destination
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.Destination
+  nameWithType: IPropertyMapping.Destination
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.Destination*
+  name: Destination
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_Destination_
+  commentId: Overload:ObjectCartographer.Interfaces.IPropertyMapping.Destination
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.Destination
+  nameWithType: IPropertyMapping.Destination
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget
+  name: DestinationTarget
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_DestinationTarget
+  commentId: P:ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget
+  nameWithType: IPropertyMapping.DestinationTarget
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget*
+  name: DestinationTarget
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_DestinationTarget_
+  commentId: Overload:ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.DestinationTarget
+  nameWithType: IPropertyMapping.DestinationTarget
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.Source
+  name: Source
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_Source
+  commentId: P:ObjectCartographer.Interfaces.IPropertyMapping.Source
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.Source
+  nameWithType: IPropertyMapping.Source
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.Source*
+  name: Source
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_Source_
+  commentId: Overload:ObjectCartographer.Interfaces.IPropertyMapping.Source
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.Source
+  nameWithType: IPropertyMapping.Source
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget
+  name: SourceTarget
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_SourceTarget
+  commentId: P:ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget
+  nameWithType: IPropertyMapping.SourceTarget
+- uid: ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget*
+  name: SourceTarget
+  href: api/ObjectCartographer.Interfaces.IPropertyMapping.html#ObjectCartographer_Interfaces_IPropertyMapping_SourceTarget_
+  commentId: Overload:ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.IPropertyMapping.SourceTarget
+  nameWithType: IPropertyMapping.SourceTarget
+- uid: ObjectCartographer.Interfaces.ITypeMapping
+  name: ITypeMapping
+  href: api/ObjectCartographer.Interfaces.ITypeMapping.html
+  commentId: T:ObjectCartographer.Interfaces.ITypeMapping
+  fullName: ObjectCartographer.Interfaces.ITypeMapping
+  nameWithType: ITypeMapping
+- uid: ObjectCartographer.Interfaces.ITypeMapping.AutoMap
+  name: AutoMap()
+  href: api/ObjectCartographer.Interfaces.ITypeMapping.html#ObjectCartographer_Interfaces_ITypeMapping_AutoMap
+  commentId: M:ObjectCartographer.Interfaces.ITypeMapping.AutoMap
+  fullName: ObjectCartographer.Interfaces.ITypeMapping.AutoMap()
+  nameWithType: ITypeMapping.AutoMap()
+- uid: ObjectCartographer.Interfaces.ITypeMapping.AutoMap*
+  name: AutoMap
+  href: api/ObjectCartographer.Interfaces.ITypeMapping.html#ObjectCartographer_Interfaces_ITypeMapping_AutoMap_
+  commentId: Overload:ObjectCartographer.Interfaces.ITypeMapping.AutoMap
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.ITypeMapping.AutoMap
+  nameWithType: ITypeMapping.AutoMap
+- uid: ObjectCartographer.Interfaces.ITypeMapping.Build
+  name: Build()
+  href: api/ObjectCartographer.Interfaces.ITypeMapping.html#ObjectCartographer_Interfaces_ITypeMapping_Build
+  commentId: M:ObjectCartographer.Interfaces.ITypeMapping.Build
+  fullName: ObjectCartographer.Interfaces.ITypeMapping.Build()
+  nameWithType: ITypeMapping.Build()
+- uid: ObjectCartographer.Interfaces.ITypeMapping.Build*
+  name: Build
+  href: api/ObjectCartographer.Interfaces.ITypeMapping.html#ObjectCartographer_Interfaces_ITypeMapping_Build_
+  commentId: Overload:ObjectCartographer.Interfaces.ITypeMapping.Build
+  isSpec: "True"
+  fullName: ObjectCartographer.Interfaces.ITypeMapping.Build
+  nameWithType: ITypeMapping.Build
+- uid: ObjectCartographer.Internal
+  name: ObjectCartographer.Internal
+  href: api/ObjectCartographer.Internal.html
+  commentId: N:ObjectCartographer.Internal
+  fullName: ObjectCartographer.Internal
+  nameWithType: ObjectCartographer.Internal
+- uid: ObjectCartographer.Internal.DefaultValueLookup
+  name: DefaultValueLookup
+  href: api/ObjectCartographer.Internal.DefaultValueLookup.html
+  commentId: T:ObjectCartographer.Internal.DefaultValueLookup
+  fullName: ObjectCartographer.Internal.DefaultValueLookup
+  nameWithType: DefaultValueLookup
+- uid: ObjectCartographer.Internal.DefaultValueLookup.Values
+  name: Values
+  href: api/ObjectCartographer.Internal.DefaultValueLookup.html#ObjectCartographer_Internal_DefaultValueLookup_Values
+  commentId: F:ObjectCartographer.Internal.DefaultValueLookup.Values
+  fullName: ObjectCartographer.Internal.DefaultValueLookup.Values
+  nameWithType: DefaultValueLookup.Values
+- uid: ObjectCartographer.Internal.PropertyMapping`3
+  name: PropertyMapping<TLeft, TRight, TLeftPropertyType>
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html
+  commentId: T:ObjectCartographer.Internal.PropertyMapping`3
+  name.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType)
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType)
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType)
+- uid: ObjectCartographer.Internal.PropertyMapping`3.#ctor(System.Func{`0,`2},System.Action{`1,`2})
+  name: PropertyMapping(Func<TLeft, TLeftPropertyType>, Action<TRight, TLeftPropertyType>)
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3__ctor_System_Func__0__2__System_Action__1__2__
+  commentId: M:ObjectCartographer.Internal.PropertyMapping`3.#ctor(System.Func{`0,`2},System.Action{`1,`2})
+  name.vb: New(Func(Of TLeft, TLeftPropertyType), Action(Of TRight, TLeftPropertyType))
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.PropertyMapping(System.Func<TLeft, TLeftPropertyType>, System.Action<TRight, TLeftPropertyType>)
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).New(System.Func(Of TLeft, TLeftPropertyType), System.Action(Of TRight, TLeftPropertyType))
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.PropertyMapping(Func<TLeft, TLeftPropertyType>, Action<TRight, TLeftPropertyType>)
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).New(Func(Of TLeft, TLeftPropertyType), Action(Of TRight, TLeftPropertyType))
+- uid: ObjectCartographer.Internal.PropertyMapping`3.#ctor*
+  name: PropertyMapping
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3__ctor_
+  commentId: Overload:ObjectCartographer.Internal.PropertyMapping`3.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.PropertyMapping
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).New
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.PropertyMapping
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).New
+- uid: ObjectCartographer.Internal.PropertyMapping`3.Destination
+  name: Destination
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_Destination
+  commentId: P:ObjectCartographer.Internal.PropertyMapping`3.Destination
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.Destination
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Destination
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.Destination
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Destination
+- uid: ObjectCartographer.Internal.PropertyMapping`3.Destination*
+  name: Destination
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_Destination_
+  commentId: Overload:ObjectCartographer.Internal.PropertyMapping`3.Destination
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.Destination
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Destination
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.Destination
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Destination
+- uid: ObjectCartographer.Internal.PropertyMapping`3.DestinationTarget
+  name: DestinationTarget
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_DestinationTarget
+  commentId: P:ObjectCartographer.Internal.PropertyMapping`3.DestinationTarget
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.DestinationTarget
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).DestinationTarget
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.DestinationTarget
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).DestinationTarget
+- uid: ObjectCartographer.Internal.PropertyMapping`3.DestinationTarget*
+  name: DestinationTarget
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_DestinationTarget_
+  commentId: Overload:ObjectCartographer.Internal.PropertyMapping`3.DestinationTarget
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.DestinationTarget
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).DestinationTarget
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.DestinationTarget
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).DestinationTarget
+- uid: ObjectCartographer.Internal.PropertyMapping`3.Source
+  name: Source
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_Source
+  commentId: P:ObjectCartographer.Internal.PropertyMapping`3.Source
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.Source
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Source
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.Source
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Source
+- uid: ObjectCartographer.Internal.PropertyMapping`3.Source*
+  name: Source
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_Source_
+  commentId: Overload:ObjectCartographer.Internal.PropertyMapping`3.Source
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.Source
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Source
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.Source
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).Source
+- uid: ObjectCartographer.Internal.PropertyMapping`3.SourceTarget
+  name: SourceTarget
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_SourceTarget
+  commentId: P:ObjectCartographer.Internal.PropertyMapping`3.SourceTarget
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.SourceTarget
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).SourceTarget
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.SourceTarget
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).SourceTarget
+- uid: ObjectCartographer.Internal.PropertyMapping`3.SourceTarget*
+  name: SourceTarget
+  href: api/ObjectCartographer.Internal.PropertyMapping-3.html#ObjectCartographer_Internal_PropertyMapping_3_SourceTarget_
+  commentId: Overload:ObjectCartographer.Internal.PropertyMapping`3.SourceTarget
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>.SourceTarget
+  fullName.vb: ObjectCartographer.Internal.PropertyMapping(Of TLeft, TRight, TLeftPropertyType).SourceTarget
+  nameWithType: PropertyMapping<TLeft, TRight, TLeftPropertyType>.SourceTarget
+  nameWithType.vb: PropertyMapping(Of TLeft, TRight, TLeftPropertyType).SourceTarget
+- uid: ObjectCartographer.Internal.TypeTuple
+  name: TypeTuple
+  href: api/ObjectCartographer.Internal.TypeTuple.html
+  commentId: T:ObjectCartographer.Internal.TypeTuple
+  fullName: ObjectCartographer.Internal.TypeTuple
+  nameWithType: TypeTuple
+- uid: ObjectCartographer.Internal.TypeTuple.#ctor(System.Type,System.Type)
+  name: TypeTuple(Type, Type)
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple__ctor_System_Type_System_Type_
+  commentId: M:ObjectCartographer.Internal.TypeTuple.#ctor(System.Type,System.Type)
+  name.vb: New(Type, Type)
+  fullName: ObjectCartographer.Internal.TypeTuple.TypeTuple(System.Type, System.Type)
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.New(System.Type, System.Type)
+  nameWithType: TypeTuple.TypeTuple(Type, Type)
+  nameWithType.vb: TypeTuple.New(Type, Type)
+- uid: ObjectCartographer.Internal.TypeTuple.#ctor*
+  name: TypeTuple
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple__ctor_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.Internal.TypeTuple.TypeTuple
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.New
+  nameWithType: TypeTuple.TypeTuple
+  nameWithType.vb: TypeTuple.New
+- uid: ObjectCartographer.Internal.TypeTuple.Destination
+  name: Destination
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Destination
+  commentId: P:ObjectCartographer.Internal.TypeTuple.Destination
+  fullName: ObjectCartographer.Internal.TypeTuple.Destination
+  nameWithType: TypeTuple.Destination
+- uid: ObjectCartographer.Internal.TypeTuple.Destination*
+  name: Destination
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Destination_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.Destination
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.TypeTuple.Destination
+  nameWithType: TypeTuple.Destination
+- uid: ObjectCartographer.Internal.TypeTuple.Equals(ObjectCartographer.Internal.TypeTuple)
+  name: Equals(TypeTuple)
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Equals_ObjectCartographer_Internal_TypeTuple_
+  commentId: M:ObjectCartographer.Internal.TypeTuple.Equals(ObjectCartographer.Internal.TypeTuple)
+  fullName: ObjectCartographer.Internal.TypeTuple.Equals(ObjectCartographer.Internal.TypeTuple)
+  nameWithType: TypeTuple.Equals(TypeTuple)
+- uid: ObjectCartographer.Internal.TypeTuple.Equals(System.Object)
+  name: Equals(object)
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Equals_System_Object_
+  commentId: M:ObjectCartographer.Internal.TypeTuple.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: ObjectCartographer.Internal.TypeTuple.Equals(object)
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.Equals(Object)
+  nameWithType: TypeTuple.Equals(object)
+  nameWithType.vb: TypeTuple.Equals(Object)
+- uid: ObjectCartographer.Internal.TypeTuple.Equals*
+  name: Equals
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Equals_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.Equals
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.TypeTuple.Equals
+  nameWithType: TypeTuple.Equals
+- uid: ObjectCartographer.Internal.TypeTuple.GetHashCode
+  name: GetHashCode()
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_GetHashCode
+  commentId: M:ObjectCartographer.Internal.TypeTuple.GetHashCode
+  fullName: ObjectCartographer.Internal.TypeTuple.GetHashCode()
+  nameWithType: TypeTuple.GetHashCode()
+- uid: ObjectCartographer.Internal.TypeTuple.GetHashCode*
+  name: GetHashCode
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_GetHashCode_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.GetHashCode
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.TypeTuple.GetHashCode
+  nameWithType: TypeTuple.GetHashCode
+- uid: ObjectCartographer.Internal.TypeTuple.Source
+  name: Source
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Source
+  commentId: P:ObjectCartographer.Internal.TypeTuple.Source
+  fullName: ObjectCartographer.Internal.TypeTuple.Source
+  nameWithType: TypeTuple.Source
+- uid: ObjectCartographer.Internal.TypeTuple.Source*
+  name: Source
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Source_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.Source
+  isSpec: "True"
+  fullName: ObjectCartographer.Internal.TypeTuple.Source
+  nameWithType: TypeTuple.Source
+- uid: ObjectCartographer.Modules
+  name: ObjectCartographer.Modules
+  href: api/ObjectCartographer.Modules.html
+  commentId: N:ObjectCartographer.Modules
+  fullName: ObjectCartographer.Modules
+  nameWithType: ObjectCartographer.Modules
+- uid: ObjectCartographer.Modules.CanisterModule
+  name: CanisterModule
+  href: api/ObjectCartographer.Modules.CanisterModule.html
+  commentId: T:ObjectCartographer.Modules.CanisterModule
+  fullName: ObjectCartographer.Modules.CanisterModule
+  nameWithType: CanisterModule
+- uid: ObjectCartographer.Modules.CanisterModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: Load(IServiceCollection?)
+  href: api/ObjectCartographer.Modules.CanisterModule.html#ObjectCartographer_Modules_CanisterModule_Load_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:ObjectCartographer.Modules.CanisterModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: Load(IServiceCollection)
+  fullName: ObjectCartographer.Modules.CanisterModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: ObjectCartographer.Modules.CanisterModule.Load(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: CanisterModule.Load(IServiceCollection?)
+  nameWithType.vb: CanisterModule.Load(IServiceCollection)
+- uid: ObjectCartographer.Modules.CanisterModule.Load*
+  name: Load
+  href: api/ObjectCartographer.Modules.CanisterModule.html#ObjectCartographer_Modules_CanisterModule_Load_
+  commentId: Overload:ObjectCartographer.Modules.CanisterModule.Load
+  isSpec: "True"
+  fullName: ObjectCartographer.Modules.CanisterModule.Load
+  nameWithType: CanisterModule.Load
+- uid: ObjectCartographer.Modules.CanisterModule.Order
+  name: Order
+  href: api/ObjectCartographer.Modules.CanisterModule.html#ObjectCartographer_Modules_CanisterModule_Order
+  commentId: P:ObjectCartographer.Modules.CanisterModule.Order
+  fullName: ObjectCartographer.Modules.CanisterModule.Order
+  nameWithType: CanisterModule.Order
+- uid: ObjectCartographer.Modules.CanisterModule.Order*
+  name: Order
+  href: api/ObjectCartographer.Modules.CanisterModule.html#ObjectCartographer_Modules_CanisterModule_Order_
+  commentId: Overload:ObjectCartographer.Modules.CanisterModule.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.Modules.CanisterModule.Order
+  nameWithType: CanisterModule.Order
+- uid: ObjectCartographer.ObjectExtensions
+  name: ObjectExtensions
+  href: api/ObjectCartographer.ObjectExtensions.html
+  commentId: T:ObjectCartographer.ObjectExtensions
+  fullName: ObjectCartographer.ObjectExtensions
+  nameWithType: ObjectExtensions
+- uid: ObjectCartographer.ObjectExtensions.AutoMap(System.Object,System.Type)
+  name: AutoMap(object?, Type)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_AutoMap_System_Object_System_Type_
+  commentId: M:ObjectCartographer.ObjectExtensions.AutoMap(System.Object,System.Type)
+  name.vb: AutoMap(Object, Type)
+  fullName: ObjectCartographer.ObjectExtensions.AutoMap(object?, System.Type)
+  fullName.vb: ObjectCartographer.ObjectExtensions.AutoMap(Object, System.Type)
+  nameWithType: ObjectExtensions.AutoMap(object?, Type)
+  nameWithType.vb: ObjectExtensions.AutoMap(Object, Type)
+- uid: ObjectCartographer.ObjectExtensions.AutoMap*
+  name: AutoMap
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_AutoMap_
+  commentId: Overload:ObjectCartographer.ObjectExtensions.AutoMap
+  isSpec: "True"
+  fullName: ObjectCartographer.ObjectExtensions.AutoMap
+  nameWithType: ObjectExtensions.AutoMap
+- uid: ObjectCartographer.ObjectExtensions.AutoMap``1(System.Object)
+  name: AutoMap<TDestination>(object?)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_AutoMap__1_System_Object_
+  commentId: M:ObjectCartographer.ObjectExtensions.AutoMap``1(System.Object)
+  name.vb: AutoMap(Of TDestination)(Object)
+  fullName: ObjectCartographer.ObjectExtensions.AutoMap<TDestination>(object?)
+  fullName.vb: ObjectCartographer.ObjectExtensions.AutoMap(Of TDestination)(Object)
+  nameWithType: ObjectExtensions.AutoMap<TDestination>(object?)
+  nameWithType.vb: ObjectExtensions.AutoMap(Of TDestination)(Object)
+- uid: ObjectCartographer.ObjectExtensions.AutoMap``2(``0)
+  name: AutoMap<TSource, TDestination>(TSource)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_AutoMap__2___0_
+  commentId: M:ObjectCartographer.ObjectExtensions.AutoMap``2(``0)
+  name.vb: AutoMap(Of TSource, TDestination)(TSource)
+  fullName: ObjectCartographer.ObjectExtensions.AutoMap<TSource, TDestination>(TSource)
+  fullName.vb: ObjectCartographer.ObjectExtensions.AutoMap(Of TSource, TDestination)(TSource)
+  nameWithType: ObjectExtensions.AutoMap<TSource, TDestination>(TSource)
+  nameWithType.vb: ObjectExtensions.AutoMap(Of TSource, TDestination)(TSource)
+- uid: ObjectCartographer.ObjectExtensions.Map*
+  name: Map
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_Map_
+  commentId: Overload:ObjectCartographer.ObjectExtensions.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ObjectExtensions.Map
+  nameWithType: ObjectExtensions.Map
+- uid: ObjectCartographer.ObjectExtensions.Map``2(``0)
+  name: Map<TSource, TDestination>(TSource)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_Map__2___0_
+  commentId: M:ObjectCartographer.ObjectExtensions.Map``2(``0)
+  name.vb: Map(Of TSource, TDestination)(TSource)
+  fullName: ObjectCartographer.ObjectExtensions.Map<TSource, TDestination>(TSource)
+  fullName.vb: ObjectCartographer.ObjectExtensions.Map(Of TSource, TDestination)(TSource)
+  nameWithType: ObjectExtensions.Map<TSource, TDestination>(TSource)
+  nameWithType.vb: ObjectExtensions.Map(Of TSource, TDestination)(TSource)
+- uid: ObjectCartographer.ObjectExtensions.To(System.Object,System.Type,System.Object)
+  name: To(object?, Type, object?)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_To_System_Object_System_Type_System_Object_
+  commentId: M:ObjectCartographer.ObjectExtensions.To(System.Object,System.Type,System.Object)
+  name.vb: To(Object, Type, Object)
+  fullName: ObjectCartographer.ObjectExtensions.To(object?, System.Type, object?)
+  fullName.vb: ObjectCartographer.ObjectExtensions.To(Object, System.Type, Object)
+  nameWithType: ObjectExtensions.To(object?, Type, object?)
+  nameWithType.vb: ObjectExtensions.To(Object, Type, Object)
+- uid: ObjectCartographer.ObjectExtensions.To*
+  name: To
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_To_
+  commentId: Overload:ObjectCartographer.ObjectExtensions.To
+  isSpec: "True"
+  fullName: ObjectCartographer.ObjectExtensions.To
+  nameWithType: ObjectExtensions.To
+- uid: ObjectCartographer.ObjectExtensions.To``1(System.Object,``0)
+  name: To<TReturn>(object?, TReturn)
+  href: api/ObjectCartographer.ObjectExtensions.html#ObjectCartographer_ObjectExtensions_To__1_System_Object___0_
+  commentId: M:ObjectCartographer.ObjectExtensions.To``1(System.Object,``0)
+  name.vb: To(Of TReturn)(Object, TReturn)
+  fullName: ObjectCartographer.ObjectExtensions.To<TReturn>(object?, TReturn)
+  fullName.vb: ObjectCartographer.ObjectExtensions.To(Of TReturn)(Object, TReturn)
+  nameWithType: ObjectExtensions.To<TReturn>(object?, TReturn)
+  nameWithType.vb: ObjectExtensions.To(Of TReturn)(Object, TReturn)
+- uid: ObjectCartographer.TypeMapping`2
+  name: TypeMapping<TSource, TDestination>
+  href: api/ObjectCartographer.TypeMapping-2.html
+  commentId: T:ObjectCartographer.TypeMapping`2
+  name.vb: TypeMapping(Of TSource, TDestination)
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination)
+  nameWithType: TypeMapping<TSource, TDestination>
+  nameWithType.vb: TypeMapping(Of TSource, TDestination)
+- uid: ObjectCartographer.TypeMapping`2.#ctor(ObjectCartographer.Internal.TypeTuple,Microsoft.Extensions.Logging.ILogger,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: TypeMapping(TypeTuple, ILogger?, ExpressionBuilderManager?)
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2__ctor_ObjectCartographer_Internal_TypeTuple_Microsoft_Extensions_Logging_ILogger_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.TypeMapping`2.#ctor(ObjectCartographer.Internal.TypeTuple,Microsoft.Extensions.Logging.ILogger,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: New(TypeTuple, ILogger, ExpressionBuilderManager)
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.TypeMapping(ObjectCartographer.Internal.TypeTuple, Microsoft.Extensions.Logging.ILogger?, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager?)
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).New(ObjectCartographer.Internal.TypeTuple, Microsoft.Extensions.Logging.ILogger, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: TypeMapping<TSource, TDestination>.TypeMapping(TypeTuple, ILogger?, ExpressionBuilderManager?)
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).New(TypeTuple, ILogger, ExpressionBuilderManager)
+- uid: ObjectCartographer.TypeMapping`2.#ctor*
+  name: TypeMapping
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2__ctor_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.TypeMapping
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).New
+  nameWithType: TypeMapping<TSource, TDestination>.TypeMapping
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).New
+- uid: ObjectCartographer.TypeMapping`2.AddMapping*
+  name: AddMapping
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_AddMapping_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.AddMapping
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.AddMapping
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).AddMapping
+  nameWithType: TypeMapping<TSource, TDestination>.AddMapping
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).AddMapping
+- uid: ObjectCartographer.TypeMapping`2.AddMapping``1(System.Func{`0,``0},System.Action{`1,``0})
+  name: AddMapping<TSourceProperty>(Func<TSource, TSourceProperty>, Action<TDestination, TSourceProperty>)
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_AddMapping__1_System_Func__0___0__System_Action__1___0__
+  commentId: M:ObjectCartographer.TypeMapping`2.AddMapping``1(System.Func{`0,``0},System.Action{`1,``0})
+  name.vb: AddMapping(Of TSourceProperty)(Func(Of TSource, TSourceProperty), Action(Of TDestination, TSourceProperty))
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.AddMapping<TSourceProperty>(System.Func<TSource, TSourceProperty>, System.Action<TDestination, TSourceProperty>)
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).AddMapping(Of TSourceProperty)(System.Func(Of TSource, TSourceProperty), System.Action(Of TDestination, TSourceProperty))
+  nameWithType: TypeMapping<TSource, TDestination>.AddMapping<TSourceProperty>(Func<TSource, TSourceProperty>, Action<TDestination, TSourceProperty>)
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).AddMapping(Of TSourceProperty)(Func(Of TSource, TSourceProperty), Action(Of TDestination, TSourceProperty))
+- uid: ObjectCartographer.TypeMapping`2.AutoMap
+  name: AutoMap()
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_AutoMap
+  commentId: M:ObjectCartographer.TypeMapping`2.AutoMap
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.AutoMap()
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).AutoMap()
+  nameWithType: TypeMapping<TSource, TDestination>.AutoMap()
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).AutoMap()
+- uid: ObjectCartographer.TypeMapping`2.AutoMap*
+  name: AutoMap
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_AutoMap_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.AutoMap
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.AutoMap
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).AutoMap
+  nameWithType: TypeMapping<TSource, TDestination>.AutoMap
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).AutoMap
+- uid: ObjectCartographer.TypeMapping`2.Build
+  name: Build()
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Build
+  commentId: M:ObjectCartographer.TypeMapping`2.Build
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Build()
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Build()
+  nameWithType: TypeMapping<TSource, TDestination>.Build()
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Build()
+- uid: ObjectCartographer.TypeMapping`2.Build*
+  name: Build
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Build_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.Build
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Build
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Build
+  nameWithType: TypeMapping<TSource, TDestination>.Build
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Build
+- uid: ObjectCartographer.TypeMapping`2.Converter
+  name: Converter
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Converter
+  commentId: P:ObjectCartographer.TypeMapping`2.Converter
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Converter
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Converter
+  nameWithType: TypeMapping<TSource, TDestination>.Converter
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Converter
+- uid: ObjectCartographer.TypeMapping`2.Converter*
+  name: Converter
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Converter_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.Converter
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Converter
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Converter
+  nameWithType: TypeMapping<TSource, TDestination>.Converter
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Converter
+- uid: ObjectCartographer.TypeMapping`2.Properties
+  name: Properties
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Properties
+  commentId: P:ObjectCartographer.TypeMapping`2.Properties
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Properties
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Properties
+  nameWithType: TypeMapping<TSource, TDestination>.Properties
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Properties
+- uid: ObjectCartographer.TypeMapping`2.Properties*
+  name: Properties
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_Properties_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.Properties
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.Properties
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).Properties
+  nameWithType: TypeMapping<TSource, TDestination>.Properties
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).Properties
+- uid: ObjectCartographer.TypeMapping`2.TypeInfo
+  name: TypeInfo
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_TypeInfo
+  commentId: P:ObjectCartographer.TypeMapping`2.TypeInfo
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.TypeInfo
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).TypeInfo
+  nameWithType: TypeMapping<TSource, TDestination>.TypeInfo
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).TypeInfo
+- uid: ObjectCartographer.TypeMapping`2.TypeInfo*
+  name: TypeInfo
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_TypeInfo_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.TypeInfo
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.TypeInfo
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).TypeInfo
+  nameWithType: TypeMapping<TSource, TDestination>.TypeInfo
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).TypeInfo
+- uid: ObjectCartographer.TypeMapping`2.UseMethod(System.Func{`0,`1,`1})
+  name: UseMethod(Func<TSource, TDestination, TDestination>)
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_UseMethod_System_Func__0__1__1__
+  commentId: M:ObjectCartographer.TypeMapping`2.UseMethod(System.Func{`0,`1,`1})
+  name.vb: UseMethod(Func(Of TSource, TDestination, TDestination))
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.UseMethod(System.Func<TSource, TDestination, TDestination>)
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).UseMethod(System.Func(Of TSource, TDestination, TDestination))
+  nameWithType: TypeMapping<TSource, TDestination>.UseMethod(Func<TSource, TDestination, TDestination>)
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).UseMethod(Func(Of TSource, TDestination, TDestination))
+- uid: ObjectCartographer.TypeMapping`2.UseMethod*
+  name: UseMethod
+  href: api/ObjectCartographer.TypeMapping-2.html#ObjectCartographer_TypeMapping_2_UseMethod_
+  commentId: Overload:ObjectCartographer.TypeMapping`2.UseMethod
+  isSpec: "True"
+  fullName: ObjectCartographer.TypeMapping<TSource, TDestination>.UseMethod
+  fullName.vb: ObjectCartographer.TypeMapping(Of TSource, TDestination).UseMethod
+  nameWithType: TypeMapping<TSource, TDestination>.UseMethod
+  nameWithType.vb: TypeMapping(Of TSource, TDestination).UseMethod

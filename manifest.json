@@ -1,0 +1,501 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/ObjectCartographer/ObjectCartographer/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.DataMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.DataMapper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Interfaces.IInternalTypeMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Interfaces.IInternalTypeMapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Interfaces.IPropertyMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Interfaces.IPropertyMapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Interfaces.ITypeMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Interfaces.ITypeMapping.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Internal.DefaultValueLookup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Internal.DefaultValueLookup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Internal.PropertyMapping-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Internal.PropertyMapping-3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Internal.TypeTuple.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Internal.TypeTuple.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Internal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Internal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Modules.CanisterModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Modules.CanisterModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.Modules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.Modules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ObjectExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.TypeMapping-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.TypeMapping-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
