@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.5"></a>
+## [3.0.5](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.5) (2023-7-8)
+
+### Bug Fixes
+
+* Adding tests ([0cd9083](https://www.github.com/JaCraig/ObjectCartographer/commit/0cd90836e14c30fb46b526686014f96bd47283ad))
+* Fixing the workflows as they were pointing to master instead of main ([e8917ed](https://www.github.com/JaCraig/ObjectCartographer/commit/e8917ed19c298b6c38b0533a59c796c16d8174a1))
+* package updates and getting the versioning working ([d1ab94d](https://www.github.com/JaCraig/ObjectCartographer/commit/d1ab94db657e41fece3e11d31e4e63c3d89e22d2))
+* Trying to get packaging working ([44e45a6](https://www.github.com/JaCraig/ObjectCartographer/commit/44e45a672907b1bbff50755d629cf913b5018603))
+
 <a name="3.0.3"></a>
 ## [3.0.3](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.3) (2023-7-8)
 
