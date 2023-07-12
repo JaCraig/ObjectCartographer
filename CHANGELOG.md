@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.9"></a>
+## [3.0.9](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.9) (2023-7-12)
+
+### Bug Fixes
+
+* bump BenchmarkDotNet from 0.13.5 to 0.13.6 ([f87e2cb](https://www.github.com/JaCraig/ObjectCartographer/commit/f87e2cb75132fba9d98cf1cef38f50747767280f))
+* bump Canister.IoC from 5.1.2 to 5.1.3 ([0635db1](https://www.github.com/JaCraig/ObjectCartographer/commit/0635db10198eb11eb99e115a155900c11f58a5b7))
+
+### Other
+
+* Merge pull request #2 from JaCraig/dependabot/nuget/Canister.IoC-5.1.3 ([14d080a](https://www.github.com/JaCraig/ObjectCartographer/commit/14d080ae6e0a2c23c93f5f2638073fbd9d02f928))
+* Merge pull request #3 from JaCraig/dependabot/nuget/BenchmarkDotNet-0.13.6 ([846660c](https://www.github.com/JaCraig/ObjectCartographer/commit/846660c6ddebeba0382330290ed4c428f5e6afce))
+
 <a name="3.0.8"></a>
 ## [3.0.8](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.8) (2023-7-10)
 
