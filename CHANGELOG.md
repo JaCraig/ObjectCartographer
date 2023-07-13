@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.10"></a>
+## [3.0.10](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.10) (2023-7-13)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.1.3 to 5.1.4 ([d6e11e1](https://www.github.com/JaCraig/ObjectCartographer/commit/d6e11e1bc98a8a55ab2e3f929beaedce780429ab))
+
+### Other
+
+* Merge pull request #4 from JaCraig/dependabot/nuget/Canister.IoC-5.1.4 ([2955326](https://www.github.com/JaCraig/ObjectCartographer/commit/295532683a00be9aa7e1ab68ce16674229aad66e))
+
 <a name="3.0.9"></a>
 ## [3.0.9](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.9) (2023-7-12)
 
