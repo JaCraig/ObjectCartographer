@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectCartographer.Benchmar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectCartographer.SQL", "ObjectCartographer.SQL\ObjectCartographer.SQL.csproj", "{F807449D-EF99-4AD8-89DD-0E93B75F11A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectCartographer.Example", "ObjectCartographer.Example\ObjectCartographer.Example.csproj", "{698C0347-4D41-40DB-8B78-0B2CC9FF6B56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectCartographer.Example", "ObjectCartographer.Example\ObjectCartographer.Example.csproj", "{698C0347-4D41-40DB-8B78-0B2CC9FF6B56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A6DD3034-E3ED-4DE2-8B3D-7ED64F48DA12}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
