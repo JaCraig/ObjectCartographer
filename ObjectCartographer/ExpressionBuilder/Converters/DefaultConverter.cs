@@ -7,8 +7,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using System.Text.Json;
 
 namespace ObjectCartographer.ExpressionBuilder.Converters
 {
@@ -91,6 +93,21 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                     }
 
                     return Enum.ToObject(destinationType, item);
+                }
+
+                if (item is JsonElement JsonElementValue)
+                {
+                    return DataMapper.Instance?.Copy(JsonElementValue.ValueKind switch
+                    {
+                        JsonValueKind.Array => JsonElementValue.EnumerateArray().ToArray(),
+                        JsonValueKind.False => false,
+                        JsonValueKind.Null => null,
+                        JsonValueKind.Number => JsonElementValue.GetDouble(),
+                        JsonValueKind.Object => JsonElementValue.EnumerateObject().ToDictionary(x => x.Name, x => x.Value),
+                        JsonValueKind.String => JsonElementValue.GetString(),
+                        JsonValueKind.True => true,
+                        _ => null,
+                    }, destination, destinationType);
                 }
 
                 var IEnumerableResultType = destinationType.GetIEnumerableElementType();
