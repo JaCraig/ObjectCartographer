@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.11"></a>
+## [3.0.11](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.11) (2023-7-24)
+
+### Bug Fixes
+
+* Adding the ability to convert JsonElement properly ([0ba76f2](https://www.github.com/JaCraig/ObjectCartographer/commit/0ba76f21cace31cbd1983d1a475c9b64fc526c42))
+
+### Other
+
+* Merge pull request #5 from JaCraig/dependabot/github_actions/dependencies-0717129e0a ([fa75a92](https://www.github.com/JaCraig/ObjectCartographer/commit/fa75a92bf2c9cbf4634a73208a768da050c9d29b))
+* adding editorconfig ([0352ec7](https://www.github.com/JaCraig/ObjectCartographer/commit/0352ec7d3d3ed5abe3342a394eac70ea1dc343ff))
+* bump the dependencies group with 2 updates ([2478b9e](https://www.github.com/JaCraig/ObjectCartographer/commit/2478b9e80eb6d21ca149ee1691c473949286cb94))
+* dependabot update ([0644817](https://www.github.com/JaCraig/ObjectCartographer/commit/064481739b5012d8306ed6e071503deea8b900b3))
+* Update dependabot.yml ([64e7fed](https://www.github.com/JaCraig/ObjectCartographer/commit/64e7fed66d39ad060bfb3d2c2e7ab6bc92f066da))
+
 <a name="3.0.10"></a>
 ## [3.0.10](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.10) (2023-7-13)
 
