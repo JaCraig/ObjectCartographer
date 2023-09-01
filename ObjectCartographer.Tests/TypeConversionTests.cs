@@ -7,13 +7,6 @@ using Xunit;
 
 namespace ObjectCartographer.Tests
 {
-    public enum MyEnumTest
-    {
-        Item1,
-        Item2,
-        Item3
-    }
-
     public interface IMyTestClass
     {
     }
@@ -156,5 +149,12 @@ namespace ObjectCartographer.Tests
             Value2,
             Value3
         }
+    }
+
+    public enum MyEnumTest
+    {
+        Item1,
+        Item2,
+        Item3
     }
 }
