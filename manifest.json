@@ -133,10 +133,40 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.yml",
       "output": {
         ".html": {
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html"
         }
       },
       "version": ""

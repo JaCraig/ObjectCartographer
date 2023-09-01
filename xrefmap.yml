@@ -674,6 +674,70 @@ references:
   isSpec: "True"
   fullName: ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.Order
   nameWithType: FromEnumConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter
+  name: FromJsonElementDictionaryConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter
+  nameWithType: FromJsonElementDictionaryConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle(System.Type, System.Type)
+  nameWithType: FromJsonElementDictionaryConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CanHandle
+  nameWithType: FromJsonElementDictionaryConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name: CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_CopyObject_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_System_Collections_Generic_List_System_Linq_Expressions_Expression__
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager,System.Collections.Generic.List{System.Linq.Expressions.Expression})
+  name.vb: CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List<System.Linq.Expressions.Expression>)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager, System.Collections.Generic.List(Of System.Linq.Expressions.Expression))
+  nameWithType: FromJsonElementDictionaryConverter.CopyObject(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager, List<Expression>)
+  nameWithType.vb: FromJsonElementDictionaryConverter.CopyObject(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager, List(Of Expression))
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject*
+  name: CopyObject
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_CopyObject_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.CopyObject
+  nameWithType: FromJsonElementDictionaryConverter.CopyObject
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order
+  nameWithType: FromJsonElementDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.Order
+  nameWithType: FromJsonElementDictionaryConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary{System.String,System.Text.Json.JsonElement},System.String,System.Nullable{System.Text.Json.JsonElement}@)
+  name: TryGetValue(IDictionary<string, JsonElement>, string, out JsonElement?)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_TryGetValue_System_Collections_Generic_IDictionary_System_String_System_Text_Json_JsonElement__System_String_System_Nullable_System_Text_Json_JsonElement___
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary{System.String,System.Text.Json.JsonElement},System.String,System.Nullable{System.Text.Json.JsonElement}@)
+  name.vb: TryGetValue(IDictionary(Of String, JsonElement), String, JsonElement?)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary<string, System.Text.Json.JsonElement>, string, out System.Text.Json.JsonElement?)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue(System.Collections.Generic.IDictionary(Of String, System.Text.Json.JsonElement), String, System.Text.Json.JsonElement?)
+  nameWithType: FromJsonElementDictionaryConverter.TryGetValue(IDictionary<string, JsonElement>, string, out JsonElement?)
+  nameWithType.vb: FromJsonElementDictionaryConverter.TryGetValue(IDictionary(Of String, JsonElement), String, JsonElement?)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue*
+  name: TryGetValue
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html#ObjectCartographer_ExpressionBuilder_Converters_FromJsonElementDictionaryConverter_TryGetValue_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.TryGetValue
+  nameWithType: FromJsonElementDictionaryConverter.TryGetValue
 - uid: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter
   name: ICollectionConverter
   href: api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html
@@ -722,6 +786,134 @@ references:
   isSpec: "True"
   fullName: ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.Order
   nameWithType: ICollectionConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter
+  name: JsonDocumentConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter
+  nameWithType: JsonDocumentConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle(System.Type, System.Type)
+  nameWithType: JsonDocumentConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.CanHandle
+  nameWithType: JsonDocumentConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo(System.Text.Json.JsonDocument,System.Object,System.Type)
+  name: ConvertTo(JsonDocument, object?, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_ConvertTo_System_Text_Json_JsonDocument_System_Object_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo(System.Text.Json.JsonDocument,System.Object,System.Type)
+  name.vb: ConvertTo(JsonDocument, Object, Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo(System.Text.Json.JsonDocument, object?, System.Type)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo(System.Text.Json.JsonDocument, Object, System.Type)
+  nameWithType: JsonDocumentConverter.ConvertTo(JsonDocument, object?, Type)
+  nameWithType.vb: JsonDocumentConverter.ConvertTo(JsonDocument, Object, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo*
+  name: ConvertTo
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_ConvertTo_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.ConvertTo
+  nameWithType: JsonDocumentConverter.ConvertTo
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: JsonDocumentConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: JsonDocumentConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Map
+  nameWithType: JsonDocumentConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order
+  nameWithType: JsonDocumentConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonDocumentConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.Order
+  nameWithType: JsonDocumentConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter
+  name: JsonElementConverter
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html
+  commentId: T:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter
+  nameWithType: JsonElementConverter
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle(System.Type,System.Type)
+  name: CanHandle(Type, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_CanHandle_System_Type_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle(System.Type,System.Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle(System.Type, System.Type)
+  nameWithType: JsonElementConverter.CanHandle(Type, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle*
+  name: CanHandle
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_CanHandle_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle
+  nameWithType: JsonElementConverter.CanHandle
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo(System.Text.Json.JsonElement,System.Object,System.Type)
+  name: ConvertTo(JsonElement, object?, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_ConvertTo_System_Text_Json_JsonElement_System_Object_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo(System.Text.Json.JsonElement,System.Object,System.Type)
+  name.vb: ConvertTo(JsonElement, Object, Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo(System.Text.Json.JsonElement, object?, System.Type)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo(System.Text.Json.JsonElement, Object, System.Type)
+  nameWithType: JsonElementConverter.ConvertTo(JsonElement, object?, Type)
+  nameWithType.vb: JsonElementConverter.ConvertTo(JsonElement, Object, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo*
+  name: ConvertTo
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_ConvertTo_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.ConvertTo
+  nameWithType: JsonElementConverter.ConvertTo
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name: Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  name.vb: Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression?, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map(System.Linq.Expressions.Expression, System.Linq.Expressions.Expression, System.Type, System.Type, ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping, ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)
+  nameWithType: JsonElementConverter.Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+  nameWithType.vb: JsonElementConverter.Map(Expression, Expression, Type, Type, IExpressionMapping, ExpressionBuilderManager)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map*
+  name: Map
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Map_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map
+  nameWithType: JsonElementConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Order
+  commentId: P:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
+  nameWithType: JsonElementConverter.Order
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order*
+  name: Order
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Order_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
+  nameWithType: JsonElementConverter.Order
 - uid: ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter
   name: KeyValuePairConverter
   href: api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html
