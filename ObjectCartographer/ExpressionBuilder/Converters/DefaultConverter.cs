@@ -131,7 +131,15 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 {
                     return System.Convert.ChangeType(item, destinationType, CultureInfo.InvariantCulture);
                 }
-                catch { }
+                catch
+                {
+                    if (destinationType.IsGenericType
+                        && destinationType.GetGenericTypeDefinition() == typeof(Nullable<>)
+                        && !SourceType.IsGenericType)
+                    {
+                        return System.Convert.ChangeType(item, destinationType.GenericTypeArguments.FirstOrDefault(), CultureInfo.InvariantCulture);
+                    }
+                }
             }
             catch
             {

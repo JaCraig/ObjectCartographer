@@ -22,7 +22,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the conver from method.
         /// </summary>
         /// <value>The conver from method.</value>
-        private static MethodInfo ConverFromMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertFrom), new[] { typeof(object) });
+        private static MethodInfo ConvertFromMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertFrom), new[] { typeof(object) });
 
         /// <summary>
         /// Gets the convert to method.
@@ -65,11 +65,10 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 return Expression.Empty();
             var Converter = TypeDescriptor.GetConverter(sourceType);
             if (Converter.CanConvertTo(destinationType))
-                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertToMethod, source, Expression.Constant(destinationType)), destinationType);
-
+                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertToMethod, Expression.Convert(source, typeof(object)), Expression.Constant(destinationType)), destinationType);
             Converter = TypeDescriptor.GetConverter(destinationType);
             if (Converter.CanConvertFrom(sourceType))
-                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConverFromMethod, source), destinationType);
+                return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertFromMethod, source), destinationType);
             return Expression.Empty();
         }
     }

@@ -59,6 +59,13 @@ namespace ObjectCartographer.Tests
         }
 
         [Fact]
+        public void NullableLongToDouble()
+        {
+            double TestObject2 = 5;
+            Assert.Equal(5, TestObject2.To<long?>());
+        }
+
+        [Fact]
         public void ProjectionTest()
         {
             new MyTestClass2().Map<MyTestClass2, ProjectionTestClass>()
