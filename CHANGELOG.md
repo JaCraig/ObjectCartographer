@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.23"></a>
+## [3.0.23](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.23) (2023-9-11)
+
+### Bug Fixes
+
+* Fixing type conversion when going from value type to nullable value type ([da15c8e](https://www.github.com/JaCraig/ObjectCartographer/commit/da15c8e95c042dffcf39bfe24b55eaa7d58e0218))
+
+### Other
+
+* Update dependabot.yml ([77b0953](https://www.github.com/JaCraig/ObjectCartographer/commit/77b09536021f253afa50d9af3682e8c340cea8aa))
+
 <a name="3.0.22"></a>
 ## [3.0.22](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.22) (2023-9-11)
 
