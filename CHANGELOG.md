@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.24"></a>
+## [3.0.24](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.24) (2023-09-18)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([15d4d4a](https://www.github.com/JaCraig/ObjectCartographer/commit/15d4d4adac570c1d2cbc0a8bce8a707210f7b760))
+
+### Other
+
+* Merge pull request #37 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-646cd6d5d1 ([eb5619a](https://www.github.com/JaCraig/ObjectCartographer/commit/eb5619a511037091019509ff5c27df3e3c6006d8))
+* Merge pull request #38 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-9a5e4e9f18 ([6e314d6](https://www.github.com/JaCraig/ObjectCartographer/commit/6e314d64d8f92c6896876f73edc1b71f306eeec5))
+* Merge pull request #39 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-152a4d637b ([8132085](https://www.github.com/JaCraig/ObjectCartographer/commit/81320857582da4925230f331a062994c8c78d018))
+* Merge pull request #40 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-3bfd6ff9f0 ([d20e58e](https://www.github.com/JaCraig/ObjectCartographer/commit/d20e58ee72d2c9437974825f8615953433ef030b))
+* Merge pull request #41 from JaCraig/dependabot/nuget/dependencies-382053586f ([b727c82](https://www.github.com/JaCraig/ObjectCartographer/commit/b727c8287a6e2a4ae379f155760dafb63bbba207))
+* bump the dependencies group ([80b0062](https://www.github.com/JaCraig/ObjectCartographer/commit/80b006273a8512929bc3c3f80f221413c9ea4219))
+* bump the dependencies group ([b2d1453](https://www.github.com/JaCraig/ObjectCartographer/commit/b2d1453dbb553747bd2c8ce5f792b08c028d7fcc))
+* bump the dependencies group ([733622e](https://www.github.com/JaCraig/ObjectCartographer/commit/733622e4cb5d454618b944c7016e080a48beca27))
+* bump the dependencies group ([aba4a20](https://www.github.com/JaCraig/ObjectCartographer/commit/aba4a2037206fb70613952a597470227cde3c32b))
+
 <a name="3.0.23"></a>
 ## [3.0.23](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.23) (2023-9-11)
 
