@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.26"></a>
+## [3.0.26](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.26) (2023-10-30)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([2abce69](https://www.github.com/JaCraig/ObjectCartographer/commit/2abce69a6e466b7c6a477248cab6d6c352f9e4f9))
+
+### Other
+
+* Merge pull request #47 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-3a16073cfc ([82dc7d1](https://www.github.com/JaCraig/ObjectCartographer/commit/82dc7d12f5a14b0719667f6a2152f13d8dc15145))
+* Merge pull request #48 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-ca3e3b579c ([6793f74](https://www.github.com/JaCraig/ObjectCartographer/commit/6793f747e0a37243a6fb6fc36526ea3b171ab6a9))
+* Merge pull request #49 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-02c2d82278 ([3a12893](https://www.github.com/JaCraig/ObjectCartographer/commit/3a128936f8a5e44edcc8c510c3c485ed5b6fa785))
+* Merge pull request #50 from JaCraig/dependabot/github_actions/dependencies-4c9eee5d7b ([e9e63a7](https://www.github.com/JaCraig/ObjectCartographer/commit/e9e63a715813d7cbc2cb0fda11b68c4e7ddaeff1))
+* Merge pull request #51 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-7f769f1783 ([47e4577](https://www.github.com/JaCraig/ObjectCartographer/commit/47e45772144efdb6b6c3fe1f6accd1f59315ee39))
+* Merge pull request #52 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-6c13c55ef1 ([216ec7a](https://www.github.com/JaCraig/ObjectCartographer/commit/216ec7a61bc8c832b0989671c3fda32815363e25))
+* Merge pull request #53 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-156898979a ([790b4e2](https://www.github.com/JaCraig/ObjectCartographer/commit/790b4e284dcff718d97b002afbb24ffe27abed08))
+* Merge pull request #54 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-e05608af98 ([5bf8477](https://www.github.com/JaCraig/ObjectCartographer/commit/5bf84771509d6f0677eac52fd31bccf2ac2b92a4))
+* Merge pull request #55 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-aafbaaef73 ([8949d6f](https://www.github.com/JaCraig/ObjectCartographer/commit/8949d6f85c412edc8da507517a75f42130a5a433))
+* Merge pull request #56 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-3561ac0874 ([5229f99](https://www.github.com/JaCraig/ObjectCartographer/commit/5229f99c2062087e6a3a4de9ecb675a00090ac47))
+* Merge pull request #57 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-57f8e5cd27 ([9a19a08](https://www.github.com/JaCraig/ObjectCartographer/commit/9a19a080cf8422cde228003db7e67ed39a23fff0))
+* Merge pull request #58 from JaCraig/dependabot/nuget/dependencies-84f832d92c ([bb6a7fa](https://www.github.com/JaCraig/ObjectCartographer/commit/bb6a7fa02e2b268f2a66bfd1fb3c8f469f541f96))
+* bump the dependencies group ([c278017](https://www.github.com/JaCraig/ObjectCartographer/commit/c27801779a7dd13d2628b829124bbf4b3c9f7232))
+* bump the dependencies group ([bbd91b6](https://www.github.com/JaCraig/ObjectCartographer/commit/bbd91b6eb7365f845f912045b71b72ebac5cece1))
+* bump the dependencies group ([7c73323](https://www.github.com/JaCraig/ObjectCartographer/commit/7c733234245df739f6d7c3f4bf69c66bd0fc0a43))
+* bump the dependencies group ([5c377e7](https://www.github.com/JaCraig/ObjectCartographer/commit/5c377e702212ceacc0833e0d9fc8a58b3f8aeabb))
+* bump the dependencies group ([9c730e3](https://www.github.com/JaCraig/ObjectCartographer/commit/9c730e3302f7e1466015b139b620f34a9ac7f508))
+* bump the dependencies group ([fdceb1f](https://www.github.com/JaCraig/ObjectCartographer/commit/fdceb1ff1a4871d5c21773fe7c3918e9a84cb8a7))
+* bump the dependencies group ([baac184](https://www.github.com/JaCraig/ObjectCartographer/commit/baac1845442a5a5f8b5a26ac62ef97812a2a5e93))
+* bump the dependencies group ([c9b2ced](https://www.github.com/JaCraig/ObjectCartographer/commit/c9b2cedd897526c6cf3568e7ed6aa9dbbb7f20c9))
+* bump the dependencies group ([935d17f](https://www.github.com/JaCraig/ObjectCartographer/commit/935d17fc8639e4c74a5a7f5e7011c6656cd8ed31))
+* bump the dependencies group ([159d06d](https://www.github.com/JaCraig/ObjectCartographer/commit/159d06d49bb08e641ac3da1be44e34841b04657e))
+* bump the dependencies group with 1 update ([0eea647](https://www.github.com/JaCraig/ObjectCartographer/commit/0eea647a7abad65710b2fd049dc68ddc5d93f309))
+
 <a name="3.0.25"></a>
 ## [3.0.25](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.25) (2023-09-22)
 
