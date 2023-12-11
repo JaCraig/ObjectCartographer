@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.30"></a>
+## [3.0.30](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.30) (2023-12-11)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([2c63d72](https://www.github.com/JaCraig/ObjectCartographer/commit/2c63d72a883ce573e6ac6f8eaffde0ac43626c17))
+
+### Other
+
+* Merge pull request #76 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-ca47d89437 ([c7b1634](https://www.github.com/JaCraig/ObjectCartographer/commit/c7b1634750ac917e668cd4db5e8bee674c3f8a87))
+* Merge pull request #77 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-ec8e9e2999 ([70271e6](https://www.github.com/JaCraig/ObjectCartographer/commit/70271e641ad3af2d7cdddc9dd62cea12c98e2d28))
+* Merge pull request #78 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-1b4c31d439 ([e96155b](https://www.github.com/JaCraig/ObjectCartographer/commit/e96155b3b4bba3fcad2cb27d0d88355726960413))
+* Merge pull request #79 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-e099decf7a ([8a05321](https://www.github.com/JaCraig/ObjectCartographer/commit/8a05321ec914ea9e6f4b9844117d1a81fda5ca3e))
+* Merge pull request #80 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-494264589d ([31120a4](https://www.github.com/JaCraig/ObjectCartographer/commit/31120a45373d0e68cbb7315769cf70933c745aef))
+* Merge pull request #81 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-1725126a36 ([6c673fe](https://www.github.com/JaCraig/ObjectCartographer/commit/6c673fea87eb7030cd9c06ac3b84143b94d6f1b2))
+* Merge pull request #82 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-6095d6a029 ([1260efc](https://www.github.com/JaCraig/ObjectCartographer/commit/1260efc1c417b1b4e1fc5e63bf5e029a36dc14e5))
+* Merge pull request #83 from JaCraig/dependabot/github_actions/dependencies-9d15ffb50c ([e51fc13](https://www.github.com/JaCraig/ObjectCartographer/commit/e51fc13fa1e3812639102e8ce607410431da2a6e))
+* Merge pull request #84 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-9380cae661 ([0855762](https://www.github.com/JaCraig/ObjectCartographer/commit/085576296be920bfac1bf4ff9a72555afc1ea89f))
+* Merge pull request #85 from JaCraig/dependabot/nuget/dependencies-24b5a6751e ([d9fc9ea](https://www.github.com/JaCraig/ObjectCartographer/commit/d9fc9ea29647f9f93024c7ae7ec1c0d90eb592be))
+* bump the dependencies group ([edcc3fa](https://www.github.com/JaCraig/ObjectCartographer/commit/edcc3fa84bb375eeb06b1f70763762158af42b39))
+* bump the dependencies group ([f238eb2](https://www.github.com/JaCraig/ObjectCartographer/commit/f238eb21ee6305723c6770f08342187dc3f0b7ff))
+* bump the dependencies group ([10c742e](https://www.github.com/JaCraig/ObjectCartographer/commit/10c742ece662670e482a5b5c59e386e6b39df016))
+* bump the dependencies group ([15cfaf5](https://www.github.com/JaCraig/ObjectCartographer/commit/15cfaf55255f59d5d8ff9e8351cc04b42e599832))
+* bump the dependencies group ([048b836](https://www.github.com/JaCraig/ObjectCartographer/commit/048b836821f220c447dbc016e5d5d7aaa1ce8432))
+* bump the dependencies group ([2b2872f](https://www.github.com/JaCraig/ObjectCartographer/commit/2b2872f13e100ccf4ce0c187e72294d932923a31))
+* bump the dependencies group ([565c512](https://www.github.com/JaCraig/ObjectCartographer/commit/565c512471fe47f7a7dc3379e9351e4701b574a1))
+* bump the dependencies group ([3e9b4c2](https://www.github.com/JaCraig/ObjectCartographer/commit/3e9b4c2cd512c6c3435d44733eb7ac52869065e0))
+* bump the dependencies group with 1 update ([f4f5375](https://www.github.com/JaCraig/ObjectCartographer/commit/f4f5375c5f81b8690b2309e67ce80ea8aced5076))
+* Fixing doc gen ([633af99](https://www.github.com/JaCraig/ObjectCartographer/commit/633af996b411ae87f2edfa6c775c011f83c12679))
+
 <a name="3.0.29"></a>
 ## [3.0.29](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.29) (2023-11-17)
 
