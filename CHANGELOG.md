@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.31"></a>
+## [3.0.31](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.31) (2024-01-10)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([e0f6dc1](https://www.github.com/JaCraig/ObjectCartographer/commit/e0f6dc1c254232c02dedb4d5449646fb5543e84b))
+
+### Other
+
+* Merge pull request #100 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-f4d160b83a ([6d95ac6](https://www.github.com/JaCraig/ObjectCartographer/commit/6d95ac6587faa246c59cd5f521177e068be8e27a))
+* Merge pull request #101 from JaCraig/dependabot/nuget/dependencies-54f3076fc6 ([b2553c1](https://www.github.com/JaCraig/ObjectCartographer/commit/b2553c11ce4c6313ca98f360a93e23922e23e1ff))
+* Merge pull request #86 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-beb0c94413 ([14b707d](https://www.github.com/JaCraig/ObjectCartographer/commit/14b707def15afb23d2f3e0c335ec34a68aeb8080))
+* Merge pull request #87 from JaCraig/dependabot/github_actions/dependencies-cac7d13037 ([28e68b9](https://www.github.com/JaCraig/ObjectCartographer/commit/28e68b984a45a81b94263949ce70936f5323968b))
+* Merge pull request #88 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-53912aba67 ([ade678d](https://www.github.com/JaCraig/ObjectCartographer/commit/ade678d937a23a8caf2f55954887e71587e18098))
+* Merge pull request #89 from JaCraig/dependabot/github_actions/dependencies-cb1dee63db ([7f7189c](https://www.github.com/JaCraig/ObjectCartographer/commit/7f7189c65b1e1152f808ccb0e767f1f1aa78d335))
+* Merge pull request #90 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-6db3575806 ([77ca73e](https://www.github.com/JaCraig/ObjectCartographer/commit/77ca73e0f0b568899f5729a525e2a5826ca0fbdd))
+* Merge pull request #91 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-84012ea624 ([7d6ac23](https://www.github.com/JaCraig/ObjectCartographer/commit/7d6ac23c576b4abf5de405bbe7a623ec7886a8db))
+* Merge pull request #92 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-e730a3342d ([c6be9ab](https://www.github.com/JaCraig/ObjectCartographer/commit/c6be9abbb18980b15656ceccda5e9b86ad7efc05))
+* Merge pull request #93 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-bf3256b4d4 ([9011f34](https://www.github.com/JaCraig/ObjectCartographer/commit/9011f3426320c286364e0b2504a47567fff7b373))
+* Merge pull request #94 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-269a907cb3 ([3fe1296](https://www.github.com/JaCraig/ObjectCartographer/commit/3fe129645bac9e9917b8bd8053fa5de350fc2a0c))
+* Merge pull request #95 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-d1155faea8 ([91d4c0d](https://www.github.com/JaCraig/ObjectCartographer/commit/91d4c0d16e105719ca1f52b22c0ae75c358316c4))
+* Merge pull request #96 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-07b50e7d0d ([173f4e1](https://www.github.com/JaCraig/ObjectCartographer/commit/173f4e10c2f8cc23dc636e6dd7c688c6144574af))
+* Merge pull request #97 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-d1d83f71e9 ([fd98f31](https://www.github.com/JaCraig/ObjectCartographer/commit/fd98f31ac7daede2f746738c842bf953daca282a))
+* Merge pull request #98 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-2c2e5d4fef ([32dd18e](https://www.github.com/JaCraig/ObjectCartographer/commit/32dd18e0d44c750f2cd092ffef9a42f5a553b0ad))
+* Merge pull request #99 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-970de2ab38 ([bc37369](https://www.github.com/JaCraig/ObjectCartographer/commit/bc37369ebdfd716066a0693af5ca7c46953360bf))
+* bump the dependencies group ([82263c8](https://www.github.com/JaCraig/ObjectCartographer/commit/82263c858b3a09030cf192c1262a733c8ecc3102))
+* bump the dependencies group ([248348c](https://www.github.com/JaCraig/ObjectCartographer/commit/248348cc0a2548b8ea8cdce72ddce1cc5dee4054))
+* bump the dependencies group ([1bf4ced](https://www.github.com/JaCraig/ObjectCartographer/commit/1bf4ced9b4da1e3130c92cc650032904b4c341da))
+* bump the dependencies group ([688acf9](https://www.github.com/JaCraig/ObjectCartographer/commit/688acf91b1cdfbdb7cca394d3a4e49e44ad27b8c))
+* bump the dependencies group ([312e099](https://www.github.com/JaCraig/ObjectCartographer/commit/312e0993de8c8b4daa34b18daf14d18f979720f2))
+* bump the dependencies group ([633af53](https://www.github.com/JaCraig/ObjectCartographer/commit/633af53d49999f53adae42ea4335cb7d2f5c7d89))
+* bump the dependencies group ([d0d632b](https://www.github.com/JaCraig/ObjectCartographer/commit/d0d632bdf8cddd7663715a978d9458a2ff452d0d))
+* bump the dependencies group ([69c1e22](https://www.github.com/JaCraig/ObjectCartographer/commit/69c1e22853774db54dce0e53c67ed709783704c7))
+* bump the dependencies group ([7c54b47](https://www.github.com/JaCraig/ObjectCartographer/commit/7c54b47303892f6ba0f3d41d759f1f8d3bd37e24))
+* bump the dependencies group ([1e0c189](https://www.github.com/JaCraig/ObjectCartographer/commit/1e0c1894c32535a00e031cd529d3f97727f7ac4e))
+* bump the dependencies group ([e662ca0](https://www.github.com/JaCraig/ObjectCartographer/commit/e662ca0b8a37413621ddc80f7692acc08509ce16))
+* bump the dependencies group ([d803278](https://www.github.com/JaCraig/ObjectCartographer/commit/d8032787dffe95a2b7f14fb561e170b6a75a9447))
+* bump the dependencies group ([6234a92](https://www.github.com/JaCraig/ObjectCartographer/commit/6234a92b43c955db413a09e869c4931aeac5a85a))
+* bump the dependencies group with 1 update ([1315e6b](https://www.github.com/JaCraig/ObjectCartographer/commit/1315e6bb5b9b80510e7800eceaa81bfc092dcfd8))
+* bump the dependencies group with 1 update ([105bcb4](https://www.github.com/JaCraig/ObjectCartographer/commit/105bcb4de5b6c9c3660db975f183c23e2ffb33fb))
+
 <a name="3.0.30"></a>
 ## [3.0.30](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.30) (2023-12-11)
 
