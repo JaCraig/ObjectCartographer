@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.34"></a>
+## [3.0.34](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.34) (2024-02-02)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([d8e9527](https://www.github.com/JaCraig/ObjectCartographer/commit/d8e95270f66e6ab77acd246fa66554864f059f6f))
+
+### Other
+
+* Merge pull request #113 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-5cd141965c ([c886032](https://www.github.com/JaCraig/ObjectCartographer/commit/c8860321037b8be4e63d5b899dddf4963ba657f8))
+* Merge pull request #114 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-90be57f0f4 ([79f6484](https://www.github.com/JaCraig/ObjectCartographer/commit/79f6484b9f04df727ed358c9aa33f01e86976595))
+* Merge pull request #115 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-c383803938 ([b13f213](https://www.github.com/JaCraig/ObjectCartographer/commit/b13f213fd0698df3b5412c58ef1dabda8b9e30b7))
+* Merge pull request #116 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-50e7fead40 ([3ba51dd](https://www.github.com/JaCraig/ObjectCartographer/commit/3ba51dd42ae6a71020e30cffc84f531f82ed8e50))
+* Merge pull request #117 from JaCraig/dependabot/nuget/dependencies-6be31571d5 ([49e8c6b](https://www.github.com/JaCraig/ObjectCartographer/commit/49e8c6bba2c4daad8d3c1ce4942fb34aa8fb389c))
+* bump the dependencies group ([4ab07f0](https://www.github.com/JaCraig/ObjectCartographer/commit/4ab07f0c8164811fcd405c95a4a2d4f595209c29))
+* bump the dependencies group ([0def3d3](https://www.github.com/JaCraig/ObjectCartographer/commit/0def3d324020eb1e101723824024d1ded5e532cb))
+* bump the dependencies group ([24dde41](https://www.github.com/JaCraig/ObjectCartographer/commit/24dde413ae86274c7856ca271d5a30096026870e))
+* bump the dependencies group ([bbdc2d5](https://www.github.com/JaCraig/ObjectCartographer/commit/bbdc2d514663ae8ec710c6101999b24739bfcb79))
+* Update dependabot-reviewer.yml ([969c264](https://www.github.com/JaCraig/ObjectCartographer/commit/969c264c2f26f56d282caec8ac0ec90efed2a431))
+
 <a name="3.0.33"></a>
 ## [3.0.33](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.33) (2024-01-29)
 
