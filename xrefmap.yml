@@ -1998,13 +1998,13 @@ references:
   fullName: ObjectCartographer.Internal.TypeTuple.Equals(ObjectCartographer.Internal.TypeTuple)
   nameWithType: TypeTuple.Equals(TypeTuple)
 - uid: ObjectCartographer.Internal.TypeTuple.Equals(System.Object)
-  name: Equals(object)
+  name: Equals(object?)
   href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_Equals_System_Object_
   commentId: M:ObjectCartographer.Internal.TypeTuple.Equals(System.Object)
   name.vb: Equals(Object)
-  fullName: ObjectCartographer.Internal.TypeTuple.Equals(object)
+  fullName: ObjectCartographer.Internal.TypeTuple.Equals(object?)
   fullName.vb: ObjectCartographer.Internal.TypeTuple.Equals(Object)
-  nameWithType: TypeTuple.Equals(object)
+  nameWithType: TypeTuple.Equals(object?)
   nameWithType.vb: TypeTuple.Equals(Object)
 - uid: ObjectCartographer.Internal.TypeTuple.Equals*
   name: Equals
@@ -2039,6 +2039,44 @@ references:
   isSpec: "True"
   fullName: ObjectCartographer.Internal.TypeTuple.Source
   nameWithType: TypeTuple.Source
+- uid: ObjectCartographer.Internal.TypeTuple.op_Equality(ObjectCartographer.Internal.TypeTuple,ObjectCartographer.Internal.TypeTuple)
+  name: operator ==(TypeTuple, TypeTuple)
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_op_Equality_ObjectCartographer_Internal_TypeTuple_ObjectCartographer_Internal_TypeTuple_
+  commentId: M:ObjectCartographer.Internal.TypeTuple.op_Equality(ObjectCartographer.Internal.TypeTuple,ObjectCartographer.Internal.TypeTuple)
+  name.vb: =(TypeTuple, TypeTuple)
+  fullName: ObjectCartographer.Internal.TypeTuple.operator ==(ObjectCartographer.Internal.TypeTuple, ObjectCartographer.Internal.TypeTuple)
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.=(ObjectCartographer.Internal.TypeTuple, ObjectCartographer.Internal.TypeTuple)
+  nameWithType: TypeTuple.operator ==(TypeTuple, TypeTuple)
+  nameWithType.vb: TypeTuple.=(TypeTuple, TypeTuple)
+- uid: ObjectCartographer.Internal.TypeTuple.op_Equality*
+  name: operator ==
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_op_Equality_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: ObjectCartographer.Internal.TypeTuple.operator ==
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.=
+  nameWithType: TypeTuple.operator ==
+  nameWithType.vb: TypeTuple.=
+- uid: ObjectCartographer.Internal.TypeTuple.op_Inequality(ObjectCartographer.Internal.TypeTuple,ObjectCartographer.Internal.TypeTuple)
+  name: operator !=(TypeTuple, TypeTuple)
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_op_Inequality_ObjectCartographer_Internal_TypeTuple_ObjectCartographer_Internal_TypeTuple_
+  commentId: M:ObjectCartographer.Internal.TypeTuple.op_Inequality(ObjectCartographer.Internal.TypeTuple,ObjectCartographer.Internal.TypeTuple)
+  name.vb: <>(TypeTuple, TypeTuple)
+  fullName: ObjectCartographer.Internal.TypeTuple.operator !=(ObjectCartographer.Internal.TypeTuple, ObjectCartographer.Internal.TypeTuple)
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.<>(ObjectCartographer.Internal.TypeTuple, ObjectCartographer.Internal.TypeTuple)
+  nameWithType: TypeTuple.operator !=(TypeTuple, TypeTuple)
+  nameWithType.vb: TypeTuple.<>(TypeTuple, TypeTuple)
+- uid: ObjectCartographer.Internal.TypeTuple.op_Inequality*
+  name: operator !=
+  href: api/ObjectCartographer.Internal.TypeTuple.html#ObjectCartographer_Internal_TypeTuple_op_Inequality_
+  commentId: Overload:ObjectCartographer.Internal.TypeTuple.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: ObjectCartographer.Internal.TypeTuple.operator !=
+  fullName.vb: ObjectCartographer.Internal.TypeTuple.<>
+  nameWithType: TypeTuple.operator !=
+  nameWithType.vb: TypeTuple.<>
 - uid: ObjectCartographer.Modules
   name: ObjectCartographer.Modules
   href: api/ObjectCartographer.Modules.html
