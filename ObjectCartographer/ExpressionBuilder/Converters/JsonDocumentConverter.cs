@@ -17,7 +17,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 2;
+        public int Order => OrderDefaults.DefaultPlusTwo;
 
         /// <summary>
         /// Gets the convert to method.

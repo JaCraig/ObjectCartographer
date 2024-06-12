@@ -15,7 +15,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 1;
+        public int Order => OrderDefaults.DefaultPlusOne;
 
         /// <summary>
         /// Converts to stringmethod.
@@ -31,10 +31,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return sourceType != typeof(DBNull) && destinationType == typeof(string);
-        }
+        public bool CanHandle(Type sourceType, Type destinationType) => sourceType != typeof(DBNull) && destinationType == typeof(string);
 
         /// <summary>
         /// Converts the specified property get.
@@ -52,11 +49,11 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 return Expression.Empty();
             if (IsNullable(sourceType))
             {
-                var EqualityComparison = Expression.Equal(source, Expression.Constant(null));
+                BinaryExpression EqualityComparison = Expression.Equal(source, Expression.Constant(null));
                 if (sourceType == typeof(object) || sourceType == typeof(DBNull))
                     EqualityComparison = Expression.Or(EqualityComparison, Expression.Equal(source, Expression.Constant(DBNull.Value)));
                 return Expression.Condition(EqualityComparison,
-                    destination,
+                    destination!,
                     Expression.Call(source, ToStringMethod));
             }
             return Expression.Call(source, ToStringMethod);

@@ -17,7 +17,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => int.MaxValue - 1;
+        public override int Order => OrderDefaults.LastMinusOne;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -57,20 +57,20 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             ExpressionBuilderManager manager,
             List<Expression> expressions)
         {
-            foreach (var Property in sourceType.ReadableProperties())
+            foreach (System.Reflection.PropertyInfo Property in sourceType.ReadableProperties())
             {
-                var DestinationProperty = destinationType.WritableProperties().FindMatchingProperty(Property.Name);
+                System.Reflection.PropertyInfo? DestinationProperty = destinationType.WritableProperties().FindMatchingProperty(Property.Name);
                 if (DestinationProperty is null)
                     continue;
 
                 Expression PropertyGet = Expression.Property(source, Property);
-                var PropertySet = Expression.Property(destination, DestinationProperty);
+                MemberExpression PropertySet = Expression.Property(destination, DestinationProperty);
 
                 PropertyGet = manager.Map(PropertyGet, PropertySet, Property.PropertyType, DestinationProperty.PropertyType, mapping);
 
                 expressions.Add(Expression.Assign(PropertySet, PropertyGet));
             }
-            expressions.Add(destination);
+            expressions.Add(destination!);
             return Expression.Block(destinationType, expressions);
         }
     }

@@ -15,7 +15,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public int Order => OrderDefaults.Default;
 
         /// <summary>
         /// Gets the enum parse.
@@ -37,10 +37,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return destinationType?.IsEnum ?? false;
-        }
+        public bool CanHandle(Type sourceType, Type destinationType) => destinationType?.IsEnum ?? false;
 
         /// <summary>
         /// Converts the specified property get.

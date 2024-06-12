@@ -14,7 +14,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public int Order => OrderDefaults.Default;
 
         /// <summary>
         /// Gets the enum parse.
@@ -50,10 +50,10 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            var ConvertMethod = ConvertType.GetMethod("To" + destinationType.Name, new[] { sourceType });
+            System.Reflection.MethodInfo? ConvertMethod = ConvertType.GetMethod("To" + destinationType.Name, new[] { sourceType });
             if (sourceType == typeof(string))
                 source = Expression.Coalesce(source, Expression.Constant(""));
-            return Expression.Call(ConvertMethod, source);
+            return Expression.Call(ConvertMethod!, source);
         }
 
         /// <summary>
@@ -61,9 +61,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is built in type] [the specified type]; otherwise, <c>false</c>.</returns>
-        private static bool IsBuiltInType(Type type)
-        {
-            return type?.IsPrimitive == true || type == typeof(string) || type == typeof(decimal);
-        }
+        private static bool IsBuiltInType(Type type) => type?.IsPrimitive == true || type == typeof(string) || type == typeof(decimal);
     }
 }

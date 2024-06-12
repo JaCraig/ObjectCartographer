@@ -16,7 +16,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => int.MaxValue - 1;
+        public int Order => OrderDefaults.LastMinusOne;
 
         /// <summary>
         /// Gets the conver from method.
@@ -42,7 +42,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (sourceType is null || destinationType is null)
                 return false;
-            var Converter = TypeDescriptor.GetConverter(sourceType);
+            TypeConverter Converter = TypeDescriptor.GetConverter(sourceType);
             if (Converter.CanConvertTo(destinationType))
                 return true;
             Converter = TypeDescriptor.GetConverter(destinationType);
@@ -63,7 +63,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            var Converter = TypeDescriptor.GetConverter(sourceType);
+            TypeConverter Converter = TypeDescriptor.GetConverter(sourceType);
             if (Converter.CanConvertTo(destinationType))
                 return Expression.Convert(Expression.Call(Expression.Constant(Converter), ConvertToMethod, Expression.Convert(source, typeof(object)), Expression.Constant(destinationType)), destinationType);
             Converter = TypeDescriptor.GetConverter(destinationType);

@@ -20,7 +20,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 2;
+        public override int Order => OrderDefaults.DefaultPlusTwo;
 
         /// <summary>
         /// The dictionary type
@@ -41,10 +41,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public override bool CanHandle(Type source, Type destination)
-        {
-            return IsDictionary(source);
-        }
+        public override bool CanHandle(Type source, Type destination) => IsDictionary(source);
 
         /// <summary>
         /// Tries the get value.
@@ -66,7 +63,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 value = dictionary[FinalKey];
                 return true;
             }
-            if (dictionary.TryGetValue(key, out var Value))
+            if (dictionary.TryGetValue(key, out JsonElement Value))
             {
                 value = Value;
                 return true;
@@ -91,32 +88,32 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (destination is null)
                 return source;
 
-            var SourceObjectAsIDictionary = mapping.AddVariable(DictionaryType);
-            var TempHolder = mapping.AddVariable(typeof(JsonElement?));
+            ParameterExpression? SourceObjectAsIDictionary = mapping.AddVariable(DictionaryType);
+            ParameterExpression? TempHolder = mapping.AddVariable(typeof(JsonElement?));
 
-            expressions.Add(Expression.Assign(SourceObjectAsIDictionary, Expression.Convert(source, DictionaryType)));
+            expressions.Add(Expression.Assign(SourceObjectAsIDictionary!, Expression.Convert(source, DictionaryType)));
 
-            var SourceProperties = sourceType.ReadableProperties();
-            var DestinationProperties = destinationType.WritableProperties();
+            PropertyInfo[] SourceProperties = sourceType.ReadableProperties();
+            PropertyInfo[] DestinationProperties = destinationType.WritableProperties();
 
             for (var x = 0; x < DestinationProperties.Length; ++x)
             {
-                var DestinationProperty = DestinationProperties[x];
-                var SourceProperty = SourceProperties.FindMatchingProperty(DestinationProperty.Name);
+                PropertyInfo DestinationProperty = DestinationProperties[x];
+                PropertyInfo? SourceProperty = SourceProperties.FindMatchingProperty(DestinationProperty.Name);
 
                 if (SourceProperty is null)
                 {
-                    var PropertySet = Expression.Property(destination, DestinationProperty);
+                    MemberExpression PropertySet = Expression.Property(destination, DestinationProperty);
                     Expression Key = Expression.Constant(DestinationProperty.Name);
-                    Expression MethodCall = Expression.Call(Expression.Constant(this), TryGetValueMethod, SourceObjectAsIDictionary, Key, TempHolder);
-                    Expression Assignment = Expression.Assign(PropertySet, manager.Map(TempHolder, PropertySet, typeof(JsonElement?), DestinationProperty.PropertyType, mapping));
+                    Expression MethodCall = Expression.Call(Expression.Constant(this), TryGetValueMethod, SourceObjectAsIDictionary!, Key, TempHolder!);
+                    Expression Assignment = Expression.Assign(PropertySet, manager.Map(TempHolder!, PropertySet, typeof(JsonElement?), DestinationProperty.PropertyType, mapping));
                     Expression IfStatement = Expression.IfThen(MethodCall, Assignment);
                     expressions.Add(IfStatement);
                 }
                 else
                 {
                     Expression PropertyGet = Expression.Property(source, SourceProperty);
-                    var PropertySet = Expression.Property(destination, DestinationProperty);
+                    MemberExpression PropertySet = Expression.Property(destination, DestinationProperty);
 
                     PropertyGet = manager.Map(PropertyGet, PropertySet, SourceProperty.PropertyType, DestinationProperty.PropertyType, mapping);
 
@@ -132,9 +129,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if the specified type is dictionary; otherwise, <c>false</c>.</returns>
-        private static bool IsDictionary(Type type)
-        {
-            return DictionaryType.IsAssignableFrom(type);
-        }
+        private static bool IsDictionary(Type type) => DictionaryType.IsAssignableFrom(type);
     }
 }

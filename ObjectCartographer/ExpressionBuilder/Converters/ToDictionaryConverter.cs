@@ -18,7 +18,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 2;
+        public override int Order => OrderDefaults.DefaultPlusTwo;
 
         /// <summary>
         /// Gets the add method.
@@ -39,10 +39,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public override bool CanHandle(Type source, Type destination)
-        {
-            return IsDictionary(destination);
-        }
+        public override bool CanHandle(Type source, Type destination) => IsDictionary(destination);
 
         /// <summary>
         /// Copies to dictionary.
@@ -60,28 +57,28 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (destination is null)
                 return source;
 
-            var DestinationObjectAsIDictionary = mapping.AddVariable(DictionaryType);
-            var TempHolder = mapping.AddVariable(typeof(object));
+            ParameterExpression? DestinationObjectAsIDictionary = mapping.AddVariable(DictionaryType);
+            ParameterExpression? TempHolder = mapping.AddVariable(typeof(object));
 
-            expressions.Add(Expression.Assign(DestinationObjectAsIDictionary, Expression.Convert(destination, DictionaryType)));
+            expressions.Add(Expression.Assign(DestinationObjectAsIDictionary!, Expression.Convert(destination, DictionaryType)));
 
-            var SourceProperties = sourceType.ReadableProperties();
-            var DestinationProperties = destinationType.WritableProperties();
+            PropertyInfo[] SourceProperties = sourceType.ReadableProperties();
+            PropertyInfo[] DestinationProperties = destinationType.WritableProperties();
 
             for (var x = 0; x < SourceProperties.Length; ++x)
             {
-                var SourceProperty = SourceProperties[x];
-                var DestinationProperty = DestinationProperties.FindMatchingProperty(SourceProperty.Name);
+                PropertyInfo SourceProperty = SourceProperties[x];
+                PropertyInfo? DestinationProperty = DestinationProperties.FindMatchingProperty(SourceProperty.Name);
 
                 if (DestinationProperty is null)
                 {
-                    var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
+                    Expression PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, typeof(object), mapping);
                     Expression Key = Expression.Constant(SourceProperty.Name);
                     expressions.Add(Expression.Call(DestinationObjectAsIDictionary, AddMethod, Key, PropertyGet));
                 }
                 else
                 {
-                    var PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, DestinationProperty.PropertyType, mapping);
+                    Expression PropertyGet = manager.Map(Expression.Property(source, SourceProperty), TempHolder, SourceProperty.PropertyType, DestinationProperty.PropertyType, mapping);
                     Expression PropertySet = Expression.Property(destination, DestinationProperty);
                     expressions.Add(Expression.Assign(PropertySet, PropertyGet));
                 }
@@ -95,11 +92,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if the specified type is dictionary; otherwise, <c>false</c>.</returns>
-        private static bool IsDictionary(Type type)
-        {
-            return DictionaryType.IsAssignableFrom(type);
-            //type.GetInterfaces();
-            //return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
-        }
+        private static bool IsDictionary(Type type) => DictionaryType.IsAssignableFrom(type);//type.GetInterfaces();//return Interfaces.Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == DictionaryType);
     }
 }

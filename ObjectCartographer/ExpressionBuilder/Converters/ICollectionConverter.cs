@@ -17,7 +17,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 1;
+        public override int Order => OrderDefaults.DefaultPlusOne;
 
         /// <summary>
         /// Gets the type of the key value pair.
@@ -39,10 +39,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public override bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return IsIEnumerable(sourceType) && IsCollection(destinationType);
-        }
+        public override bool CanHandle(Type sourceType, Type destinationType) => IsIEnumerable(sourceType) && IsCollection(destinationType);
 
         /// <summary>
         /// Copies to collection.
@@ -57,20 +54,20 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         protected override Expression CopyObject(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager, List<Expression> expressions)
         {
-            var SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType).GenericTypeArguments[0];
-            var DestinationCollectionType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
-            var DestionationCollectionValueType = DestinationCollectionType.GenericTypeArguments[0];
-            var AddMethod = DestinationCollectionType.GetMethod("Add", new[] { DestionationCollectionValueType });
+            Type SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType).GenericTypeArguments[0];
+            Type? DestinationCollectionType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
+            Type DestionationCollectionValueType = DestinationCollectionType.GenericTypeArguments[0];
+            System.Reflection.MethodInfo? AddMethod = DestinationCollectionType.GetMethod("Add", new[] { DestionationCollectionValueType });
 
-            var ForEachItem = Expression.Variable(SourceCollectionValueType);
-            var DestinationForEachItem = Expression.Variable(DestionationCollectionValueType);
+            ParameterExpression ForEachItem = Expression.Variable(SourceCollectionValueType);
+            ParameterExpression DestinationForEachItem = Expression.Variable(DestionationCollectionValueType);
 
-            var LoopBody = Expression.Call(destination, AddMethod, manager.Map(ForEachItem, DestinationForEachItem, SourceCollectionValueType, DestionationCollectionValueType, mapping));
+            MethodCallExpression LoopBody = Expression.Call(destination, AddMethod!, manager.Map(ForEachItem, DestinationForEachItem, SourceCollectionValueType, DestionationCollectionValueType, mapping));
 
-            var SourceIEnumerable = mapping.AddVariable(typeof(IEnumerable<>).MakeGenericType(SourceCollectionValueType));
-            expressions.Add(Expression.Assign(SourceIEnumerable, source));
-            expressions.Add(ForEach(SourceIEnumerable, ForEachItem, LoopBody));
-            expressions.Add(destination);
+            ParameterExpression? SourceIEnumerable = mapping.AddVariable(typeof(IEnumerable<>).MakeGenericType(SourceCollectionValueType));
+            expressions.Add(Expression.Assign(SourceIEnumerable!, source));
+            expressions.Add(ForEach(SourceIEnumerable!, ForEachItem, LoopBody));
+            expressions.Add(destination!);
 
             return Expression.Block(destinationType, new[] { DestinationForEachItem }, expressions);
         }
@@ -80,19 +77,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is key value pair] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsCollection(Type type)
-        {
-            return type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
-        }
+        private bool IsCollection(Type type) => type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
 
         /// <summary>
         /// Determines whether [is i enumerable] [the specified type].
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is i enumerable] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsIEnumerable(Type type)
-        {
-            return type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
-        }
+        private bool IsIEnumerable(Type type) => type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
     }
 }

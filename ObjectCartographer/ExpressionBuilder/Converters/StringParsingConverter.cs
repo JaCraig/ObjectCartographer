@@ -15,7 +15,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 1;
+        public int Order => OrderDefaults.DefaultPlusOne;
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -45,10 +45,10 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            var ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>());
+            MethodInfo? ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>());
             return Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
-                    destination,
-                    Expression.Call(ParseMethod, source));
+                    destination!,
+                    Expression.Call(ParseMethod!, source));
         }
     }
 }

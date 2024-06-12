@@ -15,7 +15,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public int Order => OrderDefaults.Default;
 
         /// <summary>
         /// Gets the type of the key value pair.
@@ -31,10 +31,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return IsKeyValuePair(sourceType) && IsKeyValuePair(destinationType);
-        }
+        public bool CanHandle(Type sourceType, Type destinationType) => IsKeyValuePair(sourceType) && IsKeyValuePair(destinationType);
 
         /// <summary>
         /// Maps the specified source to the destination.
@@ -50,12 +47,12 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            var SourceArgs = sourceType.GenericTypeArguments;
-            var DestinationArgs = destinationType.GenericTypeArguments;
+            Type[] SourceArgs = sourceType.GenericTypeArguments;
+            Type[] DestinationArgs = destinationType.GenericTypeArguments;
 
-            var SourceKey = manager.Map(Expression.Property(source, "Key"), null, SourceArgs[0], DestinationArgs[0], mapping);
-            var SourceValue = manager.Map(Expression.Property(source, "Value"), null, SourceArgs[1], DestinationArgs[1], mapping);
-            return Expression.New(destinationType.GetConstructor(DestinationArgs), SourceKey, SourceValue);
+            Expression SourceKey = manager.Map(Expression.Property(source, "Key"), null, SourceArgs[0], DestinationArgs[0], mapping);
+            Expression SourceValue = manager.Map(Expression.Property(source, "Value"), null, SourceArgs[1], DestinationArgs[1], mapping);
+            return Expression.New(destinationType.GetConstructor(DestinationArgs)!, SourceKey, SourceValue);
         }
 
         /// <summary>
@@ -63,9 +60,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is key value pair] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsKeyValuePair(Type type)
-        {
-            return type?.IsGenericType == true && type?.GetGenericTypeDefinition() == KeyValuePairType;
-        }
+        private bool IsKeyValuePair(Type type) => type?.IsGenericType == true && type?.GetGenericTypeDefinition() == KeyValuePairType;
     }
 }

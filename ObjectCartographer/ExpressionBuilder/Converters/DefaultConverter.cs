@@ -24,7 +24,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => int.MaxValue;
+        public int Order => OrderDefaults.Last;
 
         /// <summary>
         /// Gets the convert to method.
@@ -40,10 +40,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return true;
-        }
+        public bool CanHandle(Type sourceType, Type destinationType) => true;
 
         /// <summary>
         /// Converts to.
@@ -54,10 +51,10 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         public object? ConvertTo(object? item, object? destination, Type destinationType)
         {
-            var SourceType = item?.GetType() ?? typeof(object);
+            Type SourceType = item?.GetType() ?? typeof(object);
             try
             {
-                if (item is null || item is DBNull)
+                if (item is null or DBNull)
                 {
                     return ReturnDefaultValue(destination, destinationType);
                 }
@@ -73,7 +70,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                     catch { }
                 }
 
-                var Converter = TypeDescriptor.GetConverter(SourceType);
+                TypeConverter Converter = TypeDescriptor.GetConverter(SourceType);
                 if (Converter.CanConvertTo(destinationType))
                 {
                     return Converter.ConvertTo(item, destinationType);
@@ -110,14 +107,14 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                     }, destination, destinationType);
                 }
 
-                var IEnumerableResultType = destinationType.GetIEnumerableElementType();
-                var IEnumerableObjectType = SourceType.GetIEnumerableElementType();
+                Type IEnumerableResultType = destinationType.GetIEnumerableElementType();
+                Type IEnumerableObjectType = SourceType.GetIEnumerableElementType();
                 if (destinationType != IEnumerableResultType && SourceType != IEnumerableObjectType)
                 {
                     var TempList = (IList)FastActivator.CreateInstance(typeof(List<>).MakeGenericType(IEnumerableResultType));
                     foreach (var Item in (IEnumerable)item)
                     {
-                        TempList.Add(DataMapper.Instance?.Copy(Item, null, IEnumerableResultType));
+                        _ = TempList.Add(DataMapper.Instance?.Copy(Item, null, IEnumerableResultType));
                     }
                     return TempList;
                 }
@@ -137,7 +134,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                         && destinationType.GetGenericTypeDefinition() == typeof(Nullable<>)
                         && !SourceType.IsGenericType)
                     {
-                        return System.Convert.ChangeType(item, destinationType.GenericTypeArguments.FirstOrDefault(), CultureInfo.InvariantCulture);
+                        return System.Convert.ChangeType(item, destinationType.GenericTypeArguments.FirstOrDefault()!, CultureInfo.InvariantCulture);
                     }
                 }
             }

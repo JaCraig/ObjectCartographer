@@ -16,7 +16,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 1;
+        public int Order => OrderDefaults.DefaultPlusOne;
 
         /// <summary>
         /// Gets the type of the i enumerable.
@@ -32,10 +32,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType)
-        {
-            return IsIEnumerable(sourceType) && destinationType.IsArray;
-        }
+        public bool CanHandle(Type sourceType, Type destinationType) => IsIEnumerable(sourceType) && destinationType.IsArray;
 
         /// <summary>
         /// Conversions the specified source.
@@ -52,7 +49,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             if (destination is null)
                 return source.Select(x => DataMapper.Instance.Copy<TDestination>(x) ?? default).ToArray();
             var Index = 0;
-            foreach (var Item in source)
+            foreach (TSource? Item in source)
             {
                 if (destination.Length <= Index)
                     return destination;
@@ -82,12 +79,12 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (sourceType is null || destinationType is null)
                 return Expression.Empty();
-            var SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
-            var DestionationCollectionValueType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
+            Type SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
+            Type DestionationCollectionValueType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEnumerable<>)).GenericTypeArguments[0];
 
-            var ConversionMethod = typeof(ArrayIEnumerableConverter).GetMethod(nameof(ArrayIEnumerableConverter.Conversion)).MakeGenericMethod(SourceCollectionValueType, DestionationCollectionValueType);
+            System.Reflection.MethodInfo ConversionMethod = typeof(ArrayIEnumerableConverter).GetMethod(nameof(ArrayIEnumerableConverter.Conversion)).MakeGenericMethod(SourceCollectionValueType, DestionationCollectionValueType);
 
-            return Expression.Call(Expression.Constant(this), ConversionMethod, source, destination);
+            return Expression.Call(Expression.Constant(this), ConversionMethod, source, destination!);
         }
 
         /// <summary>
@@ -95,9 +92,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is i enumerable] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsIEnumerable(Type type)
-        {
-            return type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
-        }
+        private bool IsIEnumerable(Type type) => type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
     }
 }

@@ -15,7 +15,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public int Order => 0;
+        public int Order => OrderDefaults.Default;
 
         /// <summary>
         /// Gets the bytes.
@@ -85,19 +85,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        private Expression ByteArrayToString(Expression source)
-        {
-            return Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetString)), source);
-        }
+        private Expression ByteArrayToString(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetString)), source);
 
         /// <summary>
         /// Strings to byte array.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        private Expression StringToByteArray(Expression source)
-        {
-            return Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetBytes)), source);
-        }
+        private Expression StringToByteArray(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetBytes)), source);
     }
 }
