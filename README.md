@@ -1,6 +1,6 @@
 # ObjectCartographer
 
-[![.NET Publish](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml)
+[![.NET Publish](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/ObjectCartographer/actions/workflows/dotnet-publish.yml) [![Coverage Status](https://coveralls.io/repos/github/JaCraig/ObjectCartographer/badge.svg?branch=main)](https://coveralls.io/github/JaCraig/ObjectCartographer?branch=main)
 
 ObjectCartographer is a fast, convention based, and developer friendly object to object mapper. It's designed to simplify your life and remove the drudgery of writing code to copy data from one object to another.
 
