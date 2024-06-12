@@ -46,17 +46,17 @@ namespace ObjectCartographer
         {
             get
             {
-                if (_instance is not null)
-                    return _instance;
-                lock (InstanceLockObject)
+                if (_Instance is not null)
+                    return _Instance;
+                lock (_InstanceLockObject)
                 {
-                    if (_instance is not null)
-                        return _instance;
-                    _instance = Services.ServiceProvider?.GetService<DataMapper>();
+                    if (_Instance is not null)
+                        return _Instance;
+                    _Instance = Services.ServiceProvider?.GetService<DataMapper>();
                 }
-                return _instance;
+                return _Instance;
             }
-            set => _instance = value;
+            set => _Instance = value;
         }
 
         /// <summary>
@@ -98,37 +98,37 @@ namespace ObjectCartographer
         /// <summary>
         /// The copy create lock object
         /// </summary>
-        private static readonly object CopyCreateLockObject = new();
+        private static readonly object _CopyCreateLockObject = new();
 
         /// <summary>
         /// The copy generic
         /// </summary>
-        private static readonly MethodInfo CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, nameof(DataMapper.Copy), StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
+        private static readonly MethodInfo _CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, nameof(DataMapper.Copy), StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
 
         /// <summary>
         /// The instance lock object
         /// </summary>
-        private static readonly object InstanceLockObject = new();
+        private static readonly object _InstanceLockObject = new();
 
         /// <summary>
         /// The internal lock
         /// </summary>
-        private static readonly object InternalLock = new();
+        private static readonly object _InternalLock = new();
 
         /// <summary>
         /// The map create lock object
         /// </summary>
-        private static readonly object MapCreateLockObject = new();
+        private static readonly object _MapCreateLockObject = new();
 
         /// <summary>
         /// The generic map method.
         /// </summary>
-        private static readonly MethodInfo MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), Array.Empty<Type>());
+        private static readonly MethodInfo _MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), Array.Empty<Type>());
 
         /// <summary>
         /// The instance
         /// </summary>
-        private static DataMapper? _instance;
+        private static DataMapper? _Instance;
 
         /// <summary>
         /// Automatically maps the two types.
@@ -183,13 +183,13 @@ namespace ObjectCartographer
             var Key = new TypeTuple(Source, Destination);
             if (CopyMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
                 return Method(new object?[] { source, destination });
-            lock (CopyCreateLockObject)
+            lock (_CopyCreateLockObject)
             {
                 if (CopyMethods.TryGetValue(Key, out Method))
                     return Method(new object?[] { source, destination });
-                MethodInfo GenericMethod = CopyGeneric.MakeGenericMethod(Source, Destination);
+                MethodInfo GenericMethod = _CopyGeneric.MakeGenericMethod(Source, Destination);
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
-                CopyMethods.TryAdd(Key, FinalMethod);
+                _ = CopyMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(new object?[] { source, destination });
             }
         }
@@ -212,12 +212,12 @@ namespace ObjectCartographer
             var Key = new TypeTuple(Source, Destination);
             if (!Types.TryGetValue(Key, out ITypeMapping? ReturnValue))
             {
-                AutoMap<TSource, TDestination>();
+                _ = AutoMap<TSource, TDestination>();
                 if (!Types.TryGetValue(Key, out ReturnValue))
                     return destination;
             }
             var Mapping = ReturnValue as TypeMapping<TSource, TDestination>;
-            Mapping.Build();
+            Mapping?.Build();
             return Mapping.Converter(source, destination);
         }
 
@@ -234,13 +234,13 @@ namespace ObjectCartographer
             var Key = new TypeTuple(Source, Destination);
             if (Types.TryGetValue(Key, out ITypeMapping? ReturnValue))
                 return ReturnValue as TypeMapping<TSource, TDestination>;
-            lock (InternalLock)
+            lock (_InternalLock)
             {
                 if (Types.TryGetValue(Key, out ReturnValue))
                     return ReturnValue as TypeMapping<TSource, TDestination>;
-                Logger?.LogDebug($"Mapping {Source} => {Destination}");
+                Logger?.LogDebug("Mapping {Source} => {Destination}", Source, Destination);
                 var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
-                Types.TryAdd(Key, NewMapping);
+                _ = Types.TryAdd(Key, NewMapping);
                 return NewMapping;
             }
         }
@@ -258,13 +258,13 @@ namespace ObjectCartographer
             var Key = new TypeTuple(source, destination);
             if (MapMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
                 return Method(Array.Empty<object>()) as ITypeMapping;
-            lock (MapCreateLockObject)
+            lock (_MapCreateLockObject)
             {
                 if (MapMethods.TryGetValue(Key, out Method))
                     return Method(Array.Empty<object>()) as ITypeMapping;
-                MethodInfo GenericMethod = MapGeneric.MakeGenericMethod(source, destination);
+                MethodInfo GenericMethod = _MapGeneric.MakeGenericMethod(source, destination);
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
-                MapMethods.TryAdd(Key, FinalMethod);
+                _ = MapMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod(Array.Empty<object>()) as ITypeMapping;
             }
         }
@@ -276,11 +276,11 @@ namespace ObjectCartographer
         /// <param name="parameterInfo">The parameter information.</param>
         /// <param name="index">The index.</param>
         /// <returns>The argument expression</returns>
-        private static Expression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index)
+        private static UnaryExpression CreateArgumentExpression(ParameterExpression parameterExpression, ParameterInfo parameterInfo, int index)
         {
             BinaryExpression IndexValue = Expression.ArrayIndex(parameterExpression, Expression.Constant(index));
-            if (DefaultValueLookup.Values.TryGetValue(parameterInfo.ParameterType.GetHashCode(), out var defaultValue))
-                IndexValue = Expression.Coalesce(IndexValue, Expression.Constant(defaultValue));
+            if (DefaultValueLookup.Values.TryGetValue(parameterInfo.ParameterType.GetHashCode(), out var DefaultValue))
+                IndexValue = Expression.Coalesce(IndexValue, Expression.Constant(DefaultValue));
             else if (!parameterInfo.ParameterType.IsClass)
                 IndexValue = Expression.Coalesce(IndexValue, Expression.Call(CreateInstance.MakeGenericMethod(parameterInfo.ParameterType)));
             return Expression.Convert(

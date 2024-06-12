@@ -104,6 +104,6 @@ You would need to implement the ObjectCartographer.ExpressionBuilder.Interfaces.
 
 In order to build the library you may require the following:
 
-1. Visual Studio 2019
+1. Visual Studio 2022
 
 Other than that, just clone the project and you should be able to load the solution and build without too much effort.
