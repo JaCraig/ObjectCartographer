@@ -901,6 +901,22 @@ references:
   isSpec: "True"
   fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map
   nameWithType: JsonElementConverter.Map
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo(System.Nullable{System.Text.Json.JsonElement},System.Object,System.Type)
+  name: NullableConvertTo(JsonElement?, object?, Type)
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_NullableConvertTo_System_Nullable_System_Text_Json_JsonElement__System_Object_System_Type_
+  commentId: M:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo(System.Nullable{System.Text.Json.JsonElement},System.Object,System.Type)
+  name.vb: NullableConvertTo(JsonElement?, Object, Type)
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo(System.Text.Json.JsonElement?, object?, System.Type)
+  fullName.vb: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo(System.Text.Json.JsonElement?, Object, System.Type)
+  nameWithType: JsonElementConverter.NullableConvertTo(JsonElement?, object?, Type)
+  nameWithType.vb: JsonElementConverter.NullableConvertTo(JsonElement?, Object, Type)
+- uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo*
+  name: NullableConvertTo
+  href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_NullableConvertTo_
+  commentId: Overload:ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo
+  isSpec: "True"
+  fullName: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo
+  nameWithType: JsonElementConverter.NullableConvertTo
 - uid: ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order
   name: Order
   href: api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html#ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Order

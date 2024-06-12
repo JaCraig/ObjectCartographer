@@ -185,7 +185,7 @@ Class JsonElementConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Order" data-uid="ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Order">
   Order
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the order.</p>
@@ -222,7 +222,7 @@ Class JsonElementConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_CanHandle_System_Type_System_Type_" data-uid="ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.CanHandle(System.Type,System.Type)">
   CanHandle(Type, Type)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Determines whether this instance can handle the specified types.</p>
@@ -309,7 +309,7 @@ Class JsonElementConverter  <a class="header-action link-secondary" title="View 
 
   <h3 id="ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_Map_System_Linq_Expressions_Expression_System_Linq_Expressions_Expression_System_Type_System_Type_ObjectCartographer_ExpressionBuilder_Interfaces_IExpressionMapping_ObjectCartographer_ExpressionBuilder_ExpressionBuilderManager_" data-uid="ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.Map(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression,System.Type,System.Type,ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping,ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager)">
   Map(Expression, Expression?, Type, Type, IExpressionMapping, ExpressionBuilderManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Maps the specified source to the destination.</p>
@@ -346,6 +346,51 @@ Class JsonElementConverter  <a class="header-action link-secondary" title="View 
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a></dt>
     <dd><p>The resulting expression.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_NullableConvertTo_" data-uid="ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo*"></a>
+
+  <h3 id="ObjectCartographer_ExpressionBuilder_Converters_JsonElementConverter_NullableConvertTo_System_Nullable_System_Text_Json_JsonElement__System_Object_System_Type_" data-uid="ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.NullableConvertTo(System.Nullable{System.Text.Json.JsonElement},System.Object,System.Type)">
+  NullableConvertTo(JsonElement?, object?, Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/ObjectCartographer/blob/main/ObjectCartographer/ExpressionBuilder/Converters/JsonElementConverter.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the specified source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? NullableConvertTo(JsonElement? source, object? destination, Type destinationType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonelement">JsonElement</a>?</dt>
+    <dd><p>The source.</p>
+</dd>
+    <dt><code>destination</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The destination.</p>
+</dd>
+    <dt><code>destinationType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>Type of the destination.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The converted value</p>
 </dd>
   </dl>
 
