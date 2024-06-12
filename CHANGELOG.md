@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.51"></a>
+## [3.0.51](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.51) (2024-06-12)
+
+### Bug Fixes
+
+* Fixing order of JsonElement converter ([029bf8b](https://www.github.com/JaCraig/ObjectCartographer/commit/029bf8bab50642c8b9c28010f2b43b8056de70b3))
+
+### Other
+
+* Update README.md ([3da511f](https://www.github.com/JaCraig/ObjectCartographer/commit/3da511f7af798bf99b253273dea81ba7c02113b5))
+
 <a name="3.0.50"></a>
 ## [3.0.50](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.50) (2024-06-12)
 
