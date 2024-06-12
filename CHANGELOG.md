@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.50"></a>
+## [3.0.50](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.50) (2024-06-12)
+
+### Bug Fixes
+
+* Fixing coveralls push ([6dcc6c5](https://www.github.com/JaCraig/ObjectCartographer/commit/6dcc6c51b10668bc5930b5da6d7f54096a534236))
+
 <a name="3.0.49"></a>
 ## [3.0.49](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.49) (2024-06-12)
 
