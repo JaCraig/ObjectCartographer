@@ -38,6 +38,28 @@ namespace ObjectCartographer.Internal
         private readonly int _HashCode;
 
         /// <summary>
+        /// Implements the operator !=.
+        /// </summary>
+        /// <param name="left">Left parameter</param>
+        /// <param name="right">Right parameter</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(TypeTuple left, TypeTuple right)
+        {
+            return !(left == right);
+        }
+
+        /// <summary>
+        /// Implements the operator ==.
+        /// </summary>
+        /// <param name="left">Left parameter</param>
+        /// <param name="right">Right parameter</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(TypeTuple left, TypeTuple right)
+        {
+            return left.Equals(right);
+        }
+
+        /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
         /// <param name="other">An object to compare with this object.</param>
@@ -48,14 +70,13 @@ namespace ObjectCartographer.Internal
         public bool Equals(TypeTuple other) => other.Source == Source && other.Destination == Destination;
 
         /// <summary>
-        /// Determines whether the specified <see cref="System.Object"/>, is equal to this instance.
+        /// Determines whether the specified <see cref="object"/>, is equal to this instance.
         /// </summary>
-        /// <param name="obj">The <see cref="System.Object"/> to compare with this instance.</param>
+        /// <param name="obj">The <see cref="object"/> to compare with this instance.</param>
         /// <returns>
-        /// <c>true</c> if the specified <see cref="System.Object"/> is equal to this instance;
-        /// otherwise, <c>false</c>.
+        /// <c>true</c> if the specified <see cref="object"/> is equal to this instance; otherwise, <c>false</c>.
         /// </returns>
-        public override bool Equals(object obj) => obj is TypeTuple TypeMappingObject && Equals(TypeMappingObject);
+        public override bool Equals(object? obj) => obj is TypeTuple TypeMappingObject && Equals(TypeMappingObject);
 
         /// <summary>
         /// Returns a hash code for this instance.
