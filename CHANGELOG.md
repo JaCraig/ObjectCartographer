@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.52"></a>
+## [3.0.52](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.52) (2024-06-13)
+
+### Bug Fixes
+
+* Adding some improvements to the enum converter ([8791b28](https://www.github.com/JaCraig/ObjectCartographer/commit/8791b28113cc7db21c5ae60fd19ea43efb1a22cb))
+
+### Other
+
+* Merge pull request #196 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-3467847402 ([5d4b3e9](https://www.github.com/JaCraig/ObjectCartographer/commit/5d4b3e98ca2b0715cb57dac5ea9ad99ec51d16d4))
+* bump Mecha.xUnit ([f88a320](https://www.github.com/JaCraig/ObjectCartographer/commit/f88a320a420e1257ae397dbf4d83259926a43f10))
+
 <a name="3.0.51"></a>
 ## [3.0.51](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.51) (2024-06-12)
 
