@@ -37,7 +37,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns>
         /// <c>true</c> if this instance can handle the specified types; otherwise, <c>false</c>.
         /// </returns>
-        public bool CanHandle(Type sourceType, Type destinationType) => destinationType?.IsEnum ?? false;
+        public bool CanHandle(Type sourceType, Type destinationType) => sourceType != typeof(object) && (destinationType?.IsEnum ?? false);
 
         /// <summary>
         /// Converts the specified property get.
@@ -55,7 +55,11 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 return Expression.Empty();
             if (sourceType == typeof(string))
                 return Expression.Convert(Expression.Call(EnumParse, Expression.Constant(destinationType), source, Expression.Constant(true)), destinationType);
-            return Expression.Convert(Expression.Call(EnumToObject, Expression.Constant(destinationType), Expression.Convert(source, typeof(object))), destinationType);
+            Type UnderlyingType = destinationType.GetEnumUnderlyingType();
+            if (sourceType == UnderlyingType)
+                return Expression.Convert(source, destinationType);
+            Expression ConversionExpression = manager.Map(source, null, sourceType, UnderlyingType, mapping);
+            return Expression.Convert(Expression.Call(EnumToObject, Expression.Constant(destinationType), Expression.Convert(ConversionExpression, typeof(object))), destinationType);
         }
     }
 }

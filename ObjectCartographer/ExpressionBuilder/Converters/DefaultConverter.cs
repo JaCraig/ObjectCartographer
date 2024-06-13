@@ -82,16 +82,6 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                     return Converter.ConvertFrom(item);
                 }
 
-                if (destinationType.IsEnum)
-                {
-                    if (item is string ItemStringValue)
-                    {
-                        return Enum.Parse(destinationType, ItemStringValue, true);
-                    }
-
-                    return Enum.ToObject(destinationType, item);
-                }
-
                 if (item is JsonElement JsonElementValue)
                 {
                     return DataMapper.Instance?.Copy(JsonElementValue.ValueKind switch
@@ -105,6 +95,16 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                         JsonValueKind.True => true,
                         _ => null,
                     }, destination, destinationType);
+                }
+
+                if (destinationType.IsEnum)
+                {
+                    if (item is string ItemStringValue)
+                    {
+                        return Enum.Parse(destinationType, ItemStringValue, true);
+                    }
+
+                    return Enum.ToObject(destinationType, item);
                 }
 
                 Type IEnumerableResultType = destinationType.GetIEnumerableElementType();
