@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.53"></a>
+## [3.0.53](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.53) (2024-06-17)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([d11fb64](https://www.github.com/JaCraig/ObjectCartographer/commit/d11fb64597007a3e3d47005e72af03f588ea6fc4))
+
+### Other
+
+* Merge pull request #197 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-f258015d81 ([300fe46](https://www.github.com/JaCraig/ObjectCartographer/commit/300fe46f1c9b45c3ef419bbe3dbb7833520ad928))
+* Merge pull request #198 from JaCraig/dependabot/nuget/dependencies-14dd620748 ([bbf9b3a](https://www.github.com/JaCraig/ObjectCartographer/commit/bbf9b3a8029ca6591644a9fecff6745676e9fbb6))
+* bump Mecha.xUnit ([fdf39df](https://www.github.com/JaCraig/ObjectCartographer/commit/fdf39df799f368b59139b5892ccf10bef2bc2880))
+
 <a name="3.0.52"></a>
 ## [3.0.52](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.52) (2024-06-13)
 
