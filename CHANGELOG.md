@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.55"></a>
+## [3.0.55](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.55) (2024-07-24)
+
+### Bug Fixes
+
+* Fixing primitive conversion failure if value mismatch ([1c49520](https://www.github.com/JaCraig/ObjectCartographer/commit/1c49520565f9eb3eea5861d096b7bafa24f24094))
+
+### Other
+
+* Merge pull request #206 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-9c9374a764 ([345d8ad](https://www.github.com/JaCraig/ObjectCartographer/commit/345d8add8d90bcec235858ed256ca8293ea477e9))
+* Merge pull request #207 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-b196582cf9 ([426da01](https://www.github.com/JaCraig/ObjectCartographer/commit/426da01ff4218a1d44fd084b76e38d6a7bf20055))
+* Merge pull request #208 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-e0a0db7f59 ([978e400](https://www.github.com/JaCraig/ObjectCartographer/commit/978e40015a2588a11f76cfe44e6ac5ceb3745f02))
+* Merge pull request #209 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-1345386123 ([c7a3e0a](https://www.github.com/JaCraig/ObjectCartographer/commit/c7a3e0a93967d7326cdaba9d63a028cd0a383d26))
+* Merge pull request #210 from JaCraig/dependabot/github_actions/dependencies-c44bf69c3e ([3e36cd4](https://www.github.com/JaCraig/ObjectCartographer/commit/3e36cd42ab72d68ed3b4e6cceab30721b83a4ca7))
+* Merge pull request #211 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-8e312df114 ([b9f1b3b](https://www.github.com/JaCraig/ObjectCartographer/commit/b9f1b3b7d31e5b7e146d5dd539f5ecc48eb53bf7))
+* Merge pull request #212 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-9e1598c9b7 ([6249619](https://www.github.com/JaCraig/ObjectCartographer/commit/6249619158cefa7344696ee36864cd1ef30d1cf5))
+* Merge pull request #213 from JaCraig/dependabot/github_actions/dependencies-be62d4486d ([d0f29a8](https://www.github.com/JaCraig/ObjectCartographer/commit/d0f29a88120b1338c1f4f95e1f94ae01f7e72c0e))
+* Merge pull request #214 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-56431d92ff ([8db748b](https://www.github.com/JaCraig/ObjectCartographer/commit/8db748bf369a0281c15c69af933bab111d38e7a0))
+* Merge pull request #215 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-83469d7972 ([77cbd06](https://www.github.com/JaCraig/ObjectCartographer/commit/77cbd0614d25cfeec15bd93e9797b017991db3c3))
+* bump actions/setup-dotnet in the dependencies group ([8ea7a7e](https://www.github.com/JaCraig/ObjectCartographer/commit/8ea7a7e66b7360625092c2aadc0148460fe0934a))
+* bump dependabot/fetch-metadata in the dependencies group ([9d1a93a](https://www.github.com/JaCraig/ObjectCartographer/commit/9d1a93a100d266463a748bf93158a8d0abfafb0c))
+* bump Mecha.xUnit ([a36d44e](https://www.github.com/JaCraig/ObjectCartographer/commit/a36d44ebfcab1b25154d59a77e695df1b66a84c9))
+* bump Mecha.xUnit ([7cd0b6e](https://www.github.com/JaCraig/ObjectCartographer/commit/7cd0b6ed44a9130139a1b4c3d098f77f8fa316d0))
+* bump Mecha.xUnit ([ec8e6a7](https://www.github.com/JaCraig/ObjectCartographer/commit/ec8e6a73f027c3aa6b78d7beacd1329c1af9f91d))
+* bump Mecha.xUnit ([aec7837](https://www.github.com/JaCraig/ObjectCartographer/commit/aec783729b61e8d1a86182378505af0263fc8b80))
+* bump Mecha.xUnit ([2ad8210](https://www.github.com/JaCraig/ObjectCartographer/commit/2ad821067fb3be93192a49b474bcfa8628dea676))
+* bump Mecha.xUnit ([c364829](https://www.github.com/JaCraig/ObjectCartographer/commit/c364829333678986527679bd27e0fb17219fdfd6))
+* bump Mecha.xUnit ([0d4c795](https://www.github.com/JaCraig/ObjectCartographer/commit/0d4c795e417f6739b4647ff8f38849eba86d1d71))
+* bump the dependencies group ([cb951c0](https://www.github.com/JaCraig/ObjectCartographer/commit/cb951c0a92c694596190102132314ae8b6e8ee08))
+
 <a name="3.0.54"></a>
 ## [3.0.54](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.54) (2024-06-25)
 
