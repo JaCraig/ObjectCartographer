@@ -53,6 +53,29 @@ namespace ObjectCartographer.Tests
             Assert.Equal("http://a", Final.E);
         }
 
+        [Fact]
+        public void SerializationWithIncorrectDataTypes()
+        {
+            // Arrange
+            ExpandoObject? DeserializedData = JsonSerializer.Deserialize<ExpandoObject>("{ \"A\": { \"A\": 10, \"B\": \"\" }, \"B\": \"\" }");
+
+            // Act
+            ParentTestClass Final = DeserializedData.To<ParentTestClass>();
+
+            // Assert
+            Assert.NotNull(Final.A);
+            Assert.Equal(0, Final.A.B);
+            Assert.Equal("10", Final.A.A);
+            Assert.Equal(0, Final.B);
+        }
+
+        public class ParentTestClass
+        {
+            public TestClass? A { get; set; }
+
+            public int B { get; set; }
+        }
+
         public class TestClass
         {
             public string? A { get; set; }
