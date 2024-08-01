@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.56"></a>
+## [3.0.56](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.56) (2024-08-01)
+
+### Bug Fixes
+
+* bump Canister.IoC from 5.3.11 to 5.3.12 in the dependencies group ([225e95e](https://www.github.com/JaCraig/ObjectCartographer/commit/225e95ef0df38f3bbe4e5064b197a2ccf8fdda54))
+
+### Other
+
+* Merge pull request #216 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-25d55e3327 ([0825f2a](https://www.github.com/JaCraig/ObjectCartographer/commit/0825f2a79ee4be5197ed5eda6a739ebbe124f3b7))
+* Merge pull request #217 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-b06778b9b3 ([9dc58ff](https://www.github.com/JaCraig/ObjectCartographer/commit/9dc58fff9a331124020cad8a87a9f179c65d037b))
+* Merge pull request #218 from JaCraig/dependabot/nuget/dependencies-63ca897048 ([baedaf4](https://www.github.com/JaCraig/ObjectCartographer/commit/baedaf4d490548ddbb101e366a0869849341acc7))
+* bump Mecha.xUnit ([3b52151](https://www.github.com/JaCraig/ObjectCartographer/commit/3b52151434e7e597ae3baac28dbf73347031ea6e))
+* bump Mecha.xUnit ([909142b](https://www.github.com/JaCraig/ObjectCartographer/commit/909142bb2215dbbdbdc355ae1905a7acb6187485))
+
 <a name="3.0.55"></a>
 ## [3.0.55](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.55) (2024-07-24)
 
