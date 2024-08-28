@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.59"></a>
+## [3.0.59](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.59) (2024-08-28)
+
+### Bug Fixes
+
+* fixing issue with properties that have index parameters in object creation ([319c237](https://www.github.com/JaCraig/ObjectCartographer/commit/319c23787a5cab420f0bae5467c9c8b02a6eb517))
+
+### Other
+
+* Merge pull request #230 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-85934dc443 ([196594a](https://www.github.com/JaCraig/ObjectCartographer/commit/196594a434f44e8eaec084795725dab1fd5c74f9))
+* Merge pull request #231 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-77c4264f60 ([08ec2ca](https://www.github.com/JaCraig/ObjectCartographer/commit/08ec2cac82f3ebb1f5cf4021fcbedfe2b00d206e))
+* Merge pull request #232 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-3dbce8c6f5 ([2986a01](https://www.github.com/JaCraig/ObjectCartographer/commit/2986a01d17608cc01dcabce40af7ec4acf0ced4a))
+* bump Mecha.xUnit ([e58198b](https://www.github.com/JaCraig/ObjectCartographer/commit/e58198bee9b5011ed53d79abf28c063f2092b933))
+* bump Mecha.xUnit ([9c33ef6](https://www.github.com/JaCraig/ObjectCartographer/commit/9c33ef6583fd35c0b5f967a62fafb5d265a81280))
+* bump Mecha.xUnit ([9fa3c24](https://www.github.com/JaCraig/ObjectCartographer/commit/9fa3c24c33ddfa81c566ed0462629aaa7307d080))
+
 <a name="3.0.58"></a>
 ## [3.0.58](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.58) (2024-08-23)
 
