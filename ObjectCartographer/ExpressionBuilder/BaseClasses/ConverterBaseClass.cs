@@ -113,7 +113,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
                 {
                     var Param = Parameters[y];
                     var TempProperty = sourceProperties.FindMatchingProperty(Param.Name);
-                    if (TempProperty is null)
+                    if (TempProperty is null || TempProperty.GetIndexParameters().Length > 0)
                     {
                         Found = false;
                         break;
