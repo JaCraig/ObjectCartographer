@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.65"></a>
+## [3.0.65](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.65) (2024-11-11)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([84d7112](https://www.github.com/JaCraig/ObjectCartographer/commit/84d711200a00ee5ce18b5fb76fe588c5bfc1687b))
+
+### Other
+
+* Merge pull request #259 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-b5cc6d1a97 ([b6a9712](https://www.github.com/JaCraig/ObjectCartographer/commit/b6a9712ca86cd66df4af6d01f82445a3041e0471))
+* Merge pull request #260 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-1c844ea9e8 ([da37d45](https://www.github.com/JaCraig/ObjectCartographer/commit/da37d45275c5b60046136ab61dda6f01773b6daa))
+* Merge pull request #261 from JaCraig/dependabot/nuget/dependencies-49fcd014de ([54e98d2](https://www.github.com/JaCraig/ObjectCartographer/commit/54e98d2126b53c75dbd67bebc8f95ff3c322541b))
+* bump Mecha.xUnit ([f782449](https://www.github.com/JaCraig/ObjectCartographer/commit/f782449c06df952ed010ded8c92b4d318e2dcd62))
+* bump Mecha.xUnit ([5102b37](https://www.github.com/JaCraig/ObjectCartographer/commit/5102b378b6d61a050f0769b0988f2c81d0f5f0bb))
+
 <a name="3.0.64"></a>
 ## [3.0.64](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v3.0.64) (2024-11-04)
 
