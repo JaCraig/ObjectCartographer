@@ -6,11 +6,19 @@ ObjectCartographer is a fast, convention based, and developer friendly object to
 
 ## Setting Up the Library
 
-ObjectCartographer uses a library called Canister for registering itself in your ServiceCollection:
+Register ObjectCartographer with your IoC container during startup. Example code:
 
-    servicecollection.AddCanisterModules();
+   ```csharp
+   ServiceProvider? ServiceProvider = new ServiceCollection().RegisterObjectCartographer()?.BuildServiceProvider();
+   ```
 
-With that ObjectCartographer will automatically register any converters found in your application and work with your DI system if you are using one, allowing you to access the DataMapper object at run time if you need to. Otherwise if you are not using one, you can simply use the extension methods and it will wire itself up.
+or
+
+   ```csharp
+   ServiceProvider? ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
+   ```
+
+As the library supports [Canister Modules](https://github.com/JaCraig/Canister). With that ObjectCartographer will automatically register any converters found in your application and work with your DI system if you are using one, allowing you to access the DataMapper object at run time if you need to. Otherwise if you are not using one, you can simply use the extension methods and it will wire itself up.
 
 ## Basic Usage
 
