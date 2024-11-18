@@ -1,34 +1,6 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Microsoft.Extensions.DependencyInjection
-  name: Microsoft.Extensions.DependencyInjection
-  href: api/Microsoft.Extensions.DependencyInjection.html
-  commentId: N:Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions
-  name: CanisterExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.CanisterExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions
-  nameWithType: CanisterExtensions
-- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
-  name: RegisterObjectCartographer(ICanisterConfiguration?)
-  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html#Microsoft_Extensions_DependencyInjection_CanisterExtensions_RegisterObjectCartographer_Canister_Interfaces_ICanisterConfiguration_
-  commentId: M:Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
-  name.vb: RegisterObjectCartographer(ICanisterConfiguration)
-  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration?)
-  fullName.vb: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
-  nameWithType: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration?)
-  nameWithType.vb: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration)
-- uid: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer*
-  name: RegisterObjectCartographer
-  href: api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html#Microsoft_Extensions_DependencyInjection_CanisterExtensions_RegisterObjectCartographer_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer
-  isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.CanisterExtensions.RegisterObjectCartographer
-  nameWithType: CanisterExtensions.RegisterObjectCartographer
 - uid: ObjectCartographer
   name: ObjectCartographer
   href: api/ObjectCartographer.html
@@ -1711,6 +1683,43 @@ references:
   isSpec: "True"
   fullName: ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.Variables
   nameWithType: IExpressionMapping.Variables
+- uid: ObjectCartographer.ExtensionMethods
+  name: ObjectCartographer.ExtensionMethods
+  href: api/ObjectCartographer.ExtensionMethods.html
+  commentId: N:ObjectCartographer.ExtensionMethods
+  fullName: ObjectCartographer.ExtensionMethods
+  nameWithType: ObjectCartographer.ExtensionMethods
+- uid: ObjectCartographer.ExtensionMethods.CanisterExtensions
+  name: CanisterExtensions
+  href: api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html
+  commentId: T:ObjectCartographer.ExtensionMethods.CanisterExtensions
+  fullName: ObjectCartographer.ExtensionMethods.CanisterExtensions
+  nameWithType: CanisterExtensions
+- uid: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  name: RegisterObjectCartographer(ICanisterConfiguration?)
+  href: api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html#ObjectCartographer_ExtensionMethods_CanisterExtensions_RegisterObjectCartographer_Canister_Interfaces_ICanisterConfiguration_
+  commentId: M:ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  name.vb: RegisterObjectCartographer(ICanisterConfiguration)
+  fullName: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration?)
+  fullName.vb: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Canister.Interfaces.ICanisterConfiguration)
+  nameWithType: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration?)
+  nameWithType.vb: CanisterExtensions.RegisterObjectCartographer(ICanisterConfiguration)
+- uid: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: RegisterObjectCartographer(IServiceCollection?)
+  href: api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html#ObjectCartographer_ExtensionMethods_CanisterExtensions_RegisterObjectCartographer_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: RegisterObjectCartographer(IServiceCollection)
+  fullName: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: CanisterExtensions.RegisterObjectCartographer(IServiceCollection?)
+  nameWithType.vb: CanisterExtensions.RegisterObjectCartographer(IServiceCollection)
+- uid: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer*
+  name: RegisterObjectCartographer
+  href: api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html#ObjectCartographer_ExtensionMethods_CanisterExtensions_RegisterObjectCartographer_
+  commentId: Overload:ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer
+  isSpec: "True"
+  fullName: ObjectCartographer.ExtensionMethods.CanisterExtensions.RegisterObjectCartographer
+  nameWithType: CanisterExtensions.RegisterObjectCartographer
 - uid: ObjectCartographer.Interfaces
   name: ObjectCartographer.Interfaces
   href: api/ObjectCartographer.Interfaces.html

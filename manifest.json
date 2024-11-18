@@ -12,26 +12,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ObjectCartographer.DataMapper.yml",
       "output": {
         ".html": {
@@ -316,6 +296,26 @@
       "output": {
         ".html": {
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExtensionMethods.CanisterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ObjectCartographer.ExtensionMethods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ObjectCartographer.ExtensionMethods.html"
         }
       },
       "version": ""

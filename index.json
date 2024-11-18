@@ -1,14 +1,4 @@
 {
-  "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html": {
-    "href": "api/Microsoft.Extensions.DependencyInjection.CanisterExtensions.html",
-    "title": "Class CanisterExtensions | ObjectCartographer API Reference",
-    "keywords": "Class CanisterExtensions Namespace Microsoft.Extensions.DependencyInjection Assembly ObjectCartographer.dll Canister extension methods public static class CanisterExtensions Inheritance object CanisterExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods RegisterObjectCartographer(ICanisterConfiguration?) Registers the big book of data types. public static ICanisterConfiguration? RegisterObjectCartographer(this ICanisterConfiguration? bootstrapper) Parameters bootstrapper ICanisterConfiguration The bootstrapper. Returns ICanisterConfiguration The bootstrapper"
-  },
-  "api/Microsoft.Extensions.DependencyInjection.html": {
-    "href": "api/Microsoft.Extensions.DependencyInjection.html",
-    "title": "Namespace Microsoft.Extensions.DependencyInjection | ObjectCartographer API Reference",
-    "keywords": "Namespace Microsoft.Extensions.DependencyInjection Classes CanisterExtensions Canister extension methods"
-  },
   "api/ObjectCartographer.DataMapper.html": {
     "href": "api/ObjectCartographer.DataMapper.html",
     "title": "Class DataMapper | ObjectCartographer API Reference",
@@ -153,6 +143,16 @@
     "href": "api/ObjectCartographer.ExpressionBuilder.html",
     "title": "Namespace ObjectCartographer.ExpressionBuilder | ObjectCartographer API Reference",
     "keywords": "Namespace ObjectCartographer.ExpressionBuilder Classes ExpressionBuilderManager Expression builder manager ExpressionMapping<TSource, TDestination> Expression mapping"
+  },
+  "api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html": {
+    "href": "api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html",
+    "title": "Class CanisterExtensions | ObjectCartographer API Reference",
+    "keywords": "Class CanisterExtensions Namespace ObjectCartographer.ExtensionMethods Assembly ObjectCartographer.dll Canister extension methods public static class CanisterExtensions Inheritance object CanisterExtensions Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods RegisterObjectCartographer(ICanisterConfiguration?) Registers the big book of data types. public static ICanisterConfiguration? RegisterObjectCartographer(this ICanisterConfiguration? bootstrapper) Parameters bootstrapper ICanisterConfiguration The bootstrapper. Returns ICanisterConfiguration The bootstrapper RegisterObjectCartographer(IServiceCollection?) Registers the ObjectCartographer services. public static IServiceCollection? RegisterObjectCartographer(this IServiceCollection? services) Parameters services IServiceCollection The service collection to add the services to. Returns IServiceCollection The updated service collection."
+  },
+  "api/ObjectCartographer.ExtensionMethods.html": {
+    "href": "api/ObjectCartographer.ExtensionMethods.html",
+    "title": "Namespace ObjectCartographer.ExtensionMethods | ObjectCartographer API Reference",
+    "keywords": "Namespace ObjectCartographer.ExtensionMethods Classes CanisterExtensions Canister extension methods"
   },
   "api/ObjectCartographer.Interfaces.IInternalTypeMapping.html": {
     "href": "api/ObjectCartographer.Interfaces.IInternalTypeMapping.html",
