@@ -1,7 +1,9 @@
 ﻿using Canister.Interfaces;
-using ObjectCartographer;
+using Microsoft.Extensions.DependencyInjection;
+using ObjectCartographer.ExpressionBuilder;
+using ObjectCartographer.ExpressionBuilder.Interfaces;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace ObjectCartographer.ExtensionMethods
 {
     /// <summary>
     /// Canister extension methods
@@ -13,9 +15,19 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The bootstrapper</returns>
-        public static ICanisterConfiguration? RegisterObjectCartographer(this ICanisterConfiguration? bootstrapper)
+        public static ICanisterConfiguration? RegisterObjectCartographer(this ICanisterConfiguration? bootstrapper) => bootstrapper?.AddAssembly(typeof(DataMapper).Assembly);
+
+        /// <summary>
+        /// Registers the ObjectCartographer services.
+        /// </summary>
+        /// <param name="services">The service collection to add the services to.</param>
+        /// <returns>The updated service collection.</returns>
+        public static IServiceCollection? RegisterObjectCartographer(this IServiceCollection? services)
         {
-            return bootstrapper?.AddAssembly(typeof(DataMapper).Assembly);
+            Services.ServiceCollection = services;
+            return services?.AddSingleton<DataMapper>()
+                .AddSingleton<ExpressionBuilderManager>()
+                .AddAllSingleton<IConverter>();
         }
     }
 }
