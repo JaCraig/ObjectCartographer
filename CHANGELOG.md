@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.0.1) (2024-11-18)
+
+### Bug Fixes
+
+* Refactor namespaces and enhance service registration ([24f7be7](https://www.github.com/JaCraig/ObjectCartographer/commit/24f7be789ca657c6695aceefa75f20732806c327))
+
+### Other
+
+* Merge ([a2d0d92](https://www.github.com/JaCraig/ObjectCartographer/commit/a2d0d92a1c18264b826556c3fa2870591d889344))
+
 <a name="4.0.0"></a>
 ## [4.0.0](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.0.0) (2024-11-18)
 
