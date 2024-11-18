@@ -39,63 +39,6 @@ namespace ObjectCartographer
         }
 
         /// <summary>
-        /// Gets the instance.
-        /// </summary>
-        /// <value>The instance.</value>
-        internal static DataMapper? Instance
-        {
-            get
-            {
-                if (_Instance is not null)
-                    return _Instance;
-                lock (_InstanceLockObject)
-                {
-                    if (_Instance is not null)
-                        return _Instance;
-                    _Instance = Services.ServiceProvider?.GetService<DataMapper>();
-                }
-                return _Instance;
-            }
-            set => _Instance = value;
-        }
-
-        /// <summary>
-        /// Gets the create instance.
-        /// </summary>
-        /// <value>The create instance.</value>
-        private static MethodInfo CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, Array.Empty<Type>());
-
-        /// <summary>
-        /// Gets the copy methods.
-        /// </summary>
-        /// <value>The copy methods.</value>
-        private Dictionary<TypeTuple, MethodWrapperDelegate> CopyMethods { get; } = new Dictionary<TypeTuple, MethodWrapperDelegate>();
-
-        /// <summary>
-        /// Gets the expression builder.
-        /// </summary>
-        /// <value>The expression builder.</value>
-        private ExpressionBuilderManager? ExpressionBuilder { get; }
-
-        /// <summary>
-        /// Gets the logger.
-        /// </summary>
-        /// <value>The logger.</value>
-        private ILogger<DataMapper>? Logger { get; }
-
-        /// <summary>
-        /// Gets the map methods.
-        /// </summary>
-        /// <value>The map methods.</value>
-        private Dictionary<TypeTuple, MethodWrapperDelegate> MapMethods { get; } = new Dictionary<TypeTuple, MethodWrapperDelegate>();
-
-        /// <summary>
-        /// Gets the types.
-        /// </summary>
-        /// <value>The types.</value>
-        private Dictionary<TypeTuple, ITypeMapping> Types { get; } = new Dictionary<TypeTuple, ITypeMapping>();
-
-        /// <summary>
         /// The copy create lock object
         /// </summary>
         private static readonly object _CopyCreateLockObject = new();
@@ -123,12 +66,69 @@ namespace ObjectCartographer
         /// <summary>
         /// The generic map method.
         /// </summary>
-        private static readonly MethodInfo _MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), Array.Empty<Type>());
+        private static readonly MethodInfo _MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), []);
 
         /// <summary>
         /// The instance
         /// </summary>
         private static DataMapper? _Instance;
+
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        /// <value>The instance.</value>
+        internal static DataMapper? Instance
+        {
+            get
+            {
+                if (_Instance is not null)
+                    return _Instance;
+                lock (_InstanceLockObject)
+                {
+                    if (_Instance is not null)
+                        return _Instance;
+                    _Instance = Services.ServiceProvider?.GetService<DataMapper>();
+                }
+                return _Instance;
+            }
+            set => _Instance = value;
+        }
+
+        /// <summary>
+        /// Gets the create instance.
+        /// </summary>
+        /// <value>The create instance.</value>
+        private static MethodInfo CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, []);
+
+        /// <summary>
+        /// Gets the copy methods.
+        /// </summary>
+        /// <value>The copy methods.</value>
+        private Dictionary<TypeTuple, MethodWrapperDelegate> CopyMethods { get; } = [];
+
+        /// <summary>
+        /// Gets the expression builder.
+        /// </summary>
+        /// <value>The expression builder.</value>
+        private ExpressionBuilderManager? ExpressionBuilder { get; }
+
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>The logger.</value>
+        private ILogger<DataMapper>? Logger { get; }
+
+        /// <summary>
+        /// Gets the map methods.
+        /// </summary>
+        /// <value>The map methods.</value>
+        private Dictionary<TypeTuple, MethodWrapperDelegate> MapMethods { get; } = [];
+
+        /// <summary>
+        /// Gets the types.
+        /// </summary>
+        /// <value>The types.</value>
+        private Dictionary<TypeTuple, ITypeMapping> Types { get; } = [];
 
         /// <summary>
         /// Automatically maps the two types.
@@ -182,15 +182,15 @@ namespace ObjectCartographer
                 return destination;
             var Key = new TypeTuple(Source, Destination);
             if (CopyMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
-                return Method(new object?[] { source, destination });
+                return Method([source, destination]);
             lock (_CopyCreateLockObject)
             {
                 if (CopyMethods.TryGetValue(Key, out Method))
-                    return Method(new object?[] { source, destination });
+                    return Method([source, destination]);
                 MethodInfo GenericMethod = _CopyGeneric.MakeGenericMethod(Source, Destination);
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 _ = CopyMethods.TryAdd(Key, FinalMethod);
-                return FinalMethod(new object?[] { source, destination });
+                return FinalMethod([source, destination]);
             }
         }
 
@@ -257,15 +257,15 @@ namespace ObjectCartographer
                 return null;
             var Key = new TypeTuple(source, destination);
             if (MapMethods.TryGetValue(Key, out MethodWrapperDelegate? Method))
-                return Method(Array.Empty<object>()) as ITypeMapping;
+                return Method([]) as ITypeMapping;
             lock (_MapCreateLockObject)
             {
                 if (MapMethods.TryGetValue(Key, out Method))
-                    return Method(Array.Empty<object>()) as ITypeMapping;
+                    return Method([]) as ITypeMapping;
                 MethodInfo GenericMethod = _MapGeneric.MakeGenericMethod(source, destination);
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 _ = MapMethods.TryAdd(Key, FinalMethod);
-                return FinalMethod(Array.Empty<object>()) as ITypeMapping;
+                return FinalMethod([]) as ITypeMapping;
             }
         }
 

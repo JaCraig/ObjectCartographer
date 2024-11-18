@@ -38,7 +38,7 @@ namespace ObjectCartographer
         /// Gets the mappings.
         /// </summary>
         /// <value>The mappings.</value>
-        public List<IPropertyMapping> Properties { get; } = new List<IPropertyMapping>();
+        public List<IPropertyMapping> Properties { get; } = [];
 
         /// <summary>
         /// Gets the type information.

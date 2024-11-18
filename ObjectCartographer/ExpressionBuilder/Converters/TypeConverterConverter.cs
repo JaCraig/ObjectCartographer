@@ -22,13 +22,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the conver from method.
         /// </summary>
         /// <value>The conver from method.</value>
-        private static MethodInfo ConvertFromMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertFrom), new[] { typeof(object) });
+        private static MethodInfo ConvertFromMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertFrom), [typeof(object)]);
 
         /// <summary>
         /// Gets the convert to method.
         /// </summary>
         /// <value>The convert to method.</value>
-        private static MethodInfo ConvertToMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertTo), new[] { typeof(object), typeof(Type) });
+        private static MethodInfo ConvertToMethod { get; } = typeof(TypeConverter).GetMethod(nameof(TypeConverter.ConvertTo), [typeof(object), typeof(Type)]);
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.

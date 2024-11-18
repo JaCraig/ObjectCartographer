@@ -18,7 +18,7 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <param name="expressionMappers">The expression mappers.</param>
         public ExpressionBuilderManager(IEnumerable<IConverter> expressionMappers)
         {
-            ExpressionMappers = expressionMappers.OrderBy(x => x.Order).ToArray() ?? Array.Empty<IConverter>();
+            ExpressionMappers = expressionMappers.OrderBy(x => x.Order).ToArray() ?? [];
         }
 
         /// <summary>
@@ -67,10 +67,10 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <returns></returns>
         private Expression AddPreMappedProperties(IInternalTypeMapping typeInfo, IExpressionMapping mapping)
         {
-            List<Expression> Expressions = new List<Expression>();
-            foreach (var Property in typeInfo.Properties)
+            List<Expression> Expressions = [];
+            foreach (IPropertyMapping Property in typeInfo.Properties)
             {
-                var SourceCall = Expression.Call(Expression.Constant(Property.SourceTarget), Property.Source, mapping.SourceParameter);
+                MethodCallExpression SourceCall = Expression.Call(Expression.Constant(Property.SourceTarget), Property.Source, mapping.SourceParameter);
                 Expressions.Add(Expression.Call(Expression.Constant(Property.DestinationTarget), Property.Destination, mapping.DestinationParameter, SourceCall));
             }
             return Expression.Block(Expressions);

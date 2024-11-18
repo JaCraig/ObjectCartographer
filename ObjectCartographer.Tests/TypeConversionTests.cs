@@ -40,7 +40,7 @@ namespace ObjectCartographer.Tests
 
     public class TypeConversionTests : TestBaseClass
     {
-        protected override Type ObjectType { get; set; } = null;
+        protected override Type? ObjectType { get; set; } = null;
 
         [Fact]
         public void DbTypeToSqlDbType()
@@ -61,7 +61,7 @@ namespace ObjectCartographer.Tests
         [Fact]
         public void NullableLongToDouble()
         {
-            double TestObject2 = 5;
+            const double TestObject2 = 5;
             Assert.Equal(5, TestObject2.To<long?>());
         }
 
@@ -95,7 +95,7 @@ namespace ObjectCartographer.Tests
         {
             Assert.Equal(new Uri("http://A"), "http://A".To<Uri>());
             Assert.Equal("http://a/", new Uri("http://A").To<string>());
-            var Value = DBNull.Value;
+            DBNull Value = DBNull.Value;
             Assert.Equal("A", Value.To("A"));
             Assert.Equal(default(DateTime), Value.To(typeof(DateTime), null));
             Assert.Equal(TestEnum.Value2, 1.To(typeof(TestEnum), null));
@@ -106,7 +106,7 @@ namespace ObjectCartographer.Tests
         public void ToExpando()
         {
             var TestObject = new MyTestClass();
-            var Object = TestObject.To<ExpandoObject>();
+            ExpandoObject Object = TestObject.To<ExpandoObject>();
             Assert.Equal(10, ((IDictionary<string, object>)Object)["B"]);
             ((IDictionary<string, object>)Object)["B"] = 20;
             Assert.Equal(20, Object.To(new MyTestClass()).B);
@@ -116,19 +116,19 @@ namespace ObjectCartographer.Tests
         public void ToList()
         {
             var TestObject = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
-            Assert.Equal(new List<long>() { 1, 2, 3, 4, 5, 6, 7, 8 }, TestObject.To(new List<long>()));
+            Assert.Equal([1, 2, 3, 4, 5, 6, 7, 8], TestObject.To(new List<long>()));
         }
 
         [Fact]
         public void TryConvert()
         {
-            Assert.Equal(1, (1.0f).To(0));
-            Assert.Equal("2011", (2011).To(""));
+            Assert.Equal(1, 1.0f.To(0));
+            Assert.Equal("2011", 2011.To(""));
             Assert.NotNull(new MyTestClass().To<IMyTestClass>());
-            Assert.NotNull(((object)new MyTestClass()).To<IMyTestClass>());
+            Assert.NotNull(new MyTestClass().To<IMyTestClass>());
             Assert.NotNull(new MyTestClass().To<MyTestClass2>());
-            Assert.NotNull(((object)new MyTestClass()).To<MyTestClass2>());
-            var Result = new MyTestClass().To<MyTestClass2>();
+            Assert.NotNull(new MyTestClass().To<MyTestClass2>());
+            MyTestClass2 Result = new MyTestClass().To<MyTestClass2>();
             Assert.Equal(10, Result.B);
         }
 

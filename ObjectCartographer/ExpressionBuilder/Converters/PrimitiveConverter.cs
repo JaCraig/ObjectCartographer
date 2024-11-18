@@ -80,7 +80,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             Type SourceType = typeof(TSource);
             Type DestinationType = typeof(TDestination);
-            MethodInfo? ConvertMethod = ConvertType.GetMethod("To" + DestinationType.Name, new[] { SourceType });
+            MethodInfo? ConvertMethod = ConvertType.GetMethod("To" + DestinationType.Name, [SourceType]);
             if (ConvertMethod is null)
                 return x => default;
             ParameterExpression ParameterHolder = Expression.Parameter(SourceType);

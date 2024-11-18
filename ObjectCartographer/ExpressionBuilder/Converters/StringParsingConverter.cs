@@ -28,7 +28,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public bool CanHandle(Type sourceType, Type destinationType)
         {
             return sourceType == typeof(string)
-                && destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>()) != null;
+                && destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, [typeof(string)], []) != null;
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            MethodInfo? ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string) }, Array.Empty<ParameterModifier>());
+            MethodInfo? ParseMethod = destinationType.GetMethod("Parse", BindingFlags.Public | BindingFlags.Static, null, [typeof(string)], []);
             return Expression.Condition(Expression.Equal(source, Expression.Constant(null)),
                     destination!,
                     Expression.Call(ParseMethod!, source));

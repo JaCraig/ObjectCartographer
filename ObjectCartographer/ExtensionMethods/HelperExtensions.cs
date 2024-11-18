@@ -20,7 +20,7 @@ namespace ObjectCartographer.ExtensionMethods
         {
             if (string.IsNullOrEmpty(name))
                 return null;
-            properties ??= Array.Empty<PropertyInfo>();
+            properties ??= [];
             return Array.Find(properties, x => x.Name == name)
                     ?? Array.Find(properties, x => string.Equals(RemoveChars(x.Name), RemoveChars(name), StringComparison.OrdinalIgnoreCase));
         }
@@ -39,7 +39,7 @@ namespace ObjectCartographer.ExtensionMethods
 
         public static ConstructorInfo[] PublicConstructors(this Type type)
         {
-            return type?.GetConstructors().Where(x => x.IsPublic).ToArray() ?? Array.Empty<ConstructorInfo>();
+            return type?.GetConstructors().Where(x => x.IsPublic).ToArray() ?? [];
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace ObjectCartographer.ExtensionMethods
         /// <returns>The readable properties</returns>
         public static PropertyInfo[] ReadableProperties(this Type type)
         {
-            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanRead).ToArray() ?? Array.Empty<PropertyInfo>();
+            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanRead).ToArray() ?? [];
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace ObjectCartographer.ExtensionMethods
         /// <returns>The writable properties</returns>
         public static PropertyInfo[] WritableProperties(this Type type)
         {
-            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanWrite).ToArray() ?? Array.Empty<PropertyInfo>();
+            return type?.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public).Where(x => x.CanWrite).ToArray() ?? [];
         }
 
         /// <summary>

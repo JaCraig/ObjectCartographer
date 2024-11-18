@@ -21,13 +21,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the enum parse.
         /// </summary>
         /// <value>The enum parse.</value>
-        private static MethodInfo EnumParse { get; } = typeof(Enum).GetMethod(nameof(Enum.Parse), BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Type), typeof(string), typeof(bool) }, Array.Empty<ParameterModifier>());
+        private static MethodInfo EnumParse { get; } = typeof(Enum).GetMethod(nameof(Enum.Parse), BindingFlags.Public | BindingFlags.Static, null, [typeof(Type), typeof(string), typeof(bool)], []);
 
         /// <summary>
         /// Gets the enum to object.
         /// </summary>
         /// <value>The enum to object.</value>
-        private static MethodInfo EnumToObject { get; } = typeof(Enum).GetMethod(nameof(Enum.ToObject), BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Type), typeof(object) }, Array.Empty<ParameterModifier>());
+        private static MethodInfo EnumToObject { get; } = typeof(Enum).GetMethod(nameof(Enum.ToObject), BindingFlags.Public | BindingFlags.Static, null, [typeof(Type), typeof(object)], []);
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.

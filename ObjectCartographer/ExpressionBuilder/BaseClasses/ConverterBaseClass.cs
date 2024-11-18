@@ -17,7 +17,8 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <summary>
         /// Initializes a new instance of the <see cref="ConverterBaseClass"/> class.
         /// </summary>
-        protected ConverterBaseClass() { }
+        protected ConverterBaseClass()
+        { }
 
         /// <summary>
         /// Gets the order.
@@ -49,28 +50,28 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         {
             if (!CanHandle(sourceType, destinationType))
                 return Expression.Empty();
-            var CopyConstructor = GetCopyConstructor(sourceType, destinationType);
+            ConstructorInfo? CopyConstructor = GetCopyConstructor(sourceType, destinationType);
             if (CopyConstructor is null)
             {
                 return Expression.Block(destinationType,
                     Expression.IfThenElse(Expression.Equal(source, Expression.Constant(null)),
                         Expression.Empty(),
                         Expression.Block(destinationType,
-                            CreateObject(destination, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
-                            CopyObject(source, destination, sourceType, destinationType, mapping, manager, new List<Expression>()),
-                            destination)
+                            CreateObject(destination!, source, sourceType.ReadableProperties(), destinationType.PublicConstructors(), mapping, manager),
+                            CopyObject(source, destination!, sourceType, destinationType, mapping, manager, []),
+                            destination!)
                         ),
-                    destination);
+                    destination!);
             }
             else
             {
                 return Expression.Block(destinationType,
                     Expression.IfThenElse(Expression.Equal(source, Expression.Constant(null)),
                         Expression.Empty(),
-                        Expression.IfThenElse(Expression.Equal(destination, Expression.Constant(null)),
-                                Expression.Assign(destination, Expression.New(CopyConstructor, source)),
-                                CopyObject(source, destination, sourceType, destinationType, mapping, manager, new List<Expression>()))),
-                    destination);
+                        Expression.IfThenElse(Expression.Equal(destination!, Expression.Constant(null)),
+                                Expression.Assign(destination!, Expression.New(CopyConstructor, source)),
+                                CopyObject(source, destination!, sourceType, destinationType, mapping, manager, []))),
+                    destination!);
             }
         }
 
@@ -101,18 +102,23 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         {
             if (destinationVariable is null || destinationConstructors.Length == 0 || !destinationVariable.Type.IsClass)
                 return destinationVariable ?? Expression.Empty();
-            var FinalConstructor = destinationConstructors[^1];
+            ConstructorInfo FinalConstructor = destinationConstructors[^1];
             var FinalParameters = new List<Expression>();
             for (var x = 0; x < destinationConstructors.Length; ++x)
             {
-                var Parameters = destinationConstructors[x].GetParameters();
+                ParameterInfo[] Parameters = destinationConstructors[x].GetParameters();
 
                 var TempParams = new List<Expression>();
-                bool Found = true;
-                for (int y = 0; y < Parameters.Length; ++y)
+                var Found = true;
+                for (var y = 0; y < Parameters.Length; ++y)
                 {
-                    var Param = Parameters[y];
-                    var TempProperty = sourceProperties.FindMatchingProperty(Param.Name);
+                    ParameterInfo Param = Parameters[y];
+                    if (Param is null || string.IsNullOrEmpty(Param.Name))
+                    {
+                        Found = false;
+                        break;
+                    }
+                    PropertyInfo? TempProperty = sourceProperties.FindMatchingProperty(Param.Name);
                     if (TempProperty is null || TempProperty.GetIndexParameters().Length > 0)
                     {
                         Found = false;
@@ -141,19 +147,24 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <returns>The resulting expression</returns>
         protected Expression ForEach(Expression collection, ParameterExpression loopVar, Expression loopContent)
         {
-            var elementType = loopVar.Type;
-            var enumerableType = typeof(IEnumerable<>).MakeGenericType(elementType);
-            var enumeratorType = typeof(IEnumerator<>).MakeGenericType(elementType);
+            Type elementType = loopVar.Type;
+            Type enumerableType = typeof(IEnumerable<>).MakeGenericType(elementType);
+            Type enumeratorType = typeof(IEnumerator<>).MakeGenericType(elementType);
 
-            var enumeratorVar = Expression.Variable(enumeratorType, "enumerator");
-            var getEnumeratorCall = Expression.Call(collection, enumerableType.GetMethod("GetEnumerator"));
-            var enumeratorAssign = Expression.Assign(enumeratorVar, getEnumeratorCall);
+            ParameterExpression enumeratorVar = Expression.Variable(enumeratorType, "enumerator");
+            MethodInfo? GetEnumeratorMethod = enumerableType.GetMethod("GetEnumerator");
+            if (GetEnumeratorMethod is null)
+                return Expression.Empty();
+            MethodCallExpression getEnumeratorCall = Expression.Call(collection, GetEnumeratorMethod);
+            BinaryExpression enumeratorAssign = Expression.Assign(enumeratorVar, getEnumeratorCall);
+            MethodInfo? MoveNextMethod = typeof(IEnumerator).GetMethod("MoveNext");
+            if (MoveNextMethod is null)
+                return Expression.Empty();
+            MethodCallExpression moveNextCall = Expression.Call(enumeratorVar, MoveNextMethod);
 
-            var moveNextCall = Expression.Call(enumeratorVar, typeof(IEnumerator).GetMethod("MoveNext"));
+            LabelTarget breakLabel = Expression.Label("LoopBreak");
 
-            var breakLabel = Expression.Label("LoopBreak");
-
-            var ifThenElseExpr = Expression.IfThenElse(
+            ConditionalExpression ifThenElseExpr = Expression.IfThenElse(
                 Expression.Equal(moveNextCall, Expression.Constant(true)),
                 Expression.Block(new[] { loopVar },
                     Expression.Assign(loopVar, Expression.Property(enumeratorVar, "Current")),
@@ -162,7 +173,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
                 Expression.Break(breakLabel)
             );
 
-            var loop = Expression.Loop(ifThenElseExpr, breakLabel);
+            LoopExpression loop = Expression.Loop(ifThenElseExpr, breakLabel);
 
             return Expression.Block(new[] { enumeratorVar },
                 enumeratorAssign,
@@ -176,9 +187,6 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
         /// <param name="source">The source.</param>
         /// <param name="destination">The destination.</param>
         /// <returns></returns>
-        protected ConstructorInfo? GetCopyConstructor(Type source, Type destination)
-        {
-            return destination?.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, new[] { source }, null);
-        }
+        protected ConstructorInfo? GetCopyConstructor(Type source, Type destination) => destination?.GetConstructor(BindingFlags.Public | BindingFlags.Instance, null, [source], null);
     }
 }

@@ -55,7 +55,7 @@ namespace ObjectCartographer.ExpressionBuilder
         /// Gets the variables.
         /// </summary>
         /// <value>The variables.</value>
-        public List<ParameterExpression> Variables { get; } = new List<ParameterExpression>();
+        public List<ParameterExpression> Variables { get; } = [];
 
         /// <summary>
         /// Adds the variable.

@@ -45,7 +45,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public TDestination[] Conversion<TSource, TDestination>(IEnumerable<TSource> source, TDestination[] destination)
         {
             if (source is null)
-                return destination ?? Array.Empty<TDestination>();
+                return destination ?? [];
             if (destination is null)
                 return source.Select(x => DataMapper.Instance.Copy<TDestination>(x) ?? default).ToArray();
             var Index = 0;

@@ -57,7 +57,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
             Type SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType).GenericTypeArguments[0];
             Type? DestinationCollectionType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
             Type DestionationCollectionValueType = DestinationCollectionType.GenericTypeArguments[0];
-            System.Reflection.MethodInfo? AddMethod = DestinationCollectionType.GetMethod("Add", new[] { DestionationCollectionValueType });
+            System.Reflection.MethodInfo? AddMethod = DestinationCollectionType.GetMethod("Add", [DestionationCollectionValueType]);
 
             ParameterExpression ForEachItem = Expression.Variable(SourceCollectionValueType);
             ParameterExpression DestinationForEachItem = Expression.Variable(DestionationCollectionValueType);

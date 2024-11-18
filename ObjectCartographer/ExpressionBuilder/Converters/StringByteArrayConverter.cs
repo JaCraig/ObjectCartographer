@@ -25,7 +25,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         public static byte[] GetBytes(string data)
         {
             if (string.IsNullOrEmpty(data))
-                return Array.Empty<byte>();
+                return [];
             return Encoding.UTF8.GetBytes(data);
         }
 
