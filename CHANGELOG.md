@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.0.2"></a>
+## [4.0.2](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.0.2) (2024-11-24)
+
+### Bug Fixes
+
+* Refactor service registration and synchronization ([c8e9a2b](https://www.github.com/JaCraig/ObjectCartographer/commit/c8e9a2b65eeda6d1e5251484e536cf83c04a7fb5))
+
+### Other
+
+* Merge pull request #265 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-617062173c ([4d5a8ff](https://www.github.com/JaCraig/ObjectCartographer/commit/4d5a8ff4baba915328adfebdc4bbcd94708177d1))
+* bump Microsoft.NET.Test.Sdk ([466495f](https://www.github.com/JaCraig/ObjectCartographer/commit/466495fef65eaa009df25db87e218d592e602934))
+* Update README.md ([9a57a01](https://www.github.com/JaCraig/ObjectCartographer/commit/9a57a015ab7631df01719c376b6899e80aee4e43))
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.0.1) (2024-11-18)
 
