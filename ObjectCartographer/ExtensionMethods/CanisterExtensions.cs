@@ -24,7 +24,9 @@ namespace ObjectCartographer.ExtensionMethods
         /// <returns>The updated service collection.</returns>
         public static IServiceCollection? RegisterObjectCartographer(this IServiceCollection? services)
         {
-            Services.ServiceCollection = services;
+            if (services.Exists<DataMapper>())
+                return services;
+            Services._ServiceCollection = services;
             return services?.AddSingleton<DataMapper>()
                 .AddSingleton<ExpressionBuilderManager>()
                 .AddAllSingleton<IConverter>();

@@ -18,11 +18,11 @@ namespace ObjectCartographer.ExtensionMethods
             {
                 if (_ServiceProvider is not null)
                     return _ServiceProvider;
-                lock (LockObj)
+                lock (_LockObj)
                 {
                     if (_ServiceProvider is not null)
                         return _ServiceProvider;
-                    _ServiceProvider = (ServiceCollection ?? new ServiceCollection().AddCanisterModules())?.BuildServiceProvider();
+                    _ServiceProvider = (_ServiceCollection ?? new ServiceCollection().AddCanisterModules())?.BuildServiceProvider();
                 }
                 return _ServiceProvider;
             }
@@ -31,12 +31,12 @@ namespace ObjectCartographer.ExtensionMethods
         /// <summary>
         /// The service collection
         /// </summary>
-        internal static IServiceCollection? ServiceCollection;
+        internal static IServiceCollection? _ServiceCollection;
 
         /// <summary>
         /// The lock object
         /// </summary>
-        private static readonly object LockObj = new();
+        private static readonly object _LockObj = new();
 
         /// <summary>
         /// The service provider
