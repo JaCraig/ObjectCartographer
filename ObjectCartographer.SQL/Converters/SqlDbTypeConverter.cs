@@ -1,9 +1,9 @@
-﻿using ObjectCartographer.ExpressionBuilder;
+﻿using Microsoft.Data.SqlClient;
+using ObjectCartographer.ExpressionBuilder;
 using ObjectCartographer.ExpressionBuilder.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq.Expressions;
 
 namespace ObjectCartographer.SQL.Converters
@@ -149,7 +149,7 @@ namespace ObjectCartographer.SQL.Converters
         /// <returns></returns>
         public TDestination ConvertTo<TDestination>(SqlDbType value)
         {
-            var DestinationType = typeof(TDestination);
+            Type DestinationType = typeof(TDestination);
             if (ConvertToTypes.ContainsKey(DestinationType))
             {
                 return (TDestination)ConvertToTypes[DestinationType](value);
@@ -228,7 +228,7 @@ namespace ObjectCartographer.SQL.Converters
             {
                 SqlDbType = arg
             };
-            return DbTypeToTypeConversions.TryGetValue(Parameter.DbType, out var returnValue) ? returnValue : typeof(int);
+            return DbTypeToTypeConversions.TryGetValue(Parameter.DbType, out Type? returnValue) ? returnValue : typeof(int);
         }
 
         /// <summary>
@@ -243,7 +243,7 @@ namespace ObjectCartographer.SQL.Converters
                 TempValue = Enum.GetUnderlyingType(TempValue);
             }
 
-            if (!Conversions.TryGetValue(TempValue, out var Item))
+            if (!Conversions.TryGetValue(TempValue, out DbType Item))
                 return SqlDbType.Int;
             if (Item == DbType.Time)
                 return SqlDbType.Time;

@@ -1,9 +1,9 @@
-﻿using ObjectCartographer.ExpressionBuilder;
+﻿using Microsoft.Data.SqlClient;
+using ObjectCartographer.ExpressionBuilder;
 using ObjectCartographer.ExpressionBuilder.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq.Expressions;
 
 namespace ObjectCartographer.SQL.Converters
@@ -150,7 +150,7 @@ namespace ObjectCartographer.SQL.Converters
         /// <returns></returns>
         public TDestination ConvertTo<TDestination>(DbType value)
         {
-            var DestinationType = typeof(TDestination);
+            Type DestinationType = typeof(TDestination);
             if (ConvertToTypes.ContainsKey(DestinationType))
             {
                 return (TDestination)ConvertToTypes[DestinationType](value);
@@ -203,10 +203,7 @@ namespace ObjectCartographer.SQL.Converters
         /// </summary>
         /// <param name="value">The value.</param>
         /// <returns></returns>
-        private static object DbTypeToType(DbType value)
-        {
-            return DbTypeToTypeConversions.TryGetValue(value, out var returnValue) ? returnValue : typeof(int);
-        }
+        private static object DbTypeToType(DbType value) => DbTypeToTypeConversions.TryGetValue(value, out Type? returnValue) ? returnValue : typeof(int);
 
         /// <summary>
         /// SQLs the type of the database type to database.
@@ -236,7 +233,7 @@ namespace ObjectCartographer.SQL.Converters
             {
                 TempValue = Enum.GetUnderlyingType(TempValue);
             }
-            return Conversions.TryGetValue(TempValue, out var returnValue) ? returnValue : DbType.Int32;
+            return Conversions.TryGetValue(TempValue, out DbType returnValue) ? returnValue : DbType.Int32;
         }
     }
 }
