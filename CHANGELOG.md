@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.2"></a>
+## [4.1.2](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.2) (2025-02-12)
+
+### Bug Fixes
+
+* bump Microsoft.Extensions.Logging.Abstractions ([24df7da](https://www.github.com/JaCraig/ObjectCartographer/commit/24df7daa819ffb34f13e9583605101e6c52b8e0b))
+
+### Other
+
+* Merge pull request #280 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-d90f1eecb3 ([e00e3df](https://www.github.com/JaCraig/ObjectCartographer/commit/e00e3df34d3415e4fa2502c17f3baee2d4d4462f))
+* Merge pull request #281 from JaCraig/dependabot/nuget/ObjectCartographer.SQL/dependencies-8280840db1 ([76580d4](https://www.github.com/JaCraig/ObjectCartographer/commit/76580d4c7533d767c2b184a7cc46b71ca177ef8d))
+* bump Mecha.xUnit ([39c6f70](https://www.github.com/JaCraig/ObjectCartographer/commit/39c6f7085326531c1f4c4534f2204d4fbfe4431a))
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.1) (2025-01-29)
 
