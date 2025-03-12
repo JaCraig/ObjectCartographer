@@ -18,7 +18,11 @@
           "relative_path": "api/ObjectCartographer.DataMapper.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.DataMapper",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.DataMapper.yml\" sourcestartlinenumber=\"1\">Data mapper</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.BaseClasses.ConverterBaseClass.yml\" sourcestartlinenumber=\"1\">Converter base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.ArrayIEnumerableConverter.yml\" sourcestartlinenumber=\"1\">IEnumerable to array converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.AssignableFromConverter.yml\" sourcestartlinenumber=\"1\">Assignable from converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.ClassToClassConverter.yml\" sourcestartlinenumber=\"1\">Class to class converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.DefaultConverter.yml\" sourcestartlinenumber=\"1\">Default converters</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.EnumConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.EnumConverter.yml\" sourcestartlinenumber=\"1\">Enum converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.FromDictionaryConverter.yml\" sourcestartlinenumber=\"1\">From dictionary converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.FromEnumConverter.yml\" sourcestartlinenumber=\"1\">From enum converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.FromJsonElementDictionaryConverter.yml\" sourcestartlinenumber=\"1\">Json element dictionary converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.ICollectionConverter.yml\" sourcestartlinenumber=\"1\">Collection converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.JsonDocumentConverter.yml\" sourcestartlinenumber=\"1\">From JsonDocument converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.JsonElementConverter.yml\" sourcestartlinenumber=\"1\">JsonElement converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.KeyValuePairConverter.yml\" sourcestartlinenumber=\"1\">Key value pair converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.PrimitiveConverter.yml\" sourcestartlinenumber=\"1\">Primitive converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.SameConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.SameConverter.yml\" sourcestartlinenumber=\"1\">Same converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.StringByteArrayConverter.yml\" sourcestartlinenumber=\"1\">String/Byte array converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.StringParsingConverter.yml\" sourcestartlinenumber=\"1\">String parsing converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.ToDictionaryConverter.yml\" sourcestartlinenumber=\"1\">To dictionary converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.ToStringConverter.yml\" sourcestartlinenumber=\"1\">ToString converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Converters.TypeConverterConverter.yml\" sourcestartlinenumber=\"1\">TypeConverter converter</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Converters.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Converters",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.ExpressionBuilderManager.yml\" sourcestartlinenumber=\"1\">Expression builder manager</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.ExpressionMapping<TSource, TDestination>",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.ExpressionMapping-2.yml\" sourcestartlinenumber=\"1\">Expression mapping</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Interfaces.IConverter",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Interfaces.IConverter.yml\" sourcestartlinenumber=\"1\">Converter interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExpressionBuilder.Interfaces.IExpressionMapping.yml\" sourcestartlinenumber=\"1\">Expression mapping interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/ObjectCartographer.ExpressionBuilder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExpressionBuilder",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/ObjectCartographer.ExtensionMethods.CanisterExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExtensionMethods.CanisterExtensions",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ExtensionMethods.CanisterExtensions.yml\" sourcestartlinenumber=\"1\">Canister extension methods</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/ObjectCartographer.ExtensionMethods.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ExtensionMethods",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/ObjectCartographer.Interfaces.IInternalTypeMapping.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Interfaces.IInternalTypeMapping",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Interfaces.IInternalTypeMapping.yml\" sourcestartlinenumber=\"1\">Type mapping interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/ObjectCartographer.Interfaces.IPropertyMapping.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Interfaces.IPropertyMapping",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Interfaces.IPropertyMapping.yml\" sourcestartlinenumber=\"1\">Property mapping interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/ObjectCartographer.Interfaces.ITypeMapping.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Interfaces.ITypeMapping",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Interfaces.ITypeMapping.yml\" sourcestartlinenumber=\"1\">Type mapping interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/ObjectCartographer.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/ObjectCartographer.Internal.DefaultValueLookup.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Internal.DefaultValueLookup",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Internal.DefaultValueLookup.yml\" sourcestartlinenumber=\"1\">Default value lookup</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/ObjectCartographer.Internal.PropertyMapping-3.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Internal.PropertyMapping<TLeft, TRight, TLeftPropertyType>",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Internal.PropertyMapping-3.yml\" sourcestartlinenumber=\"1\">Property mapping</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/ObjectCartographer.Internal.TypeTuple.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Internal.TypeTuple",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Internal.TypeTuple.yml\" sourcestartlinenumber=\"1\">Type tuple</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/ObjectCartographer.Internal.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Internal",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/ObjectCartographer.Modules.CanisterModule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Modules.CanisterModule",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.Modules.CanisterModule.yml\" sourcestartlinenumber=\"1\">Canister module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/ObjectCartographer.Modules.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.Modules",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/ObjectCartographer.ObjectExtensions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.ObjectExtensions",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.ObjectExtensions.yml\" sourcestartlinenumber=\"1\">Object extensions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/ObjectCartographer.TypeMapping-2.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer.TypeMapping<TSource, TDestination>",
+      "Summary": "<p sourcefile=\"api/ObjectCartographer.TypeMapping-2.yml\" sourcestartlinenumber=\"1\">Type mapping</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/ObjectCartographer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ObjectCartographer",
+      "Summary": null
     },
     {
       "type": "Conceptual",
@@ -464,11 +640,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -487,11 +663,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -520,11 +696,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
