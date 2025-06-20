@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.3"></a>
+## [4.1.3](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.3) (2025-06-20)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([c446ad0](https://www.github.com/JaCraig/ObjectCartographer/commit/c446ad0bc9aac4fe2f5f311cf33d44a149812ddc))
+* **deps:** update package references across projects ([6d51d32](https://www.github.com/JaCraig/ObjectCartographer/commit/6d51d32080dec9089a93e373d0868ed8fe44509c))
+
+### Other
+
+* Merge pull request #282 from JaCraig/dependabot/nuget/ObjectCartographer.Example/dependencies-8f6a9ecdf3 ([16d67c2](https://www.github.com/JaCraig/ObjectCartographer/commit/16d67c24d708e2f050d1730fa3c93de95959a362))
+* Merge pull request #283 from JaCraig/dependabot/nuget/ObjectCartographer.Example/dependencies-e8eeb46425 ([f1c292b](https://www.github.com/JaCraig/ObjectCartographer/commit/f1c292b50e1d8351371fffd693742bfd13f592aa))
+* Merge pull request #284 from JaCraig/dependabot/nuget/ObjectCartographer/Microsoft.Extensions.Logging.Abstractions-9.0.5 ([53c09c3](https://www.github.com/JaCraig/ObjectCartographer/commit/53c09c32b39b9b641522d8e4c0ed5aa957065ee1))
+* Merge pull request #285 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-1b20338d55 ([0c35a94](https://www.github.com/JaCraig/ObjectCartographer/commit/0c35a9439f2dc185302d2e2a6febb6a653e7abb9))
+* Merge pull request #286 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-8cf71230ea ([b4eb02d](https://www.github.com/JaCraig/ObjectCartographer/commit/b4eb02d626897c2fbaaf2f8f1183ca0143b0b754))
+* Update Microsoft.Extensions.Logging.Abstractions to 9.0.5 ([3772600](https://www.github.com/JaCraig/ObjectCartographer/commit/37726001b3d2f3883ba38a2fdec070ae8d18301f))
+* bump Microsoft.Extensions.Logging.Abstractions ([287fe6c](https://www.github.com/JaCraig/ObjectCartographer/commit/287fe6c5296206ec5a5d134dc719776b567495dd))
+* bump Microsoft.Extensions.Logging.Abstractions ([8603ece](https://www.github.com/JaCraig/ObjectCartographer/commit/8603ece22fa2d0cc2ea883e0511676d533cf0e37))
+* Bump the dependencies group with 1 update ([7640b80](https://www.github.com/JaCraig/ObjectCartographer/commit/7640b80650395f5584ab66339de852525ea582c5))
+
 <a name="4.1.2"></a>
 ## [4.1.2](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.2) (2025-02-12)
 
