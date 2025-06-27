@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.4"></a>
+## [4.1.4](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.4) (2025-06-27)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([45b4d7c](https://www.github.com/JaCraig/ObjectCartographer/commit/45b4d7cd13c3a7e225271fe3bd0424f048362ad2))
+* Bump the dependencies group with 1 update ([73804bd](https://www.github.com/JaCraig/ObjectCartographer/commit/73804bda02dacfe0f6efc68595cab11a3b67a5e6))
+* **deps:** correct directory paths in dependabot configuration ([14922b5](https://www.github.com/JaCraig/ObjectCartographer/commit/14922b580744b683e7af1bd257bc53c6e555cf4e))
+
+### Other
+
+* Merge pull request #287 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-66b503f185 ([2500530](https://www.github.com/JaCraig/ObjectCartographer/commit/25005300ce50c678a1c305f2c4eb6e0c48787196))
+* Merge pull request #288 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-66b503f185 ([413d5d7](https://www.github.com/JaCraig/ObjectCartographer/commit/413d5d739a18b5f85e2c202f0b7640dab1b4d580))
+
 <a name="4.1.3"></a>
 ## [4.1.3](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.3) (2025-06-20)
 
