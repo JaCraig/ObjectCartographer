@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.5"></a>
+## [4.1.5](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.5) (2025-07-03)
+
+### Bug Fixes
+
+* **dependencies:** update AutoMapper and Mecha.xUnit versions ([340ded6](https://www.github.com/JaCraig/ObjectCartographer/commit/340ded6f96e328019dcf3732eb28f1bc44c07bdb))
+
 <a name="4.1.4"></a>
 ## [4.1.4](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.4) (2025-06-27)
 
