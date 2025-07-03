@@ -50,7 +50,7 @@ namespace ObjectCartographer.Benchmarks
             var configuration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<TestClass, TestClass2>();
-            });
+            }, null);
             AutoMapperMapper = configuration.CreateMapper();
         }
 
