@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.1.7"></a>
+## [4.1.7](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.7) (2025-08-05)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([dbf4c5f](https://www.github.com/JaCraig/ObjectCartographer/commit/dbf4c5fc214540a0b492772a12a66c3a0314ab17))
+
+### Other
+
+* Merge pull request #300 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-e24bd1f4e2 ([93076a6](https://www.github.com/JaCraig/ObjectCartographer/commit/93076a6d9197ce5019b05a685a1789d10c82668c))
+* Merge pull request #301 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-e24bd1f4e2 ([94a46e2](https://www.github.com/JaCraig/ObjectCartographer/commit/94a46e27f89d6f66a96abdbae10100ff22ddf120))
+* Merge pull request #302 from JaCraig/dependabot/nuget/ObjectCartographer.Benchmarks/dependencies-164769468c ([504bc90](https://www.github.com/JaCraig/ObjectCartographer/commit/504bc90703dee65c6f0d2cae34b39f9aaa2722a6))
+* Merge pull request #303 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-cb9e95d726 ([ce16bf9](https://www.github.com/JaCraig/ObjectCartographer/commit/ce16bf9edce135a8512d0ce1e4299b4cf9f99b21))
+* Merge pull request #304 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-e24bd1f4e2 ([0471802](https://www.github.com/JaCraig/ObjectCartographer/commit/0471802749625cd363835ba078df47fa3569d003))
+* Bump the dependencies group with 1 update ([c28112c](https://www.github.com/JaCraig/ObjectCartographer/commit/c28112c30203558026de20aa7a2f6c26eed79cee))
+* Bump the dependencies group with 1 update ([707d958](https://www.github.com/JaCraig/ObjectCartographer/commit/707d958b8ab26a464f12219c23e331b0d80c0541))
+* Bump the dependencies group with 2 updates ([6c59311](https://www.github.com/JaCraig/ObjectCartographer/commit/6c59311d3d10fa8427136238e92aa7e6798d77ca))
+* Bump the dependencies group with 4 updates ([0caff93](https://www.github.com/JaCraig/ObjectCartographer/commit/0caff93d58df45f55ff8e0eff2c8cd6527507b65))
+
 <a name="4.1.6"></a>
 ## [4.1.6](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.6) (2025-08-05)
 
