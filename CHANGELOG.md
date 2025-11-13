@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.2.0"></a>
+## [4.2.0](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.2.0) (2025-11-13)
+
+### Features
+
+* **dependencies:** update packages and frameworks ([3aa645e](https://www.github.com/JaCraig/ObjectCartographer/commit/3aa645ea048775f660eaa44798817d62c468fc5a))
+
+### Other
+
+* Merge pull request #322 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-2b3cce25d0 ([fe001b2](https://www.github.com/JaCraig/ObjectCartographer/commit/fe001b26bf8c111dbed6a72357a25e4e9fc80a03))
+* Merge pull request #326 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-1c1b2b187c ([3390082](https://www.github.com/JaCraig/ObjectCartographer/commit/33900829feed83fb6187a5feec32557caa42db3e))
+* Merge pull request #327 from JaCraig/dependabot/nuget/TestApp/dependencies-297067a9cf ([de67cb3](https://www.github.com/JaCraig/ObjectCartographer/commit/de67cb3598455f97bb672c734424fb4b375d7e8a))
+* Merge pull request #328 from JaCraig/dependabot/nuget/ObjectCartographer.Benchmarks/dependencies-2fec6059f7 ([297b2e6](https://www.github.com/JaCraig/ObjectCartographer/commit/297b2e6d69cf72989fe4da9c3a8d960f2dcd87f1))
+* Merge pull request #329 from JaCraig/dependabot/nuget/ObjectCartographer.Benchmarks/dependencies-01bee85e40 ([86b7fde](https://www.github.com/JaCraig/ObjectCartographer/commit/86b7fdec3c7e0b7f1e25e94844ca3df93b014e90))
+* Merge pull request #330 from JaCraig/dependabot/nuget/ObjectCartographer.Benchmarks/dependencies-687d87cf37 ([1c83956](https://www.github.com/JaCraig/ObjectCartographer/commit/1c8395648ffce3781d24d16df01b24d2714312d2))
+* Bump the dependencies group with 1 update ([ca59aa7](https://www.github.com/JaCraig/ObjectCartographer/commit/ca59aa722757e71b83548b2d0aca37d18bcf845d))
+* Bump the dependencies group with 1 update ([3118fdd](https://www.github.com/JaCraig/ObjectCartographer/commit/3118fdd488966de6d8fb31eae59ea7d8544a941e))
+* Bump the dependencies group with 1 update ([461018b](https://www.github.com/JaCraig/ObjectCartographer/commit/461018bdb2f9fefc4f6a711f77006a448e114704))
+* Bump the dependencies group with 1 update ([1826c31](https://www.github.com/JaCraig/ObjectCartographer/commit/1826c31ad3b7ac639d6300d2bbf926551d8f9c21))
+* Bump the dependencies group with 2 updates ([828dcab](https://www.github.com/JaCraig/ObjectCartographer/commit/828dcabc6aeeb3daa806040470e6d8eedfb11016))
+* Bump the dependencies group with 3 updates ([cb7bf14](https://www.github.com/JaCraig/ObjectCartographer/commit/cb7bf14b3c0046cf79a7883ce54ef24ef1a09028))
+
 <a name="4.1.10"></a>
 ## [4.1.10](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.1.10) (2025-10-15)
 
