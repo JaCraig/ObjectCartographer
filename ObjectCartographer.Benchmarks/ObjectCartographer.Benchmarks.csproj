@@ -9,7 +9,7 @@
     <PackageReference Include="AutoMapper" Version="16.0.0" />
     <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
     <PackageReference Include="Mapster" Version="7.4.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="TinyMapper" Version="3.0.3" />
   </ItemGroup>
 
