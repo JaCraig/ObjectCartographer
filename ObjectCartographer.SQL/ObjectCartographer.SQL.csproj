@@ -4,7 +4,7 @@
     <Description>ObjectCartographer converters for helping with SQL/ADO.Net.</Description>
     <AssemblyTitle>ObjectCartographer.SQL</AssemblyTitle>
     <Authors>James Craig</Authors>
-	  <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+	  <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>ObjectCartographer.SQL</AssemblyName>
     <PackageId>ObjectCartographer.SQL</PackageId>
