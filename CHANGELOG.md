@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.3.0"></a>
+## [4.3.0](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.0) (2026-02-12)
+
+### Features
+
+* **projects:** add net10.0 support and update test deps ([815891e](https://www.github.com/JaCraig/ObjectCartographer/commit/815891ee77d516200d2d9deece351624d32fa43a))
+
 <a name="4.2.2"></a>
 ## [4.2.2](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.2.2) (2026-02-11)
 
