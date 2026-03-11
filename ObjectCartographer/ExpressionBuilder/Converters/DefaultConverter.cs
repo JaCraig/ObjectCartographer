@@ -30,7 +30,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the convert to method.
         /// </summary>
         /// <value>The convert to method.</value>
-        private static MethodInfo ConvertToMethod { get; } = typeof(DefaultConverter).GetMethod(nameof(DefaultConverter.ConvertTo));
+        private static MethodInfo ConvertToMethod { get; } = typeof(DefaultConverter).GetMethod(nameof(ConvertTo));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -90,7 +90,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                         JsonValueKind.False => false,
                         JsonValueKind.Null => null,
                         JsonValueKind.Number => JsonElementValue.GetDouble(),
-                        JsonValueKind.Object => JsonElementValue.EnumerateObject().ToDictionary(x => x.Name, x => x.Value),
+                        JsonValueKind.Object => JsonElementValue.EnumerateObject().ToDictionary(static x => x.Name, static x => x.Value),
                         JsonValueKind.String => JsonElementValue.GetString(),
                         JsonValueKind.True => true,
                         _ => null,
@@ -126,7 +126,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
 
                 try
                 {
-                    return System.Convert.ChangeType(item, destinationType, CultureInfo.InvariantCulture);
+                    return Convert.ChangeType(item, destinationType, CultureInfo.InvariantCulture);
                 }
                 catch
                 {
@@ -134,7 +134,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                         && destinationType.GetGenericTypeDefinition() == typeof(Nullable<>)
                         && !SourceType.IsGenericType)
                     {
-                        return System.Convert.ChangeType(item, destinationType.GenericTypeArguments.FirstOrDefault()!, CultureInfo.InvariantCulture);
+                        return Convert.ChangeType(item, destinationType.GenericTypeArguments.FirstOrDefault()!, CultureInfo.InvariantCulture);
                     }
                 }
             }

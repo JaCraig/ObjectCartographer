@@ -19,26 +19,6 @@ namespace ObjectCartographer
     public class DataMapper
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataMapper"/> class.
-        /// </summary>
-        /// <param name="expressionBuilder">The expression builder.</param>
-        /// <param name="logger">The logger.</param>
-        public DataMapper(ExpressionBuilderManager expressionBuilder, ILogger<DataMapper>? logger = null)
-        {
-            Logger = logger;
-            ExpressionBuilder = expressionBuilder;
-            Instance = this;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DataMapper"/> class.
-        /// </summary>
-        public DataMapper()
-        {
-            Instance = this;
-        }
-
-        /// <summary>
         /// The copy create lock object
         /// </summary>
         private static readonly object _CopyCreateLockObject = new();
@@ -46,7 +26,7 @@ namespace ObjectCartographer
         /// <summary>
         /// The copy generic
         /// </summary>
-        private static readonly MethodInfo _CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), x => string.Equals(x.Name, nameof(DataMapper.Copy), StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
+        private static readonly MethodInfo? _CopyGeneric = Array.Find(typeof(DataMapper).GetMethods(), static x => string.Equals(x.Name, nameof(Copy), StringComparison.OrdinalIgnoreCase) && x.GetGenericArguments().Length == 2);
 
         /// <summary>
         /// The instance lock object
@@ -66,12 +46,32 @@ namespace ObjectCartographer
         /// <summary>
         /// The generic map method.
         /// </summary>
-        private static readonly MethodInfo _MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), []);
+        private static readonly MethodInfo? _MapGeneric = typeof(DataMapper).GetMethod(nameof(DataMapper.Map), []);
 
         /// <summary>
         /// The instance
         /// </summary>
         private static DataMapper? _Instance;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataMapper"/> class.
+        /// </summary>
+        /// <param name="expressionBuilder">The expression builder.</param>
+        /// <param name="logger">The logger.</param>
+        public DataMapper(ExpressionBuilderManager expressionBuilder, ILogger<DataMapper>? logger = null)
+        {
+            Logger = logger;
+            ExpressionBuilder = expressionBuilder;
+            Instance = this;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataMapper"/> class.
+        /// </summary>
+        public DataMapper()
+        {
+            Instance = this;
+        }
 
         /// <summary>
         /// Gets the instance.
@@ -98,7 +98,7 @@ namespace ObjectCartographer
         /// Gets the create instance.
         /// </summary>
         /// <value>The create instance.</value>
-        private static MethodInfo CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, []);
+        private static MethodInfo? CreateInstance { get; } = typeof(FastActivator).GetMethod(nameof(FastActivator.CreateInstance), 1, []);
 
         /// <summary>
         /// Gets the copy methods.
@@ -187,7 +187,7 @@ namespace ObjectCartographer
             {
                 if (CopyMethods.TryGetValue(Key, out Method))
                     return Method([source, destination]);
-                MethodInfo GenericMethod = _CopyGeneric.MakeGenericMethod(Source, Destination);
+                MethodInfo GenericMethod = _CopyGeneric?.MakeGenericMethod(Source, Destination) ?? throw new InvalidOperationException("Failed to create generic method.");
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 _ = CopyMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod([source, destination]);
@@ -238,7 +238,10 @@ namespace ObjectCartographer
             {
                 if (Types.TryGetValue(Key, out ReturnValue))
                     return ReturnValue as TypeMapping<TSource, TDestination>;
-                Logger?.LogDebug("Mapping {Source} => {Destination}", Source, Destination);
+                if (Logger?.IsEnabled(LogLevel.Debug) == true)
+                {
+                    Logger.LogDebug("Mapping {Source} => {Destination}", Source, Destination);
+                }
                 var NewMapping = new TypeMapping<TSource, TDestination>(Key, Logger, ExpressionBuilder);
                 _ = Types.TryAdd(Key, NewMapping);
                 return NewMapping;
@@ -262,7 +265,7 @@ namespace ObjectCartographer
             {
                 if (MapMethods.TryGetValue(Key, out Method))
                     return Method([]) as ITypeMapping;
-                MethodInfo GenericMethod = _MapGeneric.MakeGenericMethod(source, destination);
+                MethodInfo GenericMethod = _MapGeneric?.MakeGenericMethod(source, destination) ?? throw new InvalidOperationException("Failed to create generic method.");
                 MethodWrapperDelegate FinalMethod = CreateMethod(GenericMethod, GenericMethod.GetParameters());
                 _ = MapMethods.TryAdd(Key, FinalMethod);
                 return FinalMethod([]) as ITypeMapping;
@@ -282,7 +285,7 @@ namespace ObjectCartographer
             if (DefaultValueLookup.Values.TryGetValue(parameterInfo.ParameterType.GetHashCode(), out var DefaultValue))
                 IndexValue = Expression.Coalesce(IndexValue, Expression.Constant(DefaultValue));
             else if (!parameterInfo.ParameterType.IsClass)
-                IndexValue = Expression.Coalesce(IndexValue, Expression.Call(CreateInstance.MakeGenericMethod(parameterInfo.ParameterType)));
+                IndexValue = Expression.Coalesce(IndexValue, Expression.Call(CreateInstance?.MakeGenericMethod(parameterInfo.ParameterType) ?? throw new InvalidOperationException("Failed to create generic method.")));
             return Expression.Convert(
                 IndexValue,
                 parameterInfo.ParameterType);
@@ -299,9 +302,7 @@ namespace ObjectCartographer
             ParameterExpression ParameterExpression = Expression.Parameter(typeof(object[]), "args");
             ConstantExpression ThisValue = Expression.Constant(this);
 
-            Expression[] ArgsExpressions = parameters
-                .Select((info, index) => CreateArgumentExpression(ParameterExpression, info, index))
-                .ToArray();
+            Expression[] ArgsExpressions = [.. parameters.Select((info, index) => CreateArgumentExpression(ParameterExpression, info, index))];
 
             Expression CallExpression = Expression.Convert(Expression.Call(ThisValue, method, ArgsExpressions), typeof(object));
 

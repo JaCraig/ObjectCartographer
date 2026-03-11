@@ -54,8 +54,8 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// <returns></returns>
         protected override Expression CopyObject(Expression source, Expression? destination, Type sourceType, Type destinationType, IExpressionMapping mapping, ExpressionBuilderManager manager, List<Expression> expressions)
         {
-            Type SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType).GenericTypeArguments[0];
-            Type? DestinationCollectionType = Array.Find(destinationType.GetInterfaces(), x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
+            Type SourceCollectionValueType = Array.Find(sourceType.GetInterfaces(), static x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType).GenericTypeArguments[0];
+            Type? DestinationCollectionType = Array.Find(destinationType.GetInterfaces(), static x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
             Type DestionationCollectionValueType = DestinationCollectionType.GenericTypeArguments[0];
             System.Reflection.MethodInfo? AddMethod = DestinationCollectionType.GetMethod("Add", [DestionationCollectionValueType]);
 
@@ -77,13 +77,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is key value pair] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsCollection(Type type) => type.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
+        private bool IsCollection(Type type) => type.GetInterfaces().Any(static x => x.IsGenericType && x.GetGenericTypeDefinition() == CollectionType);
 
         /// <summary>
         /// Determines whether [is i enumerable] [the specified type].
         /// </summary>
         /// <param name="type">The type.</param>
         /// <returns><c>true</c> if [is i enumerable] [the specified type]; otherwise, <c>false</c>.</returns>
-        private bool IsIEnumerable(Type type) => type?.GetInterfaces().Any(x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
+        private bool IsIEnumerable(Type type) => type?.GetInterfaces().Any(static x => x.IsGenericType && x.GetGenericTypeDefinition() == IEnumerableType) ?? false;
     }
 }

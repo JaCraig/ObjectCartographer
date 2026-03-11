@@ -18,7 +18,7 @@ namespace ObjectCartographer.ExpressionBuilder
         /// <param name="expressionMappers">The expression mappers.</param>
         public ExpressionBuilderManager(IEnumerable<IConverter> expressionMappers)
         {
-            ExpressionMappers = expressionMappers.OrderBy(x => x.Order).ToArray() ?? [];
+            ExpressionMappers = expressionMappers.OrderBy(static x => x.Order).ToArray() ?? [];
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace ObjectCartographer.ExpressionBuilder
         public Func<TSource, TDestination, TDestination> Map<TSource, TDestination>(TypeMapping<TSource, TDestination> typeInfo)
         {
             if (typeInfo is null)
-                return (_, y) => y;
+                return static (_, y) => y;
             var Mapping = new ExpressionMapping<TSource, TDestination>();
             Mapping.FinalExpression = GenerateMappings(typeInfo, Mapping);
             return Mapping.Build();

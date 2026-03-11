@@ -23,12 +23,12 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the convert to method.
         /// </summary>
         /// <value>The convert to method.</value>
-        private static MethodInfo ConvertToMethod { get; } = typeof(JsonElementConverter).GetMethod(nameof(JsonElementConverter.ConvertTo));
+        private static MethodInfo ConvertToMethod { get; } = typeof(JsonElementConverter).GetMethod(nameof(ConvertTo));
 
         /// <summary>
         /// Gets the nullable convert to method
         /// </summary>
-        private static MethodInfo NullableConvertToMethod { get; } = typeof(JsonElementConverter).GetMethod(nameof(JsonElementConverter.NullableConvertTo));
+        private static MethodInfo NullableConvertToMethod { get; } = typeof(JsonElementConverter).GetMethod(nameof(NullableConvertTo));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
@@ -55,7 +55,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
                 JsonValueKind.False => false,
                 JsonValueKind.Null => null,
                 JsonValueKind.Number => source.GetDouble(),
-                JsonValueKind.Object => source.EnumerateObject().ToDictionary(x => x.Name, x => x.Value),
+                JsonValueKind.Object => source.EnumerateObject().ToDictionary(static x => x.Name, static x => x.Value),
                 JsonValueKind.String => source.GetString(),
                 JsonValueKind.True => true,
                 _ => null,

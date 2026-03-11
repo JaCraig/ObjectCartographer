@@ -85,13 +85,13 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        private Expression ByteArrayToString(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetString)), source);
+        private MethodCallExpression ByteArrayToString(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(GetString)), source);
 
         /// <summary>
         /// Strings to byte array.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        private Expression StringToByteArray(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(StringByteArrayConverter.GetBytes)), source);
+        private MethodCallExpression StringToByteArray(Expression source) => Expression.Call(typeof(StringByteArrayConverter).GetMethod(nameof(GetBytes)), source);
     }
 }

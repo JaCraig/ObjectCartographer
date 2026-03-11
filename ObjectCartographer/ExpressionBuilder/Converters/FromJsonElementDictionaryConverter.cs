@@ -31,7 +31,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Gets the add method.
         /// </summary>
         /// <value>The add method.</value>
-        private static MethodInfo TryGetValueMethod { get; } = typeof(FromJsonElementDictionaryConverter).GetMethod(nameof(FromJsonElementDictionaryConverter.TryGetValue));
+        private static MethodInfo TryGetValueMethod { get; } = typeof(FromJsonElementDictionaryConverter).GetMethod(nameof(TryGetValue));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.

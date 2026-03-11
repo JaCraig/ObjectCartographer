@@ -78,7 +78,7 @@ namespace ObjectCartographer.ExpressionBuilder
         public Func<TSource, TDestination, TDestination> Build()
         {
             if (FinalExpression is null)
-                return (_, y) => y;
+                return static (_, y) => y;
             var BlockExpression = Expression.Block(
                 DestinationType,
                 Variables.ToArray(),

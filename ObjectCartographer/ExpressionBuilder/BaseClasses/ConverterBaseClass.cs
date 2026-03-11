@@ -135,7 +135,7 @@ namespace ObjectCartographer.ExpressionBuilder.BaseClasses
             }
             if (FinalConstructor.GetParameters().Length != FinalParameters.Count)
                 return Expression.Empty();
-            return Expression.Assign(destinationVariable, Expression.Coalesce(destinationVariable, Expression.New(FinalConstructor, FinalParameters.ToArray())));
+            return Expression.Assign(destinationVariable, Expression.Coalesce(destinationVariable, Expression.New(FinalConstructor, [.. FinalParameters])));
         }
 
         /// <summary>

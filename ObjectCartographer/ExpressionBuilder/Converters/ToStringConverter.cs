@@ -21,7 +21,7 @@ namespace ObjectCartographer.ExpressionBuilder.Converters
         /// Converts to stringmethod.
         /// </summary>
         /// <value>To string method.</value>
-        private static MethodInfo ToStringMethod { get; } = typeof(object).GetMethod(nameof(object.ToString));
+        private static MethodInfo ToStringMethod { get; } = typeof(object).GetMethod(nameof(ToString));
 
         /// <summary>
         /// Determines whether this instance can handle the specified types.
