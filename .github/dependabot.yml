@@ -8,7 +8,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/ObjectCartographer/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "fix"
     groups:
@@ -19,7 +19,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/ObjectCartographer.SQL/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "fix"
     groups:
@@ -30,7 +30,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/ObjectCartographer.Tests/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -41,7 +41,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/ObjectCartographer.Benchmarks/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -52,7 +52,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/ObjectCartographer.Example/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -63,7 +63,7 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/TestApp/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
@@ -74,7 +74,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
       prefix: "chore"
     groups:
