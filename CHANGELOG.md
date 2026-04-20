@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.3.5"></a>
+## [4.3.5](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.5) (2026-04-20)
+
+### Bug Fixes
+
+* **deps:** update test project NuGet package versions ([e2ead3f](https://www.github.com/JaCraig/ObjectCartographer/commit/e2ead3f0cf7f6b4eb763eb09d11e86def9e592de))
+
 <a name="4.3.4"></a>
 ## [4.3.4](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.4) (2026-04-20)
 
