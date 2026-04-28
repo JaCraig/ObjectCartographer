@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.3.7"></a>
+## [4.3.7](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.7) (2026-04-28)
+
+### Bug Fixes
+
+* **deps:** update test deps and remove DI package ([16c074e](https://www.github.com/JaCraig/ObjectCartographer/commit/16c074ec08ec9ef4786651e2a55fd4fa237ee166))
+
 <a name="4.3.6"></a>
 ## [4.3.6](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.6) (2026-04-27)
 
