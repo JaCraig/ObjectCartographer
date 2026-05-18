@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.3.8"></a>
+## [4.3.8](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.8) (2026-05-18)
+
+### Bug Fixes
+
+* Bump the dependencies group with 5 updates ([993c16e](https://www.github.com/JaCraig/ObjectCartographer/commit/993c16e2003023f7364d5edc7403a95089618e89))
+
+### Other
+
+* Merge pull request #425 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-c40de98e79 ([fea39d8](https://www.github.com/JaCraig/ObjectCartographer/commit/fea39d85327e6dc1c8005fdbc8b5e075c3fd101c))
+* Merge pull request #426 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-89e9299b9c ([1b9cca6](https://www.github.com/JaCraig/ObjectCartographer/commit/1b9cca6612c5b228e004c98ce92cd79623113ef4))
+* Merge pull request #427 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-133bc8806a ([a684166](https://www.github.com/JaCraig/ObjectCartographer/commit/a684166cfd36db20525721038be651e9f3d5de46))
+* Merge pull request #428 from JaCraig/dependabot/nuget/ObjectCartographer/dependencies-133bc8806a ([4bfb817](https://www.github.com/JaCraig/ObjectCartographer/commit/4bfb8171a6af3d255542fda36ea8530bb11f0cc9))
+* Merge pull request #429 from JaCraig/dependabot/nuget/ObjectCartographer.SQL/dependencies-d153fd39be ([dc273cb](https://www.github.com/JaCraig/ObjectCartographer/commit/dc273cb519197ce679e7a199312162585e5d2c79))
+* Bump the dependencies group with 1 update ([2b67879](https://www.github.com/JaCraig/ObjectCartographer/commit/2b67879c7d249f137b380c6a4444222b08eb2dd8))
+* Bump the dependencies group with 1 update ([92eec6e](https://www.github.com/JaCraig/ObjectCartographer/commit/92eec6e157e55ecc41c467b06af28833a5b27eda))
+* Bump the dependencies group with 5 updates ([b907ffb](https://www.github.com/JaCraig/ObjectCartographer/commit/b907ffb412b4939ce5f16721e667c8cc32cbab80))
+* Bump the dependencies group with 8 updates ([f648f58](https://www.github.com/JaCraig/ObjectCartographer/commit/f648f58ed6ecd48acb51b8c3990bef5ba251d2de))
+
 <a name="4.3.7"></a>
 ## [4.3.7](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.7) (2026-04-28)
 
