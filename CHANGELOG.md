@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.3.9"></a>
+## [4.3.9](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.9) (2026-05-28)
+
+### Bug Fixes
+
+* **workflows:** remove PERSONAL_ACCESS_TOKEN from workflows ([5a7b754](https://www.github.com/JaCraig/ObjectCartographer/commit/5a7b7540445da269dce9aa3e9d3cccbc14afaae7))
+
+### Other
+
+* Merge pull request #432 from JaCraig/dependabot/nuget/ObjectCartographer.Tests/dependencies-18e67861e6 ([5bb8bb1](https://www.github.com/JaCraig/ObjectCartographer/commit/5bb8bb1bb4e20a60a7c9383758c4c6092fc65e3f))
+* Merge pull request #433 from JaCraig/dependabot/nuget/TestApp/dependencies-72f6040809 ([9c94661](https://www.github.com/JaCraig/ObjectCartographer/commit/9c9466106be8f2da86b65e7b23c4c77d2b806101))
+* Bump the dependencies group with 1 update ([5e1c1b8](https://www.github.com/JaCraig/ObjectCartographer/commit/5e1c1b877b31bc7805e277d562bc530c191a3747))
+* Bump the dependencies group with 2 updates ([055c71f](https://www.github.com/JaCraig/ObjectCartographer/commit/055c71f510924894dc505ea194d7e4286ca61737))
+* Merge branch 'main' of https://github.com/JaCraig/ObjectCartographer ([a66df5d](https://www.github.com/JaCraig/ObjectCartographer/commit/a66df5d2c5ab145c7a45246df28c2c5c8ec4e0bc))
+* **copilot:** add instructions for commit message formatting ([141f030](https://www.github.com/JaCraig/ObjectCartographer/commit/141f030be8b2fd7ce06a51bf9c75212e3814ffd9))
+
 <a name="4.3.8"></a>
 ## [4.3.8](https://www.github.com/JaCraig/ObjectCartographer/releases/tag/v4.3.8) (2026-05-18)
 
